@@ -21,6 +21,8 @@ const App = props =>
   </div>;
 
 const init = {
+  breakfastChoice: "Waffles",
+  musicChoice: "",
   // all below were default, not game related
   items: [],
   newItem: "",

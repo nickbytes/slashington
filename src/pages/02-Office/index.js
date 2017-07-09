@@ -1,52 +1,89 @@
-import React from "react";
+import { Blockquote, Container, Divider, Input, Text } from "rebass";
 import { Link } from "react-router-dom";
 import { connect } from "funcup";
+import React from "react";
+
 import { increment } from "../../updaters/updaters";
 
 const Office = props => {
   return (
     <div>
-      Office scene
-      "Hello, I've forgotten my badge. Could I get a temporary one for today?",
-      you ask the receptionist.
+      <Container py={4}>
+        <Blockquote>
+          "Hello, I've forgotten my badge. Could I get a temporary one for
+          today?"
+        </Blockquote>
+        <Text>you ask the receptionist.</Text>
+      </Container>
 
-      Name please. [click]
+      <Container py={4}>
+        <Blockquote>Name <button>please</button>.</Blockquote>
+      </Container>
 
-      % appears name from twitter account
+      <Container py={4}>
+        <Input defaultValue="" placeholder="Name" />
+      </Container>
 
-      Position please. [click]
+      <Container py={4}>
+        <Blockquote>Position <button>please</button>.</Blockquote>
+      </Container>
 
-      % appears bio from Twitter.
+      <Container py={4}>
+        <Blockquote>>> Job selection component</Blockquote>
+      </Container>
 
-      Security question and answer please.
+      <Container py={4}>
+        <Blockquote>Security question and answer please.</Blockquote>
+      </Container>
 
-      You look back puzzled.
+      <Container py={4}>
+        <Text>You look back puzzled.</Text>
+      </Container>
 
-      Could I have a hint?
+      <Container py={4}>
+        <Blockquote>Could I have a hint?</Blockquote>
+      </Container>
 
-      It looks like it is the name of a close friend or relatives pet + what
-      type of animal.
+      <Container py={4}>
+        <Text>The receptionist looks at you with a suspicious glance.</Text>
+        <Blockquote>
+          It looks like it is the name of a close friend or relatives pet + what
+          type of animal.
+        </Blockquote>
+      </Container>
 
-      % _George_ the _parrot_
+      <Container py={4}>
+        <Input defaultValue="" placeholder="George" /><Text>the</Text>
+        <Input defaultValue="" placeholder="Parrot" />
+      </Container>
 
-      More click-clacking on the keyboard.
+      <Container py={4}>
+        <Text>More click-clacking on the keyboard.</Text>
+      </Container>
 
-      "Here is your temporary badge."
+      <Container py={4}>
+        <Blockquote>"Look towards the camera."</Blockquote>
+        <Blockquote>"Here is your new badge."</Blockquote>
+      </Container>
 
-      Once you arrive at your desk, you begin your work.
+      <Divider />
+      <Container py={4}>
+        <Text>Once you arrive at your desk, you begin your work.</Text>
+      </Container>
 
-      - Phone call from brother
-      - if pickup
-      - tells you theyre worried about you
-      - don't worry about gift, you insist
-      - tells you more important things than work, like taking care of yourself,
-      this hits you hard
+      <Container py={4}>
+        <Blockquote>>> Work animation</Blockquote>
+      </Container>
 
-      - if don't pickup
-      - leaves goofy message you can listen to
-      - annoyed
-      - keep working until fall asleep and you're late
-      - take different train, call alex to tell him this
+      <Container>
+        <Blockquote>Get back to desk, listen to voicemail</Blockquote>
+        <Text>
+          - tells you theyre worried about you
+          - don't worry about gift, you insist
+          - tells you more important things than work, like taking care of
+          yourself,
+        </Text>
+      </Container>
 
       Next scene: Train
       - you board the train with [item] in hand
