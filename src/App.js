@@ -4,6 +4,7 @@ import { createProvider } from "funcup";
 
 import Breakfast from "./pages/01-Breakfast";
 import Office from "./pages/02-Office";
+import Train from "./pages/02.5-Train";
 import TheCouncil from "./pages/03-The-Council";
 import LeavingSlashington from "./pages/04-Leaving-Slashington";
 import Birthday from "./pages/05-Birthday";
@@ -15,6 +16,7 @@ const App = props =>
     <Route exact path="/" component={StartGame} />
     <Route path="/01-Breakfast" component={Breakfast} />
     <Route path="/02-Office" component={Office} />
+    <Route path="/02.5-Train" component={Train} />
     <Route path="/03-The-Council" component={TheCouncil} />
     <Route path="/04-Leaving-Slashington" component={LeavingSlashington} />
     <Route path="/05-Birthday" component={Birthday} />
@@ -23,6 +25,11 @@ const App = props =>
 const init = {
   breakfastChoice: "Waffles",
   musicChoice: "",
+  playerName: "",
+  playerOccupation: "",
+  petOwner: "",
+  petType: "",
+  petName: "",
   // all below were default, not game related
   items: [],
   newItem: "",

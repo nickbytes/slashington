@@ -9,7 +9,8 @@
     "react-router-dom": "next",
     "react-scripts": "0.9.x",
     "react-webcam": "^0.2.0",
-    "rebass": "^1.0.0-5"
+    "rebass": "^1.0.0-5",
+    "styled-components": "^2.1.1"
   },
   "devDependencies": {},
   "scripts": {
