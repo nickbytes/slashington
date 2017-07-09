@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "funcup": "^1.0.0-1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "0.9.x"
+    "react-router-dom": "next",
+    "react-scripts": "0.9.x",
+    "rebass": "^1.0.0-5"
   },
   "devDependencies": {},
   "scripts": {
