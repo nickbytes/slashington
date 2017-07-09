@@ -30,6 +30,7 @@ const init = {
   petOwner: "",
   petType: "",
   petName: "",
+  beverageSelection: "",
   // all below were default, not game related
   items: [],
   newItem: "",

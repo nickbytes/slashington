@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import React, { Component } from "react";
 import styled from "styled-components";
 
-const CustomContainer = styled(Container)`
-	padding-top: 64px;
-	padding-bottom: 64px;
-`;
+import CustomContainer from "../../components/CustomContainer";
 
 class LeavingSlashington extends Component {
   render() {
