@@ -24,12 +24,17 @@ const App = props =>
 
 const init = {
   breakfastChoice: "Waffles",
+  breakfastVisible: true,
   musicChoice: "",
-  playerName: "",
+  playerNameVisible: false,
+  playerNameInput: "",
+  playerNameSaved: "",
   playerOccupation: "",
   petOwner: "",
   petType: "",
   petName: "",
+  initialItem: "",
+  possibleItem: "",
   beverageSelection: "",
   // all below were default, not game related
   items: [],

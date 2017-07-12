@@ -1,2 +1,7 @@
-export const dec = state => ({ count: state.count - 1 });
-export const increment = state => ({ count: state.count + 1 });
+export const showPlayerNameField = state => ({ playerNameVisible: true });
+
+export const addPlayerName = state => ({
+  playerNameSaved: state.playerNameInput
+});
+
+export const setNewPlayerName = value => state => ({ playerNameInput: value });

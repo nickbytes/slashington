@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
-import { increment } from "../../updaters/updaters";
+import {
+  addPlayerName,
+  increment,
+  setNewPlayerName,
+  showPlayerNameField
+} from "../../updaters/updaters";
 
 const Office = props => {
   return (
@@ -17,12 +22,32 @@ const Office = props => {
       </Container>
 
       <Container py={4}>
-        <Blockquote>Name <button>please</button>.</Blockquote>
+        <Blockquote>
+          Name{" "}
+          <button onClick={e => props.update(showPlayerNameField)}>
+            please
+          </button>.
+        </Blockquote>
       </Container>
 
-      <Container py={4}>
-        <Input defaultValue="" placeholder="Name" />
-      </Container>
+      {props.playerNameVisible &&
+        <Container py={4}>
+          <form
+            onSubmit={e => {
+              e.preventDefault();
+              props.update(addPlayerName);
+            }}
+          >
+            <Input
+              defaultValue=""
+              placeholder="Name"
+              value={props.newPlayerName}
+              onChange={e => props.update(setNewPlayerName(e.target.value))}
+            />
+
+            <button children=">>" />
+          </form>
+        </Container>}
 
       <Container py={4}>
         <Blockquote>Position <button>please</button>.</Blockquote>
@@ -93,7 +118,7 @@ const Office = props => {
 };
 
 const map = state => ({
-  count: state.count
+  playerNameVisible: state.playerNameVisible
 });
 
 export default connect(map)(Office);

@@ -1,7 +1,6 @@
-import { Blockquote, Container, Divider, Text } from "rebass";
+import { Blockquote, Divider, Text } from "rebass";
 import { Link } from "react-router-dom";
 import React, { Component } from "react";
-import styled from "styled-components";
 
 import CustomContainer from "../../components/CustomContainer";
 

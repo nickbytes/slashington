@@ -126,41 +126,54 @@ class Birthday extends Component {
           <Blockquote>"_Uncle Nick_, what are you doing in here?"</Blockquote>
         </CustomContainer>
 
-        - Fulfill your role
-        - You set down the item.
+        <CustomContainer>
+          <Text>
+            - Fulfill your role
+            - You set down the item.
 
-        _Iwasjustdroppingoffthegiftidon'tknowwhatisgoingon_
+            _Iwasjustdroppingoffthegiftidon'tknowwhatisgoingon_
 
-        - it's okay Uncle Nick.
-        - it is? You attempt to hold back tears. but i dont understand why. I
-        don't understand what is happening
+            - it's okay Uncle Nick.
+            - it is? You attempt to hold back tears. but i dont understand why.
+            I
+            don't understand what is happening
 
-        She guides you over towards the chair at her computer.
+            She guides you over towards the chair at her computer.
+          </Text>
 
-        -
+        </CustomContainer>
 
-        - Take on the task yourself
-        - You put the item back into your bag.
-        - Your pulse races as you look for an explanation of why you've snuck
-        into her room.
-        - "Just wanted to see if you still had my old computer with all those
-        great games on it."
-        - "Oh yea, it's over here." She points to the section of computers and
-        hardware in the corner, then leads you over. "Still works like a charm,
-        added a new graphics card a year ago"
-        - You smile as she walks you through the changes she's made to the
-        computer, and though you taught her some of the basics, her knowledge
-        greatly surpassing yours at this point, and you feel proud.
-        - "that's amazing, you've taken the shell of an entirely old PC and
-        turned it into a powerful computing machine."
-        - "thanks, theres only one piece left."
-        - "whats that" you ask, as your palms becoming sweaty.
-        - "oh _Uncle Nick_, i thought we'd passed this..."
-        - you're confused. what does she know. how could she?
-        - Dog passed info said you were taking it especially rough this time
-        - How does she know
-        - She reaches for you bag and removes it from your clutches.
-        -
+        <CustomContainer>
+          <Text>
+            - Take on the task yourself
+            - You put the item back into your bag.
+            - Your pulse races as you look for an explanation of why you've
+            snuck
+            into her room.
+            - "Just wanted to see if you still had my old computer with all
+            those
+            great games on it."
+            - "Oh yea, it's over here." She points to the section of computers
+            and
+            hardware in the corner, then leads you over. "Still works like a
+            charm,
+            added a new graphics card a year ago"
+            - You smile as she walks you through the changes she's made to the
+            computer, and though you taught her some of the basics, her
+            knowledge
+            greatly surpassing yours at this point, and you feel proud.
+            - "that's amazing, you've taken the shell of an entirely old PC and
+            turned it into a powerful computing machine."
+            - "thanks, theres only one piece left."
+            - "whats that" you ask, as your palms becoming sweaty.
+            - "oh _Uncle Nick_, i thought we'd passed this..."
+            - you're confused. what does she know. how could she?
+            - Dog passed info said you were taking it especially rough this time
+            - How does she know
+            - She reaches for you bag and removes it from your clutches.
+          </Text>
+
+        </CustomContainer>
       </div>
     );
   }
