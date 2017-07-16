@@ -1,33 +1,66 @@
-import { Blockquote, Container, Divider, Input, Text } from "rebass";
+import "../../vendor/devices.min.css";
+
+import { Arrow } from "reline";
+import { Blockquote, Container, Input } from "rebass";
 import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
 import {
   addPlayerName,
-  increment,
   setNewPlayerName,
-  showPlayerNameField
+  showPlayerNameField,
+  showPlayerOccupationField
 } from "../../updaters/updaters";
+import CustomContainer from "../../components/CustomContainer";
+import JobSelectionComponent from "../../components/JobSelectionComponent";
+import MainText from "../../components/MainText";
+import UserQuote from "../../components/UserQuote";
+import Workspace from "../../components/Workspace";
 
 const Office = props => {
   return (
     <div>
       <Container py={4}>
-        <Blockquote>
+        <UserQuote>
           "Hello, I've forgotten my badge. Could I get a temporary one for
           today?"
-        </Blockquote>
-        <Text>you ask the receptionist.</Text>
+        </UserQuote>
+        <MainText>
+          you ask the receptionist. She looks at you annoyed, but you're not
+          bothered by it.
+        </MainText>
+        <MainText>
+          Nothing is getting on your nerves today. Not the burnt toast that
+          nearly caused a fire in your apartment, not your nosy super Derek
+          asking about your plans to renew your lease, not your forgotten badge,
+          and not the receptionist's crabby mood.
+        </MainText>
+        <MainText>
+          It's Friday. It's the end of a long week. And tonight you're leaving
+          New York City for Washington, DC to visit your brother and more
+          importantly, his daughter Sam.
+        </MainText>
       </Container>
 
       <Container py={4}>
-        <Blockquote>
-          Name{" "}
-          <button onClick={e => props.update(showPlayerNameField)}>
+        <UserQuote>
+          "Name{" "}
+          <button
+            style={{
+              fontFamily: "inherit",
+              fontSize: "inherit",
+              lineHeight: "inherit",
+              border: "0",
+              background: "none",
+              cursor: "pointer",
+              borderBottom: "4px dotted"
+            }}
+            onClick={e => props.update(showPlayerNameField)}
+          >
             please
-          </button>.
-        </Blockquote>
+          </button>."
+        </UserQuote>
       </Container>
 
       {props.playerNameVisible &&
@@ -37,88 +70,222 @@ const Office = props => {
               e.preventDefault();
               props.update(addPlayerName);
             }}
+            style={{
+              display: "flex"
+            }}
           >
             <Input
               defaultValue=""
-              placeholder="Name"
+              placeholder="First Name"
               value={props.newPlayerName}
               onChange={e => props.update(setNewPlayerName(e.target.value))}
+              style={{
+                border: "0",
+                fontFamily: "'Courier Neue', courier, monospace",
+                width: "200px",
+                borderBottom: "2px dotted",
+                marginRight: "35px"
+              }}
             />
 
-            <button children=">>" />
+            <button style={{}} children={<Arrow right />} />
           </form>
         </Container>}
 
-      <Container py={4}>
-        <Blockquote>Position <button>please</button>.</Blockquote>
-      </Container>
+      {props.playerNameSaved &&
+        <Container py={4}>
+          <UserQuote>
+            "Position{" "}
+            <button
+              style={{
+                fontFamily: "inherit",
+                fontSize: "inherit",
+                lineHeight: "inherit",
+                border: "0",
+                background: "none",
+                cursor: "pointer",
+                borderBottom: "4px dotted"
+              }}
+              onClick={e => props.update(showPlayerOccupationField)}
+            >
+              please
+            </button>."
+          </UserQuote>
+        </Container>}
+
+      {props.playerOccupationVisible &&
+        <Container py={4}>
+          <JobSelectionComponent {...props} />
+        </Container>}
+
+      {props.playerOccupationFinished &&
+        <div>
+          <Container py={4}>
+            <UserQuote>"Security question and answer please."</UserQuote>
+          </Container>
+
+          <Container py={4}>
+            <MainText>You look back puzzled.</MainText>
+          </Container>
+
+          <Container py={4}>
+            <UserQuote>"Could I have a hint?"</UserQuote>
+          </Container>
+
+          <Container py={4}>
+            <MainText>
+              The receptionist looks at you with a suspicious glance.
+            </MainText>
+            <UserQuote>
+              "It looks like it is the name of a close friend or relatives pet +
+              what type of animal."
+            </UserQuote>
+          </Container>
+
+          <Container py={4}>
+            <Input defaultValue="" placeholder="George" />
+            <MainText>the</MainText>
+            <Input defaultValue="" placeholder="Parrot" />
+          </Container>
+        </div>}
+
+      {props.securityQuestionsAnswered &&
+        <div>
+          <Container py={4}>
+            <MainText>More click-clacking on the keyboard.</MainText>
+          </Container>
+
+          <Container py={4}>
+            <UserQuote>"Look towards the camera."</UserQuote>
+            <Blockquote>"Here is your new badge."</Blockquote>
+          </Container>
+        </div>}
 
       <Container py={4}>
-        <Blockquote>>> Job selection component</Blockquote>
+        <MainText>
+          Once you arrive at your desk, you turn on your computer.
+        </MainText>
       </Container>
 
-      <Container py={4}>
-        <Blockquote>Security question and answer please.</Blockquote>
-      </Container>
+      {props.workspaceVisible && <Workspace />}
 
-      <Container py={4}>
-        <Text>You look back puzzled.</Text>
-      </Container>
+      <CustomContainer>
+        <MainText>
+          You eject yourself from your desk and go grab a cup of{" "}
+          {props.preferredBeverage}.
+        </MainText>
+      </CustomContainer>
 
-      <Container py={4}>
-        <Blockquote>Could I have a hint?</Blockquote>
-      </Container>
+      <CustomContainer>
+        <MainText>
+          When you get back to your desk, you see that you have a voicemail from
+          your brother.
+        </MainText>
+        <MainText bg={"#e3e3e3"}>
+          "Hey, you must be busy working. Anyway, we're looking forward to
+          having you down this weekend. And listen, don't worry about a gift,
+          Emma is just excited to have you down here this weekend. We all are.
+          Hope work hasn't been stressing you out too much – I know how you bury
+          yourself away from time to time. Okay well, I'll pick you up at the
+          train station at normal time. Talk soon. "
+        </MainText>
+      </CustomContainer>
 
-      <Container py={4}>
-        <Text>The receptionist looks at you with a suspicious glance.</Text>
+      {props.phoneVisible &&
+        <div
+          style={{
+            position: "fixed",
+            top: "0",
+            right: "25px"
+          }}
+        >
+          <div className="cd-iphone-6 cd-scale-60 cd-center cd-padded-device cd-blueprint">
+            <div className="cd-body">
+              <div className="cd-sound" />
+              <div className="cd-sleep" />
+              <div className="cd-camera" />
+              <div className="cd-ear" />
+              <div className="cd-home" />
+              <div className="cd-screen cd-smart-loader">
+                <div
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(-90deg, #5263E5, #E5A852) !important",
+                    display: "block !important"
+                  }}
+                >
+                  <h1>hello</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>}
+
+      <CustomContainer>
+        <MainText>You get back to work.</MainText>
+      </CustomContainer>
+
+      <CustomContainer bg={"#e3e3e3"}>
+        <MainText>Email broken</MainText>
+      </CustomContainer>
+
+      <CustomContainer>
+        <MainText>
+          Something is wrong with your keyboard. As a {props.playerOccupation},
+          it's pretty essential for you to have this type of special keyboard.
+          While any version of this keyboard will work, you've been using this
+          one for years.
+        </MainText>
+      </CustomContainer>
+
+      <CustomContainer>
+        <Blockquote>Keyboard issues?</Blockquote>
+        <MainText>
+          You look up and see {props.coworkerName}.
+        </MainText>
+      </CustomContainer>
+
+      <CustomContainer>
         <Blockquote>
-          It looks like it is the name of a close friend or relatives pet + what
-          type of animal.
+          Yea, for some reason every key is registering as only an t or z on the
+          screen.
         </Blockquote>
-      </Container>
+      </CustomContainer>
 
-      <Container py={4}>
-        <Input defaultValue="" placeholder="George" /><Text>the</Text>
-        <Input defaultValue="" placeholder="Parrot" />
-      </Container>
+      <CustomContainer>
+        <Blockquote>
+          Same thing happened to me about a year ago. I took it to a place near
+          where I lived in DC. Fixed it up in a day, had it working good as new.
+        </Blockquote>
+      </CustomContainer>
 
-      <Container py={4}>
-        <Text>More click-clacking on the keyboard.</Text>
-      </Container>
+      <CustomContainer>
+        <Blockquote>
+          I'm headed there this weekend. Where's the shop located?
+        </Blockquote>
+      </CustomContainer>
 
-      <Container py={4}>
-        <Blockquote>"Look towards the camera."</Blockquote>
-        <Blockquote>"Here is your new badge."</Blockquote>
-      </Container>
+      <CustomContainer>
+        <Blockquote>
+          Crazy coincidence. It's right off the Amtrak stop. You can't miss it,
+          south east corner of the Mall. Open on weekends too, can probably pick
+          it up on your way back.
+        </Blockquote>
+      </CustomContainer>
 
-      <Divider />
-      <Container py={4}>
-        <Text>Once you arrive at your desk, you begin your work.</Text>
-      </Container>
-
-      <Container py={4}>
-        <Blockquote>>> Work animation</Blockquote>
-      </Container>
-
-      <Container>
-        <Blockquote>Get back to desk, listen to voicemail</Blockquote>
-        <Text bg={"#e3e3e3"}>
-          - tells you theyre worried about you
-          - don't worry about gift, you insist
-          - tells you more important things than work, like taking care of
-          yourself,
-        </Text>
-      </Container>
-
-      <h2>Count: {props.count}</h2>
-      <button onClick={e => props.update(increment)} children="+Increment " />
       <Link to="/02.5-Train">Next</Link>
     </div>
   );
 };
 
 const map = state => ({
-  playerNameVisible: state.playerNameVisible
+  playerNameVisible: state.playerNameVisible,
+  playerNameSaved: state.playerNameSaved,
+  playerOccupationVisible: state.playerOccupationVisible,
+  playerOccupation: state.playerOccupation,
+  playerOccupationFinished: state.playerOccupationFinished,
+  preferredBeverage: state.preferredBeverage,
+  phoneVisible: state.phoneVisible
 });
 
 export default connect(map)(Office);

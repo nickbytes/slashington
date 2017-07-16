@@ -22,24 +22,32 @@ const App = props =>
     <Route path="/05-Birthday" component={Birthday} />
   </div>;
 
-const init = {
+const initialState = {
   breakfastChoice: "Waffles",
   breakfastVisible: true,
   musicChoice: "",
   playerNameVisible: false,
   playerNameInput: "",
   playerNameSaved: "",
-  playerOccupation: "",
+  playerOccupationVisible: false,
+  playerOccupationSaved: "",
+  playerOccupationFinished: false,
+  playerOccupationRadio: "",
+  securityQuestionsVisible: false,
+  securityQuestionsAnswered: true,
+  preferredBeverage: "coffee",
+  keyboardBroken: false,
   petOwner: "",
   petType: "",
   petName: "",
   initialItem: "",
   possibleItem: "",
   beverageSelection: "",
+  phoneVisible: false,
   // all below were default, not game related
   items: [],
   newItem: "",
   count: 0
 };
 
-export default createProvider(init)(App);
+export default createProvider(initialState)(App);
