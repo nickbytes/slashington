@@ -1,3 +1,5 @@
+/* global party */
+
 export const showPlayerNameField = state => ({ playerNameVisible: true });
 
 export const hidePlayerNameField = state => ({ playerNameVisible: false });
@@ -9,6 +11,18 @@ export const showPlayerOccupationField = state => ({
 export const hidePlayerOccupationField = state => ({
   playerOccupationVisible: false
 });
+
+export const startBurning = state => {
+  // probably a bad idea
+  if (state.startBurning === true) {
+    const blowTrees = Math.floor(Math.random() * 100) + 20;
+    window.party.addsmoke(550, 400, blowTrees);
+    return;
+  }
+  return {
+    startBurning: true
+  };
+};
 
 // saves currently inputted name value to global object
 // this is temporary within the form

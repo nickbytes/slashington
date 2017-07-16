@@ -26,6 +26,7 @@ const initialState = {
   breakfastChoice: "Waffles",
   breakfastVisible: true,
   musicChoice: "",
+  startBurning: false,
   playerNameVisible: false,
   playerNameInput: "",
   playerNameSaved: "",

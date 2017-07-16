@@ -10,11 +10,13 @@ import {
   addPlayerName,
   setNewPlayerName,
   showPlayerNameField,
-  showPlayerOccupationField
+  showPlayerOccupationField,
+  startBurning
 } from "../../updaters/updaters";
 import CustomContainer from "../../components/CustomContainer";
 import JobSelectionComponent from "../../components/JobSelectionComponent";
 import MainText from "../../components/MainText";
+import Smoke from "../../components/Smoke";
 import UserQuote from "../../components/UserQuote";
 import Workspace from "../../components/Workspace";
 
@@ -31,8 +33,14 @@ const Office = props => {
           bothered by it.
         </MainText>
         <MainText>
-          Nothing is getting on your nerves today. Not the burnt toast that
-          nearly caused a fire in your apartment, not your nosy super Derek
+          Nothing is getting on your nerves today. Not the{" "}
+          <button onClick={e => props.update(startBurning)}>
+            <div style={{ position: "relative" }}>
+              burnt toast
+              {props.startBurning && <Smoke />}
+            </div>
+          </button>
+          that nearly caused a fire in your apartment, not your nosy super Derek
           asking about your plans to renew your lease, not your forgotten badge,
           and not the receptionist's crabby mood.
         </MainText>
@@ -285,7 +293,8 @@ const map = state => ({
   playerOccupation: state.playerOccupation,
   playerOccupationFinished: state.playerOccupationFinished,
   preferredBeverage: state.preferredBeverage,
-  phoneVisible: state.phoneVisible
+  phoneVisible: state.phoneVisible,
+  startBurning: state.startBurning
 });
 
 export default connect(map)(Office);
