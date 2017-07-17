@@ -34,7 +34,17 @@ const Office = props => {
         </MainText>
         <MainText>
           Nothing is getting on your nerves today. Not the{" "}
-          <button onClick={e => props.update(startBurning)}>
+          <button
+            style={{
+              fontFamily: "inherit",
+              fontSize: "inherit",
+              border: "0",
+              borderBottom: "1px dotted",
+              background: "none",
+              outline: "0"
+            }}
+            onClick={e => props.update(startBurning)}
+          >
             <div style={{ position: "relative" }}>
               burnt toast
               {props.startBurning && <Smoke />}
@@ -51,25 +61,27 @@ const Office = props => {
         </MainText>
       </Container>
 
-      <Container py={4}>
-        <UserQuote>
-          "Name{" "}
-          <button
-            style={{
-              fontFamily: "inherit",
-              fontSize: "inherit",
-              lineHeight: "inherit",
-              border: "0",
-              background: "none",
-              cursor: "pointer",
-              borderBottom: "4px dotted"
-            }}
-            onClick={e => props.update(showPlayerNameField)}
-          >
-            please
-          </button>."
-        </UserQuote>
-      </Container>
+      {props.startBurning &&
+        <Container py={4}>
+          <UserQuote>
+            "Name{" "}
+            <button
+              style={{
+                fontFamily: "inherit",
+                fontSize: "inherit",
+                lineHeight: "inherit",
+                border: "0",
+                background: "none",
+                cursor: "pointer",
+                borderBottom: "4px dotted",
+                outline: "0"
+              }}
+              onClick={e => props.update(showPlayerNameField)}
+            >
+              please
+            </button>."
+          </UserQuote>
+        </Container>}
 
       {props.playerNameVisible &&
         <Container py={4}>
@@ -112,7 +124,8 @@ const Office = props => {
                 border: "0",
                 background: "none",
                 cursor: "pointer",
-                borderBottom: "4px dotted"
+                borderBottom: "4px dotted",
+                outline: "0"
               }}
               onClick={e => props.update(showPlayerOccupationField)}
             >
