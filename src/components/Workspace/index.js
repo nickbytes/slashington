@@ -1,7 +1,8 @@
-import { Icon } from "reline";
+import Icon from "react-geomicons";
 import React from "react";
 
 import beach from "../../images/beach.jpg";
+import dunno from "../../images/dunno.jpg";
 
 const Workspace = () =>
   <div
@@ -16,7 +17,8 @@ const Workspace = () =>
         backgroundImage: `url(${beach})`,
         height: "600px",
         backgroundPosition: "center center",
-        backgroundSize: "cover"
+        backgroundSize: "cover",
+        position: "relative"
       }}
     >
       <div
@@ -93,6 +95,24 @@ const Workspace = () =>
         >
           <Icon name="skull" /> You have 7 deadlines today.
         </h3>
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          top: "200px",
+          left: "200px",
+          backgroundColor: "gray",
+          border: "1px solid gray",
+          width: "400px"
+        }}
+      >
+        <img
+          style={{
+            width: "100%",
+            maxWidth: "100%"
+          }}
+          src={dunno}
+        />
       </div>
     </div>
   </div>;

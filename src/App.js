@@ -36,6 +36,9 @@ const initialState = {
   playerOccupationRadio: "",
   securityQuestionsVisible: false,
   securityQuestionsAnswered: true,
+  newBadgeReceived: true,
+  workspaceVisible: false,
+  phoneVisible: false,
   preferredBeverage: "coffee",
   keyboardBroken: false,
   petOwner: "",
@@ -44,7 +47,6 @@ const initialState = {
   initialItem: "",
   possibleItem: "",
   beverageSelection: "",
-  phoneVisible: false,
   // all below were default, not game related
   items: [],
   newItem: "",

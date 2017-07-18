@@ -1,6 +1,7 @@
 import "../../vendor/devices.min.css";
 
-import { Arrow } from "reline";
+import { Arrow, Clock } from "reline";
+import Icon from "react-geomicons";
 import { Blockquote, Container, Input } from "rebass";
 import { Link } from "react-router-dom";
 import { connect } from "funcup";
@@ -11,11 +12,13 @@ import {
   setNewPlayerName,
   showPlayerNameField,
   showPlayerOccupationField,
-  startBurning
+  startBurning,
+  turnOnComputer
 } from "../../updaters/updaters";
 import CustomContainer from "../../components/CustomContainer";
 import JobSelectionComponent from "../../components/JobSelectionComponent";
 import MainText from "../../components/MainText";
+import PhoneComponent from "../../components/PhoneComponent";
 import Smoke from "../../components/Smoke";
 import UserQuote from "../../components/UserQuote";
 import Workspace from "../../components/Workspace";
@@ -182,11 +185,25 @@ const Office = props => {
           </Container>
         </div>}
 
-      <Container py={4}>
-        <MainText>
-          Once you arrive at your desk, you turn on your computer.
-        </MainText>
-      </Container>
+      {props.newBadgeReceived &&
+        <Container py={4}>
+          <MainText>
+            Once you arrive at your desk, you turn on your{" "}
+            <button
+              style={{
+                fontFamily: "inherit",
+                fontSize: "inherit",
+                border: "0",
+                borderBottom: "1px dotted",
+                background: "none",
+                outline: "0"
+              }}
+              onClick={e => props.update(turnOnComputer)}
+            >
+              computer
+            </button>.
+          </MainText>
+        </Container>}
 
       {props.workspaceVisible && <Workspace />}
 
@@ -213,34 +230,12 @@ const Office = props => {
       </CustomContainer>
 
       {props.phoneVisible &&
-        <div
-          style={{
-            position: "fixed",
-            top: "0",
-            right: "25px"
-          }}
-        >
-          <div className="cd-iphone-6 cd-scale-60 cd-center cd-padded-device cd-blueprint">
-            <div className="cd-body">
-              <div className="cd-sound" />
-              <div className="cd-sleep" />
-              <div className="cd-camera" />
-              <div className="cd-ear" />
-              <div className="cd-home" />
-              <div className="cd-screen cd-smart-loader">
-                <div
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(-90deg, #5263E5, #E5A852) !important",
-                    display: "block !important"
-                  }}
-                >
-                  <h1>hello</h1>
-                </div>
-              </div>
-            </div>
+        <PhoneComponent>
+          <div>
+            <h1>Hello</h1>
+            <Icon name="clock" />
           </div>
-        </div>}
+        </PhoneComponent>}
 
       <CustomContainer>
         <MainText>You get back to work.</MainText>
@@ -307,7 +302,9 @@ const map = state => ({
   playerOccupationFinished: state.playerOccupationFinished,
   preferredBeverage: state.preferredBeverage,
   phoneVisible: state.phoneVisible,
-  startBurning: state.startBurning
+  startBurning: state.startBurning,
+  newBadgeReceived: state.newBadgeReceived,
+  workspaceVisible: state.workspaceVisible
 });
 
 export default connect(map)(Office);

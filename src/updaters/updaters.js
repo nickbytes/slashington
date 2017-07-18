@@ -46,3 +46,7 @@ export const addPlayerOccupation = state => ({
   playerOccupationSaved: state.playerOccupationRadio,
   playerOccupationFinished: true
 });
+
+export const turnOnComputer = state => ({
+  workspaceVisible: true
+});
