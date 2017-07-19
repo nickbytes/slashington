@@ -1,10 +1,10 @@
 import "../../vendor/devices.min.css";
 
-import { Arrow, Clock } from "reline";
-import Icon from "react-geomicons";
+import { Arrow } from "reline";
 import { Blockquote, Container, Input } from "rebass";
 import { Link } from "react-router-dom";
 import { connect } from "funcup";
+import Icon from "react-geomicons";
 import React from "react";
 
 import {
@@ -16,6 +16,7 @@ import {
   turnOnComputer
 } from "../../updaters/updaters";
 import CustomContainer from "../../components/CustomContainer";
+import DreamText from "../../components/DreamText";
 import JobSelectionComponent from "../../components/JobSelectionComponent";
 import MainText from "../../components/MainText";
 import PhoneComponent from "../../components/PhoneComponent";
@@ -60,7 +61,7 @@ const Office = props => {
         <MainText>
           It's Friday. It's the end of a long week. And tonight you're leaving
           New York City for Washington, DC to visit your brother and more
-          importantly, his daughter Sam.
+          importantly, his daughter Sam for her 13th birthday.
         </MainText>
       </Container>
 
@@ -207,27 +208,29 @@ const Office = props => {
 
       {props.workspaceVisible && <Workspace />}
 
-      <CustomContainer>
-        <MainText>
-          You eject yourself from your desk and go grab a cup of{" "}
-          {props.preferredBeverage}.
-        </MainText>
-      </CustomContainer>
+      {props.coffeeClicked &&
+        <CustomContainer>
+          <MainText>
+            You eject yourself from your desk and go grab a cup of{" "}
+            {props.preferredBeverage}.
+          </MainText>
+        </CustomContainer>}
 
-      <CustomContainer>
-        <MainText>
-          When you get back to your desk, you see that you have a voicemail from
-          your brother.
-        </MainText>
-        <MainText bg={"#e3e3e3"}>
-          "Hey, you must be busy working. Anyway, we're looking forward to
-          having you down this weekend. And listen, don't worry about a gift,
-          Emma is just excited to have you down here this weekend. We all are.
-          Hope work hasn't been stressing you out too much – I know how you bury
-          yourself away from time to time. Okay well, I'll pick you up at the
-          train station at normal time. Talk soon. "
-        </MainText>
-      </CustomContainer>
+      {props.coffeeBreakOver &&
+        <CustomContainer>
+          <MainText>
+            When you get back to your desk, you see that you have a voicemail
+            from your brother.
+          </MainText>
+          <MainText bg={"#e3e3e3"}>
+            "Hey, you must be busy working. Anyway, we're looking forward to
+            having you down this weekend. And listen, don't worry about a gift,
+            Emma is just excited to have you down here this weekend. We all are.
+            Hope work hasn't been stressing you out too much – I know how you
+            bury yourself away from time to time. Okay well, I'll pick you up at
+            the train station at normal time. Talk soon. "
+          </MainText>
+        </CustomContainer>}
 
       {props.phoneVisible &&
         <PhoneComponent>
@@ -237,59 +240,82 @@ const Office = props => {
           </div>
         </PhoneComponent>}
 
-      <CustomContainer>
-        <MainText>You get back to work.</MainText>
-      </CustomContainer>
+      {props.voicemailOver &&
+        <CustomContainer>
+          <MainText>You get back to work.</MainText>
+          <MainText>
+            What did he mean by 'strange gift'...? You think back to Sam's last
+            birthday...
+          </MainText>
+          <DreamText>
+            barbeque, slipknot karaoke, did you have a few drinks...?
+          </DreamText>
+          <DreamText>
+            what did you get her...? how could you forget this...?
+          </DreamText>
+          <MainText>
+            It all feels dreamlike. You're a {props.playerOccupation}, you pay
+            such great attention to detail, how could you forget something like
+            this...?
+          </MainText>
+          <MainText>
+            Maybe Alex <i>is</i> right. All this work is pushing you to the
+            edge. This weekend, you won't take your laptop, you wont look at the
+            feeds, you'll disconnect. You've just got to get through the next
+            few hours and deadlines.
+          </MainText>
+        </CustomContainer>}
 
-      <CustomContainer bg={"#e3e3e3"}>
-        <MainText>Email broken</MainText>
-      </CustomContainer>
+      {props.restartingWork &&
+        <CustomContainer bg={"#e3e3e3"}>
+          <MainText>Email broken</MainText>
+        </CustomContainer>}
 
-      <CustomContainer>
-        <MainText>
-          Something is wrong with your keyboard. As a {props.playerOccupation},
-          it's pretty essential for you to have this type of special keyboard.
-          While any version of this keyboard will work, you've been using this
-          one for years.
-        </MainText>
-      </CustomContainer>
+      {props.brokenKeyboard &&
+        <div>
+          <CustomContainer>
+            <MainText>
+              Something is wrong with your keyboard. As a{" "}
+              {props.playerOccupation}, it's pretty essential for you to have
+              this type of special keyboard. While any version of this keyboard
+              will work, you've been using this one for years.
+            </MainText>
+          </CustomContainer>
+          <CustomContainer>
+            <Blockquote>Keyboard issues?</Blockquote>
+            <MainText>
+              You look up and see {props.coworkerName}.
+            </MainText>
+          </CustomContainer>
+          <CustomContainer>
+            <Blockquote>
+              Yea, for some reason every key is registering as only an t or z on
+              the screen.
+            </Blockquote>
+          </CustomContainer>
+          <CustomContainer>
+            <Blockquote>
+              Same thing happened to me about a year ago. I took it to a place
+              near where I lived in DC. Fixed it up in a day, had it working
+              good as new.
+            </Blockquote>
+          </CustomContainer>
 
-      <CustomContainer>
-        <Blockquote>Keyboard issues?</Blockquote>
-        <MainText>
-          You look up and see {props.coworkerName}.
-        </MainText>
-      </CustomContainer>
+          <CustomContainer>
+            <Blockquote>
+              I'm headed there this weekend. Where's the shop located?
+            </Blockquote>
+          </CustomContainer>
 
-      <CustomContainer>
-        <Blockquote>
-          Yea, for some reason every key is registering as only an t or z on the
-          screen.
-        </Blockquote>
-      </CustomContainer>
-
-      <CustomContainer>
-        <Blockquote>
-          Same thing happened to me about a year ago. I took it to a place near
-          where I lived in DC. Fixed it up in a day, had it working good as new.
-        </Blockquote>
-      </CustomContainer>
-
-      <CustomContainer>
-        <Blockquote>
-          I'm headed there this weekend. Where's the shop located?
-        </Blockquote>
-      </CustomContainer>
-
-      <CustomContainer>
-        <Blockquote>
-          Crazy coincidence. It's right off the Amtrak stop. You can't miss it,
-          south east corner of the Mall. Open on weekends too, can probably pick
-          it up on your way back.
-        </Blockquote>
-      </CustomContainer>
-
-      <Link to="/02.5-Train">Next</Link>
+          <CustomContainer>
+            <Blockquote>
+              Crazy coincidence. It's right off the Amtrak stop. You can't miss
+              it, south east corner of the Mall. Open on weekends too, can
+              probably pick it up on your way back.
+            </Blockquote>
+          </CustomContainer>
+          <Link to="/02.5-Train">Next</Link>
+        </div>}
     </div>
   );
 };

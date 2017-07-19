@@ -1,6 +1,7 @@
 import Icon from "react-geomicons";
 import React from "react";
 
+import AreaChart from "../AreaChart";
 import beach from "../../images/beach.jpg";
 import dunno from "../../images/dunno.jpg";
 
@@ -96,6 +97,7 @@ const Workspace = () =>
           <Icon name="skull" /> You have 7 deadlines today.
         </h3>
       </div>
+      <AreaChart />
       <div
         style={{
           position: "absolute",

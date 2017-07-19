@@ -38,7 +38,7 @@ const initialState = {
   securityQuestionsAnswered: true,
   newBadgeReceived: true,
   workspaceVisible: false,
-  phoneVisible: false,
+  phoneVisible: true,
   preferredBeverage: "coffee",
   keyboardBroken: false,
   petOwner: "",
