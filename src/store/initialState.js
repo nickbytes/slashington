@@ -10,7 +10,6 @@ const initialState = {
   playerOccupationSaved: "",
   playerOccupationFinished: false,
   playerOccupationRadio: "",
-  securityQuestionsVisible: false,
   petOwnerInput: "",
   petTypeInput: "",
   petNameInput: "",

@@ -10,6 +10,7 @@ import React from "react";
 import {
   addPlayerName,
   addSecurityAnswers,
+  receiveBadge,
   setNewPetName,
   setNewPetOwner,
   setNewPetType,
@@ -21,6 +22,7 @@ import {
 } from "../../updaters/updaters";
 import CustomContainer from "../../components/CustomContainer";
 import DreamText from "../../components/DreamText";
+import InProgress from "../../components/InProgress";
 import JobSelectionComponent from "../../components/JobSelectionComponent";
 import MainText from "../../components/MainText";
 import PhoneComponent from "../../components/PhoneComponent";
@@ -30,7 +32,11 @@ import Workspace from "../../components/Workspace";
 
 const Office = props => {
   return (
-    <div>
+    <div
+      style={{
+        paddingBottom: "150px"
+      }}
+    >
       <Container py={4}>
         <UserQuote>
           "Hello, I've forgotten my badge. Could I get a temporary one for
@@ -70,7 +76,7 @@ const Office = props => {
       </Container>
 
       {props.startBurning &&
-        <Container py={4}>
+        <CustomContainer>
           <UserQuote>
             "Name{" "}
             <button
@@ -89,10 +95,10 @@ const Office = props => {
               please
             </button>."
           </UserQuote>
-        </Container>}
+        </CustomContainer>}
 
       {props.playerNameVisible &&
-        <Container py={4}>
+        <CustomContainer>
           <form
             onSubmit={e => {
               e.preventDefault();
@@ -118,10 +124,10 @@ const Office = props => {
 
             <button style={{}} children={<Arrow right />} />
           </form>
-        </Container>}
+        </CustomContainer>}
 
       {props.playerNameSaved &&
-        <Container py={4}>
+        <CustomContainer>
           <UserQuote>
             "Position{" "}
             <button
@@ -140,20 +146,20 @@ const Office = props => {
               please
             </button>."
           </UserQuote>
-        </Container>}
+        </CustomContainer>}
 
       {props.playerOccupationVisible &&
-        <Container py={4}>
+        <CustomContainer>
           <JobSelectionComponent {...props} />
-        </Container>}
+        </CustomContainer>}
 
       {props.playerOccupationFinished &&
         <div>
-          <Container py={4}>
+          <CustomContainer>
             <UserQuote>
               "And what are the answers your security question?"
             </UserQuote>
-          </Container>
+          </CustomContainer>
 
           <Container py={4}>
             <MainText>You look back puzzled.</MainText>
@@ -178,7 +184,7 @@ const Office = props => {
             <MainText>You don't remember filling out this question.</MainText>
           </CustomContainer>
 
-          <Container py={4}>
+          <CustomContainer>
             <form
               onSubmit={e => {
                 e.preventDefault();
@@ -233,23 +239,47 @@ const Office = props => {
 
               <button style={{}} children={<Arrow right />} />
             </form>
-          </Container>
+          </CustomContainer>
         </div>}
 
       {props.securityQuestionsAnswered &&
         <div>
-          <Container py={4}>
+          <CustomContainer>
             <MainText>More click-clacking on the keyboard.</MainText>
-          </Container>
+          </CustomContainer>
 
-          <Container py={4}>
+          <CustomContainer>
             <UserQuote>"Look towards the camera."</UserQuote>
-            <Blockquote>"Here is your new badge."</Blockquote>
-          </Container>
+          </CustomContainer>
+
+          <CustomContainer>
+            <InProgress>This is where the webcam will come in 👀</InProgress>
+          </CustomContainer>
+
+          <CustomContainer>
+            <UserQuote>
+              "Here is your new{" "}
+              <button
+                style={{
+                  fontFamily: "inherit",
+                  fontSize: "inherit",
+                  lineHeight: "inherit",
+                  border: "0",
+                  background: "none",
+                  cursor: "pointer",
+                  borderBottom: "4px dotted",
+                  outline: "0"
+                }}
+                onClick={e => props.update(receiveBadge)}
+              >
+                badge
+              </button>."
+            </UserQuote>
+          </CustomContainer>
         </div>}
 
       {props.newBadgeReceived &&
-        <Container py={4}>
+        <CustomContainer>
           <MainText>
             Once you arrive at your desk, you turn on your{" "}
             <button
@@ -266,7 +296,7 @@ const Office = props => {
               computer
             </button>.
           </MainText>
-        </Container>}
+        </CustomContainer>}
 
       {props.workspaceVisible && <Workspace />}
 
@@ -392,7 +422,8 @@ const map = state => ({
   phoneVisible: state.phoneVisible,
   startBurning: state.startBurning,
   newBadgeReceived: state.newBadgeReceived,
-  workspaceVisible: state.workspaceVisible
+  workspaceVisible: state.workspaceVisible,
+  securityQuestionsAnswered: state.securityQuestionsAnswered
 });
 
 export default connect(map)(Office);

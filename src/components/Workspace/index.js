@@ -4,8 +4,9 @@ import React from "react";
 import AreaChart from "../AreaChart";
 import beach from "../../images/beach.jpg";
 import dunno from "../../images/dunno.jpg";
+import galaxy from "../../images/galaxy.png";
 
-const Workspace = () =>
+const Workspace = props =>
   <div
     style={{
       padding: "4em 0",
@@ -116,6 +117,38 @@ const Workspace = () =>
           src={dunno}
           alt={"dunno"}
         />
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          top: "50px",
+          right: "20px",
+          border: "1px dotted rgba(255,255,255,0.5)",
+          width: "90px",
+          height: "90px"
+        }}
+      >
+        <img
+          src={galaxy}
+          alt={"Space"}
+          style={{
+            width: "100%",
+            maxWidth: "100%"
+          }}
+        />
+        <h1
+          style={{
+            margin: "0",
+            padding: "0",
+            textAlign: "center",
+            fontSize: "0.5rem",
+            color: "rgba(255,255,255,1)",
+            textShadow: "1px 1px 2px black",
+            letterSpacing: "1px"
+          }}
+        >
+          Space
+        </h1>
       </div>
     </div>
   </div>;

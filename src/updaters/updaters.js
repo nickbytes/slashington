@@ -61,3 +61,7 @@ export const addSecurityAnswers = state => ({
   petNameInputSaved: state.petNameInput,
   securityQuestionsAnswered: true
 });
+
+export const receiveBadge = state => ({
+  newBadgeReceived: true
+});
