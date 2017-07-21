@@ -37,7 +37,7 @@ const Office = props => {
         paddingBottom: "150px"
       }}
     >
-      <Container py={4}>
+      <CustomContainer>
         <UserQuote>
           "Hello, I've forgotten my badge. Could I get a temporary one for
           today?"
@@ -69,11 +69,10 @@ const Office = props => {
           and not the receptionist's crabby mood.
         </MainText>
         <MainText>
-          It's Friday. It's the end of a long week. And tonight you're leaving
-          New York City for Washington, DC to visit your brother and more
-          importantly, his daughter Sam for her 13th birthday.
+          It's Friday. It's the end of a long week. And after work today you're
+          headed to from New York to Washington, DC for your niece's birthday.
         </MainText>
-      </Container>
+      </CustomContainer>
 
       {props.startBurning &&
         <CustomContainer>
