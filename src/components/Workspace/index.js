@@ -63,18 +63,18 @@ const Workspace = props =>
       <div
         className="desktop-notif"
         style={{
-          border: "1px solid rgb(157, 165, 180)",
+          border: "1px solid rgb(218, 216, 218)",
           width: "400px",
           margin: "40px",
           color: "rgba(0,0,0,0.7)",
-          background: "rgba(157, 165, 180, 0.7)"
+          background: "rgba(218, 216, 218, 0.7)"
         }}
       >
         <div
           style={{
             width: "100%",
             height: "15px",
-            backgroundColor: "rgb(157, 165, 180)"
+            backgroundColor: "rgb(218, 216, 218)"
           }}
         />
         <h1
@@ -104,11 +104,24 @@ const Workspace = props =>
           position: "absolute",
           top: "200px",
           left: "200px",
-          backgroundColor: "gray",
-          border: "1px solid gray",
+          backgroundColor: "rgb(218, 216, 218)",
+          border: "1px solid rgb(218, 216, 218)",
           width: "400px"
         }}
       >
+        <div>
+          <h1
+            style={{
+              margin: "0",
+              padding: "5px 0 6px",
+              fontSize: "0.85rem",
+              fontWeight: "normal",
+              textAlign: "center"
+            }}
+          >
+            Window
+          </h1>
+        </div>
         <img
           style={{
             width: "100%",
