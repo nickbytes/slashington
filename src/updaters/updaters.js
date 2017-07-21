@@ -50,3 +50,14 @@ export const addPlayerOccupation = state => ({
 export const turnOnComputer = state => ({
   workspaceVisible: true
 });
+
+export const setNewPetOwner = value => state => ({ petOwnerInput: value });
+export const setNewPetType = value => state => ({ petTypeInput: value });
+export const setNewPetName = value => state => ({ petNameInput: value });
+
+export const addSecurityAnswers = state => ({
+  petOwnerInputSaved: state.petOwnerInput,
+  petTypeInputSaved: state.petTypeInput,
+  petNameInputSaved: state.petNameInput,
+  securityQuestionsAnswered: true
+});

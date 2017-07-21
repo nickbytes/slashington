@@ -6,6 +6,12 @@ import {
   addPlayerOccupation,
   setNewPlayerOccupation
 } from "../../updaters/updaters";
+import { createTitle } from "./jobGenerator";
+
+// TODO refactor
+const job1 = createTitle();
+const job2 = createTitle();
+const job3 = createTitle();
 
 const JobSelectionComponent = props =>
   <form
@@ -18,29 +24,29 @@ const JobSelectionComponent = props =>
       <Label>
         <Radio
           name="radio"
-          value={"Hello"}
-          checked={"Hello" === props.playerOccupationRadio}
+          value={job1}
+          checked={job1 === props.playerOccupationRadio}
           onChange={e => props.update(setNewPlayerOccupation(e.target.value))}
         />
-        Hello
+        {job1}
       </Label>
       <Label>
         <Radio
           name="radio"
-          value={"Beep"}
-          checked={"Beep" === props.playerOccupationRadio}
+          value={job2}
+          checked={job2 === props.playerOccupationRadio}
           onChange={e => props.update(setNewPlayerOccupation(e.target.value))}
         />
-        Beep
+        {job2}
       </Label>
       <Label>
         <Radio
           name="radio"
-          value={"Boop"}
-          checked={"Boop" === props.playerOccupationRadio}
+          value={job3}
+          checked={job3 === props.playerOccupationRadio}
           onChange={e => props.update(setNewPlayerOccupation(e.target.value))}
         />
-        Boop
+        {job3}
       </Label>
     </radiogroup>
     <button>Save</button>

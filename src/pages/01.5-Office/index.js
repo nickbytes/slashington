@@ -9,6 +9,10 @@ import React from "react";
 
 import {
   addPlayerName,
+  addSecurityAnswers,
+  setNewPetName,
+  setNewPetOwner,
+  setNewPetType,
   setNewPlayerName,
   showPlayerNameField,
   showPlayerOccupationField,
@@ -146,7 +150,9 @@ const Office = props => {
       {props.playerOccupationFinished &&
         <div>
           <Container py={4}>
-            <UserQuote>"Security question and answer please."</UserQuote>
+            <UserQuote>
+              "And what are the answers your security question?"
+            </UserQuote>
           </Container>
 
           <Container py={4}>
@@ -154,7 +160,7 @@ const Office = props => {
           </Container>
 
           <Container py={4}>
-            <UserQuote>"Could I have a hint?"</UserQuote>
+            <UserQuote>"Uhhh, what's the question again?"</UserQuote>
           </Container>
 
           <Container py={4}>
@@ -162,15 +168,71 @@ const Office = props => {
               The receptionist looks at you with a suspicious glance.
             </MainText>
             <UserQuote>
-              "It looks like it is the name of a close friend or relatives pet +
-              what type of animal."
+              "What is the name of a close friend or relative who owns a pet,
+              the pets name, and the type of pet?"
             </UserQuote>
           </Container>
 
+          <CustomContainer>
+            <UserQuote>"Wow."</UserQuote>
+            <MainText>You don't remember filling out this question.</MainText>
+          </CustomContainer>
+
           <Container py={4}>
-            <Input defaultValue="" placeholder="George" />
-            <MainText>the</MainText>
-            <Input defaultValue="" placeholder="Parrot" />
+            <form
+              onSubmit={e => {
+                e.preventDefault();
+                props.update(addSecurityAnswers);
+              }}
+              style={{
+                display: "flex",
+                flexDirection: "column"
+              }}
+            >
+              <Input
+                defaultValue=""
+                placeholder="Aunt Millie's"
+                value={props.newPetOwner}
+                onChange={e => props.update(setNewPetOwner(e.target.value))}
+                style={{
+                  border: "0",
+                  fontFamily: "'Courier Neue', courier, monospace",
+                  width: "200px",
+                  borderBottom: "2px dotted",
+                  marginRight: "35px"
+                }}
+              />
+
+              <Input
+                defaultValue=""
+                placeholder="parrot"
+                value={props.newPetType}
+                onChange={e => props.update(setNewPetType(e.target.value))}
+                style={{
+                  border: "0",
+                  fontFamily: "'Courier Neue', courier, monospace",
+                  width: "200px",
+                  borderBottom: "2px dotted",
+                  marginRight: "35px"
+                }}
+              />
+
+              <Input
+                defaultValue=""
+                placeholder="George"
+                value={props.newPetName}
+                onChange={e => props.update(setNewPetName(e.target.value))}
+                style={{
+                  border: "0",
+                  fontFamily: "'Courier Neue', courier, monospace",
+                  width: "200px",
+                  borderBottom: "2px dotted",
+                  marginRight: "35px"
+                }}
+              />
+
+              <button style={{}} children={<Arrow right />} />
+            </form>
           </Container>
         </div>}
 

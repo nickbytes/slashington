@@ -114,6 +114,7 @@ const Workspace = () =>
             maxWidth: "100%"
           }}
           src={dunno}
+          alt={"dunno"}
         />
       </div>
     </div>
