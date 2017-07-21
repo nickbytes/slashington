@@ -6,7 +6,7 @@ import React from "react";
 const Breakfast = props => {
   return (
     <div>
-      <Container py={2} bg={`#e3e3e3`}>
+      {/* <Container py={2} bg={`#e3e3e3`}>
         *WIP Notes*<br />
         - What is crux of opening?<br />
         - There are people helping and watching you<br />
@@ -121,12 +121,11 @@ const Breakfast = props => {
           with the swarth of people. As soon as you swipe you metro card, you
           realize you've forgotten your work badge. Too late now.
         </Text>
-      </Container>
+      </Container> */}
 
       <Container py={4}>
         <Link to="/02-Office">Next</Link>
       </Container>
-
     </div>
   );
 };

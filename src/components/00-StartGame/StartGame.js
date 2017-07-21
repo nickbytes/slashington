@@ -10,17 +10,15 @@ class StartGame extends Component {
       <div>
         <CustomContainer>
           <Text>
-            Aurora Metropolis is a semi-fictional interactive story. It is
-            played
-            best on a modern desktop browser (Chrome, Safari, Firefox). The game
-            has
-            an audio component, with transcripts provided.
+            Aurora Metropolis [working title] is a semi-fictional interactive
+            story. It is played best on a modern desktop browser (Chrome,
+            Safari, Firefox). The game has an audio component, with transcripts
+            provided.
           </Text>
         </CustomContainer>
         <CustomContainer>
-          <Link to={`/01-Breakfast`}>Begin</Link>
+          <Link to={`/01.5-Office`}>Begin</Link>
         </CustomContainer>
-
       </div>
     );
   }
