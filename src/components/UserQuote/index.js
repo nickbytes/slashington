@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const UserQuote = styled(Blockquote)`
   font-family: 'Montserrat', sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   max-width: 700px;
 `;
 

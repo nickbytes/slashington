@@ -37,15 +37,15 @@ class TheCouncil extends Component {
             You count the buildings. 8, 10, 12. 13. One building, is much larger
             than the other. You can see it along the path, towards the back of
             the grouping of huts. It has a large entrance, large enough for you
-            to walk through.
+            to walk through...
           </MainText>
         </CustomContainer>
 
         <CustomContainer>
           <MainText>
             You suddenly realize {this.props.petNameInputSaved || "Sam"} has
-            been talking the entire time you've been trying to take the scene
-            in. Everything feels like a blur.
+            been talking the entire time you've been trying to take in the
+            surroundings. Everything feels like a blur.
           </MainText>
         </CustomContainer>
 
@@ -54,13 +54,13 @@ class TheCouncil extends Component {
             {this.props.petNameInputSaved.toUpperCase() ||
               "Sam".toUpperCase()}{" "}
             IS TALKING. YOU ARE IN SOME OTHER PLACE. IS THIS A DREAM. WHY THE
-            HELL AM I STILL HOLDING THIS TOASTER
+            HELL AM I STILL HOLDING THIS KEYBOARD.
           </MainText>
         </CustomContainer>
 
         <CustomContainer>
           <MainText>
-            You heart pounds. You hear {this.props.petNameInputSaved || "Sam"}{" "}
+            Your heart pounds. You hear {this.props.petNameInputSaved || "Sam"}{" "}
             say something about "last time" and "of course its all dangerous but
             it's the only option" but you can barely hear{" "}
             {this.props.petNameInputSaved || "Sam"} over your heart pounding.
@@ -80,7 +80,7 @@ class TheCouncil extends Component {
         </CustomContainer>
 
         <CustomContainer>
-          <UserQuote>"I'm not young... I don't understand"</UserQuote>
+          <UserQuote>"I'm not young... I don't understand..."</UserQuote>
         </CustomContainer>
 
         <CustomContainer>
@@ -99,8 +99,8 @@ class TheCouncil extends Component {
 
         <CustomContainer>
           <MainText>
-            You push the door, which though thick, is incredibly light. Youre
-            first draw to the hanging light at the top of the cone roof. A
+            You push the door, which though thick, is incredibly light. You're
+            first drawn to the hanging light at the top of the cone roof. A
             circle _orb_ glowly softly, and–
           </MainText>
         </CustomContainer>
@@ -176,23 +176,24 @@ class TheCouncil extends Component {
             "Must we really explain this again Comrade Igglefort?"
           </UserQuote>
           <UserQuote>
-            "Yes, it is imperative to explain, with a discrete amount of detail,
-            the job that must be done. Rule 17, Article 405b states that the
-            counselor must explain appropriate context for me the-"
+            "Rule 17, Article 405b states that the counselor must explain
+            appropriate context for me the-"
           </UserQuote>
           <UserQuote>"I know what the article states."</UserQuote>
           <UserQuote>
             Then you should also understand it's importance. As I was saying...
           </UserQuote>
           <UserQuote>
-            Magic has been passed down throughout the ages. It used to be taught
+            You have been selected for a task. But first, some background. Magic
+            has been passed down throughout the ages. It used to be taught
             somewhat more openly, and accepted on some level, but rises in
             secular conservatism saw it as a threat. People persecuted magicial
             beings. Now it is hushed, but helps to keep societal balance in some
-            ways. Today, magic is only taught to a handful of people, found in
-            their early teens. These teenagers possess abilities in science,
-            computing, mathematics. The best magicians are critical thinkers,
-            optimists. A few will go into politics, but that can really go awry.
+            ways. Today, magic is only taught to a handful of people, usually
+            found in their early teens. These teenagers possess abilities in
+            science, computing, mathematics. The best magicians are critical
+            thinkers, optimists. A few will go into politics, but that can
+            really go awry.
           </UserQuote>
           <UserQuote>
             Ivy League colleges were created to find best and brightest, and
