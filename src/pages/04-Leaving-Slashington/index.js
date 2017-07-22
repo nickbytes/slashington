@@ -1,8 +1,9 @@
-import { Blockquote, Divider, Text } from "rebass";
+import { Blockquote, Divider } from "rebass";
 import { Link } from "react-router-dom";
 import React, { Component } from "react";
 
 import CustomContainer from "../../components/CustomContainer";
+import MainText from "../../components/MainText";
 
 class LeavingSlashington extends Component {
   render() {
@@ -13,47 +14,37 @@ class LeavingSlashington extends Component {
         </CustomContainer>
 
         <CustomContainer>
-          <Text>You sit down again in the same seat on the train.</Text>
+          <MainText>You sit down again in the same seat on the train.</MainText>
         </CustomContainer>
 
         <CustomContainer>
-          <Text>
+          <MainText>
             You watch outside, as _George_ waves to you. And you feel the
-            familiar
-            jolt of the train as it begins to move forward. After some time, the
-            train gains speed and you can no longer seen the small village of
-            Slashington, only the barren landscape. One hour passes. A small
-            red,
-            ice capped mountain appears in the distance. Closer and closer it
-            comes
-            over the next hour, and the train appears to be preparing to go
-            through
-            a tunnel at the base.
-          </Text>
+            familiar jolt of the train as it begins to move forward. After some
+            time, the train gains speed and you can no longer seen the small
+            village of Slashington, only the barren landscape. One hour passes.
+            A small red, ice capped mountain appears in the distance. Closer and
+            closer it comes over the next hour, and the train appears to be
+            preparing to go through a tunnel at the base.
+          </MainText>
         </CustomContainer>
 
         <CustomContainer>
-          <Text>
+          <MainText>
             You look back towards Slashington, though it is now disappeared in
-            the
-            distance. The sun is beginning to peak from the horizon to your
-            left. As
-            you enter the tunnel, darkness engulfs your car.
-          </Text>
+            the distance. The sun is beginning to peak from the horizon to your
+            left. As you enter the tunnel, darkness engulfs your car.
+          </MainText>
         </CustomContainer>
 
         <CustomContainer>
-          <Text>
+          <MainText>
             Three or four seconds. Suddenly the car bursts with morning light,
-            you
-            grimace and squint in the stark contrast. When you open your eyes,
-            the
-            train car is again packed with people, regular people. People
-            reading
-            their tablets, morning papers, talking on cell phones, glancing out
-            the
-            window as you pass through Baltimore.
-          </Text>
+            you grimace and squint in the stark contrast. When you open your
+            eyes, the train car is again packed with people, regular people.
+            People reading their tablets, morning papers, talking on cell
+            phones, glancing out the window as you pass through Baltimore.
+          </MainText>
         </CustomContainer>
 
         <CustomContainer>
@@ -61,15 +52,15 @@ class LeavingSlashington extends Component {
         </CustomContainer>
 
         <CustomContainer>
-          <Text>
-            Alex greets you at the station. You load your bags and [item ]
-            into the trunk of his car.
-          </Text>
+          <MainText>
+            Alex greets you at the station. You load your bags and [item ] into
+            the trunk of his car.
+          </MainText>
         </CustomContainer>
 
         <CustomContainer>
           <Blockquote>"What's with the [item]?"</Blockquote>
-          <Text>hes asks, somewhat concerned.</Text>
+          <MainText>hes asks, somewhat concerned.</MainText>
         </CustomContainer>
 
         <CustomContainer>
@@ -79,11 +70,11 @@ class LeavingSlashington extends Component {
         </CustomContainer>
 
         <CustomContainer>
-          <Text>
+          <MainText>
             He goes on chatting about work, neighbors, _____ s job, only do you
             take notice when he mentions the exception grades Emma has been
             getting.
-          </Text>
+          </MainText>
         </CustomContainer>
 
         <CustomContainer>
@@ -91,14 +82,13 @@ class LeavingSlashington extends Component {
         </CustomContainer>
 
         <CustomContainer>
-          <Text>The words of The Council echo in your head.</Text>
+          <MainText>The words of The Council echo in your head.</MainText>
         </CustomContainer>
 
         <CustomContainer>
           <Blockquote>
             > The burden is too great for one so young. Surely some adult can
-            take
-            on responsibility.
+            take on responsibility.
           </Blockquote>
         </CustomContainer>
 
@@ -116,8 +106,7 @@ class LeavingSlashington extends Component {
         <CustomContainer>
           <Blockquote>
             'Hey, anyway, were glad to have you here. You look like you could
-            use a
-            little break from the office for a weekend.'
+            use a little break from the office for a weekend.'
           </Blockquote>
         </CustomContainer>
 
@@ -128,7 +117,6 @@ class LeavingSlashington extends Component {
         <CustomContainer>
           <Link to="/05-Birthday">Next</Link>
         </CustomContainer>
-
       </div>
     );
   }

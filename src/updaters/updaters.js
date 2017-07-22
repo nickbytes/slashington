@@ -65,3 +65,6 @@ export const addSecurityAnswers = state => ({
 export const receiveBadge = state => ({
   newBadgeReceived: true
 });
+
+export const reactAngrily = state => ({ reactAngrily: true });
+export const easyNod = state => ({ easyNod: true });
