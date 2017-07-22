@@ -1,10 +1,11 @@
-import { Blockquote, Heading, Text } from "rebass";
+import { Blockquote, Heading } from "rebass";
 import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
 import CustomContainer from "../../components/CustomContainer";
 import MainText from "../../components/MainText";
+import UserQuote from "../../components/UserQuote";
 
 const Train = props => {
   return (
@@ -80,42 +81,44 @@ const Train = props => {
       </CustomContainer>
 
       <CustomContainer>
-        <Text>
+        <MainText>
           You begin walking towards the small ticket booth. Astonished you see
           not a human on the other side of the glass, but... no... it can't be.
-        </Text>
+        </MainText>
       </CustomContainer>
 
       <CustomContainer>
-        <Blockquote>
+        <UserQuote>
           "A little late, but I think everything should be fine. I was starting
-          to worry about you. I see you've got the [item], good good. Come on,
+          to worry about you. I see you've got the keyboard, good good. Come on,
           I'll lead you to the council."
-        </Blockquote>
-        <Text>
-          said _George_ the _parrot_, dressed in a old timey looking train
-          conductors outfit, complete with bowtie..
-        </Text>
+        </UserQuote>
+        <MainText>
+          said {props.petNameInputSaved} the {props.petTypeInputSaved}, dressed
+          in a old timey looking train conductors outfit, complete with bowtie..
+        </MainText>
       </CustomContainer>
 
       <CustomContainer>
-        <Blockquote>"George?!?!?"</Blockquote>
-        <Text>you stammer.</Text>
-        <Blockquote>
+        <UserQuote>
+          "{props.petNameInputSaved}?!?!?"
+        </UserQuote>
+        <MainText>you stammer.</MainText>
+        <UserQuote>
           "You can speak! What in the hell is going on? Where are we.. what is
           the council..."
-        </Blockquote>
+        </UserQuote>
       </CustomContainer>
 
       <CustomContainer>
-        <Text>You feel your legs start to wobble.</Text>
+        <MainText>You feel your legs start to wobble.</MainText>
       </CustomContainer>
 
       <CustomContainer>
-        <Blockquote>
+        <UserQuote>
           "Oh yes, I always seem to forget this part...The Council will explain
           it to you."
-        </Blockquote>
+        </UserQuote>
       </CustomContainer>
 
       <CustomContainer>
@@ -126,7 +129,8 @@ const Train = props => {
 };
 
 const map = state => ({
-  count: state.count
+  petNameInputSaved: state.petNameInputSaved,
+  petTypeInputSaved: state.petTypeInputSaved
 });
 
 export default connect(map)(Train);

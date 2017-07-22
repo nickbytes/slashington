@@ -56,6 +56,20 @@ const Workspace = props =>
             paddingRight: "15px"
           }}
         >
+          <span
+            style={{
+              paddingRight: "10px"
+            }}
+          >
+            ☕️
+          </span>
+          <span
+            style={{
+              paddingRight: "10px"
+            }}
+          >
+            🌱
+          </span>
           <time style={{ color: "white" }}>12:34</time>
         </div>
       </div>

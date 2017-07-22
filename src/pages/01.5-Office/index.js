@@ -37,7 +37,6 @@ const Office = props => {
         paddingBottom: "150px"
       }}
     >
-      <Workspace />
       <CustomContainer>
         <UserQuote>
           "Hello, I've forgotten my badge. Could I get a temporary one for
