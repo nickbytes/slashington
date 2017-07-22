@@ -6,6 +6,7 @@ import { easyNod, reactAngrily } from "../../updaters/updaters";
 import ChapterTitle from "../../components/ChapterTitle";
 import CustomContainer from "../../components/CustomContainer";
 import InProgress from "../../components/InProgress";
+import ItalicMind from "../../components/ItalicMind";
 import MainText from "../../components/MainText";
 import UserQuote from "../../components/UserQuote";
 
@@ -50,12 +51,14 @@ class TheCouncil extends Component {
         </CustomContainer>
 
         <CustomContainer>
-          <MainText>
-            {this.props.petNameInputSaved.toUpperCase() ||
-              "Sam".toUpperCase()}{" "}
-            IS TALKING. YOU ARE IN SOME OTHER PLACE. IS THIS A DREAM. WHY THE
-            HELL AM I STILL HOLDING THIS KEYBOARD.
-          </MainText>
+          <ItalicMind>
+            {this.props.petNameInputSaved || "Sam"} is talking
+          </ItalicMind>
+          <ItalicMind>You are in some other place</ItalicMind>
+          <ItalicMind>is this a dream</ItalicMind>
+          <ItalicMind>why the hell am I still holding this keyboard</ItalicMind>
+          <br />
+          <InProgress>I think it would be cool to have these flash</InProgress>
         </CustomContainer>
 
         <CustomContainer>

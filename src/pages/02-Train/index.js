@@ -1,9 +1,10 @@
-import { Blockquote, Heading } from "rebass";
+import { Heading } from "rebass";
 import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
 import CustomContainer from "../../components/CustomContainer";
+import InProgress from "../../components/InProgress";
 import MainText from "../../components/MainText";
 import UserQuote from "../../components/UserQuote";
 
@@ -23,6 +24,10 @@ const Train = props => {
       </CustomContainer>
 
       <CustomContainer>
+        <InProgress>Wavvvvesss video / voice</InProgress>
+      </CustomContainer>
+
+      <CustomContainer>
         <MainText>
           The train nudges forward, and begins rolling out of the station. You
           lean against the window as city lights slowly give in to the darkness
@@ -35,7 +40,7 @@ const Train = props => {
       </CustomContainer>
 
       <CustomContainer>
-        <MainText>Train animation</MainText>
+        <InProgress>Train animation</InProgress>
       </CustomContainer>
 
       <CustomContainer>

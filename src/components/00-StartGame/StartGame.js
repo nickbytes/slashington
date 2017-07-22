@@ -11,9 +11,9 @@ class StartGame extends Component {
       <div>
         <CustomContainer>
           <MainText>
-            [Untitled Game] is a semi-fictional interactive story. It is played
-            best on a modern desktop browser (Chrome, Safari, Firefox). The game
-            has an audio component, with transcripts provided.
+            [Untitled Game] is a semi-fictional interactive whirlwind. It is
+            played best on a modern desktop browser (Chrome, Safari, Firefox).
+            The game has an audio component, with transcripts provided.
           </MainText>
         </CustomContainer>
         <CustomContainer>
