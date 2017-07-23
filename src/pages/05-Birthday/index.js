@@ -1,8 +1,10 @@
-import { Blockquote, Heading } from "rebass";
+import { Heading } from "rebass";
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import ChapterTitle from "../../components/ChapterTitle";
 import CustomContainer from "../../components/CustomContainer";
+import InProgress from "../../components/InProgress";
 import MainText from "../../components/MainText";
 import UserQuote from "../../components/UserQuote";
 

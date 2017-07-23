@@ -8,6 +8,9 @@ import Office from "./pages/01.5-Office";
 import StartGame from "./components/00-StartGame/StartGame";
 import TheCouncil from "./pages/03-The-Council";
 import Train from "./pages/02-Train";
+import GoodMessengerScene from "./pages/06-Good-Messenger";
+import Credits from "./pages/credits";
+
 import initialState from "./store/initialState";
 
 const App = props =>
@@ -19,6 +22,8 @@ const App = props =>
     <Route path="/03-The-Council" component={TheCouncil} />
     <Route path="/04-Leaving-Slashington" component={LeavingSlashington} />
     <Route path="/05-Birthday" component={Birthday} />
+    <Route path="/06-Good-Messenger" component={GoodMessengerScene} />
+    <Route path="/credits" component={Credits} />
   </div>;
 
 export default createProvider(initialState)(App);

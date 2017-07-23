@@ -1,4 +1,4 @@
-import { Blockquote, Divider } from "rebass";
+import { Divider } from "rebass";
 import { Link } from "react-router-dom";
 import React, { Component } from "react";
 
