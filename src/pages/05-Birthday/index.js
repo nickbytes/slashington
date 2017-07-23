@@ -1,22 +1,24 @@
 import { Blockquote, Heading } from "rebass";
 import React, { Component } from "react";
 
+import ChapterTitle from "../../components/ChapterTitle";
 import CustomContainer from "../../components/CustomContainer";
 import MainText from "../../components/MainText";
+import UserQuote from "../../components/UserQuote";
 
 class Birthday extends Component {
   render() {
     return (
       <div>
         <CustomContainer>
-          <Heading>Birthday</Heading>
+          <ChapterTitle>Birthday</ChapterTitle>
         </CustomContainer>
 
         <CustomContainer>
-          <Blockquote>
+          <UserQuote>
             "Hey, ill take your stuff up to the guest room. You go relax and say
             hello to Emma and Jill."
-          </Blockquote>
+          </UserQuote>
         </CustomContainer>
 
         <CustomContainer>
@@ -27,37 +29,42 @@ class Birthday extends Component {
         </CustomContainer>
 
         <CustomContainer>
-          <Blockquote>"_Nick_!"</Blockquote>
+          <UserQuote>
+            "{this.props.playerNameSaved || "Nick"}!"
+          </UserQuote>
           <MainText>you're met with a hug.</MainText>
         </CustomContainer>
 
         <CustomContainer>
-          <Blockquote>"_Jill_, thanks so much for having me"</Blockquote>
+          <UserQuote>"Jill, thanks so much for having me"</UserQuote>
         </CustomContainer>
 
         <CustomContainer>
-          <Blockquote>
-            "Of course. We're all glad to see you, _Alex_ tells me you're
-            spending far too much time at the office. _Emma_ missed you. She's
-            in the backyard with her friends."
-          </Blockquote>
+          <UserQuote>
+            "Of course. We're all glad to see you, Alex tells me you're spending
+            far too much time at the office. Sam missed you. She's in the
+            backyard with her friends."
+          </UserQuote>
         </CustomContainer>
 
         <CustomContainer>
+          <InProgress>Is this a garbage component? Maybe.</InProgress>
           Grab a can of fizzoda. - Keep your mind right Grab a can of Burrrrrr
           Beer. - Need this shit right about now.
         </CustomContainer>
 
         <CustomContainer>
           <MainText>
-            You walk out the back door. _Emma_ and her group of friends are
-            doing group _Slipknot karaoke_. It's adorable and hardcore as fuck.
-            She's learned so well.
+            You walk out the back door. Sam and her group of friends are doing
+            group _Slipknot karaoke_. It's adorable and hardcore as fuck. She's
+            learned so well.
           </MainText>
         </CustomContainer>
 
         <CustomContainer>
-          <Blockquote>"_Comrade Nick_!"</Blockquote>
+          <UserQuote>
+            "Comrade {this.props.playerNameSaved}!"
+          </UserQuote>
         </CustomContainer>
 
         <CustomContainer>
@@ -98,7 +105,7 @@ class Birthday extends Component {
         <CustomContainer>
           <MainText>
             Your chest tightens, fingers begin to shake and fidget. How can you
-            just leave the _item_ here? Will she know what to do with it? Does
+            just leave the keyboard here? Will she know what to do with it? Does
             she understand the risks she is facing?
           </MainText>
         </CustomContainer>
@@ -114,7 +121,10 @@ class Birthday extends Component {
         </CustomContainer>
 
         <CustomContainer>
-          <Blockquote>"_Uncle Nick_, what are you doing in here?"</Blockquote>
+          <UserQuote>
+            "{"Comrade"} {this.props.playerNameSaved}, what are you doing in
+            here?"
+          </UserQuote>
         </CustomContainer>
 
         <CustomContainer>
@@ -148,6 +158,11 @@ class Birthday extends Component {
             from your clutches.
           </MainText>
         </CustomContainer>
+
+        {this.props.endReady &&
+          <div>
+            <Link to={"/end"}>End</Link>
+          </div>}
       </div>
     );
   }

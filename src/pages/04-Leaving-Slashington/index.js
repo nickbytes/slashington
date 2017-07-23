@@ -2,15 +2,18 @@ import { Blockquote, Divider } from "rebass";
 import { Link } from "react-router-dom";
 import React, { Component } from "react";
 
+import ChapterTitle from "../../components/ChapterTitle";
 import CustomContainer from "../../components/CustomContainer";
 import MainText from "../../components/MainText";
+import ThoughtQuote from "../../components/ThoughtQuote";
+import UserQuote from "../../components/UserQuote";
 
 class LeavingSlashington extends Component {
   render() {
     return (
       <div>
         <CustomContainer>
-          <h1>Leaving Slashington</h1>
+          <ChapterTitle>Leaving Slashington</ChapterTitle>
         </CustomContainer>
 
         <CustomContainer>
@@ -19,13 +22,14 @@ class LeavingSlashington extends Component {
 
         <CustomContainer>
           <MainText>
-            You watch outside, as _George_ waves to you. And you feel the
-            familiar jolt of the train as it begins to move forward. After some
-            time, the train gains speed and you can no longer seen the small
-            village of Slashington, only the barren landscape. One hour passes.
-            A small red, ice capped mountain appears in the distance. Closer and
-            closer it comes over the next hour, and the train appears to be
-            preparing to go through a tunnel at the base.
+            You watch outside, as {this.props.petNameInputSaved} waves to you.
+            And you feel the familiar jolt of the train as it begins to move
+            forward. After some time, the train gains speed and you can no
+            longer seen the small village of Slashington, only the barren
+            landscape. One hour passes. A small red, ice capped mountain appears
+            in the distance. Closer and closer it comes over the next hour, and
+            the train appears to be preparing to go through a tunnel at the
+            base.
           </MainText>
         </CustomContainer>
 
@@ -53,32 +57,30 @@ class LeavingSlashington extends Component {
 
         <CustomContainer>
           <MainText>
-            Alex greets you at the station. You load your bags and [item ] into
+            Alex greets you at the station. You load your bags and keyboard into
             the trunk of his car.
           </MainText>
         </CustomContainer>
 
         <CustomContainer>
-          <Blockquote>"What's with the [item]?"</Blockquote>
+          <UserQuote>"What's with the keyboard?"</UserQuote>
           <MainText>hes asks, somewhat concerned.</MainText>
         </CustomContainer>
 
         <CustomContainer>
-          <Blockquote>
-            "Oh. Something I was getting fixed. No big deal."
-          </Blockquote>
+          <UserQuote>"A gift for Sam."</UserQuote>
         </CustomContainer>
 
         <CustomContainer>
           <MainText>
-            He goes on chatting about work, neighbors, _____ s job, only do you
+            He goes on chatting about work, neighbors, Jill's job, only do you
             take notice when he mentions the exception grades Emma has been
             getting.
           </MainText>
         </CustomContainer>
 
         <CustomContainer>
-          <Blockquote>"That's great, real great."</Blockquote>
+          <UserQuote>"That's great, real great."</UserQuote>
         </CustomContainer>
 
         <CustomContainer>
@@ -86,32 +88,32 @@ class LeavingSlashington extends Component {
         </CustomContainer>
 
         <CustomContainer>
-          <Blockquote>
-            > The burden is too great for one so young. Surely some adult can
-            take on responsibility.
-          </Blockquote>
+          <ThoughtQuote>
+            The burden is too great for one so young. Surely some adult can take
+            on responsibility.
+          </ThoughtQuote>
         </CustomContainer>
 
         <CustomContainer>
-          <Blockquote>
-            > It must be her. Weve gone over this. She is uniquely talented, and
+          <ThoughtQuote>
+            It must be her. Weve gone over this. She is uniquely talented, and
             her path will cross appropriately.
-          </Blockquote>
-          <Blockquote>
-            > But she may not be able to do it. She may die.
-          </Blockquote>
-          <Blockquote>> It is the only way..</Blockquote>
+          </ThoughtQuote>
+          <ThoughtQuote>
+            But she may not be able to do it. She may die.
+          </ThoughtQuote>
+          <ThoughtQuote> It is the only way..</ThoughtQuote>
         </CustomContainer>
 
         <CustomContainer>
-          <Blockquote>
+          <UserQuote>
             'Hey, anyway, were glad to have you here. You look like you could
             use a little break from the office for a weekend.'
-          </Blockquote>
+          </UserQuote>
         </CustomContainer>
 
         <CustomContainer>
-          <Blockquote>"Yeah, definitely."</Blockquote>
+          <UserQuote>"Yeah, definitely."</UserQuote>
         </CustomContainer>
 
         <CustomContainer>

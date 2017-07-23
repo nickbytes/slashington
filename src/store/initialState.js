@@ -24,9 +24,8 @@ const initialState = {
   keyboardBroken: false,
   reactAngrily: false,
   easyNod: false,
-  initialItem: "",
-  possibleItem: "",
-  beverageSelection: "",
+  explanationHeard: true,
+  beverageSelected: false,
   // all below were default, not game related
   items: [],
   newItem: "",
