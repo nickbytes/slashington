@@ -1,8 +1,8 @@
-import { Heading } from "rebass";
 import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
+import ChapterTitle from "../../components/ChapterTitle";
 import CustomContainer from "../../components/CustomContainer";
 import InProgress from "../../components/InProgress";
 import MainText from "../../components/MainText";
@@ -79,10 +79,8 @@ const Train = props => {
         </MainText>
       </CustomContainer>
 
-      <CustomContainer bg={"#e3e3e3"} />
-
       <CustomContainer>
-        <Heading>Next scene: the Exchange, the [item]</Heading>
+        <ChapterTitle>Next scene: the Exchange, the [item]</ChapterTitle>
       </CustomContainer>
 
       <CustomContainer>

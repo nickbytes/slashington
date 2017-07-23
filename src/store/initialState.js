@@ -20,7 +20,7 @@ const initialState = {
   newBadgeReceived: false,
   workspaceVisible: false,
   phoneVisible: false,
-  preferredBeverage: "coffee",
+  coffeeClicked: false,
   keyboardBroken: false,
   reactAngrily: false,
   easyNod: false,

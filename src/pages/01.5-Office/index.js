@@ -422,7 +422,8 @@ const map = state => ({
   startBurning: state.startBurning,
   newBadgeReceived: state.newBadgeReceived,
   workspaceVisible: state.workspaceVisible,
-  securityQuestionsAnswered: state.securityQuestionsAnswered
+  securityQuestionsAnswered: state.securityQuestionsAnswered,
+  coffeeClicked: state.coffeeClicked
 });
 
 export default connect(map)(Office);

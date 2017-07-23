@@ -68,3 +68,4 @@ export const receiveBadge = state => ({
 
 export const reactAngrily = state => ({ reactAngrily: true });
 export const easyNod = state => ({ easyNod: true });
+export const coffeeClicked = state => ({ coffeeClicked: true });

@@ -1,6 +1,8 @@
+import { connect } from "funcup";
 import Icon from "react-geomicons";
 import React from "react";
 
+import { coffeeClicked } from "../../updaters/updaters";
 import AreaChart from "../AreaChart";
 import beach from "../../images/beach.jpg";
 import dunno from "../../images/dunno.jpg";
@@ -61,7 +63,20 @@ const Workspace = props =>
               paddingRight: "10px"
             }}
           >
-            ☕️
+            <button
+              style={{
+                fontFamily: "inherit",
+                fontSize: "inherit",
+                lineHeight: "inherit",
+                border: "0",
+                background: "none",
+                cursor: "pointer",
+                outline: "0"
+              }}
+              onClick={e => props.update(coffeeClicked)}
+            >
+              ☕️
+            </button>
           </span>
           <span
             style={{
@@ -180,4 +195,8 @@ const Workspace = props =>
     </div>
   </div>;
 
-export default Workspace;
+const map = state => ({
+  playerNameSaved: state.playerNameSaved
+});
+
+export default connect(map)(Workspace);
