@@ -7,12 +7,6 @@ import {
   newJobs,
   setNewPlayerOccupation
 } from "../../updaters/updaters";
-import { createTitle } from "./jobGenerator";
-
-// TODO refactor
-const job1 = createTitle();
-const job2 = createTitle();
-const job3 = createTitle();
 
 const JobSelectionComponent = props =>
   <form

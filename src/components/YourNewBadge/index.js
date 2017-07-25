@@ -1,6 +1,8 @@
 import React from "react";
 import Barcode from "react-barcode";
 
+import company from "../../images/company.png";
+
 const YourNewBadge = props =>
   <div
     style={{
@@ -12,7 +14,7 @@ const YourNewBadge = props =>
         width: "280px",
         margin: "0 auto",
         border: "2px solid black",
-        padding: "25px",
+        padding: "25px 25px 0",
         textAlign: "center",
         height: "450px",
         display: "flex",
@@ -33,6 +35,14 @@ const YourNewBadge = props =>
           position: "absolute",
           left: "calc(50% - 45px)"
         }}
+      />
+      <img
+        style={{
+          width: "99px",
+          margin: "0 auto"
+        }}
+        src={company}
+        alt={"Corp A"}
       />
       <img
         style={{
