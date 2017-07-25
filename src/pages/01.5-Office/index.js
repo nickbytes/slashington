@@ -10,7 +10,6 @@ import React from "react";
 import {
   addPlayerName,
   addSecurityAnswers,
-  receiveBadge,
   setNewPetName,
   setNewPetOwner,
   setNewPetType,
@@ -22,12 +21,12 @@ import {
 } from "../../updaters/updaters";
 import CustomContainer from "../../components/CustomContainer";
 import DreamText from "../../components/DreamText";
-import InProgress from "../../components/InProgress";
 import JobSelectionComponent from "../../components/JobSelectionComponent";
 import MainText from "../../components/MainText";
 import PhoneComponent from "../../components/PhoneComponent";
 import Smoke from "../../components/Smoke";
 import UserQuote from "../../components/UserQuote";
+import WebcamComponent from "../../components/WebcamComponent";
 import Workspace from "../../components/Workspace";
 
 const Office = props => {
@@ -266,28 +265,7 @@ const Office = props => {
           </CustomContainer>
 
           <CustomContainer>
-            <InProgress>This is where the webcam will come in 👀</InProgress>
-          </CustomContainer>
-
-          <CustomContainer>
-            <UserQuote pl={"300px"}>
-              "Here is your new{" "}
-              <button
-                style={{
-                  fontFamily: "inherit",
-                  fontSize: "inherit",
-                  lineHeight: "inherit",
-                  border: "0",
-                  background: "none",
-                  cursor: "pointer",
-                  borderBottom: "4px dotted",
-                  outline: "0"
-                }}
-                onClick={e => props.update(receiveBadge)}
-              >
-                badge
-              </button>."
-            </UserQuote>
+            <WebcamComponent />
           </CustomContainer>
         </div>}
 
