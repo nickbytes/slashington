@@ -301,7 +301,8 @@ const Office = props => {
                 border: "0",
                 borderBottom: "1px dotted",
                 background: "none",
-                outline: "0"
+                outline: "0",
+                cursor: "pointer"
               }}
               onClick={e => props.update(turnOnComputer)}
             >
