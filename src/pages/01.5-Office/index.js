@@ -76,7 +76,7 @@ const Office = props => {
 
       {props.startBurning &&
         <CustomContainer>
-          <UserQuote>
+          <UserQuote pl={"300px"}>
             "Name{" "}
             <button
               style={{
@@ -98,36 +98,42 @@ const Office = props => {
 
       {props.playerNameVisible &&
         <CustomContainer>
-          <form
-            onSubmit={e => {
-              e.preventDefault();
-              props.update(addPlayerName);
-            }}
-            style={{
-              display: "flex"
-            }}
-          >
-            <Input
-              defaultValue=""
-              placeholder="First Name"
-              value={props.newPlayerName}
-              onChange={e => props.update(setNewPlayerName(e.target.value))}
-              style={{
-                border: "0",
-                fontFamily: "'Courier Neue', courier, monospace",
-                width: "200px",
-                borderBottom: "2px dotted",
-                marginRight: "35px"
+          {!props.playerNameSaved &&
+            <form
+              onSubmit={e => {
+                e.preventDefault();
+                props.update(addPlayerName);
               }}
-            />
+              style={{
+                display: "flex"
+              }}
+            >
+              <Input
+                defaultValue=""
+                placeholder="First Name"
+                value={props.newPlayerName}
+                onChange={e => props.update(setNewPlayerName(e.target.value))}
+                style={{
+                  border: "0",
+                  fontFamily: "'Courier Neue', courier, monospace",
+                  width: "200px",
+                  borderBottom: "2px dotted",
+                  marginRight: "35px"
+                }}
+              />
 
-            <button style={{}} children={<Arrow right />} />
-          </form>
+              <button style={{}} children={<Arrow right />} />
+            </form>}
+
+          {props.playerNameSaved &&
+            <UserQuote>
+              "{props.playerNameSaved}."
+            </UserQuote>}
         </CustomContainer>}
 
       {props.playerNameSaved &&
         <CustomContainer>
-          <UserQuote>
+          <UserQuote pl={"300px"}>
             "Position{" "}
             <button
               style={{
@@ -149,13 +155,18 @@ const Office = props => {
 
       {props.playerOccupationVisible &&
         <CustomContainer>
-          <JobSelectionComponent {...props} />
+          {!props.playerOccupationFinished &&
+            <JobSelectionComponent {...props} />}
+          {props.playerOccupationFinished &&
+            <UserQuote>
+              "{props.playerOccupationSaved}."
+            </UserQuote>}
         </CustomContainer>}
 
       {props.playerOccupationFinished &&
         <div>
           <CustomContainer>
-            <UserQuote>
+            <UserQuote pl={"300px"}>
               "And what are the answers your security question?"
             </UserQuote>
           </CustomContainer>
@@ -172,14 +183,13 @@ const Office = props => {
             <MainText>
               The receptionist looks at you with a suspicious glance.
             </MainText>
-            <UserQuote>
+            <UserQuote pl={"300px"}>
               "What is the name of a close friend or relative who owns a pet,
               the pets name, and the type of pet?"
             </UserQuote>
           </Container>
 
           <CustomContainer>
-            <UserQuote>"Wow."</UserQuote>
             <MainText>You don't remember filling out this question.</MainText>
           </CustomContainer>
 
@@ -191,12 +201,14 @@ const Office = props => {
               }}
               style={{
                 display: "flex",
-                flexDirection: "column"
+                flexDirection: "row",
+                alignItems: "flex-end",
+                justifyContent: "flex-start"
               }}
             >
               <Input
                 defaultValue=""
-                placeholder="Aunt Millie's"
+                placeholder="Aunt Millie"
                 value={props.newPetOwner}
                 onChange={e => props.update(setNewPetOwner(e.target.value))}
                 style={{
@@ -204,9 +216,10 @@ const Office = props => {
                   fontFamily: "'Courier Neue', courier, monospace",
                   width: "200px",
                   borderBottom: "2px dotted",
-                  marginRight: "35px"
+                  marginRight: "5px"
                 }}
               />
+              <span>'s</span>
 
               <Input
                 defaultValue=""
@@ -235,8 +248,9 @@ const Office = props => {
                   marginRight: "35px"
                 }}
               />
-
-              <button style={{}} children={<Arrow right />} />
+              <div>
+                <button style={{}} children={<Arrow right />} />
+              </div>
             </form>
           </CustomContainer>
         </div>}
@@ -248,7 +262,7 @@ const Office = props => {
           </CustomContainer>
 
           <CustomContainer>
-            <UserQuote>"Look towards the camera."</UserQuote>
+            <UserQuote pl={"300px"}>"Look towards the camera."</UserQuote>
           </CustomContainer>
 
           <CustomContainer>
@@ -256,7 +270,7 @@ const Office = props => {
           </CustomContainer>
 
           <CustomContainer>
-            <UserQuote>
+            <UserQuote pl={"300px"}>
               "Here is your new{" "}
               <button
                 style={{
@@ -417,6 +431,7 @@ const map = state => ({
   playerOccupationVisible: state.playerOccupationVisible,
   playerOccupation: state.playerOccupation,
   playerOccupationFinished: state.playerOccupationFinished,
+  playerOccupationSaved: state.playerOccupationSaved,
   preferredBeverage: state.preferredBeverage,
   phoneVisible: state.phoneVisible,
   startBurning: state.startBurning,
