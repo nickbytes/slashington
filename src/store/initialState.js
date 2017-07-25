@@ -1,3 +1,5 @@
+import { createTitle } from "../components/JobSelectionComponent/jobGenerator";
+
 const initialState = {
   breakfastChoice: "Waffles",
   breakfastVisible: true,
@@ -27,7 +29,11 @@ const initialState = {
   explanationHeard: true,
   beverageSelected: false,
   // all below were default, not game related
-  items: [],
+  jobItems: [
+    { id: 1, title: createTitle() },
+    { id: 2, title: createTitle() },
+    { id: 3, title: createTitle() }
+  ],
   newItem: "",
   count: 0
 };

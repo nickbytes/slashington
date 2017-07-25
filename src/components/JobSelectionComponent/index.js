@@ -4,6 +4,7 @@ import React from "react";
 
 import {
   addPlayerOccupation,
+  newJobs,
   setNewPlayerOccupation
 } from "../../updaters/updaters";
 import { createTitle } from "./jobGenerator";
@@ -21,60 +22,40 @@ const JobSelectionComponent = props =>
     }}
   >
     <radiogroup>
-      <Label
-        style={{
-          fontFamily: "'Montserrat', sans-serif",
-          fontWeight: "900",
-          fontStyle: "italic",
-          fontSize: "3rem"
-        }}
-      >
-        <Radio
-          name="radio"
-          value={job1}
-          checked={job1 === props.playerOccupationRadio}
-          onChange={e => props.update(setNewPlayerOccupation(e.target.value))}
-        />
-        {job1}
-      </Label>
-      <Label
-        style={{
-          fontFamily: "'Montserrat', sans-serif",
-          fontWeight: "900",
-          fontStyle: "italic",
-          fontSize: "3rem"
-        }}
-      >
-        <Radio
-          name="radio"
-          value={job2}
-          checked={job2 === props.playerOccupationRadio}
-          onChange={e => props.update(setNewPlayerOccupation(e.target.value))}
-        />
-        {job2}
-      </Label>
-      <Label
-        style={{
-          fontFamily: "'Montserrat', sans-serif",
-          fontWeight: "900",
-          fontStyle: "italic",
-          fontSize: "3rem"
-        }}
-      >
-        <Radio
-          name="radio"
-          value={job3}
-          checked={job3 === props.playerOccupationRadio}
-          onChange={e => props.update(setNewPlayerOccupation(e.target.value))}
-        />
-        {job3}
-      </Label>
+      {props.jobItems.map(jobItem =>
+        <Label
+          key={jobItem.id}
+          style={{
+            fontFamily: "'Montserrat', sans-serif",
+            fontWeight: "900",
+            fontStyle: "italic",
+            fontSize: "3rem"
+          }}
+        >
+          <Radio
+            name="radio"
+            value={jobItem.title}
+            checked={jobItem.title === props.playerOccupationRadio}
+            onChange={e => props.update(setNewPlayerOccupation(e.target.value))}
+          />
+          {jobItem.title}
+        </Label>
+      )}
     </radiogroup>
+    <button
+      onClick={e => {
+        e.preventDefault();
+        props.update(newJobs);
+      }}
+    >
+      Regenerate Jobs
+    </button>
     <button>Save</button>
   </form>;
 
 const map = state => ({
-  playerOccupationRadio: state.playerOccupationRadio
+  playerOccupationRadio: state.playerOccupationRadio,
+  jobItems: state.jobItems
 });
 
 export default connect(map)(JobSelectionComponent);

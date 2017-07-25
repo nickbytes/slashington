@@ -1,5 +1,7 @@
 /* global party */
 
+import { createTitle } from "../components/JobSelectionComponent/jobGenerator";
+
 export const showPlayerNameField = state => ({ playerNameVisible: true });
 
 export const hidePlayerNameField = state => ({ playerNameVisible: false });
@@ -69,3 +71,20 @@ export const receiveBadge = state => ({
 export const reactAngrily = state => ({ reactAngrily: true });
 export const easyNod = state => ({ easyNod: true });
 export const coffeeClicked = state => ({ coffeeClicked: true });
+
+export const newJobs = state => ({
+  jobItems: [
+    {
+      id: 1,
+      title: createTitle()
+    },
+    {
+      id: 2,
+      title: createTitle()
+    },
+    {
+      id: 3,
+      title: createTitle()
+    }
+  ]
+});
