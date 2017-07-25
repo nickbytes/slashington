@@ -116,14 +116,23 @@ const Office = props => {
                 onChange={e => props.update(setNewPlayerName(e.target.value))}
                 style={{
                   border: "0",
-                  fontFamily: "'Courier Neue', courier, monospace",
-                  width: "200px",
-                  borderBottom: "2px dotted",
+                  fontFamily: "'Montserrat', sans-serif",
+                  fontWeight: "900",
+                  fontStyle: "italic",
+                  width: "300px",
+                  fontSize: "3rem",
                   marginRight: "35px"
                 }}
               />
 
-              <button style={{}} children={<Arrow right />} />
+              <button
+                style={{
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer"
+                }}
+                children={<Arrow right />}
+              />
             </form>}
 
           {props.playerNameSaved &&
@@ -200,12 +209,6 @@ const Office = props => {
                 e.preventDefault();
                 props.update(addSecurityAnswers);
               }}
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "flex-end",
-                justifyContent: "flex-start"
-              }}
             >
               <Input
                 defaultValue=""
@@ -213,14 +216,25 @@ const Office = props => {
                 value={props.newPetOwner}
                 onChange={e => props.update(setNewPetOwner(e.target.value))}
                 style={{
-                  border: "0",
-                  fontFamily: "'Courier Neue', courier, monospace",
-                  width: "200px",
-                  borderBottom: "2px dotted",
-                  marginRight: "5px"
+                  fontFamily: "'Montserrat', sans-serif",
+                  fontWeight: "900",
+                  fontStyle: "italic",
+                  fontSize: "3rem",
+                  border: "none",
+                  width: "290px"
                 }}
               />
-              <span>'s</span>
+              <span
+                style={{
+                  fontFamily: "'Montserrat', sans-serif",
+                  fontWeight: "900",
+                  fontStyle: "italic",
+                  fontSize: "3rem",
+                  border: "none"
+                }}
+              >
+                's
+              </span>
 
               <Input
                 defaultValue=""
@@ -228,11 +242,12 @@ const Office = props => {
                 value={props.newPetType}
                 onChange={e => props.update(setNewPetType(e.target.value))}
                 style={{
-                  border: "0",
-                  fontFamily: "'Courier Neue', courier, monospace",
-                  width: "200px",
-                  borderBottom: "2px dotted",
-                  marginRight: "35px"
+                  fontFamily: "'Montserrat', sans-serif",
+                  fontWeight: "900",
+                  fontStyle: "italic",
+                  fontSize: "3rem",
+                  border: "none",
+                  paddingLeft: "115px"
                 }}
               />
 
@@ -242,15 +257,19 @@ const Office = props => {
                 value={props.newPetName}
                 onChange={e => props.update(setNewPetName(e.target.value))}
                 style={{
-                  border: "0",
-                  fontFamily: "'Courier Neue', courier, monospace",
-                  width: "200px",
-                  borderBottom: "2px dotted",
-                  marginRight: "35px"
+                  fontFamily: "'Montserrat', sans-serif",
+                  fontWeight: "900",
+                  fontStyle: "italic",
+                  fontSize: "3rem",
+                  border: "none",
+                  paddingLeft: "230px"
                 }}
               />
-              <div>
-                <button style={{}} children={<Arrow right />} />
+              <div style={{ paddingLeft: "355px" }}>
+                <button
+                  style={{ background: "none", border: "none" }}
+                  children={<Arrow right />}
+                />
               </div>
             </form>
           </CustomContainer>

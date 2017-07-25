@@ -21,7 +21,14 @@ const JobSelectionComponent = props =>
     }}
   >
     <radiogroup>
-      <Label>
+      <Label
+        style={{
+          fontFamily: "'Montserrat', sans-serif",
+          fontWeight: "900",
+          fontStyle: "italic",
+          fontSize: "3rem"
+        }}
+      >
         <Radio
           name="radio"
           value={job1}
@@ -30,7 +37,14 @@ const JobSelectionComponent = props =>
         />
         {job1}
       </Label>
-      <Label>
+      <Label
+        style={{
+          fontFamily: "'Montserrat', sans-serif",
+          fontWeight: "900",
+          fontStyle: "italic",
+          fontSize: "3rem"
+        }}
+      >
         <Radio
           name="radio"
           value={job2}
@@ -39,7 +53,14 @@ const JobSelectionComponent = props =>
         />
         {job2}
       </Label>
-      <Label>
+      <Label
+        style={{
+          fontFamily: "'Montserrat', sans-serif",
+          fontWeight: "900",
+          fontStyle: "italic",
+          fontSize: "3rem"
+        }}
+      >
         <Radio
           name="radio"
           value={job3}
