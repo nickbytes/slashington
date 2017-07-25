@@ -42,7 +42,7 @@ const Office = props => {
           today?"
         </UserQuote>
         <MainText>
-          you ask the receptionist. She looks at you annoyed, but you're not
+          you ask the front desk clerk. They look at you annoyed, but you're not
           bothered by it.
         </MainText>
         <MainText>
@@ -67,7 +67,7 @@ const Office = props => {
           </button>
           that nearly caused a fire in your apartment, not your nosy super Derek
           asking about your plans to renew your lease, not your forgotten badge,
-          and not the receptionist's crabby mood.
+          and not the clerk's crabby mood.
         </MainText>
         <MainText>
           It's Friday. It's the end of a long week. And after work today you're
@@ -191,7 +191,7 @@ const Office = props => {
 
           <Container py={4}>
             <MainText>
-              The receptionist looks at you with a suspicious glance.
+              The clerk looks at you with a suspicious glance.
             </MainText>
             <UserQuote pl={"300px"} pt={"100px"}>
               "What is the name of a close friend or relative who owns a pet,
@@ -316,8 +316,7 @@ const Office = props => {
       {props.coffeeClicked &&
         <CustomContainer>
           <MainText>
-            You eject yourself from your desk and go grab a cup of{" "}
-            {props.preferredBeverage}.
+            You eject yourself from your desk and go grab a cup of coffee.
           </MainText>
         </CustomContainer>}
 
