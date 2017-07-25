@@ -50,13 +50,13 @@ class WebcamComponent extends Component {
                 >
                   badge
                 </button>."
-                {this.props.newBadgeReceived &&
-                  <YourNewBadge
-                    imgSrc={this.state.photoSrc}
-                    playerName={this.props.playerNameSaved}
-                    playerOccupation={this.props.playerOccupationSaved}
-                  />}
               </UserQuote>
+              {this.props.newBadgeReceived &&
+                <YourNewBadge
+                  imgSrc={this.state.photoSrc}
+                  playerName={this.props.playerNameSaved}
+                  playerOccupation={this.props.playerOccupationSaved}
+                />}
             </div>
           : <div
               style={{

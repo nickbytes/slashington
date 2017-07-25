@@ -168,7 +168,7 @@ const Office = props => {
         <div>
           <CustomContainer>
             <UserQuote pl={"300px"}>
-              "And what are the answers your security question?"
+              "And what are the answers to your security question?"
             </UserQuote>
           </CustomContainer>
 

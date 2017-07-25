@@ -4,12 +4,12 @@ import Barcode from "react-barcode";
 const YourNewBadge = props =>
   <div
     style={{
-      margin: "50px auto 0"
+      margin: "200px auto 0"
     }}
   >
     <div
       style={{
-        width: "300px",
+        width: "280px",
         margin: "0 auto",
         border: "2px solid black",
         padding: "25px",
@@ -65,7 +65,7 @@ const YourNewBadge = props =>
         </h2>
       </div>
       <div>
-        <Barcode value={`${props.playerName}.n325938`} />
+        <Barcode width={1.5} value={`${props.playerName}.n325938`} />
       </div>
     </div>
   </div>;
