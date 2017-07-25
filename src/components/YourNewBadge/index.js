@@ -17,9 +17,23 @@ const YourNewBadge = props =>
         height: "450px",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center"
+        justifyContent: "center",
+        borderRadius: "20px",
+        position: "relative"
       }}
     >
+      <div
+        style={{
+          width: "90px",
+          height: "10px",
+          borderRadius: "8px",
+          border: "2px solid black",
+          margin: "0 auto",
+          top: "18px",
+          position: "absolute",
+          left: "calc(50% - 45px)"
+        }}
+      />
       <img
         style={{
           width: "150px",

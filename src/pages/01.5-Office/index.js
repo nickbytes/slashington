@@ -54,7 +54,9 @@ const Office = props => {
               border: "0",
               borderBottom: "1px dotted",
               background: "none",
-              outline: "0"
+              outline: "0",
+              paddingBottom: "1px",
+              cursor: "pointer"
             }}
             onClick={e => props.update(startBurning)}
           >
@@ -182,7 +184,7 @@ const Office = props => {
             <MainText>
               The receptionist looks at you with a suspicious glance.
             </MainText>
-            <UserQuote pl={"300px"}>
+            <UserQuote pl={"300px"} pt={"100px"}>
               "What is the name of a close friend or relative who owns a pet,
               the pets name, and the type of pet?"
             </UserQuote>
