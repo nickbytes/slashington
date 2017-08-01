@@ -42,8 +42,7 @@ const Office = props => {
           today?"
         </UserQuote>
         <MainText>
-          you ask the front desk clerk. They look at you annoyed, but you're not
-          bothered by it.
+          The receptionist looks at you, annoyed. You're not bothered by it.
         </MainText>
         <MainText>
           Nothing is getting on your nerves today. Not the{" "}
@@ -83,6 +82,7 @@ const Office = props => {
               style={{
                 fontFamily: "inherit",
                 fontSize: "inherit",
+                fontWeight: "inherit",
                 lineHeight: "inherit",
                 border: "0",
                 background: "none",
@@ -116,9 +116,8 @@ const Office = props => {
                 onChange={e => props.update(setNewPlayerName(e.target.value))}
                 style={{
                   border: "0",
-                  fontFamily: "'Montserrat', sans-serif",
-                  fontWeight: "900",
-                  fontStyle: "italic",
+                  fontFamily: "'Source Code Pro', monospace",
+                  fontWeight: "700",
                   width: "300px",
                   fontSize: "3rem",
                   marginRight: "35px"
@@ -314,27 +313,27 @@ const Office = props => {
       {props.workspaceVisible && <Workspace />}
 
       {props.coffeeClicked &&
-        <CustomContainer>
-          <MainText>
-            You eject yourself from your desk and go grab a cup of coffee.
-          </MainText>
-        </CustomContainer>}
-
-      {props.coffeeBreakOver &&
-        <CustomContainer>
-          <MainText>
-            When you get back to your desk, you see that you have a voicemail
-            from your brother.
-          </MainText>
-          <MainText bg={"#e3e3e3"}>
-            "Hey, you must be busy working. Anyway, we're looking forward to
-            having you down this weekend. And listen, don't worry about a gift,
-            Emma is just excited to have you down here this weekend. We all are.
-            Hope work hasn't been stressing you out too much – I know how you
-            bury yourself away from time to time. Okay well, I'll pick you up at
-            the train station at normal time. Talk soon. "
-          </MainText>
-        </CustomContainer>}
+        <div>
+          <CustomContainer>
+            <MainText>
+              You eject yourself from your desk and go grab a cup of coffee.
+            </MainText>
+          </CustomContainer>
+          <CustomContainer>
+            <MainText>
+              When you get back to your desk, you see that you have a{" "}
+              <button>voicemail from your brother</button>.
+            </MainText>
+            <MainText bg={"#e3e3e3"}>
+              "Hey, you must be busy working. Anyway, we're looking forward to
+              having you down this weekend. And listen, don't worry about a
+              gift, Emma is just excited to have you down here this weekend. We
+              all are. Hope work hasn't been stressing you out too much – I know
+              how you bury yourself away from time to time. Okay well, I'll pick
+              you up at the train station at normal time. Talk soon. "
+            </MainText>
+          </CustomContainer>
+        </div>}
 
       {props.phoneVisible &&
         <PhoneComponent>
@@ -370,10 +369,7 @@ const Office = props => {
           </MainText>
         </CustomContainer>}
 
-      {props.restartingWork &&
-        <CustomContainer bg={"#e3e3e3"}>
-          <MainText>Email broken</MainText>
-        </CustomContainer>}
+      {props.restartingWork && <Workspace broken={true} />}
 
       {props.brokenKeyboard &&
         <div>
@@ -386,39 +382,40 @@ const Office = props => {
             </MainText>
           </CustomContainer>
           <CustomContainer>
-            <Blockquote>Keyboard issues?</Blockquote>
+            <UserQuote>Keyboard issues?</UserQuote>
             <MainText>
               You look up and see {props.coworkerName}.
             </MainText>
           </CustomContainer>
           <CustomContainer>
-            <Blockquote>
-              Yea, for some reason every key is registering as only an t or z on
-              the screen.
-            </Blockquote>
+            <UserQuote>
+              For some reason, every key is registering as only an t or z on the
+              screen.
+            </UserQuote>
           </CustomContainer>
           <CustomContainer>
-            <Blockquote>
+            <UserQuote>
               Same thing happened to me about a year ago. I took it to a place
               near where I lived in DC. Fixed it up in a day, had it working
               good as new.
-            </Blockquote>
+            </UserQuote>
           </CustomContainer>
 
           <CustomContainer>
-            <Blockquote>
-              I'm headed there this weekend. Where's the shop located?
-            </Blockquote>
+            <UserQuote>
+              I'm taking the Amtrak down there this weekend. It's my niece's
+              birthday. Where's the shop located?
+            </UserQuote>
           </CustomContainer>
 
           <CustomContainer>
-            <Blockquote>
+            <UserQuote>
               Crazy coincidence. It's right off the Amtrak stop. You can't miss
               it, south east corner of the Mall. Open on weekends too, can
               probably pick it up on your way back.
-            </Blockquote>
+            </UserQuote>
           </CustomContainer>
-          <Link to="/02.5-Train">Next</Link>
+          <Link to="/A-Train-to-Not-Washington">Next</Link>
         </div>}
     </div>
   );
