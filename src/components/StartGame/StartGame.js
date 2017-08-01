@@ -17,9 +17,33 @@ class StartGame extends Component {
           </MainText>
         </CustomContainer>
         <CustomContainer>
-          <InProgress>
-            I will do this last since it seems a bit promotional.
-          </InProgress>
+          <nav>
+            <li>
+              <Link to={`/The-Office`}>The Office</Link>
+            </li>
+            <li>
+              <Link to={`/A-Train-to-Not-Washington`}>
+                A Train to Not Washington
+              </Link>
+            </li>
+            <li>
+              <Link to={`/The-Council`}>The Council</Link>
+            </li>
+            <li>
+              <Link to={`/Slashington`}>Slashington</Link>
+            </li>
+            <li>
+              <Link disabled to={`/Birthday`}>
+                Birthday
+              </Link>
+            </li>
+            <li>
+              <Link to={`/Good-Messenger`}>Good-Messenger</Link>
+            </li>
+            <li>
+              <Link to={`/credits`}>credits</Link>
+            </li>
+          </nav>
         </CustomContainer>
         <CustomContainer>
           <Link to={`/01.5-Office`}>Begin</Link>

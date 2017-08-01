@@ -1,12 +1,11 @@
 import { Blockquote } from "rebass";
+import React from "react";
 import styled from "styled-components";
 
 const UserQuote = styled(Blockquote)`
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
+  font-family: 'Source Code Pro', monospace;
   max-width: 700px;
-  font-style: italic;
-  font-weight: 900;
+  font-weight: 700;
 `;
 
 export default UserQuote;
