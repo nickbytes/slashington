@@ -37,7 +37,11 @@ const Office = props => {
       }}
     >
       <CustomContainer>
-        <UserQuote>
+        <UserQuote
+          style={{
+            marginBottom: "3.5em"
+          }}
+        >
           "Hello, I've forgotten my badge. Could I get a temporary one for
           today?"
         </UserQuote>
@@ -175,18 +179,21 @@ const Office = props => {
       {props.playerOccupationFinished &&
         <div>
           <CustomContainer>
-            <UserQuote pl={"300px"}>
-              "And what are the answers to your security question?"
-            </UserQuote>
+            <UserQuote pl={"300px"}>...</UserQuote>
           </CustomContainer>
 
-          <Container py={4}>
-            <MainText>You look back puzzled.</MainText>
-          </Container>
+          <CustomContainer>
+            <MainText>
+              You look back puzzled. The receptionist is sharing at you
+              intently.
+            </MainText>
+          </CustomContainer>
 
-          <Container py={4}>
-            <UserQuote>"Uhhh, what's the question again?"</UserQuote>
-          </Container>
+          <CustomContainer>
+            <UserQuote pl={"300px"}>
+              THE ANSWERS TO YOUR SECURITY QUESTION.
+            </UserQuote>
+          </CustomContainer>
 
           <Container py={4}>
             <MainText>
@@ -215,20 +222,18 @@ const Office = props => {
                 value={props.newPetOwner}
                 onChange={e => props.update(setNewPetOwner(e.target.value))}
                 style={{
-                  fontFamily: "'Montserrat', sans-serif",
-                  fontWeight: "900",
-                  fontStyle: "italic",
-                  fontSize: "3rem",
+                  fontFamily: "'Source Code Pro', monospace",
+                  fontWeight: "700",
+                  fontSize: "1.5rem",
                   border: "none",
                   width: "290px"
                 }}
               />
               <span
                 style={{
-                  fontFamily: "'Montserrat', sans-serif",
-                  fontWeight: "900",
-                  fontStyle: "italic",
-                  fontSize: "3rem",
+                  fontFamily: "'Source Code Pro', monospace",
+                  fontWeight: "700",
+                  fontSize: "1.5rem",
                   border: "none"
                 }}
               >
@@ -241,10 +246,9 @@ const Office = props => {
                 value={props.newPetType}
                 onChange={e => props.update(setNewPetType(e.target.value))}
                 style={{
-                  fontFamily: "'Montserrat', sans-serif",
-                  fontWeight: "900",
-                  fontStyle: "italic",
-                  fontSize: "3rem",
+                  fontFamily: "'Source Code Pro', monospace",
+                  fontWeight: "700",
+                  fontSize: "1.5rem",
                   border: "none",
                   paddingLeft: "115px"
                 }}
@@ -256,10 +260,9 @@ const Office = props => {
                 value={props.newPetName}
                 onChange={e => props.update(setNewPetName(e.target.value))}
                 style={{
-                  fontFamily: "'Montserrat', sans-serif",
-                  fontWeight: "900",
-                  fontStyle: "italic",
-                  fontSize: "3rem",
+                  fontFamily: "'Source Code Pro', monospace",
+                  fontWeight: "700",
+                  fontSize: "1.5rem",
                   border: "none",
                   paddingLeft: "230px"
                 }}

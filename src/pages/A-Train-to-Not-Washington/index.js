@@ -7,6 +7,7 @@ import CustomContainer from "../../components/CustomContainer";
 import InProgress from "../../components/InProgress";
 import MainText from "../../components/MainText";
 import UserQuote from "../../components/UserQuote";
+import Waves from "../../components/Waves";
 
 const Train = props => {
   return (
@@ -24,7 +25,7 @@ const Train = props => {
       </CustomContainer>
 
       <CustomContainer>
-        <InProgress>Wavvvvesss video / voice</InProgress>
+        <Waves />
       </CustomContainer>
 
       <CustomContainer>
@@ -125,7 +126,7 @@ const Train = props => {
       </CustomContainer>
 
       <CustomContainer>
-        <Link to="/03-The-Council">Next</Link>
+        <Link to="/The-Council">Next</Link>
       </CustomContainer>
     </div>
   );

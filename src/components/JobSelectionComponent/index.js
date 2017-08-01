@@ -20,10 +20,8 @@ const JobSelectionComponent = props =>
         <Label
           key={jobItem.id}
           style={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontWeight: "900",
-            fontStyle: "italic",
-            fontSize: "3rem"
+            fontFamily: "'Source Code Pro', monospace",
+            fontWeight: "700"
           }}
         >
           <Radio
