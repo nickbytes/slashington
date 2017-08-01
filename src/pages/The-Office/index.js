@@ -348,7 +348,6 @@ const Office = props => {
 
       {props.voicemailOver &&
         <CustomContainer>
-          <MainText>You get back to work.</MainText>
           <MainText>
             What did he mean by 'strange gift'...? You think back to Sam's last
             birthday...
