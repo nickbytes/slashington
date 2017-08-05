@@ -8,7 +8,6 @@ export const jobFirst = [
   "Autonomous",
   "B2B",
   "B2C",
-  "Badass",
   "Best Practice",
   "Chief",
   "Civilian",
@@ -327,7 +326,6 @@ export const jobPosition = [
   "Attourney",
   "Authority",
   "Broker",
-  "Chairman",
   "Chairperson",
   "Coach",
   "Collaborateur",
@@ -361,7 +359,6 @@ export const jobPosition = [
   "Lobbyist",
   "Manager",
   "Manufacturer",
-  "Man of Mystery",
   "Marshall",
   "Mentor",
   "Modeler",
@@ -388,7 +385,7 @@ export const jobPosition = [
   "Tutor",
   "Vice",
   "Visionary",
-  "Woman of Mystery"
+  "Human"
 ];
 
 export const companyName = [
