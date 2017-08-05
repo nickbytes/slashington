@@ -123,7 +123,7 @@ const Office = props => {
                   fontFamily: "'Source Code Pro', monospace",
                   fontWeight: "700",
                   width: "300px",
-                  fontSize: "3rem",
+                  fontSize: "20px",
                   marginRight: "35px"
                 }}
               />
@@ -152,6 +152,7 @@ const Office = props => {
               style={{
                 fontFamily: "inherit",
                 fontSize: "inherit",
+                fontWeight: "700",
                 lineHeight: "inherit",
                 border: "0",
                 background: "none",
@@ -191,7 +192,7 @@ const Office = props => {
 
           <CustomContainer>
             <UserQuote pl={"300px"}>
-              THE ANSWERS TO YOUR SECURITY QUESTION.
+              "THE ANSWERS TO YOUR SECURITY QUESTION."
             </UserQuote>
           </CustomContainer>
 
@@ -325,7 +326,19 @@ const Office = props => {
           <CustomContainer>
             <MainText>
               When you get back to your desk, you see that you have a{" "}
-              <button>voicemail from your brother</button>.
+              <button
+                style={{
+                  fontFamily: "inherit",
+                  fontSize: "inherit",
+                  border: "0",
+                  borderBottom: "1px dotted",
+                  background: "none",
+                  outline: "0",
+                  cursor: "pointer"
+                }}
+              >
+                voicemail from your brother
+              </button>.
             </MainText>
             <MainText bg={"#e3e3e3"}>
               "Hey, you must be busy working. Anyway, we're looking forward to

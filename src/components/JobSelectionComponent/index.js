@@ -21,7 +21,8 @@ const JobSelectionComponent = props =>
           key={jobItem.id}
           style={{
             fontFamily: "'Source Code Pro', monospace",
-            fontWeight: "700"
+            fontWeight: "700",
+            fontSize: "20px"
           }}
         >
           <Radio
@@ -39,10 +40,28 @@ const JobSelectionComponent = props =>
         e.preventDefault();
         props.update(newJobs);
       }}
+      style={{
+        fontFamily: "'Source Code Pro', monospace",
+        fontSize: "17px",
+        marginRight: "10px",
+        marginTop: "10px",
+        background: "none",
+        border: "1px solid rgb(27, 29, 35)"
+      }}
     >
       Regenerate Jobs
     </button>
-    <button>Save</button>
+    <button
+      style={{
+        fontFamily: "'Source Code Pro', monospace",
+        fontSize: "17px",
+        marginTop: "10px",
+        background: "none",
+        border: "1px solid rgb(27, 29, 35)"
+      }}
+    >
+      Save
+    </button>
   </form>;
 
 const map = state => ({

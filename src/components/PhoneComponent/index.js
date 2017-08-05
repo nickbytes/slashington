@@ -1,6 +1,33 @@
 import React, { Component } from "react";
 
+import Dots from "./Dots";
+
 class PhoneComponent extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      randomValues: []
+    };
+
+    this.updateRandomValues = this.updateRandomValues.bind(this);
+  }
+  componentDidMount() {
+    setInterval(() => {
+      this.updateRandomValues();
+    }, 2000);
+  }
+
+  updateRandomValues() {
+    const randoms = Array.from(
+      { length: 13 },
+      () => Math.floor(Math.random() * 100) + "%"
+    );
+
+    this.setState({
+      randomValues: randoms
+    });
+  }
   render() {
     return (
       <div
@@ -86,122 +113,83 @@ class PhoneComponent extends Component {
                     height: "100px"
                   }}
                 >
-                  <span
-                    style={{
-                      top: "3%",
-                      left: "50%",
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "rgb(215, 218, 224)"
-                    }}
+                  <Dots
+                    top={"3%"}
+                    left={"50%"}
+                    animationTop={this.state.randomValues[1]}
+                    animationLeft={this.state.randomValues[2]}
                   />
-                  <span
-                    style={{
-                      bottom: "3%",
-                      left: "50%",
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "rgb(215, 218, 224)"
-                    }}
+                  <Dots
+                    top={"97%"}
+                    left={"50%"}
+                    animationTop={this.state.randomValues[3]}
+                    animationLeft={this.state.randomValues[4]}
                   />
-                  <span
-                    style={{
-                      top: "50%",
-                      left: "50%",
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "rgb(215, 218, 224)"
-                    }}
+                  <Dots
+                    top={"50%"}
+                    left={"50%"}
+                    animationTop={this.state.randomValues[5]}
+                    animationLeft={this.state.randomValues[6]}
                   />
-                  <span
-                    style={{
-                      top: "50%",
-                      left: "3%",
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "rgb(215, 218, 224)"
-                    }}
+                  <Dots
+                    top={"50%"}
+                    left={"3%"}
+                    animationTop={this.state.randomValues[7]}
+                    animationLeft={this.state.randomValues[8]}
                   />
-                  <span
-                    style={{
-                      top: "50%",
-                      right: "3%",
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "rgb(215, 218, 224)"
-                    }}
+                  <Dots
+                    top={"50%"}
+                    left={"97%"}
+                    animationTop={this.state.randomValues[9]}
+                    animationLeft={this.state.randomValues[10]}
                   />
-                  <span
-                    style={{
-                      top: "74%",
-                      right: "7%",
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "rgb(215, 218, 224)"
-                    }}
+                  <Dots
+                    top={"74%"}
+                    left={"93%"}
+                    animationTop={this.state.randomValues[12]}
+                    animationLeft={this.state.randomValues[11]}
                   />
-                  <span
-                    style={{
-                      top: "74%",
-                      left: "7%",
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "rgb(215, 218, 224)"
-                    }}
+                  <Dots
+                    top={"74%"}
+                    left={"7%"}
+                    animationTop={this.state.randomValues[3]}
+                    animationLeft={this.state.randomValues[2]}
                   />
-                  <span
-                    style={{
-                      top: "11%",
-                      left: "74%",
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "rgb(215, 218, 224)"
-                    }}
+                  <Dots
+                    top={"11%"}
+                    left={"74%"}
+                    animationTop={this.state.randomValues[1]}
+                    animationLeft={this.state.randomValues[4]}
                   />
-                  <span
-                    style={{
-                      top: "11%",
-                      right: "74%",
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "rgb(215, 218, 224)"
-                    }}
+                  <Dots
+                    top={"11%"}
+                    left={"28%"}
+                    animationTop={this.state.randomValues[5]}
+                    animationLeft={this.state.randomValues[6]}
                   />
-                  <span
-                    style={{
-                      top: "28%",
-                      left: "7%",
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "rgb(215, 218, 224)"
-                    }}
+                  <Dots
+                    top={"28%"}
+                    left={"7%"}
+                    animationTop={this.state.randomValues[8]}
+                    animationLeft={this.state.randomValues[10]}
                   />
-                  <span
-                    style={{
-                      top: "90%",
-                      right: "73%",
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "rgb(215, 218, 224)"
-                    }}
+                  <Dots
+                    top={"90%"}
+                    left={"28%"}
+                    animationTop={this.state.randomValues[7]}
+                    animationLeft={this.state.randomValues[9]}
                   />
-                  <span
-                    style={{
-                      top: "90%",
-                      left: "73%",
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "rgb(215, 218, 224)"
-                    }}
+                  <Dots
+                    top={"90%"}
+                    left={"73%"}
+                    animationTop={this.state.randomValues[11]}
+                    animationLeft={this.state.randomValues[1]}
                   />
-                  <span
-                    style={{
-                      top: "28%",
-                      right: "7%",
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "rgb(215, 218, 224)"
-                    }}
+                  <Dots
+                    top={"28%"}
+                    left={"93%"}
+                    animationTop={this.state.randomValues[0]}
+                    animationLeft={this.state.randomValues[4]}
                   />
                 </div>
                 <h1

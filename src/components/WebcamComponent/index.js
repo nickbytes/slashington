@@ -39,6 +39,7 @@ class WebcamComponent extends Component {
                   style={{
                     fontFamily: "inherit",
                     fontSize: "inherit",
+                    fontWeight: "700",
                     lineHeight: "inherit",
                     border: "0",
                     background: "none",
