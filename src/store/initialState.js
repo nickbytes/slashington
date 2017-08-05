@@ -21,7 +21,7 @@ const initialState = {
   securityQuestionsAnswered: false,
   newBadgeReceived: false,
   workspaceVisible: false,
-  phoneVisible: true,
+  phoneVisible: false,
   coffeeClicked: false,
   keyboardBroken: false,
   reactAngrily: false,

@@ -92,3 +92,11 @@ export const newJobs = state => ({
 export const showWaves = state => ({
   wavesVisible: true
 });
+
+export const showPhone = state => ({
+  phoneVisible: true
+});
+
+export const hidePhone = state => ({
+  phoneVisible: false
+});

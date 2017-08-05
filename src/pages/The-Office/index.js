@@ -13,6 +13,7 @@ import {
   setNewPetOwner,
   setNewPetType,
   setNewPlayerName,
+  showPhone,
   showPlayerNameField,
   showPlayerOccupationField,
   startBurning,
@@ -335,22 +336,15 @@ const Office = props => {
                   outline: "0",
                   cursor: "pointer"
                 }}
+                onClick={e => props.update(showPhone)}
               >
                 voicemail from your brother
               </button>.
             </MainText>
-            <MainText bg={"#e3e3e3"}>
-              "Hey, you must be busy working. Anyway, we're looking forward to
-              having you down this weekend. And listen, don't worry about a
-              gift, Emma is just excited to have you down here this weekend. We
-              all are. Hope work hasn't been stressing you out too much – I know
-              how you bury yourself away from time to time. Okay well, I'll pick
-              you up at the train station at normal time. Talk soon. "
-            </MainText>
           </CustomContainer>
         </div>}
 
-      {props.phoneVisible && <PhoneComponent />}
+      {props.phoneVisible && <PhoneComponent {...props} />}
 
       {props.voicemailOver &&
         <CustomContainer>
