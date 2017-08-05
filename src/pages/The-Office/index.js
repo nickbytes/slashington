@@ -338,13 +338,7 @@ const Office = props => {
           </CustomContainer>
         </div>}
 
-      {props.phoneVisible &&
-        <PhoneComponent>
-          <div>
-            <h1>Hello</h1>
-            <Icon name="clock" />
-          </div>
-        </PhoneComponent>}
+      {props.phoneVisible && <PhoneComponent />}
 
       {props.voicemailOver &&
         <CustomContainer>

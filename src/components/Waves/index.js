@@ -11,15 +11,18 @@ class Waves extends Component {
           loop={true}
           controls={false}
         />
-        <div>
-          <ReactPlayer
-            url="https://www.youtube.com/watch?v=P1TX-xlVVWA"
-            playing
-            loop={true}
-            controls={false}
-            volume={0}
-          />
-        </div>
+
+        <ReactPlayer
+          url="https://www.youtube.com/watch?v=P1TX-xlVVWA"
+          playing
+          loop={true}
+          controls={false}
+          volume={0}
+          style={{
+            marginTop: "-85px",
+            paddingLeft: "25%"
+          }}
+        />
       </div>
     );
   }

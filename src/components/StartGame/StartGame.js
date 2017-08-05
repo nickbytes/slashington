@@ -17,6 +17,7 @@ class StartGame extends Component {
           </MainText>
         </CustomContainer>
         <CustomContainer>
+          <InProgress>Devtool to help navigate</InProgress>
           <nav>
             <li>
               <Link to={`/The-Office`}>The Office</Link>

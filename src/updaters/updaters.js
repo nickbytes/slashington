@@ -88,3 +88,7 @@ export const newJobs = state => ({
     }
   ]
 });
+
+export const showWaves = state => ({
+  wavesVisible: true
+});

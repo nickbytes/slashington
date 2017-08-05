@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
+import { showWaves } from "../../updaters/updaters";
 import ChapterTitle from "../../components/ChapterTitle";
 import CustomContainer from "../../components/CustomContainer";
-import InProgress from "../../components/InProgress";
 import MainText from "../../components/MainText";
+import TrainAnimation from "../../components/TrainAnimation";
 import UserQuote from "../../components/UserQuote";
 import Waves from "../../components/Waves";
 
@@ -21,12 +22,31 @@ const Train = props => {
           You find a seat near the middle of the train and unwind. You've made
           it. The end of a long week.
         </MainText>
-        <MainText>Relief washes over you like a series gentle waves.</MainText>
+        <MainText>
+          Relief washes over you like a series gentle{" "}
+          <button
+            style={{
+              fontFamily: "inherit",
+              fontSize: "inherit",
+              fontWeight: "inherit",
+              lineHeight: "inherit",
+              border: "0",
+              background: "none",
+              cursor: "pointer",
+              borderBottom: "4px dotted",
+              outline: "0"
+            }}
+            onClick={e => props.update(showWaves)}
+          >
+            waves.
+          </button>
+        </MainText>
       </CustomContainer>
 
-      <CustomContainer>
-        <Waves />
-      </CustomContainer>
+      {props.wavesVisible &&
+        <CustomContainer>
+          <Waves />
+        </CustomContainer>}
 
       <CustomContainer>
         <MainText>
@@ -41,7 +61,7 @@ const Train = props => {
       </CustomContainer>
 
       <CustomContainer>
-        <InProgress>Train animation</InProgress>
+        <TrainAnimation />
       </CustomContainer>
 
       <CustomContainer>
@@ -134,7 +154,8 @@ const Train = props => {
 
 const map = state => ({
   petNameInputSaved: state.petNameInputSaved,
-  petTypeInputSaved: state.petTypeInputSaved
+  petTypeInputSaved: state.petTypeInputSaved,
+  wavesVisible: state.wavesVisible
 });
 
 export default connect(map)(Train);

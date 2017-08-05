@@ -21,7 +21,7 @@ const initialState = {
   securityQuestionsAnswered: false,
   newBadgeReceived: false,
   workspaceVisible: false,
-  phoneVisible: false,
+  phoneVisible: true,
   coffeeClicked: false,
   keyboardBroken: false,
   reactAngrily: false,
@@ -34,6 +34,7 @@ const initialState = {
     { id: 2, title: createTitle() },
     { id: 3, title: createTitle() }
   ],
+  wavesVisible: false,
   newItem: "",
   count: 0
 };

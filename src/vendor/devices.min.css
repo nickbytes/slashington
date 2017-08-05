@@ -327,15 +327,15 @@
   left: -2px !important;
 }
 .cd-blueprint[class^='cd-iphone-6'] .cd-sleep {
-  background: #000 !important;
+  background: #000;
   width: 1px !important;
-  border: none !important;
+  border: none;
   right: -2px;
 }
 .cd-blueprint[class^='cd-iphone-5'] .cd-sleep {
-  background: #000 !important;
+  background: #000;
   height: 1px !important;
-  border: none !important;
+  border: none;
   top: -2px;
 }
 .cd-ipad,
@@ -685,18 +685,18 @@ body {
 [class^='cd-'].cd-blueprint *,
 [class^='cd-'].cd-blueprint *::after,
 [class^='cd-'].cd-blueprint *::before {
-  background: white !important;
-  border: 1px solid #000 !important;
+  background: white;
+  border: 1px solid #000;
 }
 .cd-blueprint .cd-sound,
 .cd-blueprint .cd-sound::before,
 .cd-blueprint .cd-sound::after {
-  background: #000 !important;
+  background: #000;
   width: 1px !important;
-  border: none !important;
+  border: none;
 }
 .cd-blueprint .cd-screen * {
-  border: none !important;
+  border: none;
 }
 .cd-slideshow > *:nth-child(n + 2) {
   display: none;
