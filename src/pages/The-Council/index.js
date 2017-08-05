@@ -14,6 +14,10 @@ import UserQuote from "../../components/UserQuote";
 class TheCouncil extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      yea: ""
+    };
   }
   render() {
     return (

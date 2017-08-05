@@ -1,5 +1,4 @@
 import { Blockquote } from "rebass";
-import React from "react";
 import styled from "styled-components";
 
 const UserQuote = styled(Blockquote)`

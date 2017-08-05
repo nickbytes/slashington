@@ -1,10 +1,9 @@
 import "../../vendor/devices.min.css";
 
 import { Arrow } from "reline";
-import { Blockquote, Container, Input } from "rebass";
+import { Container, Input } from "rebass";
 import { Link } from "react-router-dom";
 import { connect } from "funcup";
-import Icon from "react-geomicons";
 import React from "react";
 
 import {
