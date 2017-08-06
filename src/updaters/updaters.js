@@ -98,5 +98,6 @@ export const showPhone = state => ({
 });
 
 export const hidePhone = state => ({
-  phoneVisible: false
+  phoneVisible: false,
+  voicemailDone: true
 });
