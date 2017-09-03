@@ -89,6 +89,8 @@ const Workspace = props =>
         </div>
       </div>
 
+      {props.children}
+
       <div
         className="desktop-notif"
         style={{

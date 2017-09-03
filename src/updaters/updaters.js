@@ -101,3 +101,11 @@ export const hidePhone = state => ({
   phoneVisible: false,
   voicemailDone: true
 });
+
+export const restartWork = state => ({
+  restartingWork: true
+});
+
+export const scottArrives = state => ({
+  scottAtDesk: true
+});

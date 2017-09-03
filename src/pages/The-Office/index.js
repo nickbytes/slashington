@@ -9,6 +9,7 @@ import React from "react";
 import {
   addPlayerName,
   addSecurityAnswers,
+  restartWork,
   setNewPetName,
   setNewPetOwner,
   setNewPetType,
@@ -19,6 +20,7 @@ import {
   startBurning,
   turnOnComputer
 } from "../../updaters/updaters";
+import BrokenEmail from "../../components/BrokenEmail";
 import CustomContainer from "../../components/CustomContainer";
 import DreamText from "../../components/DreamText";
 import JobSelectionComponent from "../../components/JobSelectionComponent";
@@ -346,7 +348,7 @@ const Office = props => {
 
       {props.phoneVisible && <PhoneComponent {...props} />}
 
-      {props.voicemailOver &&
+      {props.voicemailDone &&
         <CustomContainer>
           <MainText>
             What did he mean by 'strange gift'...? You think back to Sam's last
@@ -366,14 +368,31 @@ const Office = props => {
           <MainText>
             Maybe Alex <i>is</i> right. All this work is pushing you to the
             edge. This weekend, you won't take your laptop, you wont look at the
-            feeds, you'll disconnect. You've just got to get through the next
-            few hours and deadlines.
+            feeds, you'll disconnect. You've just got to{" "}
+            <button
+              style={{
+                fontFamily: "inherit",
+                fontSize: "inherit",
+                border: "0",
+                borderBottom: "1px dotted",
+                background: "none",
+                outline: "0",
+                cursor: "pointer"
+              }}
+              onClick={e => props.update(restartWork)}
+            >
+              get through the next few hours and deadlines.
+            </button>
           </MainText>
         </CustomContainer>}
 
-      {props.restartingWork && <Workspace broken={true} />}
+      {/* gon use child components*/}
+      {props.restartingWork &&
+        <Workspace>
+          <BrokenEmail {...props} />
+        </Workspace>}
 
-      {props.brokenKeyboard &&
+      {props.scottAtDesk &&
         <div>
           <CustomContainer>
             <MainText>
@@ -436,7 +455,10 @@ const map = state => ({
   newBadgeReceived: state.newBadgeReceived,
   workspaceVisible: state.workspaceVisible,
   securityQuestionsAnswered: state.securityQuestionsAnswered,
-  coffeeClicked: state.coffeeClicked
+  coffeeClicked: state.coffeeClicked,
+  voicemailDone: state.voicemailDone,
+  restartingWork: state.restartingWork,
+  scottAtDesk: state.scottAtDesk
 });
 
 export default connect(map)(Office);

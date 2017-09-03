@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { doSomething, hidePhone } from "../../updaters/updaters";
+import { hidePhone } from "../../updaters/updaters";
 import Dots from "./Dots";
 
 {
@@ -58,7 +58,8 @@ class PhoneComponent extends Component {
             <div className="cd-ear" />
             <div
               className="cd-home"
-              onClick={e => this.props.update(hidePhone, doSomething)}
+              onClick={e => this.props.update(hidePhone)}
+              style={{ cursor: "pointer" }}
             />
             <div
               className="cd-screen cd-smart-loader"

@@ -23,6 +23,8 @@ const initialState = {
   workspaceVisible: false,
   phoneVisible: true,
   voicemailDone: false,
+  restartingWork: false,
+  scottAtDesk: false,
   coffeeClicked: false,
   keyboardBroken: false,
   reactAngrily: false,
