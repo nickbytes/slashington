@@ -37,7 +37,26 @@ const initialState = {
     { id: 2, title: createTitle() },
     { id: 3, title: createTitle() }
   ],
+  // Train to Not Washington
   wavesVisible: false,
+  trainAnimationVisible: false,
+  awakenAfterTrainRide: false,
+  afterLookOutWindow: false,
+  afterYouMustBeDreaming: false,
+  afterWalkingOffTrain: false,
+  afterSayingPetName: false,
+  // The Council
+  afterClickBlur: false,
+  afterWhyTheHell: false,
+  afterClickGoInside: false,
+  easyNodClicked: false,
+  reactAngrilyClicked: false,
+  // Slashington
+
+  // Birthday
+
+  // Good Messenger
+
   newItem: "",
   count: 0
 };
