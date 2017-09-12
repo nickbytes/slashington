@@ -16,7 +16,7 @@ class StartGame extends Component {
             The game has an audio component, with transcripts provided.
           </MainText>
         </CustomContainer>
-        <CustomContainer>
+        {/* <CustomContainer>
           <InProgress>Devtool to help navigate</InProgress>
           <nav>
             <li>
@@ -45,7 +45,7 @@ class StartGame extends Component {
               <Link to={`/credits`}>credits</Link>
             </li>
           </nav>
-        </CustomContainer>
+        </CustomContainer> */}
         <CustomContainer>
           <Link to={`/The-Office`}>Begin</Link>
         </CustomContainer>
