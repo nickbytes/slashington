@@ -47,7 +47,7 @@ class StartGame extends Component {
           </nav>
         </CustomContainer>
         <CustomContainer>
-          <Link to={`/01.5-Office`}>Begin</Link>
+          <Link to={`/The-Office`}>Begin</Link>
         </CustomContainer>
       </div>
     );
