@@ -80,7 +80,7 @@ const Office = props => {
         </MainText>
       </CustomContainer>
 
-      {props.startBurning &&
+      {props.startBurning && (
         <CustomContainer>
           <UserQuote pl={"300px"}>
             "Name{" "}
@@ -101,11 +101,12 @@ const Office = props => {
               please
             </button>."
           </UserQuote>
-        </CustomContainer>}
+        </CustomContainer>
+      )}
 
-      {props.playerNameVisible &&
+      {props.playerNameVisible && (
         <CustomContainer>
-          {!props.playerNameSaved &&
+          {!props.playerNameSaved && (
             <form
               onSubmit={e => {
                 e.preventDefault();
@@ -138,15 +139,16 @@ const Office = props => {
                 }}
                 children={<Arrow right />}
               />
-            </form>}
+            </form>
+          )}
 
-          {props.playerNameSaved &&
-            <UserQuote>
-              "{props.playerNameSaved}."
-            </UserQuote>}
-        </CustomContainer>}
+          {props.playerNameSaved && (
+            <UserQuote>"{props.playerNameSaved}."</UserQuote>
+          )}
+        </CustomContainer>
+      )}
 
-      {props.playerNameSaved &&
+      {props.playerNameSaved && (
         <CustomContainer>
           <UserQuote pl={"300px"}>
             "Position{" "}
@@ -167,19 +169,21 @@ const Office = props => {
               please
             </button>."
           </UserQuote>
-        </CustomContainer>}
+        </CustomContainer>
+      )}
 
-      {props.playerOccupationVisible &&
+      {props.playerOccupationVisible && (
         <CustomContainer>
-          {!props.playerOccupationFinished &&
-            <JobSelectionComponent {...props} />}
-          {props.playerOccupationFinished &&
-            <UserQuote>
-              "{props.playerOccupationSaved}."
-            </UserQuote>}
-        </CustomContainer>}
+          {!props.playerOccupationFinished && (
+            <JobSelectionComponent {...props} />
+          )}
+          {props.playerOccupationFinished && (
+            <UserQuote>"{props.playerOccupationSaved}."</UserQuote>
+          )}
+        </CustomContainer>
+      )}
 
-      {props.playerOccupationFinished &&
+      {props.playerOccupationFinished && (
         <div>
           <CustomContainer>
             <UserQuote pl={"300px"}>...</UserQuote>
@@ -278,9 +282,10 @@ const Office = props => {
               </div>
             </form>
           </CustomContainer>
-        </div>}
+        </div>
+      )}
 
-      {props.securityQuestionsAnswered &&
+      {props.securityQuestionsAnswered && (
         <div>
           <CustomContainer>
             <MainText>More click-clacking on the keyboard.</MainText>
@@ -293,9 +298,10 @@ const Office = props => {
           <CustomContainer>
             <WebcamComponent />
           </CustomContainer>
-        </div>}
+        </div>
+      )}
 
-      {props.newBadgeReceived &&
+      {props.newBadgeReceived && (
         <CustomContainer>
           <MainText>
             Once you arrive at your desk, you turn on your{" "}
@@ -314,11 +320,12 @@ const Office = props => {
               computer
             </button>.
           </MainText>
-        </CustomContainer>}
+        </CustomContainer>
+      )}
 
       {props.workspaceVisible && <Workspace />}
 
-      {props.coffeeClicked &&
+      {props.coffeeClicked && (
         <div>
           <CustomContainer>
             <MainText>
@@ -344,11 +351,12 @@ const Office = props => {
               </button>.
             </MainText>
           </CustomContainer>
-        </div>}
+        </div>
+      )}
 
       {props.phoneVisible && <PhoneComponent {...props} />}
 
-      {props.voicemailDone &&
+      {props.voicemailDone && (
         <CustomContainer>
           <MainText>
             What did he mean by 'strange gift'...? You think back to Sam's last
@@ -384,34 +392,39 @@ const Office = props => {
               get through the next few hours and deadlines.
             </button>
           </MainText>
-        </CustomContainer>}
+        </CustomContainer>
+      )}
 
-      {/* gon use child components*/}
-      {props.restartingWork &&
+      {/* gon use child components  props.restartingWork   */}
+      {true && (
         <Workspace>
           <BrokenEmail {...props} />
-        </Workspace>}
+        </Workspace>
+      )}
 
-      {props.scottAtDesk &&
+      {props.scottAtDesk && (
         <div>
           <CustomContainer>
             <MainText>
               Something is wrong with your keyboard. As a{" "}
-              {props.playerOccupation}, it's pretty essential for you to have
-              this type of special keyboard. While any version of this keyboard
-              will work, you've been using this one for years.
+              {props.playerOccupation || "PLAYER_OCCUPATION"}, it's pretty
+              essential for you to have this type of special keyboard. While any
+              version of this keyboard will work, you've been using this one for
+              years.
             </MainText>
           </CustomContainer>
           <CustomContainer>
-            <UserQuote>Keyboard issues?</UserQuote>
+            <UserQuote>"Keyboard issues?"</UserQuote>
+          </CustomContainer>
+          <CustomContainer>
             <MainText>
-              You look up and see {props.coworkerName}.
+              You look up and see {props.coworkerName || "SCOTT_PLAYER_TEST"}.
             </MainText>
           </CustomContainer>
           <CustomContainer>
             <UserQuote>
-              For some reason, every key is registering as only an t or z on the
-              screen.
+              "For some reason, every key is registering as only an n or b on
+              the screen."
             </UserQuote>
           </CustomContainer>
           <CustomContainer>
@@ -424,20 +437,21 @@ const Office = props => {
 
           <CustomContainer>
             <UserQuote>
-              I'm taking the Amtrak down there this weekend. It's my niece's
-              birthday. Where's the shop located?
+              I'm taking the Amtrak down there this weekend... It's my niece's
+              birthday...
             </UserQuote>
           </CustomContainer>
 
           <CustomContainer>
             <UserQuote>
-              Crazy coincidence. It's right off the Amtrak stop. You can't miss
+              Crazy coincidence! It's right off the Amtrak stop. You can't miss
               it, south east corner of the Mall. Open on weekends too, can
               probably pick it up on your way back.
             </UserQuote>
           </CustomContainer>
           <Link to="/A-Train-to-Not-Washington">Next</Link>
-        </div>}
+        </div>
+      )}
     </div>
   );
 };

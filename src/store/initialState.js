@@ -1,9 +1,6 @@
 import { createTitle } from "../components/JobSelectionComponent/jobGenerator";
 
 const initialState = {
-  breakfastChoice: "Waffles",
-  breakfastVisible: true,
-  musicChoice: "",
   startBurning: false,
   playerNameVisible: false,
   playerNameInput: "",
@@ -21,7 +18,7 @@ const initialState = {
   securityQuestionsAnswered: false,
   newBadgeReceived: false,
   workspaceVisible: false,
-  phoneVisible: true,
+  phoneVisible: false,
   voicemailDone: false,
   restartingWork: false,
   scottAtDesk: false,
@@ -31,7 +28,6 @@ const initialState = {
   easyNod: false,
   explanationHeard: true,
   beverageSelected: false,
-  // all below were default, not game related
   jobItems: [
     { id: 1, title: createTitle() },
     { id: 2, title: createTitle() },
@@ -56,9 +52,8 @@ const initialState = {
   // Birthday
 
   // Good Messenger
-
-  newItem: "",
-  count: 0
+  // debug
+  devtool: true
 };
 
 // TODO add bindings for checking localstorage
