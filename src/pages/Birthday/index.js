@@ -158,6 +158,7 @@ const Birthday = props => (
         <MainText>
           She guides you over towards the chair at her computer.
         </MainText>
+        <InProgress>Memory wipe ending :scream: </InProgress>
       </CustomContainer>
     )}
 
@@ -204,6 +205,12 @@ const Birthday = props => (
           How does she know? She reaches for you bag and removes it from your
           clutches.
         </MainText>
+        <InProgress>Choice again to resist or give in.</InProgress>
+        <InProgress>Resist: uses cords to subdue you with magic</InProgress>
+        <InProgress>
+          Give in: easy, offer help, she appreciates, memory wipe still
+        </InProgress>
+        <InProgress>Memory wipe ending :scream: </InProgress>
       </CustomContainer>
     )}
 
