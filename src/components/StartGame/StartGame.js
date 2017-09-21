@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import React, { Component } from "react";
 
 import CustomContainer from "../CustomContainer";
-import InProgress from "../InProgress";
 import MainText from "../MainText";
 
 class StartGame extends Component {

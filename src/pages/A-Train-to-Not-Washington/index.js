@@ -13,6 +13,7 @@ import MainText from "../../components/MainText";
 import TrainAnimation from "../../components/TrainAnimation";
 import UserQuote from "../../components/UserQuote";
 import Waves from "../../components/Waves";
+import buttonStyle from "../../utilities/buttonStyle";
 
 const Train = props => {
   return (
@@ -125,17 +126,7 @@ const Train = props => {
           <MainText>
             You must be dreaming. You are not in{" "}
             <button
-              style={{
-                fontFamily: "inherit",
-                fontSize: "inherit",
-                fontWeight: "inherit",
-                lineHeight: "inherit",
-                border: "0",
-                background: "none",
-                cursor: "pointer",
-                borderBottom: "4px dotted",
-                outline: "0"
-              }}
+              style={buttonStyle}
               onClick={e => props.update(thinkMustBeDream)}
             >
               Washington, DC

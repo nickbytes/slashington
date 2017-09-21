@@ -1,16 +1,13 @@
 import React, { Component } from "react";
-
 import { hidePhone } from "../../updaters/updaters";
 import Dots from "./Dots";
 
-{
-  /*               "Hey, you must be busy working. Anyway, we're looking forward to
-              having you down this weekend. And listen, don't worry about a
-              gift, Emma is just excited to have you down here this weekend. We
-              all are. Hope work hasn't been stressing you out too much – I know
-              how you bury yourself away from time to time. Okay well, I'll pick
-              you up at the train station at normal time. Talk soon. "*/
-}
+//"Hey, you must be busy working. Anyway, we're looking forward to
+//  having you down this weekend. And listen, don't worry about a
+//  gift, Emma is just excited to have you down here this weekend. We
+//  all are. Hope work hasn't been stressing you out too much – I know
+//  how you bury yourself away from time to time. Okay well, I'll pick
+//  you up at the train station at normal time. Talk soon. "
 
 class PhoneComponent extends Component {
   constructor(props) {

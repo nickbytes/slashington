@@ -37,7 +37,8 @@ class LeavingSlashington extends Component {
           <MainText>
             You look back towards Slashington, though it is now disappeared in
             the distance. The sun is beginning to peak from the horizon to your
-            left. As you enter the tunnel, darkness engulfs your car.
+            left. As you enter the tunnel,{" "}
+            <button>darkness engulfs your car</button>.
           </MainText>
         </CustomContainer>
 

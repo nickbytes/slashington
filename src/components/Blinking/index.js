@@ -1,6 +1,4 @@
-import React from "react";
-import styled from "styled-components";
-import { keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const blinkAnimation = keyframes`
 	50% { opacity: 0; }
