@@ -47,11 +47,15 @@ const initialState = {
   afterClickGoInside: false,
   easyNodClicked: false,
   reactAngrilyClicked: false,
+  playerCompanySaved: "Bauzort",
   // Slashington
 
   // Birthday
 
   // Good Messenger
+  // global
+  nieceName: "Emma",
+  inLawName: "Jill",
   // debug
   devtool: true
 };

@@ -10,29 +10,13 @@ import InProgress from "../../components/InProgress";
 import ItalicMind from "../../components/ItalicMind";
 import MainText from "../../components/MainText";
 import UserQuote from "../../components/UserQuote";
+import buttonStyle from "../../utilities/buttonStyle";
 
-const TheCouncil = props =>
+const TheCouncil = props => (
   <div>
     <CustomContainer>
       <ChapterTitle>The Council</ChapterTitle>
     </CustomContainer>
-
-    <button
-      style={{
-        fontFamily: "inherit",
-        fontSize: "inherit",
-        fontWeight: "inherit",
-        lineHeight: "inherit",
-        border: "0",
-        background: "none",
-        cursor: "pointer",
-        borderBottom: "4px dotted",
-        outline: "0"
-      }}
-      onClick={e => props.update()}
-    >
-      waves.
-    </button>
 
     <CustomContainer>
       <MainText>
@@ -64,9 +48,7 @@ const TheCouncil = props =>
     </CustomContainer>
 
     <CustomContainer>
-      <ItalicMind>
-        {props.petNameInputSaved} is talking
-      </ItalicMind>
+      <ItalicMind>{props.petNameInputSaved} is talking</ItalicMind>
       <ItalicMind>You are in some other place</ItalicMind>
       <ItalicMind>is this a dream</ItalicMind>
       <ItalicMind>why the hell am I still holding this keyboard</ItalicMind>
@@ -123,7 +105,7 @@ const TheCouncil = props =>
     <CustomContainer>
       <UserQuote pl={"300px"}>
         "Ahhhhh, {props.playerNameSaved}, {props.playerOccupationSaved},
-        Earthling of the {this.props.playerCompanySaved} tribe."
+        Earthling of the {props.playerCompanySaved} tribe."
       </UserQuote>
     </CustomContainer>
 
@@ -144,48 +126,32 @@ const TheCouncil = props =>
     <CustomContainer>
       <MainText>
         <ul>
-          {!props.easyNod &&
+          {!props.easyNod && (
             <li>
               <button
-                style={{
-                  fontFamily: "inherit",
-                  fontSize: "inherit",
-                  lineHeight: "inherit",
-                  border: "0",
-                  background: "none",
-                  cursor: "pointer",
-                  borderBottom: "4px dotted",
-                  outline: "0"
-                }}
+                style={buttonStyle}
                 onClick={e => this.props.update(reactAngrily)}
               >
                 React angrily
               </button>
-            </li>}
+            </li>
+          )}
 
-          {!props.reactAngrily &&
+          {!props.reactAngrily && (
             <li>
               <button
-                style={{
-                  fontFamily: "inherit",
-                  fontSize: "inherit",
-                  lineHeight: "inherit",
-                  border: "0",
-                  background: "none",
-                  cursor: "pointer",
-                  borderBottom: "4px dotted",
-                  outline: "0"
-                }}
+                style={buttonStyle}
                 onClick={e => this.props.update(easyNod)}
               >
                 Nod
               </button>
-            </li>}
+            </li>
+          )}
         </ul>
       </MainText>
     </CustomContainer>
 
-    {props.reactAngrily &&
+    {props.reactAngrily && (
       <CustomContainer>
         <InProgress>React angrily</InProgress>
         <UserQuote>"What the fuck is going on?!"</UserQuote>
@@ -240,9 +206,7 @@ const TheCouncil = props =>
           <UserQuote pl={"150px"}>
             "Comrade Igglefort, may we hear some possible doubts in this plan-"
           </UserQuote>
-          <MainText>
-            another {props.petTypeInputSaved} says.
-          </MainText>
+          <MainText>another {props.petTypeInputSaved} says.</MainText>
           <UserQuote pl={"300px"}>
             "The Council has decided. There will be no further discussions. We
             are moving forward with the candidate."
@@ -254,9 +218,10 @@ const TheCouncil = props =>
             mutter something like "too exposed."
           </MainText>
         </CustomContainer>
-      </CustomContainer>}
+      </CustomContainer>
+    )}
 
-    {props.easyNod &&
+    {props.easyNod && (
       <CustomContainer>
         <AnimalQuote pl={"300px"}>
           "What else do you know about us?"
@@ -324,19 +289,23 @@ const TheCouncil = props =>
           more intensive training to prepare for her future. A very important
           future."
         </AnimalQuote>
-      </CustomContainer>}
+      </CustomContainer>
+    )}
 
-    {props.explanationHeard &&
+    {props.explanationHeard && (
       <CustomContainer>
         <Link to="/04-Leaving-Slashington">Next</Link>
-      </CustomContainer>}
-  </div>;
+      </CustomContainer>
+    )}
+  </div>
+);
 
 const map = state => ({
   petNameInputSaved: state.petNameInputSaved,
   petTypeInputSaved: state.petTypeInputSaved,
   playerNameSaved: state.playerNameSaved,
   playerOccupationSaved: state.playerOccupationSaved,
+  playerCompanySaved: state.playerCompanySaved,
   reactAngrily: state.reactAngrily,
   easyNod: state.easyNod,
   explanationHeard: state.explanationHeard
