@@ -7,6 +7,7 @@ import ChapterTitle from "../../components/ChapterTitle";
 import CustomContainer from "../../components/CustomContainer";
 import InProgress from "../../components/InProgress";
 import MainText from "../../components/MainText";
+import PosterAnimation from "../../components/PosterAnimation";
 import UserQuote from "../../components/UserQuote";
 
 const Birthday = props => (
@@ -88,8 +89,12 @@ const Birthday = props => (
       <MainText>
         You slide away from the parents and children, and make your way
         upstairs. At the end of the hallway, you see {props.nieceName}'s room,
-        mostly because of the _Wow_ posters on the door.
+        mostly because of the posters on the door.
       </MainText>
+    </CustomContainer>
+
+    <CustomContainer>
+      <PosterAnimation />
     </CustomContainer>
 
     <CustomContainer>
@@ -118,40 +123,56 @@ const Birthday = props => (
 
     <CustomContainer>
       <UserQuote>
-        "{"Comrade"} {props.playerNameSaved}, what are you doing in here?"
+        "{props.preferredTitle} {props.playerNameSaved}, what are you doing in
+        here?"
       </UserQuote>
     </CustomContainer>
 
     <CustomContainer>
-      <MainText>
-        - Fulfill your role - You set down the item.
-        _Iwasjustdroppingoffthegiftidon'tknowwhatisgoingon_ - it's okay Uncle
-        Nick. - it is? You attempt to hold back tears. but i dont understand
-        why. I don't understand what is happening She guides you over towards
-        the chair at her computer.
-      </MainText>
+      <ul>
+        <li>
+          <button>Fulfill your role - You set down the item</button>
+        </li>
+        <li>
+          <button>
+            - Take on the task yourself - hide the item behind your back.
+          </button>
+        </li>
+      </ul>
     </CustomContainer>
 
-    <CustomContainer>
-      <MainText>
-        - Take on the task yourself - You put the item back into your bag. -
-        Your pulse races as you look for an explanation of why you've snuck into
-        her room. - "Just wanted to see if you still had my old computer with
-        all those great games on it." - "Oh yea, it's over here." She points to
-        the section of computers and hardware in the corner, then leads you
-        over. "Still works like a charm, added a new graphics card a year ago" -
-        You smile as she walks you through the changes she's made to the
-        computer, and though you taught her some of the basics, her knowledge
-        greatly surpassing yours at this point, and you feel proud. - "that's
-        amazing, you've taken the shell of an entirely old PC and turned it into
-        a powerful computing machine." - "thanks, theres only one piece left." -
-        "whats that" you ask, as your palms becoming sweaty. - "oh _Uncle Nick_,
-        i thought we'd passed this..." - you're confused. what does she know.
-        how could she? - Dog passed info said you were taking it especially
-        rough this time - How does she know - She reaches for you bag and
-        removes it from your clutches.
-      </MainText>
-    </CustomContainer>
+    {props.roleFulfilled && (
+      <CustomContainer>
+        <MainText>
+          _Iwasjustdroppingoffthegiftidon'tknowwhatisgoingon_ - it's okay Uncle
+          Nick. - it is? You attempt to hold back tears. but i dont understand
+          why. I don't understand what is happening She guides you over towards
+          the chair at her computer.
+        </MainText>
+      </CustomContainer>
+    )}
+
+    {props.taskTaken && (
+      <CustomContainer>
+        <MainText>
+          - Your pulse races as you look for an explanation of why you've snuck
+          into her room. - "Just wanted to see if you still had my old computer
+          with all those great games on it." - "Oh yea, it's over here." She
+          points to the section of computers and hardware in the corner, then
+          leads you over. "Still works like a charm, added a new graphics card a
+          year ago" - You smile as she walks you through the changes she's made
+          to the computer, and though you taught her some of the basics, her
+          knowledge greatly surpassing yours at this point, and you feel proud.
+          - "that's amazing, you've taken the shell of an entirely old PC and
+          turned it into a powerful computing machine." - "thanks, theres only
+          one piece left." - "whats that" you ask, as your palms becoming
+          sweaty. - "oh _Uncle Nick_, i thought we'd passed this..." - you're
+          confused. what does she know. how could she? - Dog passed info said
+          you were taking it especially rough this time - How does she know -
+          She reaches for you bag and removes it from your clutches.
+        </MainText>
+      </CustomContainer>
+    )}
 
     {props.endReady && (
       <div>
@@ -165,7 +186,8 @@ const map = state => ({
   playerNameSaved: state.playerNameSaved,
   playerCompanySaved: state.playerCompanySaved,
   nieceName: state.nieceName,
-  inLawName: state.inLawName
+  inLawName: state.inLawName,
+  preferredTitle: state.preferredTitle
 });
 
 export default connect(map)(Birthday);

@@ -294,7 +294,7 @@ const TheCouncil = props => (
 
     {props.explanationHeard && (
       <CustomContainer>
-        <Link to="/04-Leaving-Slashington">Next</Link>
+        <Link to="/Slashington">Next</Link>
       </CustomContainer>
     )}
   </div>

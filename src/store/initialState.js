@@ -56,6 +56,7 @@ const initialState = {
   // global
   nieceName: "Emma",
   inLawName: "Jill",
+  preferredTitle: "",
   // debug
   devtool: true
 };
