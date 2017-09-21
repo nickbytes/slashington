@@ -36,7 +36,7 @@ const initialState = {
   // Train to Not Washington
   wavesVisible: false,
   trainAnimationVisible: false,
-  awakenAfterTrainRide: false,
+  awakenAfterTrainRide: true,
   afterLookOutWindow: false,
   afterYouMustBeDreaming: false,
   afterWalkingOffTrain: false,

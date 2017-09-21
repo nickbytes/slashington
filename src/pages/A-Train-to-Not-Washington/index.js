@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
-import { showTrainAnimation } from "../../updaters/NotWashingtonUpdaters";
+import {
+  lookOutWindowTrain,
+  showTrainAnimation,
+  thinkMustBeDream
+} from "../../updaters/NotWashingtonUpdaters";
 import { showWaves } from "../../updaters/updaters";
 import CustomContainer from "../../components/CustomContainer";
 import MainText from "../../components/MainText";
@@ -43,7 +47,7 @@ const Train = props => {
         </MainText>
       </CustomContainer>
 
-      {props.wavesVisible &&
+      {props.wavesVisible && (
         <div>
           <CustomContainer>
             <Waves />
@@ -75,14 +79,16 @@ const Train = props => {
               </button>
             </MainText>
           </CustomContainer>
-        </div>}
+        </div>
+      )}
 
-      {props.trainAnimationVisible &&
+      {props.trainAnimationVisible && (
         <CustomContainer>
           <TrainAnimation />
-        </CustomContainer>}
+        </CustomContainer>
+      )}
 
-      {props.awakenAfterTrainRide &&
+      {props.awakenAfterTrainRide && (
         <CustomContainer>
           <MainText>
             You groggily awake to the sunshine on your face. The sky is bright
@@ -92,17 +98,53 @@ const Train = props => {
             As you stir awake, you notice the train car is completely silent. A
             quick glance reveals that you are alone on the train.
           </MainText>
-          <MainText>You look out the window.</MainText>{" "}
-        </CustomContainer>}
+          <MainText>
+            You look out the{" "}
+            <button
+              style={{
+                fontFamily: "inherit",
+                fontSize: "inherit",
+                fontWeight: "inherit",
+                lineHeight: "inherit",
+                border: "0",
+                background: "none",
+                cursor: "pointer",
+                borderBottom: "4px dotted",
+                outline: "0"
+              }}
+              onClick={e => props.update(lookOutWindowTrain)}
+            >
+              window
+            </button>.
+          </MainText>
+        </CustomContainer>
+      )}
 
-      {props.afterLookOutWindow &&
+      {props.afterLookOutWindow && (
         <CustomContainer>
           <MainText>
-            You must be dreaming. You are not in Washington, DC.
+            You must be dreaming. You are not in{" "}
+            <button
+              style={{
+                fontFamily: "inherit",
+                fontSize: "inherit",
+                fontWeight: "inherit",
+                lineHeight: "inherit",
+                border: "0",
+                background: "none",
+                cursor: "pointer",
+                borderBottom: "4px dotted",
+                outline: "0"
+              }}
+              onClick={e => props.update(thinkMustBeDream)}
+            >
+              Washington, DC
+            </button>.
           </MainText>
-        </CustomContainer>}
+        </CustomContainer>
+      )}
 
-      {props.afterYouMustBeDreaming &&
+      {props.afterYouMustBeDreaming && (
         <CustomContainer>
           <MainText>
             The morning sun is above you, but the landscape is bizarre. The
@@ -125,9 +167,10 @@ const Train = props => {
             your fingers. This is real. Bag, suitcase, and keyboard in hand, you
             slowly stand, and begin moving toward the open door.
           </MainText>
-        </CustomContainer>}
+        </CustomContainer>
+      )}
 
-      {props.afterWalkingOffTrain &&
+      {props.afterWalkingOffTrain && (
         <CustomContainer>
           <MainText>
             You begin walking towards the small ticket booth. Astonished you see
@@ -144,13 +187,12 @@ const Train = props => {
             dressed in a old timey looking train conductors outfit, complete
             with bowtie..
           </MainText>
-          <UserQuote>
-            "{props.petNameInputSaved}?!?!?"
-          </UserQuote>
+          <UserQuote>"{props.petNameInputSaved}?!?!?"</UserQuote>
           <MainText>you stammer.</MainText>
-        </CustomContainer>}
+        </CustomContainer>
+      )}
 
-      {props.afterSayingPetName &&
+      {props.afterSayingPetName && (
         <div>
           <CustomContainer>
             <UserQuote>
@@ -172,7 +214,8 @@ const Train = props => {
           <CustomContainer>
             <Link to="/The-Council">Next</Link>
           </CustomContainer>
-        </div>}
+        </div>
+      )}
     </div>
   );
 };
