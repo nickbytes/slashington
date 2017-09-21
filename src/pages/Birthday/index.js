@@ -9,6 +9,7 @@ import InProgress from "../../components/InProgress";
 import MainText from "../../components/MainText";
 import PosterAnimation from "../../components/PosterAnimation";
 import UserQuote from "../../components/UserQuote";
+import buttonStyle from "../../utilities/buttonStyle";
 
 const Birthday = props => (
   <div>
@@ -131,10 +132,12 @@ const Birthday = props => (
     <CustomContainer>
       <ul>
         <li>
-          <button>Fulfill your role - You set down the item</button>
+          <button style={buttonStyle}>
+            Fulfill your role - You set down the item
+          </button>
         </li>
         <li>
-          <button>
+          <button style={buttonStyle}>
             - Take on the task yourself - hide the item behind your back.
           </button>
         </li>
@@ -155,21 +158,45 @@ const Birthday = props => (
     {props.taskTaken && (
       <CustomContainer>
         <MainText>
-          - Your pulse races as you look for an explanation of why you've snuck
-          into her room. - "Just wanted to see if you still had my old computer
-          with all those great games on it." - "Oh yea, it's over here." She
-          points to the section of computers and hardware in the corner, then
-          leads you over. "Still works like a charm, added a new graphics card a
-          year ago" - You smile as she walks you through the changes she's made
-          to the computer, and though you taught her some of the basics, her
-          knowledge greatly surpassing yours at this point, and you feel proud.
-          - "that's amazing, you've taken the shell of an entirely old PC and
-          turned it into a powerful computing machine." - "thanks, theres only
-          one piece left." - "whats that" you ask, as your palms becoming
-          sweaty. - "oh _Uncle Nick_, i thought we'd passed this..." - you're
-          confused. what does she know. how could she? - Dog passed info said
-          you were taking it especially rough this time - How does she know -
-          She reaches for you bag and removes it from your clutches.
+          Your pulse races as you look for an explanation of why you've snuck
+          into her room.
+        </MainText>
+        <UserQuote>
+          "Just wanted to see if you still had my old computer with all those
+          great games on it."
+        </UserQuote>
+        <UserQuote>"Oh yea, it's over here."</UserQuote>
+        <MainText>
+          She points to the section of computers and hardware in the corner,
+          then leads you over.
+        </MainText>
+        <UserQuote>
+          "Still works like a charm, added a new graphics card a year ago"
+        </UserQuote>
+        <MainText>
+          You smile as she walks you through the changes she's made to the
+          computer, and though you taught her some of the basics, her knowledge
+          greatly surpassing yours at this point, and you feel proud.
+        </MainText>
+        <UserQuote>
+          "that's amazing, you've taken the shell of an entirely old PC and
+          turned it into a powerful computing machine."
+        </UserQuote>
+        <UserQuote>"thanks, theres only one piece left."</UserQuote>
+        <UserQuote>"whats that"</UserQuote>
+        <MainText>you ask, as your palms becoming sweaty.</MainText>
+        <UserQuote>
+          "oh {props.preferredTitle} {props.playerNameSaved}, i thought we'd
+          passed this..."
+        </UserQuote>
+        <MainText>you're confused. what does she know. how could she?</MainText>
+        <UserQuote>
+          {props.petNameInputSaved} passed info said you were taking it
+          especially rough this time...
+        </UserQuote>
+        <MainText>
+          How does she know? She reaches for you bag and removes it from your
+          clutches.
         </MainText>
       </CustomContainer>
     )}
