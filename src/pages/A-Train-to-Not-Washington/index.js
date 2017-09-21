@@ -123,7 +123,8 @@ const Train = props => {
             much too real. You can feel the subtle tactile keys on the keyboard.
             You measure your breaths. You wiggle your toes, feel the tips of
             your fingers. This is real. Bag, suitcase, and keyboard in hand, you
-            slowly stand, and begin moving toward the open door.
+            slowly stand, and begin moving toward the{" "}
+            <button style={buttonStyle}>open door</button>.
           </MainText>
         </CustomContainer>
       )}
@@ -141,11 +142,15 @@ const Train = props => {
             good. Come on, I'll lead you to the council."
           </UserQuote>
           <MainText>
-            said {props.petNameInputSaved} the {props.petTypeInputSaved},
-            dressed in a old timey looking train conductors outfit, complete
-            with bowtie..
+            says {props.petNameInputSaved} the {props.petTypeInputSaved},
+            dressed in a old timey looking train conductors outfit.{" "}
+            {props.petNameInputSaved} is wearing a bowtie.
           </MainText>
-          <UserQuote>"{props.petNameInputSaved}?!?!?"</UserQuote>
+          <UserQuote>
+            <button style={buttonStyle}>
+              "{props.petNameInputSaved}?!?!?"
+            </button>
+          </UserQuote>
           <MainText>you stammer.</MainText>
         </CustomContainer>
       )}
