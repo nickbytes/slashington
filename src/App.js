@@ -14,10 +14,9 @@ import TheCouncil from "./pages/The-Council";
 
 import initialState from "./store/initialState";
 
-const App = props =>
+const App = props => (
   <div>
     <Route exact path="/" component={StartGame} />
-    {/* <Route path="/01-Breakfast" component={Breakfast} /> */}
     <Route path="/The-Office" component={Office} />
     <Route path="/A-Train-to-Not-Washington" component={Train} />
     <Route path="/The-Council" component={TheCouncil} />
@@ -25,6 +24,7 @@ const App = props =>
     <Route path="/Birthday" component={Birthday} />
     <Route path="/Good-Messenger" component={GoodMessengerScene} />
     <Route path="/credits" component={Credits} />
-  </div>;
+  </div>
+);
 
 export default createProvider(initialState)(App);
