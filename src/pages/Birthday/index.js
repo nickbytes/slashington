@@ -146,11 +146,17 @@ const Birthday = props => (
 
     {props.roleFulfilled && (
       <CustomContainer>
+        <UserQuote>Iwasjustdroppingoffthegiftidon'tknowwhatisgoingon</UserQuote>
+        <UserQuote>
+          It's okay {props.preferredTitle} {props.playerNameSaved}.
+        </UserQuote>
+        <UserQuote>it is?</UserQuote>
+        <MainText>You attempt to hold back tears.</MainText>
+        <UserQuote>
+          but i dont understand why. I don't understand what is happening
+        </UserQuote>
         <MainText>
-          _Iwasjustdroppingoffthegiftidon'tknowwhatisgoingon_ - it's okay Uncle
-          Nick. - it is? You attempt to hold back tears. but i dont understand
-          why. I don't understand what is happening She guides you over towards
-          the chair at her computer.
+          She guides you over towards the chair at her computer.
         </MainText>
       </CustomContainer>
     )}
