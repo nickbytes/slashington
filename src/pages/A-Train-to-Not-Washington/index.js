@@ -29,20 +29,7 @@ const Train = props => {
         </MainText>
         <MainText>
           Relief washes over you like a series gentle{" "}
-          <button
-            style={{
-              fontFamily: "inherit",
-              fontSize: "inherit",
-              fontWeight: "inherit",
-              lineHeight: "inherit",
-              border: "0",
-              background: "none",
-              cursor: "pointer",
-              borderBottom: "4px dotted",
-              outline: "0"
-            }}
-            onClick={e => props.update(showWaves)}
-          >
+          <button style={buttonStyle} onClick={e => props.update(showWaves)}>
             waves.
           </button>
         </MainText>
@@ -63,17 +50,7 @@ const Train = props => {
             <MainText>
               The train has begun its slow wind along the coast. It lulls you to
               <button
-                style={{
-                  fontFamily: "inherit",
-                  fontSize: "inherit",
-                  fontWeight: "inherit",
-                  lineHeight: "inherit",
-                  border: "0",
-                  background: "none",
-                  cursor: "pointer",
-                  borderBottom: "4px dotted",
-                  outline: "0"
-                }}
+                style={buttonStyle}
                 onClick={e => props.update(showTrainAnimation)}
               >
                 sleep.
@@ -102,17 +79,7 @@ const Train = props => {
           <MainText>
             You look out the{" "}
             <button
-              style={{
-                fontFamily: "inherit",
-                fontSize: "inherit",
-                fontWeight: "inherit",
-                lineHeight: "inherit",
-                border: "0",
-                background: "none",
-                cursor: "pointer",
-                borderBottom: "4px dotted",
-                outline: "0"
-              }}
+              style={buttonStyle}
               onClick={e => props.update(lookOutWindowTrain)}
             >
               window

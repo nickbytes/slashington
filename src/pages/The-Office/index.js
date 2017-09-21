@@ -30,6 +30,7 @@ import Smoke from "../../components/Smoke";
 import UserQuote from "../../components/UserQuote";
 import WebcamComponent from "../../components/WebcamComponent";
 import Workspace from "../../components/Workspace";
+import buttonStyle from "../../utilities/buttonStyle";
 
 const Office = props => {
   return (
@@ -52,19 +53,7 @@ const Office = props => {
         </MainText>
         <MainText>
           Nothing is getting on your nerves today. Not the{" "}
-          <button
-            style={{
-              fontFamily: "inherit",
-              fontSize: "inherit",
-              border: "0",
-              borderBottom: "1px dotted",
-              background: "none",
-              outline: "0",
-              paddingBottom: "1px",
-              cursor: "pointer"
-            }}
-            onClick={e => props.update(startBurning)}
-          >
+          <button style={buttonStyle} onClick={e => props.update(startBurning)}>
             <div style={{ position: "relative" }}>
               burnt toast
               {props.startBurning && <Smoke />}
@@ -85,17 +74,7 @@ const Office = props => {
           <UserQuote pl={"300px"}>
             "Name{" "}
             <button
-              style={{
-                fontFamily: "inherit",
-                fontSize: "inherit",
-                fontWeight: "inherit",
-                lineHeight: "inherit",
-                border: "0",
-                background: "none",
-                cursor: "pointer",
-                borderBottom: "4px dotted",
-                outline: "0"
-              }}
+              style={buttonStyle}
               onClick={e => props.update(showPlayerNameField)}
             >
               please
@@ -153,17 +132,7 @@ const Office = props => {
           <UserQuote pl={"300px"}>
             "Position{" "}
             <button
-              style={{
-                fontFamily: "inherit",
-                fontSize: "inherit",
-                fontWeight: "700",
-                lineHeight: "inherit",
-                border: "0",
-                background: "none",
-                cursor: "pointer",
-                borderBottom: "4px dotted",
-                outline: "0"
-              }}
+              style={buttonStyle}
               onClick={e => props.update(showPlayerOccupationField)}
             >
               please
@@ -306,15 +275,7 @@ const Office = props => {
           <MainText>
             Once you arrive at your desk, you turn on your{" "}
             <button
-              style={{
-                fontFamily: "inherit",
-                fontSize: "inherit",
-                border: "0",
-                borderBottom: "1px dotted",
-                background: "none",
-                outline: "0",
-                cursor: "pointer"
-              }}
+              style={buttonStyle}
               onClick={e => props.update(turnOnComputer)}
             >
               computer
@@ -336,15 +297,7 @@ const Office = props => {
             <MainText>
               When you get back to your desk, you see that you have a{" "}
               <button
-                style={{
-                  fontFamily: "inherit",
-                  fontSize: "inherit",
-                  border: "0",
-                  borderBottom: "1px dotted",
-                  background: "none",
-                  outline: "0",
-                  cursor: "pointer"
-                }}
+                style={buttonStyle}
                 onClick={e => props.update(showPhone)}
               >
                 voicemail from your brother
@@ -378,15 +331,7 @@ const Office = props => {
             edge. This weekend, you won't take your laptop, you wont look at the
             feeds, you'll disconnect. You've just got to{" "}
             <button
-              style={{
-                fontFamily: "inherit",
-                fontSize: "inherit",
-                border: "0",
-                borderBottom: "1px dotted",
-                background: "none",
-                outline: "0",
-                cursor: "pointer"
-              }}
+              style={buttonStyle}
               onClick={e => props.update(restartWork)}
             >
               get through the next few hours and deadlines.
