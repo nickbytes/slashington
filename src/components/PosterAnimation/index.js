@@ -8,7 +8,9 @@ const Poster = props => (
 
 const PosterAnimation = () => (
   <div>
-    {PosterUrls.map((singleUrl, i) => <Poster posterUrl={singleUrl[i]} />)}
+    {PosterUrls.map((singleUrl, i) => (
+      <Poster key={i} posterUrl={singleUrl[i]} />
+    ))}
   </div>
 );
 
