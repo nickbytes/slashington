@@ -7,6 +7,7 @@ import CustomContainer from "../../components/CustomContainer";
 import MainText from "../../components/MainText";
 import ThoughtQuote from "../../components/ThoughtQuote";
 import UserQuote from "../../components/UserQuote";
+import buttonStyle from "../../utilities/buttonStyle";
 
 class LeavingSlashington extends Component {
   render() {
@@ -38,17 +39,18 @@ class LeavingSlashington extends Component {
             You look back towards Slashington, though it is now disappeared in
             the distance. The sun is beginning to peak from the horizon to your
             left. As you enter the tunnel,{" "}
-            <button>darkness engulfs your car</button>.
+            <button style={buttonStyle}>darkness engulfs your car</button>.
           </MainText>
         </CustomContainer>
 
         <CustomContainer>
           <MainText>
-            Three or four seconds. Suddenly the car bursts with morning light,
-            you grimace and squint in the stark contrast. When you open your
-            eyes, the train car is again packed with people, regular people.
-            People reading their tablets, morning papers, talking on cell
-            phones, glancing out the window as you pass through Baltimore.
+            Three or four seconds. Suddenly the car{" "}
+            <button style={buttonStyle}>bursts</button> with light, you grimace
+            and squint in the stark contrast. When you open your eyes, the train
+            car is again packed with people, regular people. People reading
+            their tablets, morning papers, talking on cell phones, glancing out
+            the window as you pass through Baltimore.
           </MainText>
         </CustomContainer>
 
@@ -56,55 +58,59 @@ class LeavingSlashington extends Component {
           <Divider />
         </CustomContainer>
 
-        <CustomContainer>
-          <MainText>
-            Alex greets you at the station. You load your bags and keyboard into
-            the trunk of his car.
-          </MainText>
-        </CustomContainer>
+        {props.dividerClicked && (
+          <div>
+            <CustomContainer>
+              <MainText>
+                Alex greets you at the station. You load your bags and keyboard
+                into the trunk of his car.
+              </MainText>
+            </CustomContainer>
+            <CustomContainer>
+              <UserQuote>"What's with the keyboard?"</UserQuote>
+              <MainText>hes asks, somewhat concerned.</MainText>
+            </CustomContainer>
+            <CustomContainer>
+              <UserQuote>"A gift for Sam."</UserQuote>
+            </CustomContainer>
+            <CustomContainer>
+              <MainText>
+                He goes on chatting about work, neighbors, Jill's job, only do
+                you take notice when he mentions the exception grades Emma has
+                been getting.
+              </MainText>
+            </CustomContainer>
 
-        <CustomContainer>
-          <UserQuote>"What's with the keyboard?"</UserQuote>
-          <MainText>hes asks, somewhat concerned.</MainText>
-        </CustomContainer>
+            <CustomContainer>
+              <UserQuote>"That's great, real great."</UserQuote>
+            </CustomContainer>
+            <CustomContainer>
+              <MainText>The words of The Council echo in your head.</MainText>
+            </CustomContainer>
+          </div>
+        )}
 
-        <CustomContainer>
-          <UserQuote>"A gift for Sam."</UserQuote>
-        </CustomContainer>
+        {props.wordsEcho && (
+          <div>
+            <CustomContainer>
+              <ThoughtQuote>
+                The burden is too great for one so young. Surely some adult can
+                take on responsibility.
+              </ThoughtQuote>
+            </CustomContainer>
 
-        <CustomContainer>
-          <MainText>
-            He goes on chatting about work, neighbors, Jill's job, only do you
-            take notice when he mentions the exception grades Emma has been
-            getting.
-          </MainText>
-        </CustomContainer>
-
-        <CustomContainer>
-          <UserQuote>"That's great, real great."</UserQuote>
-        </CustomContainer>
-
-        <CustomContainer>
-          <MainText>The words of The Council echo in your head.</MainText>
-        </CustomContainer>
-
-        <CustomContainer>
-          <ThoughtQuote>
-            The burden is too great for one so young. Surely some adult can take
-            on responsibility.
-          </ThoughtQuote>
-        </CustomContainer>
-
-        <CustomContainer>
-          <ThoughtQuote>
-            It must be her. Weve gone over this. She is uniquely talented, and
-            her path will cross appropriately.
-          </ThoughtQuote>
-          <ThoughtQuote>
-            But she may not be able to do it. She may die.
-          </ThoughtQuote>
-          <ThoughtQuote> It is the only way..</ThoughtQuote>
-        </CustomContainer>
+            <CustomContainer>
+              <ThoughtQuote>
+                It must be her. Weve gone over this. She is uniquely talented,
+                and her path will cross appropriately.
+              </ThoughtQuote>
+              <ThoughtQuote>
+                But she may not be able to do it. She may die.
+              </ThoughtQuote>
+              <ThoughtQuote> It is the only way..</ThoughtQuote>
+            </CustomContainer>
+          </div>
+        )}
 
         <CustomContainer>
           <UserQuote>
