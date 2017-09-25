@@ -49,6 +49,10 @@ const initialState = {
   reactAngrilyClicked: false,
   playerCompanySaved: "Bauzort",
   // Slashington
+  darknessEngulfs: false,
+  lightBursts: false,
+  wordsEcho: false,
+  dividerClicked: false,
 
   // Birthday
 
