@@ -310,34 +310,42 @@ const Office = props => {
       {props.phoneVisible && <PhoneComponent {...props} />}
 
       {props.voicemailDone && (
-        <CustomContainer>
-          <MainText>
-            What did he mean by 'strange gift'...? You think back to Sam's last
-            birthday...
-          </MainText>
-          <DreamText>
-            barbeque, slipknot karaoke, did you have a few drinks...?
-          </DreamText>
-          <DreamText>
-            what did you get her...? how could you forget this...?
-          </DreamText>
-          <MainText>
-            It all feels dreamlike. You're a {props.playerOccupation}, you pay
-            such great attention to detail, how could you forget something like
-            this...?
-          </MainText>
-          <MainText>
-            Maybe Alex <i>is</i> right. All this work is pushing you to the
-            edge. This weekend, you won't take your laptop, you wont look at the
-            feeds, you'll disconnect. You've just got to{" "}
-            <button
-              style={buttonStyle}
-              onClick={e => props.update(restartWork)}
-            >
-              get through the next few hours and deadlines.
-            </button>
-          </MainText>
-        </CustomContainer>
+        <div>
+          <CustomContainer>
+            <MainText>
+              What did he mean by 'strange gift'...? You think back to Sam's
+              last birthday...
+            </MainText>
+          </CustomContainer>
+
+          <CustomContainer>
+            <DreamText>
+              barbeque, slipknot karaoke, did you have a few drinks...?
+            </DreamText>
+            <DreamText>
+              what did you get her...? how could you forget this...?
+            </DreamText>
+          </CustomContainer>
+
+          <CustomContainer>
+            <MainText>
+              It all feels dreamlike. You're a {props.playerOccupation}, you pay
+              such great attention to detail, how could you forget something
+              like this...?
+            </MainText>
+            <MainText>
+              Maybe Alex <i>is</i> right. All this work is pushing you to the
+              edge. This weekend, you won't take your laptop, you wont look at
+              the feeds, you'll disconnect. You've just got to{" "}
+              <button
+                style={buttonStyle}
+                onClick={e => props.update(restartWork)}
+              >
+                get through the next few hours and deadlines.
+              </button>
+            </MainText>
+          </CustomContainer>
+        </div>
       )}
 
       {/* gon use child components  props.restartingWork   */}
