@@ -352,7 +352,7 @@ const Office = props => {
           <CustomContainer>
             <MainText>
               Something is wrong with your keyboard. As a{" "}
-              {props.playerOccupation || "PLAYER_OCCUPATION"}, it's pretty
+              {props.playerOccupationSaved || "PLAYER_OCCUPATION"}, it's pretty
               essential for you to have this type of special keyboard. While any
               version of this keyboard will work, you've been using this one for
               years.

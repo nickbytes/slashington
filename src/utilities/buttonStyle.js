@@ -4,10 +4,10 @@ const buttonStyle = {
   fontWeight: "inherit",
   lineHeight: "inherit",
   border: "0",
-  background: "none",
+  background: "rgb(218, 218, 218)",
   cursor: "pointer",
-  borderBottom: "4px dotted",
-  outline: "0"
+  outline: "0",
+  padding: "0 3px"
 };
 
 export default buttonStyle;
