@@ -341,7 +341,7 @@ const Office = props => {
       )}
 
       {/* gon use child components  props.restartingWork   */}
-      {true && (
+      {props.restartingWork && (
         <Workspace>
           <BrokenEmail {...props} />
         </Workspace>
@@ -359,7 +359,7 @@ const Office = props => {
             </MainText>
           </CustomContainer>
           <CustomContainer>
-            <UserQuote>"Keyboard issues?"</UserQuote>
+            <UserQuote pl={"300px"}>"Keyboard issues?"</UserQuote>
           </CustomContainer>
           <CustomContainer>
             <MainText>
@@ -373,25 +373,25 @@ const Office = props => {
             </UserQuote>
           </CustomContainer>
           <CustomContainer>
-            <UserQuote>
-              Same thing happened to me about a year ago. I took it to a place
+            <UserQuote pl={"300px"}>
+              "Same thing happened to me about a year ago. I took it to a place
               near where I lived in DC. Fixed it up in a day, had it working
-              good as new.
+              good as new."
             </UserQuote>
           </CustomContainer>
 
           <CustomContainer>
             <UserQuote>
-              I'm taking the Amtrak down there this weekend... It's my niece's
-              birthday...
+              "I'm taking the Amtrak down there this weekend... It's my niece's
+              birthday..."
             </UserQuote>
           </CustomContainer>
 
           <CustomContainer>
-            <UserQuote>
-              Crazy coincidence! It's right off the Amtrak stop. You can't miss
+            <UserQuote pl={"300px"}>
+              "Crazy coincidence! It's right off the Amtrak stop. You can't miss
               it, south east corner of the Mall. Open on weekends too, can
-              probably pick it up on your way back.
+              probably pick it up on your way back."
             </UserQuote>
           </CustomContainer>
           <Link to="/A-Train-to-Not-Washington">Next</Link>
