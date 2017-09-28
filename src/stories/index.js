@@ -25,7 +25,9 @@ storiesOf("DreamText", module).add("with text", () => (
   <DreamText>How could you forget?</DreamText>
 ));
 
-storiesOf("BrokenEmail", module).add("BrokenEmail", () => <BrokenEmail />);
+storiesOf("BrokenEmail", module).add("BrokenEmail", () => (
+  <BrokenEmail playerNameSaved={"Nick"} />
+));
 
 storiesOf("TrainAnimation", module).add("TrainAnimation", () => (
   <TrainAnimation />

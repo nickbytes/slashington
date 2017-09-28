@@ -7,6 +7,7 @@ import InputContainer from "./InputContainer";
 import MessageName from "./MessageName";
 import MessageText from "./MessageText";
 import MessagesContainer from "./MessagesContainer";
+import SingleMessage from "./SingleMessage";
 import TopBar from "./TopBar";
 
 class BrokenEmail extends Component {
@@ -45,10 +46,20 @@ class BrokenEmail extends Component {
       <EmailContainer>
         <TopBar>WorkplaceAIM</TopBar>
         <MessagesContainer>
-          <MessageName>Scott</MessageName>
-          <MessageText>
-            Do you have a moment to chat? Could I come to your desk?
-          </MessageText>
+          <SingleMessage>
+            <MessageName>Scott</MessageName>
+            <MessageText>
+              Do you have a moment to chat? Could I come to your desk?
+            </MessageText>
+          </SingleMessage>
+
+          <SingleMessage>
+            <MessageName>Scott</MessageName>
+            <MessageText>
+              @{this.props.playerNameSaved}, do you have a moment to chat? Could
+              I come to your desk?
+            </MessageText>
+          </SingleMessage>
         </MessagesContainer>
         <InputContainer>
           {this.state.wordJumble} <Blinking />
