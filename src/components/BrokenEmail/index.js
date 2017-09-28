@@ -47,9 +47,11 @@ class BrokenEmail extends Component {
         <TopBar>WorkplaceAIM</TopBar>
         <MessagesContainer>
           <SingleMessage>
-            <MessageName>Scott</MessageName>
+            <MessageName>Morgane</MessageName>
             <MessageText>
-              Do you have a moment to chat? Could I come to your desk?
+              well it’s built with unity and can technically export to any
+              platform. i just export to iOS so i can run it on my phone. i
+              could try to do webvr instead :thinking_face:
             </MessageText>
           </SingleMessage>
 
