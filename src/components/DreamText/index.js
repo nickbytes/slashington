@@ -1,6 +1,5 @@
 import { Text } from "rebass";
 import styled from "styled-components";
-import squiggle from "../../images/squiggle.png";
 
 const DreamText = styled(Text)`
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
