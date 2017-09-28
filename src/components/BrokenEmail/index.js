@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 
 import { scottArrives } from "../../updaters/updaters";
-import Blinking from "../Blinking";
+import Blinking from "./Blinking";
+import EmailContainer from "./EmailContainer";
+import InputContainer from "./InputContainer";
+import MessageName from "./MessageName";
+import MessageText from "./MessageText";
+import MessagesContainer from "./MessagesContainer";
+import TopBar from "./TopBar";
 
 class BrokenEmail extends Component {
   constructor(props) {
@@ -36,58 +42,18 @@ class BrokenEmail extends Component {
   }
   render() {
     return (
-      <div
-        style={{
-          backgroundColor: "rgb(218, 216, 218)",
-          maxWidth: "600px",
-          position: "relative",
-          paddingTop: "16px",
-          paddingBottom: "10px"
-        }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            right: "0",
-            textAlign: "center"
-          }}
-        >
-          WorkplaceAIM
-        </div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center"
-          }}
-        >
-          <h1
-            style={{
-              fontSize: "10px",
-              paddingRight: "50px"
-            }}
-          >
-            {"Scott"}
-          </h1>
-          <h2
-            style={{
-              fontSize: "9px"
-            }}
-          >
+      <EmailContainer>
+        <TopBar>WorkplaceAIM</TopBar>
+        <MessagesContainer>
+          <MessageName>Scott</MessageName>
+          <MessageText>
             Do you have a moment to chat? Could I come to your desk?
-          </h2>
-        </div>
-        <div
-          style={{
-            border: "1px solid rgb(40, 44, 52)",
-            margin: "10px 10px 0 10px",
-            padding: "10px"
-          }}
-        >
+          </MessageText>
+        </MessagesContainer>
+        <InputContainer>
           {this.state.wordJumble} <Blinking />
-        </div>
-      </div>
+        </InputContainer>
+      </EmailContainer>
     );
   }
 }

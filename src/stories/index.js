@@ -5,7 +5,9 @@ import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 import { storiesOf } from "@storybook/react";
 
+import BrokenEmail from "../components/BrokenEmail";
 import DreamText from "../components/DreamText";
+import TrainAnimation from "../components/TrainAnimation";
 
 storiesOf("Welcome", module).add("to Storybook", () => (
   <Welcome showApp={linkTo("Button")} />
@@ -21,4 +23,10 @@ storiesOf("Button", module)
 
 storiesOf("DreamText", module).add("with text", () => (
   <DreamText>How could you forget?</DreamText>
+));
+
+storiesOf("BrokenEmail", module).add("BrokenEmail", () => <BrokenEmail />);
+
+storiesOf("TrainAnimation", module).add("TrainAnimation", () => (
+  <TrainAnimation />
 ));
