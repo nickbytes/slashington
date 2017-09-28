@@ -6,7 +6,7 @@ const MessagesContainer = styled.div`
   align-items: flex-start;
   border: 3px double rgba(0, 0, 0, 1);
   padding: 20px 10px;
-  margin: 20px 10px 0;
+  margin: 25px 10px 0;
   min-height: 300px;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
