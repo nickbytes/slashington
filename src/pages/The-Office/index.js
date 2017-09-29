@@ -25,6 +25,7 @@ import CustomContainer from "../../components/CustomContainer";
 import DreamText from "../../components/DreamText";
 import JobSelectionComponent from "../../components/JobSelectionComponent";
 import MainText from "../../components/MainText";
+import NotesApp from "../../components/NotesApp";
 import PhoneComponent from "../../components/PhoneComponent";
 import Smoke from "../../components/Smoke";
 import UserQuote from "../../components/UserQuote";
@@ -355,6 +356,7 @@ const Office = props => {
       {props.restartingWork && (
         <Workspace>
           <BrokenEmail {...props} />
+          <NotesApp />
         </Workspace>
       )}
 
