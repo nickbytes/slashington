@@ -47,6 +47,18 @@ class BrokenEmail extends Component {
         <TopBar>WorkplaceAIM</TopBar>
         <MessagesContainer>
           <SingleMessage>
+            <MessageName>audrey</MessageName>
+            <MessageText>o n l i n e</MessageText>
+          </SingleMessage>
+          <SingleMessage>
+            <MessageName>cristina</MessageName>
+            <MessageText>sample text</MessageText>
+          </SingleMessage>
+          <SingleMessage>
+            <MessageName>edouard</MessageName>
+            <MessageText>YOW</MessageText>
+          </SingleMessage>
+          <SingleMessage>
             <MessageName>alexsingh</MessageName>
             <MessageText>
               Your friend's analogy can take the woodworker all the way to the

@@ -1,42 +1,21 @@
-import { connect } from "funcup";
 import Icon from "react-geomicons";
 import React from "react";
 
 import { coffeeClicked } from "../../updaters/updaters";
 import AreaChart from "../AreaChart";
-import beach from "../../images/beach.jpg";
+import DesktopBackground from "./DesktopBackground";
+import NotificationEvent from "./NotificationEvent";
+import NotificationTopBar from "./NotificationTopBar";
+import NotificationWindow from "./NotificationWindow";
+import TopBar from "./TopBar";
+import WorkspaceContainer from "./WorkspaceContainer";
 import dunno from "../../images/dunno.jpg";
 import galaxy from "../../images/galaxy.png";
 
-const Workspace = props =>
-  <div
-    style={{
-      padding: "4em 0",
-      margin: "0 50px"
-    }}
-  >
-    <div
-      className="desktop-bg"
-      style={{
-        backgroundImage: `url(${beach})`,
-        height: "600px",
-        backgroundPosition: "center center",
-        backgroundSize: "cover",
-        position: "relative"
-      }}
-    >
-      <div
-        className="desktop-topBar"
-        style={{
-          width: "100%",
-          height: "27px",
-          backgroundColor: "rgba(0,0,0,0.5)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          borderBottom: "1px solid black"
-        }}
-      >
+const Workspace = props => (
+  <WorkspaceContainer>
+    <DesktopBackground className="desktop-bg">
+      <TopBar className="desktop-topBar">
         <div
           style={{
             paddingLeft: "20px"
@@ -87,48 +66,19 @@ const Workspace = props =>
           </span>
           <time style={{ color: "white" }}>12:34</time>
         </div>
-      </div>
+      </TopBar>
 
       {props.children}
 
-      <div
-        className="desktop-notif"
-        style={{
-          border: "1px solid rgb(218, 216, 218)",
-          width: "400px",
-          margin: "40px",
-          color: "rgba(0,0,0,0.7)",
-          background: "rgba(218, 216, 218, 0.7)"
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            height: "15px",
-            backgroundColor: "rgb(218, 216, 218)"
-          }}
-        />
-        <h1
-          style={{
-            padding: "0 15px",
-            fontWeight: "normal",
-            fontSize: "16px",
-            letterSpacing: "1px"
-          }}
-        >
+      <NotificationWindow className="desktop-notif">
+        <NotificationTopBar />
+        <NotificationEvent>
           <Icon name="clock" /> You have 39 meetings today.
-        </h1>
-        <h3
-          style={{
-            padding: "0 15px",
-            fontWeight: "normal",
-            fontSize: "16px",
-            letterSpacing: "1px"
-          }}
-        >
+        </NotificationEvent>
+        <NotificationEvent>
           <Icon name="skull" /> You have 7 deadlines today.
-        </h3>
-      </div>
+        </NotificationEvent>
+      </NotificationWindow>
       <AreaChart />
       <div
         style={{
@@ -194,11 +144,8 @@ const Workspace = props =>
           Space
         </h1>
       </div>
-    </div>
-  </div>;
+    </DesktopBackground>
+  </WorkspaceContainer>
+);
 
-const map = state => ({
-  playerNameSaved: state.playerNameSaved
-});
-
-export default connect(map)(Workspace);
+export default Workspace;
