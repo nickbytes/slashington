@@ -286,6 +286,8 @@ const Office = props => {
 
       {props.workspaceVisible && <Workspace />}
 
+      <Workspace {...props} />
+
       {props.coffeeClicked && (
         <div>
           <CustomContainer>
@@ -329,9 +331,10 @@ const Office = props => {
 
           <CustomContainer>
             <MainText>
-              It all feels dreamlike. You're a {props.playerOccupation}, you pay
-              such great attention to detail, how could you forget something
-              like this...?
+              It all feels dreamlike. You're a{" "}
+              {props.playerOccupation || "PLAYER_OCCUPATION"}, you pay such
+              great attention to detail. How could you forget something like
+              this...?
             </MainText>
             <MainText>
               Maybe Alex <i>is</i> right. All this work is pushing you to the
@@ -402,7 +405,9 @@ const Office = props => {
               probably pick it up on your way back."
             </UserQuote>
           </CustomContainer>
-          <Link to="/A-Train-to-Not-Washington">Next</Link>
+          <CustomContainer>
+            <Link to="/A-Train-to-Not-Washington">Next</Link>
+          </CustomContainer>
         </div>
       )}
     </div>

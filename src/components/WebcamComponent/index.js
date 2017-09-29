@@ -31,53 +31,57 @@ class WebcamComponent extends Component {
   render() {
     return (
       <div>
-        {this.state.photoSrc
-          ? <div>
-              <UserQuote pl={"300px"}>
-                "Here is your new{" "}
-                <button
-                  style={{
-                    fontFamily: "inherit",
-                    fontSize: "inherit",
-                    fontWeight: "700",
-                    lineHeight: "inherit",
-                    border: "0",
-                    background: "none",
-                    cursor: "pointer",
-                    borderBottom: "4px dotted",
-                    outline: "0"
-                  }}
-                  onClick={e => this.props.update(receiveBadge)}
-                >
-                  badge
-                </button>."
-              </UserQuote>
-              {this.props.newBadgeReceived &&
-                <YourNewBadge
-                  imgSrc={this.state.photoSrc}
-                  playerName={this.props.playerNameSaved}
-                  playerOccupation={this.props.playerOccupationSaved}
-                />}
-            </div>
-          : <div
+        {this.state.photoSrc ? (
+          <div>
+            <UserQuote pl={"300px"}>
+              "Here is your new{" "}
+              <button
+                style={{
+                  fontFamily: "inherit",
+                  fontSize: "inherit",
+                  fontWeight: "700",
+                  lineHeight: "inherit",
+                  border: "0",
+                  background: "none",
+                  cursor: "pointer",
+                  borderBottom: "4px dotted",
+                  outline: "0"
+                }}
+                onClick={e => this.props.update(receiveBadge)}
+              >
+                badge
+              </button>."
+            </UserQuote>
+            {this.props.newBadgeReceived && (
+              <YourNewBadge
+                imgSrc={this.state.photoSrc}
+                playerName={this.props.playerNameSaved}
+                playerOccupation={this.props.playerOccupationSaved}
+              />
+            )}
+          </div>
+        ) : (
+          <div
+            style={{
+              position: "relative",
+              textAlign: "center"
+            }}
+          >
+            <Webcam ref={this.setRef} audio={false} />
+            <button
+              onClick={this.takePhoto}
               style={{
-                position: "relative",
-                textAlign: "center"
+                position: "absolute",
+                left: "50%",
+                right: "50%",
+                bottom: "0"
               }}
             >
-              <Webcam ref={this.setRef} audio={false} />
-              <button
-                onClick={this.takePhoto}
-                style={{
-                  position: "absolute",
-                  left: "50%",
-                  right: "50%",
-                  bottom: "0"
-                }}
-              >
-                Take Photo
-              </button>
-            </div>}
+              Take Photo
+            </button>
+            <button>make true</button>
+          </div>
+        )}
       </div>
     );
   }
