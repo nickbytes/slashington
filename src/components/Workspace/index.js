@@ -14,60 +14,59 @@ import galaxy from "../../images/galaxy.png";
 
 const Workspace = props => (
   <WorkspaceContainer>
+    <TopBar className="desktop-topBar">
+      <div
+        style={{
+          paddingLeft: "20px"
+        }}
+      >
+        <span>🔮</span>
+        <span
+          style={{
+            color: "rgba(255,255,255,0.7)",
+            paddingLeft: "20px",
+            lineHeight: "1rem"
+          }}
+        >
+          Computer
+        </span>
+      </div>
+      <div
+        style={{
+          paddingRight: "15px"
+        }}
+      >
+        <span
+          style={{
+            paddingRight: "10px"
+          }}
+        >
+          <button
+            style={{
+              fontFamily: "inherit",
+              fontSize: "inherit",
+              lineHeight: "inherit",
+              border: "0",
+              background: "none",
+              cursor: "pointer",
+              outline: "0"
+            }}
+            onClick={e => props.update(coffeeClicked)}
+          >
+            ☕️
+          </button>
+        </span>
+        <span
+          style={{
+            paddingRight: "10px"
+          }}
+        >
+          🌱
+        </span>
+        <time style={{ color: "white" }}>12:34</time>
+      </div>
+    </TopBar>
     <DesktopBackground className="desktop-bg">
-      <TopBar className="desktop-topBar">
-        <div
-          style={{
-            paddingLeft: "20px"
-          }}
-        >
-          <span>🔮</span>
-          <span
-            style={{
-              color: "rgba(255,255,255,0.7)",
-              paddingLeft: "20px",
-              lineHeight: "1rem"
-            }}
-          >
-            Computer
-          </span>
-        </div>
-        <div
-          style={{
-            paddingRight: "15px"
-          }}
-        >
-          <span
-            style={{
-              paddingRight: "10px"
-            }}
-          >
-            <button
-              style={{
-                fontFamily: "inherit",
-                fontSize: "inherit",
-                lineHeight: "inherit",
-                border: "0",
-                background: "none",
-                cursor: "pointer",
-                outline: "0"
-              }}
-              onClick={e => props.update(coffeeClicked)}
-            >
-              ☕️
-            </button>
-          </span>
-          <span
-            style={{
-              paddingRight: "10px"
-            }}
-          >
-            🌱
-          </span>
-          <time style={{ color: "white" }}>12:34</time>
-        </div>
-      </TopBar>
-
       {props.children}
 
       <NotificationWindow className="desktop-notif">
