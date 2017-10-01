@@ -17,30 +17,26 @@ class BrokenEmail extends Component {
     this.state = {
       wordJumble: ""
     };
-
-    this.typingMess = this.typingMess.bind(this);
   }
   componentDidMount() {
-    this.typingMess();
+    document.body.addEventListener("keypress", this.typingMess);
   }
   componentWillUnmount() {
-    document.body.removeEventListener("keypress");
+    document.body.removeEventListener("keypress", this.typingMess);
   }
 
-  typingMess() {
-    document.body.addEventListener("keypress", () => {
-      if (this.state.wordJumble.length > 35) {
-        this.props.update(scottArrives);
-      } else {
-        const textArray = ["n", "b", " "];
-        const randomNumber = Math.floor(Math.random() * textArray.length);
-        let wordzlol = this.state.wordJumble + textArray[randomNumber];
-        this.setState({
-          wordJumble: wordzlol
-        });
-      }
-    });
-  }
+  typingMess = () => {
+    if (this.state.wordJumble.length > 35) {
+      this.props.update(scottArrives);
+    } else {
+      const textArray = ["n", "b", " "];
+      const randomNumber = Math.floor(Math.random() * textArray.length);
+      let wordzlol = this.state.wordJumble + textArray[randomNumber];
+      this.setState({
+        wordJumble: wordzlol
+      });
+    }
+  };
   render() {
     return (
       <EmailContainer>

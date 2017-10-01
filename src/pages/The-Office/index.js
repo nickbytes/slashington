@@ -41,14 +41,12 @@ const Office = props => {
       }}
     >
       <CustomContainer>
-        <UserQuote
-          style={{
-            marginBottom: "3.5em"
-          }}
-        >
+        <UserQuote>
           "Hello, I've forgotten my badge. Could I get a temporary one for
           today?"
         </UserQuote>
+      </CustomContainer>
+      <CustomContainer>
         <MainText>
           The receptionist looks at you, annoyed. You're not bothered by it.
         </MainText>
@@ -104,7 +102,6 @@ const Office = props => {
                 style={{
                   border: "0",
                   fontFamily: "'Source Code Pro', monospace",
-                  fontWeight: "700",
                   width: "300px",
                   fontSize: "20px",
                   marginRight: "35px"
@@ -285,9 +282,7 @@ const Office = props => {
         </CustomContainer>
       )}
 
-      {props.workspaceVisible && <Workspace />}
-
-      <Workspace {...props} />
+      {props.workspaceVisible && <Workspace {...props} />}
 
       {props.coffeeClicked && (
         <div>
@@ -333,14 +328,17 @@ const Office = props => {
           <CustomContainer>
             <MainText>
               It all feels dreamlike. You're a{" "}
-              {props.playerOccupation || "PLAYER_OCCUPATION"}, you pay such
-              great attention to detail. How could you forget something like
-              this...?
+              {props.playerOccupationSaved || "PLAYER_OCCUPATION"} – you pay
+              such great attention to detail. How could you forget something
+              like this...?
             </MainText>
             <MainText>
-              Maybe Alex <i>is</i> right. All this work is pushing you to the
-              edge. This weekend, you won't take your laptop, you wont look at
-              the feeds, you'll disconnect. You've just got to{" "}
+              Maybe Alex <i>is</i> right.
+            </MainText>
+            <MainText>
+              All this work is pushing you to the edge. This weekend, you won't
+              take your laptop, you won't look at the Feeds, you'll disconnect.
+              You've just got to{" "}
               <button
                 style={buttonStyle}
                 onClick={e => props.update(restartWork)}

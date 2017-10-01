@@ -2,8 +2,8 @@ import { Container } from "rebass";
 import styled from "styled-components";
 
 const CustomContainer = styled(Container)`
-	padding-top: 88px;
-	padding-bottom: 88px;
+  padding-top: 44px;
+  padding-bottom: 44px;
 `;
 
 export default CustomContainer;

@@ -4,10 +4,11 @@ const buttonStyle = {
   fontWeight: "inherit",
   lineHeight: "inherit",
   border: "0",
-  background: "rgb(218, 218, 218)",
+  borderBottom: "2px solid black",
+  backgroundColor: "transparent",
   cursor: "pointer",
   outline: "0",
-  padding: "0 3px"
+  padding: "0 1px"
 };
 
 export default buttonStyle;
