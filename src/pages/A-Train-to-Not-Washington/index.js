@@ -4,8 +4,10 @@ import React from "react";
 
 import {
   lookOutWindowTrain,
+  sayPetName,
   showTrainAnimation,
-  thinkMustBeDream
+  thinkMustBeDream,
+  walkOffTrain
 } from "../../updaters/NotWashingtonUpdaters";
 import { showWaves } from "../../updaters/updaters";
 import CustomContainer from "../../components/CustomContainer";
@@ -66,7 +68,7 @@ const Train = props => {
         </CustomContainer>
       )}
 
-      {props.awakenAfterTrainRide && (
+      {/* {props.awakenAfterTrainRide*/ true && (
         <CustomContainer>
           <MainText>
             You groggily awake to the sunshine on your face. The sky is bright
@@ -124,7 +126,12 @@ const Train = props => {
             You measure your breaths. You wiggle your toes, feel the tips of
             your fingers. This is real. Bag, suitcase, and keyboard in hand, you
             slowly stand, and begin moving toward the{" "}
-            <button style={buttonStyle}>open door</button>.
+            <button
+              onClick={e => props.update(walkOffTrain)}
+              style={buttonStyle}
+            >
+              open door
+            </button>.
           </MainText>
         </CustomContainer>
       )}
@@ -136,7 +143,7 @@ const Train = props => {
             not a human on the other side of the glass, but... no... it can't
             be.
           </MainText>
-          <UserQuote>
+          <UserQuote pl={"300px"}>
             "A little late, but I think everything should be fine. I was
             starting to worry about you. I see you've got the keyboard, good
             good. Come on, I'll lead you to the council."
@@ -147,8 +154,8 @@ const Train = props => {
             {props.petNameInputSaved} is wearing a bowtie.
           </MainText>
           <UserQuote>
-            <button style={buttonStyle}>
-              "{props.petNameInputSaved}?!?!?"
+            <button onClick={e => props.update(sayPetName)} style={buttonStyle}>
+              "{props.petNameInputSaved || "PET_NAME"}?!?!?"
             </button>
           </UserQuote>
           <MainText>you stammer.</MainText>

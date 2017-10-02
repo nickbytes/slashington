@@ -22,13 +22,13 @@ const LeavingSlashington = props => (
 
     <CustomContainer>
       <MainText>
-        You watch outside, as {this.props.petNameInputSaved} waves to you. And
-        you feel the familiar jolt of the train as it begins to move forward.
-        After some time, the train gains speed and you can no longer seen the
-        small village of Slashington, only the barren landscape. One hour
-        passes. A small red, ice capped mountain appears in the distance. Closer
-        and closer it comes over the next hour, and the train appears to be
-        preparing to go through a tunnel at the base.
+        You watch outside, as {props.petNameInputSaved || "PET_NAME"} waves to
+        you. And you feel the familiar jolt of the train as it begins to move
+        forward. After some time, the train gains speed and you can no longer
+        seen the small village of Slashington, only the barren landscape. One
+        hour passes. A small red, ice capped mountain appears in the distance.
+        Closer and closer it comes over the next hour, and the train appears to
+        be preparing to go through a tunnel at the base.
       </MainText>
     </CustomContainer>
 

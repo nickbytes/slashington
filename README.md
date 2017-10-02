@@ -4,6 +4,29 @@
 
 ![v3](train.jpg)
 
+## Getting started
+
+1. Install dependences
+```bash
+$ yarn install
+```
+
+2. Start Development Server
+```bash
+$ yarn start
+```
+
+By default, you can view the game at `localhost:3000` unless this port is already taken, in which vase, `create-react-app` will prompt you to confirm use of another port.
+
+3. (Optional) Start Storybook
+You can view game components in isolation in the storybook. This is great for developing components without having to navigate to the page/state they are present.
+
+```bash
+$ yarn run storybook
+```
+
+You can see the story book at `localhost:9009`.
+
 ### TODO
 - [ ] localstorage saving state
 - [ ] block URL routes if haven't played that far (or createMemoryHistory)

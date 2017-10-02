@@ -4,6 +4,8 @@ import { storiesOf } from "@storybook/react";
 
 import BrokenEmail from "../components/BrokenEmail";
 import DreamText from "../components/DreamText";
+import ItalicMind from "../components/ItalicMind";
+import ThoughtQuote from "../components/ThoughtQuote";
 import TrainAnimation from "../components/TrainAnimation";
 import Workspace from "../components/Workspace";
 
@@ -22,3 +24,15 @@ storiesOf("TrainAnimation", module).add("TrainAnimation", () => (
 ));
 
 storiesOf("Workspace", module).add("Workspace", () => <Workspace />);
+
+storiesOf("ThoughtQuote", module)
+  .add("with text", () => <ThoughtQuote>How could you forget?</ThoughtQuote>)
+  .add("longer text", () => (
+    <ThoughtQuote>You can barely remember last year's birthday.</ThoughtQuote>
+  ));
+
+storiesOf("ItalicMind", module)
+  .add("with text", () => <ItalicMind>How could you forget?</ItalicMind>)
+  .add("longer text", () => (
+    <ItalicMind>You can barely remember last year's birthday.</ItalicMind>
+  ));

@@ -8,10 +8,8 @@ class AreaChart extends Component {
     this.state = {
       randomNumbers: [1, 2, 3, 4, 5]
     };
-
-    this.startTimer = this.startTimer.bind(this);
   }
-  startTimer() {
+  startTimer = () => {
     setInterval(() => {
       var arr = [];
       while (arr.length < 5) {
@@ -23,7 +21,7 @@ class AreaChart extends Component {
         randomNumbers: arr
       });
     }, 1000);
-  }
+  };
   componentDidMount() {
     this.startTimer();
   }

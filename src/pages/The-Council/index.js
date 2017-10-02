@@ -130,7 +130,7 @@ const TheCouncil = props => (
             <li>
               <button
                 style={buttonStyle}
-                onClick={e => this.props.update(reactAngrily)}
+                onClick={e => props.update(reactAngrily)}
               >
                 React angrily
               </button>
@@ -139,10 +139,7 @@ const TheCouncil = props => (
 
           {!props.reactAngrily && (
             <li>
-              <button
-                style={buttonStyle}
-                onClick={e => this.props.update(easyNod)}
-              >
+              <button style={buttonStyle} onClick={e => props.update(easyNod)}>
                 Nod
               </button>
             </li>
