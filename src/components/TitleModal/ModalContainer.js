@@ -4,10 +4,12 @@ const fadeAnimation = keyframes`
 	from {
 		opacity: 1;
 		display: flex;
+		visibility: visible;
 	}
 
 	to {
 		opacity: 0;
+		visibility: hidden;
 		display: none;
 	}
 `;
@@ -23,7 +25,7 @@ const ModalContainer = styled.div`
   z-index: 20;
   background-color: rgb(41, 41, 41);
   color: rgb(255, 255, 231);
-  display: flex;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
