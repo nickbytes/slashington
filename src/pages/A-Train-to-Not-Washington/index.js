@@ -50,7 +50,7 @@ const Train = props => {
               darkness of the outer edges of the city.
             </MainText>
             <MainText>
-              The train has begun its slow wind along the coast. It lulls you to
+              The train has begun its slow wind along the coast. It lulls you to{" "}
               <button
                 style={buttonStyle}
                 onClick={e => props.update(showTrainAnimation)}
@@ -175,7 +175,7 @@ const Train = props => {
             <MainText>You feel your legs start to wobble.</MainText>
           </CustomContainer>
           <CustomContainer>
-            <UserQuote>
+            <UserQuote pl={"300px"}>
               "Oh yes, I always seem to forget this part...The Council will
               explain it to you."
             </UserQuote>

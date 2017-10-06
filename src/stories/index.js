@@ -8,6 +8,7 @@ import ItalicMind from "../components/ItalicMind";
 import ThoughtQuote from "../components/ThoughtQuote";
 import TrainAnimation from "../components/TrainAnimation";
 import Workspace from "../components/Workspace";
+import TitleModal from "../components/TitleModal";
 
 storiesOf("DreamText", module)
   .add("with text", () => <DreamText>How could you forget?</DreamText>)
@@ -36,3 +37,7 @@ storiesOf("ItalicMind", module)
   .add("longer text", () => (
     <ItalicMind>You can barely remember last year's birthday.</ItalicMind>
   ));
+
+storiesOf("TitleModal", module).add("normal", () => (
+  <TitleModal chapterNumber={"01"} chapterTitle={"The Office"} />
+));

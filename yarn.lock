@@ -2098,6 +2098,10 @@ colormin@^1.0.5:
     css-color-names "0.0.4"
     has "^1.0.1"
 
+colors.css@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/colors.css/-/colors.css-2.3.0.tgz#e8953837543e19d98e2917ff0b998f6db286213b"
+
 colors@1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/colors/-/colors-1.0.3.tgz#0433f44d809680fdeb60ed260f1b0c262e82a40b"
@@ -7335,6 +7339,12 @@ verror@1.3.6:
   resolved "https://registry.yarnpkg.com/verror/-/verror-1.3.6.tgz#cff5df12946d297d2baaefaa2689e25be01c005c"
   dependencies:
     extsprintf "1.0.2"
+
+vhs@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/vhs/-/vhs-0.2.0.tgz#56893c54e1202348245eddd93e06d1d708415075"
+  dependencies:
+    colors.css "^2.3.0"
 
 victory-chart@^21.3.0:
   version "21.3.0"

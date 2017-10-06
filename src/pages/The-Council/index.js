@@ -20,13 +20,13 @@ const TheCouncil = props => (
 
     <CustomContainer>
       <MainText>
-        {props.petNameInputSaved} moves out from behind the booth and leads you
-        along a narrow gently winding, stone-lined path. As you get closer to
-        the huts, you see their brilliance. They are completely smooth, with no
-        imperfections, as if they were always that shape. They look quite solid
-        and dense, though you cannot see through the deep darkness and small
-        doorways that would accommodate only a creature of{" "}
-        {props.petNameInputSaved}'s size.
+        {props.petNameInputSaved || "PET_NAME"} moves out from behind the booth
+        and leads you along a narrow gently winding, stone-lined path. As you
+        get closer to the huts, you see their brilliance. They are completely
+        smooth, with no imperfections, as if they were always that shape. They
+        look quite solid and dense, though you cannot see through the deep
+        darkness and small doorways that would accommodate only a creature of{" "}
+        {props.petNameInputSaved || "PET_NAME"}'s size.
       </MainText>
     </CustomContainer>
 
@@ -48,7 +48,9 @@ const TheCouncil = props => (
     </CustomContainer>
 
     <CustomContainer>
-      <ItalicMind>{props.petNameInputSaved} is talking</ItalicMind>
+      <ItalicMind>
+        {props.petNameInputSaved || "PET_NAME"} is talking
+      </ItalicMind>
       <ItalicMind>You are in some other place</ItalicMind>
       <ItalicMind>is this a dream</ItalicMind>
       <ItalicMind>why the hell am I still holding this keyboard</ItalicMind>
@@ -58,21 +60,21 @@ const TheCouncil = props => (
 
     <CustomContainer>
       <MainText>
-        Your heart pounds. You hear {props.petNameInputSaved} say something
-        about "last time" and "of course its all dangerous but it's the only
-        option" but you can barely hear {props.petNameInputSaved} over your
-        heart pounding.
+        Your heart pounds. You hear {props.petNameInputSaved || "PET_NAME"} say
+        something about "last time" and "of course its all dangerous but it's
+        the only option" but you can barely hear{" "}
+        {props.petNameInputSaved || "PET_NAME"} over your heart pounding.
       </MainText>
     </CustomContainer>
 
     <CustomContainer>
       <MainText>
-        {props.petNameInputSaved} stops at the doorway, a bone white door,
-        nearly flush with the outside of the building and turns back to you.{" "}
-        {props.petNameInputSaved} is trying to hold back tears. "So young, too
-        young, I shouldn't say anymore, but I'm worried for..."{" "}
-        {props.petNameInputSaved} takes a deep breath and tries to stay
-        composed.
+        {props.petNameInputSaved || "PET_NAME"} stops at the doorway, a bone
+        white door, nearly flush with the outside of the building and turns back
+        to you. {props.petNameInputSaved || "PET_NAME"} is trying to hold back
+        tears. "So young, too young, I shouldn't say anymore, but I'm worried
+        for..." {props.petNameInputSaved || "PET_NAME"} takes a deep breath and
+        tries to stay composed.
       </MainText>
     </CustomContainer>
 
@@ -82,8 +84,8 @@ const TheCouncil = props => (
 
     <CustomContainer>
       <MainText>
-        {props.petNameInputSaved} isn't paying attention, engulfed in tears,
-        choking up.
+        {props.petNameInputSaved || "PET_NAME"} isn't paying attention, engulfed
+        in tears, choking up.
       </MainText>
     </CustomContainer>
 
@@ -104,16 +106,17 @@ const TheCouncil = props => (
 
     <CustomContainer>
       <UserQuote pl={"300px"}>
-        "Ahhhhh, {props.playerNameSaved}, {props.playerOccupationSaved},
-        Earthling of the {props.playerCompanySaved} tribe."
+        "Ahhhhh, {props.playerNameSaved || "PLAYER_NAME"},{" "}
+        {props.playerOccupationSaved || "PLAYER_JOB"}, Earthling of the{" "}
+        {props.playerCompanySaved || "PLAYER_COMPANY"} tribe."
       </UserQuote>
     </CustomContainer>
 
     <CustomContainer>
       <MainText>
         You see the circlular table, surrounded by a group of{" "}
-        {props.petTypeInputSaved}s dressed similarly, though more intricate and
-        grandoise, as {props.petNameInputSaved}.
+        {props.petTypeInputSaved || "PET_TYPE"}s dressed similarly, though more
+        intricate and grandoise, as {props.petNameInputSaved || "PET_TYPE"}.
       </MainText>
     </CustomContainer>
 
@@ -203,16 +206,18 @@ const TheCouncil = props => (
           <UserQuote pl={"150px"}>
             "Comrade Igglefort, may we hear some possible doubts in this plan-"
           </UserQuote>
-          <MainText>another {props.petTypeInputSaved} says.</MainText>
+          <MainText>
+            another {props.petTypeInputSaved || "PET_TYPE"} says.
+          </MainText>
           <UserQuote pl={"300px"}>
             "The Council has decided. There will be no further discussions. We
             are moving forward with the candidate."
           </UserQuote>
 
           <MainText>
-            Some {props.petTypeInputSaved}s look taken aback, or vaguely
-            offended, though none continue to quarrel. You hear one of them
-            mutter something like "too exposed."
+            Some {props.petTypeInputSaved || "PET_TYPE"}s look taken aback, or
+            vaguely offended, though none continue to quarrel. You hear one of
+            them mutter something like "too exposed."
           </MainText>
         </CustomContainer>
       </CustomContainer>
@@ -224,8 +229,8 @@ const TheCouncil = props => (
           "What else do you know about us?"
         </AnimalQuote>
         <AnimalQuote pl={"150px"}>
-          "{props.playerNameSaved} knows nothing else, you know that, Comrade
-          Igglefort."
+          "{props.playerNameSaved || "PLAYER_NAME"} knows nothing else, you know
+          that, Comrade Igglefort-"
         </AnimalQuote>
         <AnimalQuote>
           "Rule 42, Section 7, Line 12 states that a counselor must ask whether
@@ -235,17 +240,17 @@ const TheCouncil = props => (
           "I know what the article states."
         </AnimalQuote>
         <AnimalQuote pl={"300px"}>
-          Then you should also understand it's importance. Now that that's
+          "Then you should also understand it's importance. Now that that's
           finished, please allow me to quickly run through protocol and update
-          our guest on their task.
+          our guest on their task."
         </AnimalQuote>
         <MainText>
-          The other {props.petTypeInputSaved} nods, and sits back in
-          disinterest.
+          The other {props.petTypeInputSaved || "PET_TYPE"} nods, and sits back
+          in disinterest.
         </MainText>
         <AnimalQuote pl={"300px"}>
-          You have been selected for a task. But first, some background. You are
-          not in a dream. Magic has been passed down throughout the ages. It
+          "You have been selected for a task. But first, some background. You
+          are not in a dream. Magic has been passed down throughout the ages. It
           used to be taught somewhat more openly, and accepted on some level,
           but rises in secular conservatism saw it as a threat. People
           persecuted magicial beings. Now it is hushed, but helps to keep
@@ -253,32 +258,32 @@ const TheCouncil = props => (
           handful of people, usually found in their early teens. These teenagers
           possess abilities in science, computing, mathematics. The best
           magicians are critical thinkers, optimists. A few will go into
-          politics, but that can really go awry.
+          politics, but that can really go awry."
         </AnimalQuote>
         <AnimalQuote pl={"300px"}>
-          Ivy League colleges were created to find best and brightest, and pump
+          "Ivy League colleges were created to find best and brightest, and pump
           logical, big biz, into their veins, to stamp magic out. It's own
           optimistic ritual, though dangerous. The same faith in trickle down
           morality as in economics. She is a number of a handful. She has been
-          learning. It is time for her to learn more, to assert more influence.
+          learning. It is time for her to learn more, to assert more influence."
         </AnimalQuote>
         <UserQuote>"She?"</UserQuote>
         <AnimalQuote pl={"300px"}>
-          Why politicians not seek to out magic? Would cause panic. Some of them
-          are covert magicians themselves.
+          "Why politicians not seek to out magic? Would cause panic. Some of
+          them are covert magicians themselves."
         </AnimalQuote>
         <AnimalQuote pl={"300px"}>
-          Next bit of her training is the most important, need an easy vessel
+          "Next bit of her training is the most important, need an easy vessel
           for communication. Your keyboard. Once items made magical, hard to
           detect obviously, looks as though a product of modern tech. Last time
-          tried a blender, obvious fluke...
+          tried a blender, obvious fluke..."
         </AnimalQuote>
         <MainText>
           Something sounds vaguely familiar about a blender. A moment of deja-vu
           almost, but you cannot piece it together...
         </MainText>
         <UserQuote>"How much danger is she in?"</UserQuote>
-        <AnimalQuote>We are fully confident in her abilities.</AnimalQuote>
+        <AnimalQuote>"We are fully confident in her abilities."</AnimalQuote>
         <UserQuote>"You did not answer my question."</UserQuote>
         <AnimalQuote>
           "She will be more prepared, in less danger, if you can successfully

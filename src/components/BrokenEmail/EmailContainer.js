@@ -8,6 +8,7 @@ const EmailContainer = styled.div`
   padding-top: 16px;
   padding-bottom: 10px;
   border-radius: 3px;
+  z-index: 10;
 `;
 
 export default EmailContainer;
