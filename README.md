@@ -29,7 +29,6 @@ You can see the story book at `localhost:9009`.
 
 ## TODO
 ### Page 1
-- [ ] make badge downloadable
 - [ ] add more dummy modules to the computer screen
 - [ ] add voicemail playing/finished animation
 - [ ] add second color animation to dream text
@@ -69,6 +68,10 @@ You can see the story book at `localhost:9009`.
 - [ ] upgrade to react 16 for better modals + render array, better performance too
 - [ ] localstorage saving state
 - [ ] block URL routes if haven't played that far (or createMemoryHistory)
-- [ ] music is 🍒
+
 - [ ] block smaller screens :shrug:
   - [ ] Use an HOC, similar to scrollTop, to do this
+
+### 🍒
+- [ ] music
+- [ ] make badge downloadable

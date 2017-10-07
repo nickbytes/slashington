@@ -1,5 +1,11 @@
 import { Text } from "rebass";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const colorShadow = keyframes`
+  50% {
+    text-shadow: 0px 1px 9px rgb(73, 1, 119);
+  }
+`;
 
 const DreamText = styled(Text)`
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
@@ -13,6 +19,7 @@ const DreamText = styled(Text)`
   max-width: 38em;
   margin-bottom: 1.5em;
   text-shadow: 0px 1px 15px rgb(73, 1, 119);
+  animation: ${colorShadow} 2s infinite;
 `;
 
 export default DreamText;
