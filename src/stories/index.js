@@ -5,10 +5,11 @@ import { storiesOf } from "@storybook/react";
 import BrokenEmail from "../components/BrokenEmail";
 import DreamText from "../components/DreamText";
 import ItalicMind from "../components/ItalicMind";
+import NotesApp from "../components/NotesApp";
 import ThoughtQuote from "../components/ThoughtQuote";
+import TitleModal from "../components/TitleModal";
 import TrainAnimation from "../components/TrainAnimation";
 import Workspace from "../components/Workspace";
-import TitleModal from "../components/TitleModal";
 
 storiesOf("DreamText", module)
   .add("with text", () => <DreamText>How could you forget?</DreamText>)
@@ -41,3 +42,5 @@ storiesOf("ItalicMind", module)
 storiesOf("TitleModal", module).add("normal", () => (
   <TitleModal chapterNumber={"01"} chapterTitle={"The Office"} />
 ));
+
+storiesOf("Notes App", module).add("normal", () => <NotesApp />);

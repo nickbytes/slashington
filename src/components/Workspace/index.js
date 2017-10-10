@@ -4,6 +4,7 @@ import React from "react";
 import { coffeeClicked } from "../../updaters/updaters";
 import AreaChart from "../AreaChart";
 import DesktopBackground from "./DesktopBackground";
+import NotesApp from "../NotesApp";
 import NotificationEvent from "./NotificationEvent";
 import NotificationTopBar from "./NotificationTopBar";
 import NotificationWindow from "./NotificationWindow";
@@ -78,6 +79,7 @@ const Workspace = props => (
           <Icon name="skull" /> You have 7 deadlines today.
         </NotificationEvent>
       </NotificationWindow>
+      <NotesApp />
       <AreaChart />
       <div
         style={{

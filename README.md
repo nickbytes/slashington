@@ -29,9 +29,9 @@ You can see the story book at `localhost:9009`.
 
 ## TODO
 ### Page 1
-- [ ] add more dummy modules to the computer screen
+- [x] add more dummy modules to the computer screen
 - [ ] add voicemail playing/finished animation
-- [ ] add second color animation to dream text
+- [x] add second color animation to dream text
 - [ ] absolute position things on the computer screen
 - [ ] full screen the computer screen when active
 - [ ] gray out the computer screen when typing in the AIM box

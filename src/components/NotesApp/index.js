@@ -1,15 +1,23 @@
 import React from "react";
 
+import NotesContainer from "./NotesContainer";
+import NotesTopBar from "./NotesTopBar";
+
 const NotesApp = props => (
-  <div>
-    <div />
+  <NotesContainer>
+    <NotesTopBar>
+      <h1>Notes</h1>
+    </NotesTopBar>
     <div>
       <ul>
-        <li>Note 1</li>
-        <li>Note 2</li>
+        <li>Research system dynamics</li>
+        <li>Review Ethical Investments from Frontier Imaginaries</li>
+        <li>Process emulation fever dream, due EOD.</li>
+        <li>Military cybernetics?!?!</li>
+        <li>4, 8, 15, 16, 23, 42</li>
       </ul>
     </div>
-  </div>
+  </NotesContainer>
 );
 
 export default NotesApp;
