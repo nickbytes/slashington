@@ -110,5 +110,6 @@ export const restartWork = state => ({
 });
 
 export const scottArrives = state => ({
-  scottAtDesk: true
+  scottAtDesk: true,
+  restartingWork: false
 });
