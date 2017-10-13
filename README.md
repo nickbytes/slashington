@@ -32,7 +32,7 @@ You can see the story book at `localhost:9009`.
 - [x] add more dummy modules to the computer screen
 - [ ] add voicemail playing/finished animation
 - [x] add second color animation to dream text
-- [ ] absolute position things on the computer screen
+- [x] absolute position things on the computer screen
 - [ ] full screen the computer screen when active
 - [ ] gray out the computer screen when typing in the AIM box
 

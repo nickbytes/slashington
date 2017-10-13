@@ -70,7 +70,10 @@ export const receiveBadge = state => ({
 
 export const reactAngrily = state => ({ reactAngrily: true });
 export const easyNod = state => ({ easyNod: true });
-export const coffeeClicked = state => ({ coffeeClicked: true });
+export const coffeeClicked = state => ({
+  coffeeClicked: true,
+  workspaceVisible: false
+});
 
 export const newJobs = state => ({
   jobItems: [
