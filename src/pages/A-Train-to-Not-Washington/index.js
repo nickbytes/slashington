@@ -68,7 +68,7 @@ const Train = props => {
         </CustomContainer>
       )}
 
-      {/* {props.awakenAfterTrainRide*/ true && (
+      {props.awakenAfterTrainRide && (
         <CustomContainer>
           <MainText>
             You groggily awake to the sunshine on your face. The sky is bright

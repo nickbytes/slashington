@@ -34,7 +34,9 @@ You can see the story book at `localhost:9009`.
 - [x] add second color animation to dream text
 - [x] absolute position things on the computer screen
 - [x] full screen the computer screen when active
-- [ ] gray out the computer screen when typing in the AIM box
+- [x] ~~gray out the computer screen when typing in the AIM box~~
+- [ ] add something to denote closed Workspace
+  - ideas: line, mini computer icon
 
 ### Page 2
 - [ ] initial showing state is messed up
