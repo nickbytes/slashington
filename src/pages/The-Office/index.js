@@ -33,6 +33,8 @@ import WebcamComponent from "../../components/WebcamComponent";
 import Workspace from "../../components/Workspace";
 import buttonStyle from "../../utilities/buttonStyle";
 
+import keyboard from "../../images/keyboard.jpg";
+
 const Office = props => {
   return (
     <div
@@ -368,6 +370,9 @@ const Office = props => {
               version of this keyboard will work, you've been using this one for
               years.
             </MainText>
+          </CustomContainer>
+          <CustomContainer>
+            <img src={keyboard} alt="keyboard" />
           </CustomContainer>
           <CustomContainer>
             <UserQuote pl={"300px"}>"Keyboard issues?"</UserQuote>

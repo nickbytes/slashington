@@ -2,6 +2,7 @@ import styled from "styled-components";
 import beach from "../../images/beach.jpg";
 
 const DesktopBackground = styled.div`
+  background-color: rgba(31, 34, 40, 1);
   background-image: url(${beach});
   background-position: center center;
   background-size: cover;
