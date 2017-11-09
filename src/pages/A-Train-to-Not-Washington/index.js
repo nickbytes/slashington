@@ -64,7 +64,7 @@ const Train = props => {
 
       {props.trainAnimationVisible && (
         <CustomContainer>
-          <TrainAnimation />
+          <TrainAnimation {...props} />
         </CustomContainer>
       )}
 
