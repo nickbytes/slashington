@@ -43,51 +43,62 @@ const TheCouncil = props => (
       <MainText>
         You suddenly realize {props.petNameInputSaved} has been talking the
         entire time you've been trying to take in the surroundings. Everything
-        feels like a blur.
+        feels like a{" "}
+        <button style={buttonStyle} onClick={e => props.update(showWaves)}>
+          blur
+        </button>.
       </MainText>
     </CustomContainer>
 
-    <CustomContainer>
-      <ItalicMind>
-        {props.petNameInputSaved || "PET_NAME"} is talking
-      </ItalicMind>
-      <ItalicMind>You are in some other place</ItalicMind>
-      <ItalicMind>is this a dream</ItalicMind>
-      <ItalicMind>why the hell am I still holding this keyboard</ItalicMind>
-      <br />
-      <InProgress>I think it would be cool to have these flash</InProgress>
-    </CustomContainer>
+    {props.showThoughts && (
+      <CustomContainer>
+        <ItalicMind>
+          {props.petNameInputSaved || "PET_NAME"} is talking
+        </ItalicMind>
+        <ItalicMind>You are in some other place</ItalicMind>
+        <ItalicMind>is this a dream</ItalicMind>
+        <ItalicMind>why the hell am I still holding this keyboard</ItalicMind>
+        <br />
+        <InProgress>I think it would be cool to have these flash</InProgress>
+      </CustomContainer>
+    )}
 
-    <CustomContainer>
-      <MainText>
-        Your heart pounds. You hear {props.petNameInputSaved || "PET_NAME"} say
-        something about "last time" and "of course its all dangerous but it's
-        the only option" but you can barely hear{" "}
-        {props.petNameInputSaved || "PET_NAME"} over your heart pounding.
-      </MainText>
-    </CustomContainer>
+    {props.showMoreText && (
+      <div>
+        <CustomContainer>
+          <MainText>
+            Your heart pounds. You hear {props.petNameInputSaved || "PET_NAME"}{" "}
+            say something about "last time" and "of course its all dangerous but
+            it's the only option" but you can barely hear{" "}
+            {props.petNameInputSaved || "PET_NAME"} over your heart pounding.
+          </MainText>
+        </CustomContainer>
 
-    <CustomContainer>
-      <MainText>
-        {props.petNameInputSaved || "PET_NAME"} stops at the doorway, a bone
-        white door, nearly flush with the outside of the building and turns back
-        to you. {props.petNameInputSaved || "PET_NAME"} is trying to hold back
-        tears. "So young, too young, I shouldn't say anymore, but I'm worried
-        for..." {props.petNameInputSaved || "PET_NAME"} takes a deep breath and
-        tries to stay composed.
-      </MainText>
-    </CustomContainer>
+        <CustomContainer>
+          <MainText>
+            {props.petNameInputSaved || "PET_NAME"} stops at the doorway, a bone
+            white door, nearly flush with the outside of the building and turns
+            back to you. {props.petNameInputSaved || "PET_NAME"} is trying to
+            hold back tears. "So young, too young, I shouldn't say anymore, but
+            I'm worried for..." {props.petNameInputSaved || "PET_NAME"} takes a
+            deep breath and tries to stay composed.
+          </MainText>
+        </CustomContainer>
 
-    <CustomContainer>
-      <UserQuote>"I'm not young... I don't understand..."</UserQuote>
-    </CustomContainer>
+        <CustomContainer>
+          <UserQuote>"I'm not young... I don't understand..."</UserQuote>
+        </CustomContainer>
 
-    <CustomContainer>
-      <MainText>
-        {props.petNameInputSaved || "PET_NAME"} isn't paying attention, engulfed
-        in tears, choking up.
-      </MainText>
-    </CustomContainer>
+        <CustomContainer>
+          <MainText>
+            {props.petNameInputSaved || "PET_NAME"} isn't paying attention,
+            engulfed in tears, choking up.
+          </MainText>
+        </CustomContainer>
+      </div>
+    )}
+
+    {}
 
     <CustomContainer>
       <UserQuote pl={"300px"}>
@@ -135,7 +146,7 @@ const TheCouncil = props => (
                 style={buttonStyle}
                 onClick={e => props.update(reactAngrily)}
               >
-                React angrily
+                😡
               </button>
             </li>
           )}
@@ -143,7 +154,7 @@ const TheCouncil = props => (
           {!props.reactAngrily && (
             <li>
               <button style={buttonStyle} onClick={e => props.update(easyNod)}>
-                Nod
+                😳
               </button>
             </li>
           )}
