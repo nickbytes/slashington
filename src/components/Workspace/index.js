@@ -21,7 +21,9 @@ const Workspace = props => (
           paddingLeft: "20px"
         }}
       >
-        <span>🔮</span>
+        <span role="img" aria-label="crystal ball">
+          🔮
+        </span>
         <span
           style={{
             color: "rgba(255,255,255,0.7)",
@@ -54,7 +56,9 @@ const Workspace = props => (
             }}
             onClick={e => props.update(coffeeClicked)}
           >
-            ☕️
+            <span role="img" aria-label="coffee">
+              ☕️
+            </span>
           </button>
         </span>
         <span
@@ -62,7 +66,9 @@ const Workspace = props => (
             paddingRight: "10px"
           }}
         >
-          🌱
+          <span role="img" aria-label="seedling">
+            🌱
+          </span>
         </span>
         <time style={{ color: "white" }}>12:34</time>
       </div>

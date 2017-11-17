@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 /* global party */
 
 import { createTitle } from "../components/JobSelectionComponent/jobGenerator";
