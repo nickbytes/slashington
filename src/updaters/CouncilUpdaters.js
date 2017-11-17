@@ -1,3 +1,3 @@
-export const simpleFlipper = (state, flipProperty) => ({
-  flipProperty: true
+export const showWaves = state => ({
+  showThoughts: true
 });

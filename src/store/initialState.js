@@ -48,6 +48,7 @@ const initialState = {
   easyNodClicked: false,
   reactAngrilyClicked: false,
   playerCompanySaved: "Bauzort",
+  showThoughts: false,
   // Slashington
   darknessEngulfs: false,
   lightBursts: false,

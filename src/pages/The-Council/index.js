@@ -3,8 +3,8 @@ import { connect } from "funcup";
 import React from "react";
 
 import { easyNod, reactAngrily } from "../../updaters/updaters";
+import { showWaves } from "../../updaters/CouncilUpdaters";
 import AnimalQuote from "../../components/AnimalQuote";
-import ChapterTitle from "../../components/ChapterTitle";
 import CustomContainer from "../../components/CustomContainer";
 import InProgress from "../../components/InProgress";
 import ItalicMind from "../../components/ItalicMind";
@@ -14,10 +14,6 @@ import buttonStyle from "../../utilities/buttonStyle";
 
 const TheCouncil = props => (
   <div>
-    <CustomContainer>
-      <ChapterTitle>The Council</ChapterTitle>
-    </CustomContainer>
-
     <CustomContainer>
       <MainText>
         {props.petNameInputSaved || "PET_NAME"} moves out from behind the booth
@@ -164,7 +160,6 @@ const TheCouncil = props => (
 
     {props.reactAngrily && (
       <CustomContainer>
-        <InProgress>React angrily</InProgress>
         <UserQuote>"What the fuck is going on?!"</UserQuote>
         <AnimalQuote pl={"300px"}>"You have been-"</AnimalQuote>
         <AnimalQuote pl={"150px"}>
@@ -321,7 +316,8 @@ const map = state => ({
   playerCompanySaved: state.playerCompanySaved,
   reactAngrily: state.reactAngrily,
   easyNod: state.easyNod,
-  explanationHeard: state.explanationHeard
+  explanationHeard: state.explanationHeard,
+  showThoughts: state.showThoughts
 });
 
 export default connect(map)(TheCouncil);
