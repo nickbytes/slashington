@@ -142,7 +142,9 @@ const TheCouncil = props => (
                 style={buttonStyle}
                 onClick={e => props.update(reactAngrily)}
               >
-                😡
+                <span role="img" aria-label="grimacing face">
+                  😡
+                </span>
               </button>
             </li>
           )}
@@ -150,7 +152,9 @@ const TheCouncil = props => (
           {!props.reactAngrily && (
             <li>
               <button style={buttonStyle} onClick={e => props.update(easyNod)}>
-                😳
+                <span role="img" aria-label="flushed face">
+                  😳
+                </span>
               </button>
             </li>
           )}
