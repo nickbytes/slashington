@@ -9,11 +9,12 @@ import CustomContainer from "../../components/CustomContainer";
 import InProgress from "../../components/InProgress";
 import ItalicMind from "../../components/ItalicMind";
 import MainText from "../../components/MainText";
+import PageWrapper from "../../components/PageWrapper";
 import UserQuote from "../../components/UserQuote";
 import buttonStyle from "../../utilities/buttonStyle";
 
 const TheCouncil = props => (
-  <div>
+  <PageWrapper>
     <CustomContainer>
       <MainText>
         {props.petNameInputSaved || "PET_NAME"} moves out from behind the booth
@@ -309,7 +310,7 @@ const TheCouncil = props => (
         <Link to="/Slashington">Next</Link>
       </CustomContainer>
     )}
-  </div>
+  </PageWrapper>
 );
 
 const map = state => ({
