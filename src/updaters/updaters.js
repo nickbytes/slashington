@@ -114,3 +114,18 @@ export const scottArrives = state => ({
   scottAtDesk: true,
   restartingWork: false
 });
+
+// testing
+// testing
+export const testingFun = state => ({
+  somethingFun: true
+});
+
+export const testingSmaller = state => ({
+  somethingElse: true
+});
+
+export const testingNext = state => ({
+  somethingFun: false,
+  somethingMore: true,
+});
