@@ -7,3 +7,38 @@ export const showNameQuesiton = state => ({
   receptionistVisible: false,
   nameQuestionVisible: true
 });
+
+export const showNameQuesiton = state => ({
+  receptionistVisible: false,
+  nameQuestionVisible: true
+});
+
+export const showNameQuesiton = state => ({
+  receptionistVisible: false,
+  nameQuestionVisible: true
+});
+
+export const showNameQuesiton = state => ({
+  receptionistVisible: false,
+  nameQuestionVisible: true
+});
+
+export const showNameQuesiton = state => ({
+  receptionistVisible: false,
+  nameQuestionVisible: true
+});
+
+export const showNameQuesiton = state => ({
+  receptionistVisible: false,
+  nameQuestionVisible: true
+});
+
+export const showNameQuesiton = state => ({
+  receptionistVisible: false,
+  nameQuestionVisible: true
+});
+
+export const showNameQuesiton = state => ({
+  receptionistVisible: false,
+  nameQuestionVisible: true
+});

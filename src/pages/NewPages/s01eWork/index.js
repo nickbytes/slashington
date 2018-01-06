@@ -67,7 +67,7 @@ const s01eWork = props => (
           It's Friday. It's the end of a long week. And after work today you're
           headed to from New York to Washington, DC for your niece's birthday.
         </MainText>
-        <NextButton />
+        <NextButton onClick={() => props.update(showNameQuesiton)} />
       </CustomContainer>
     </SimpleScene>
     <SimpleScene isVisible={props.nameQuestionVisible}>
