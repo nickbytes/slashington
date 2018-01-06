@@ -8,6 +8,8 @@ export const showNameQuesiton = state => ({
   nameQuestionVisible: true
 });
 
+// yes i am fully aware
+
 export const showNameQuesiton = state => ({
   receptionistVisible: false,
   nameQuestionVisible: true
