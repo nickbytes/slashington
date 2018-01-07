@@ -1,4 +1,4 @@
-import { Arrow, Container, Input } from "rebass";
+import { Arrow, Container } from "rebass";
 import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
@@ -16,24 +16,24 @@ import {
   showPlayerOccupationField,
   startBurning,
   turnOnComputer
-} from "../../updaters/updaters";
-import { showReceptionist } from "./updaters";
-import BrokenEmail from "../../components/BrokenEmail";
-import CustomContainer from "../../components/CustomContainer";
-import DreamText from "../../components/DreamText";
-import JobSelectionComponent from "../../components/JobSelectionComponent";
-import MainText from "../../components/MainText";
+} from "../../../updaters/updaters";
+import { showNameQuestion, showReceptionist } from "./updaters";
+import BrokenEmail from "../../../components/BrokenEmail";
+import CustomContainer from "../../../components/CustomContainer";
+import DreamText from "../../../components/DreamText";
+import JobSelectionComponent from "../../../components/JobSelectionComponent";
+import MainText from "../../../components/MainText";
 import NewInput from "../../../components/NewInput";
-import NextButton from "../../components/NextButton";
-import NotesApp from "../../components/NotesApp";
-import PhoneComponent from "../../components/PhoneComponent";
-import SimpleScene from "../../components/SimpleScene";
-import Smoke from "../../components/Smoke";
-import UserQuote from "../../components/UserQuote";
-import WebcamComponent from "../../components/WebcamComponent";
-import Workspace from "../../components/Workspace";
-import buttonStyle from "../../utilities/buttonStyle";
-import keyboard from "../../images/keyboard.jpg";
+import NextButton from "../../../components/NextButton";
+import NotesApp from "../../../components/NotesApp";
+import PhoneComponent from "../../../components/PhoneComponent";
+import SimpleScene from "../../../components/SimpleScene";
+import Smoke from "../../../components/Smoke";
+import UserQuote from "../../../components/UserQuote";
+import WebcamComponent from "../../../components/WebcamComponent";
+import Workspace from "../../../components/Workspace";
+import buttonStyle from "../../../utilities/buttonStyle";
+import keyboard from "../../../images/keyboard.jpg";
 
 const s01eWork = props => (
   <div>
@@ -67,7 +67,7 @@ const s01eWork = props => (
           It's Friday. It's the end of a long week. And after work today you're
           headed to from New York to Washington, DC for your niece's birthday.
         </MainText>
-        <NextButton onClick={() => props.update(showNameQuesiton)} />
+        <NextButton onClick={() => props.update(showNameQuestion)} />
       </CustomContainer>
     </SimpleScene>
     <SimpleScene isVisible={props.nameQuestionVisible}>

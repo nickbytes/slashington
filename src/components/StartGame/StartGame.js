@@ -10,41 +10,14 @@ class StartGame extends Component {
       <div>
         <CustomContainer>
           <MainText>
-            [Untitled Game] is a semi-fictional interactive whirlwind. It is
-            played best on a modern desktop browser (Chrome, Safari, Firefox).
-            The game has an audio component, with transcripts provided.
+            <b>Now Arriving: Slashington</b> is a semi-fictional interactive
+            whirlwind where players act as a messenger between worlds, help plot
+            the demise of a pop star turned political icon, and attend their
+            niece's 16th birthday party. It is played best on a modern desktop
+            browser (Chrome, Safari, Firefox). The game has an audio component,
+            with transcripts provided.
           </MainText>
         </CustomContainer>
-        {/* <CustomContainer>
-          <InProgress>Devtool to help navigate</InProgress>
-          <nav>
-            <li>
-              <Link to={`/The-Office`}>The Office</Link>
-            </li>
-            <li>
-              <Link to={`/A-Train-to-Not-Washington`}>
-                A Train to Not Washington
-              </Link>
-            </li>
-            <li>
-              <Link to={`/The-Council`}>The Council</Link>
-            </li>
-            <li>
-              <Link to={`/Slashington`}>Slashington</Link>
-            </li>
-            <li>
-              <Link disabled to={`/Birthday`}>
-                Birthday
-              </Link>
-            </li>
-            <li>
-              <Link to={`/Good-Messenger`}>Good-Messenger</Link>
-            </li>
-            <li>
-              <Link to={`/credits`}>credits</Link>
-            </li>
-          </nav>
-        </CustomContainer> */}
         <CustomContainer>
           <Link to={`/The-Office`}>Begin</Link>
         </CustomContainer>

@@ -3,44 +3,44 @@ export const showReceptionist = state => ({
   receptionistVisible: true
 });
 
-export const showNameQuesiton = state => ({
+export const showNameQuestion = state => ({
   receptionistVisible: false,
   nameQuestionVisible: true
 });
 
 // yes i am fully aware
 
-export const showNameQuesiton = state => ({
-  receptionistVisible: false,
-  nameQuestionVisible: true
-});
-
-export const showNameQuesiton = state => ({
-  receptionistVisible: false,
-  nameQuestionVisible: true
-});
-
-export const showNameQuesiton = state => ({
-  receptionistVisible: false,
-  nameQuestionVisible: true
-});
-
-export const showNameQuesiton = state => ({
-  receptionistVisible: false,
-  nameQuestionVisible: true
-});
-
-export const showNameQuesiton = state => ({
-  receptionistVisible: false,
-  nameQuestionVisible: true
-});
-
-export const showNameQuesiton = state => ({
-  receptionistVisible: false,
-  nameQuestionVisible: true
-});
-
-export const showNameQuesiton = state => ({
-  receptionistVisible: false,
-  nameQuestionVisible: true
-});
+// export const showNameQuesiton = state => ({
+//   receptionistVisible: false,
+//   nameQuestionVisible: true
+// });
+//
+// export const showNameQuesiton = state => ({
+//   receptionistVisible: false,
+//   nameQuestionVisible: true
+// });
+//
+// export const showNameQuesiton = state => ({
+//   receptionistVisible: false,
+//   nameQuestionVisible: true
+// });
+//
+// export const showNameQuesiton = state => ({
+//   receptionistVisible: false,
+//   nameQuestionVisible: true
+// });
+//
+// export const showNameQuesiton = state => ({
+//   receptionistVisible: false,
+//   nameQuestionVisible: true
+// });
+//
+// export const showNameQuesiton = state => ({
+//   receptionistVisible: false,
+//   nameQuestionVisible: true
+// });
+//
+// export const showNameQuesiton = state => ({
+//   receptionistVisible: false,
+//   nameQuestionVisible: true
+// });
