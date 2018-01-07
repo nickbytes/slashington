@@ -23,6 +23,7 @@ import CustomContainer from "../../components/CustomContainer";
 import DreamText from "../../components/DreamText";
 import JobSelectionComponent from "../../components/JobSelectionComponent";
 import MainText from "../../components/MainText";
+import NewInput from "../../../components/NewInput";
 import NextButton from "../../components/NextButton";
 import NotesApp from "../../components/NotesApp";
 import PhoneComponent from "../../components/PhoneComponent";
@@ -32,7 +33,6 @@ import UserQuote from "../../components/UserQuote";
 import WebcamComponent from "../../components/WebcamComponent";
 import Workspace from "../../components/Workspace";
 import buttonStyle from "../../utilities/buttonStyle";
-
 import keyboard from "../../images/keyboard.jpg";
 
 const s01eWork = props => (
@@ -95,18 +95,11 @@ const s01eWork = props => (
               display: "flex"
             }}
           >
-            <Input
+            <NewInput
               defaultValue=""
               placeholder="First Name"
               value={props.newPlayerName}
               onChange={e => props.update(setNewPlayerName(e.target.value))}
-              style={{
-                border: "0",
-                fontFamily: "'Source Code Pro', monospace",
-                width: "300px",
-                fontSize: "20px",
-                marginRight: "35px"
-              }}
             />
 
             <button
@@ -184,18 +177,11 @@ const s01eWork = props => (
               props.update(addSecurityAnswers);
             }}
           >
-            <Input
+            <NewInput
               defaultValue=""
               placeholder="Aunt Millie"
               value={props.newPetOwner}
               onChange={e => props.update(setNewPetOwner(e.target.value))}
-              style={{
-                fontFamily: "'Source Code Pro', monospace",
-                fontWeight: "700",
-                fontSize: "1.5rem",
-                border: "none",
-                width: "290px"
-              }}
             />
             <span
               style={{
@@ -208,32 +194,18 @@ const s01eWork = props => (
               's
             </span>
 
-            <Input
+            <NewInput
               defaultValue=""
               placeholder="parrot"
               value={props.newPetType}
               onChange={e => props.update(setNewPetType(e.target.value))}
-              style={{
-                fontFamily: "'Source Code Pro', monospace",
-                fontWeight: "700",
-                fontSize: "1.5rem",
-                border: "none",
-                paddingLeft: "115px"
-              }}
             />
 
-            <Input
+            <NewInput
               defaultValue=""
               placeholder="George"
               value={props.newPetName}
               onChange={e => props.update(setNewPetName(e.target.value))}
-              style={{
-                fontFamily: "'Source Code Pro', monospace",
-                fontWeight: "700",
-                fontSize: "1.5rem",
-                border: "none",
-                paddingLeft: "230px"
-              }}
             />
             <div style={{ paddingLeft: "355px" }}>
               <button
