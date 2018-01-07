@@ -1,3 +1,5 @@
+import "../../../vendor/devices.min.css";
+
 import { Arrow, Container } from "rebass";
 import { Link } from "react-router-dom";
 import { connect } from "funcup";
@@ -5,19 +7,22 @@ import React from "react";
 
 import {
   addPlayerName,
+  setNewPlayerName,
+  showFirstWorkspace,
+  showNameQuestion,
+  showPhone,
+  showPlayerNameField,
+  showReceptionist,
+  startBurning
+} from "./updaters";
+import {
   addSecurityAnswers,
   restartWork,
   setNewPetName,
   setNewPetOwner,
   setNewPetType,
-  setNewPlayerName,
-  showPhone,
-  showPlayerNameField,
-  showPlayerOccupationField,
-  startBurning,
-  turnOnComputer
+  showPlayerOccupationField
 } from "../../../updaters/updaters";
-import { showNameQuestion, showReceptionist } from "./updaters";
 import BrokenEmail from "../../../components/BrokenEmail";
 import CustomContainer from "../../../components/CustomContainer";
 import DreamText from "../../../components/DreamText";
@@ -72,7 +77,7 @@ const s01eWork = props => (
     </SimpleScene>
     <SimpleScene isVisible={props.nameQuestionVisible}>
       <CustomContainer>
-        <UserQuote pl={"300px"}>
+        <UserQuote>
           "Name{" "}
           <button
             style={buttonStyle}
@@ -85,38 +90,37 @@ const s01eWork = props => (
     </SimpleScene>
     <SimpleScene isVisible={props.nameFormVisible}>
       <CustomContainer>
-        {!props.playerNameSaved && (
-          <form
-            onSubmit={e => {
-              e.preventDefault();
-              props.update(addPlayerName);
-            }}
-            style={{
-              display: "flex"
-            }}
-          >
-            <NewInput
-              defaultValue=""
-              placeholder="First Name"
-              value={props.newPlayerName}
-              onChange={e => props.update(setNewPlayerName(e.target.value))}
-            />
+        <form
+          onSubmit={e => {
+            e.preventDefault();
+            props.update(addPlayerName);
+          }}
+          style={{
+            display: "flex"
+          }}
+        >
+          <NewInput
+            defaultValue=""
+            placeholder="First Name"
+            value={props.newPlayerName}
+            onChange={e => props.update(setNewPlayerName(e.target.value))}
+          />
 
-            <button
-              style={{
-                background: "none",
-                border: "none",
-                cursor: "pointer"
-              }}
-              children={<Arrow right />}
-            />
-          </form>
-        )}
+          <button
+            style={{
+              background: "none",
+              border: "none",
+              cursor: "pointer"
+            }}
+            children={<Arrow right />}
+          />
+        </form>
       </CustomContainer>
     </SimpleScene>
     <SimpleScene isVisible={props.nameAnswerVisible}>
       <UserQuote>"{props.playerNameSaved}."</UserQuote>
     </SimpleScene>
+
     <SimpleScene isVisible={props.positionQuestionVisible}>
       <CustomContainer>
         <UserQuote pl={"300px"}>
@@ -130,6 +134,7 @@ const s01eWork = props => (
         </UserQuote>
       </CustomContainer>
     </SimpleScene>
+
     <SimpleScene isVisible={props.positionFormVisible}>
       <CustomContainer>
         {!props.playerOccupationFinished && (
@@ -140,6 +145,7 @@ const s01eWork = props => (
         )}
       </CustomContainer>
     </SimpleScene>
+
     <SimpleScene isVisible={props.occupationAnswerCompleted}>
       <div>
         <CustomContainer>
@@ -217,7 +223,8 @@ const s01eWork = props => (
         </CustomContainer>
       </div>
     </SimpleScene>
-    <SimpleScene>
+
+    <SimpleScene isVisible={props.askForPhoto}>
       <div>
         <CustomContainer>
           <MainText>More click-clacking on the keyboard.</MainText>
@@ -232,23 +239,26 @@ const s01eWork = props => (
         </CustomContainer>
       </div>
     </SimpleScene>
-    <SimpleScene>
+
+    <SimpleScene isVisible={props.arrivedAtDesk}>
       <CustomContainer>
         <MainText>
           Once you arrive at your desk, you turn on your{" "}
           <button
             style={buttonStyle}
-            onClick={e => props.update(turnOnComputer)}
+            onClick={e => props.update(showFirstWorkspace)}
           >
             computer
           </button>.
         </MainText>
       </CustomContainer>
     </SimpleScene>
-    <SimpleScene>
+
+    <SimpleScene isVisible={props.firstWorkspace}>
       <Workspace {...props} />
     </SimpleScene>
-    <SimpleScene>
+
+    <SimpleScene isVisible={props.grabCoffee}>
       <div>
         <CustomContainer>
           <MainText>
@@ -265,10 +275,12 @@ const s01eWork = props => (
         </CustomContainer>
       </div>
     </SimpleScene>
-    <SimpleScene>
+
+    <SimpleScene isVisible={props.phoneVisible}>
       <PhoneComponent {...props} />
     </SimpleScene>
-    <SimpleScene>
+
+    <SimpleScene isVisible={props.phoneCallOver}>
       <div>
         <CustomContainer>
           <MainText>
@@ -310,13 +322,15 @@ const s01eWork = props => (
         </CustomContainer>
       </div>
     </SimpleScene>
-    <SimpleScene>
+
+    <SimpleScene isVisible={props.secondWorkspace}>
       <Workspace>
         <BrokenEmail {...props} />
         <NotesApp />
       </Workspace>
     </SimpleScene>
-    <SimpleScene>
+
+    <SimpleScene isVisible={props.computerBroken}>
       <div>
         <CustomContainer>
           <MainText>
@@ -377,7 +391,23 @@ const s01eWork = props => (
 const map = state => ({
   initialBlock: state.initialBlock,
   startBurning: state.startBurning,
-  receptionistVisible: state.receptionistVisible
+  receptionistVisible: state.receptionistVisible,
+  nameQuestionVisible: state.nameQuestionVisible,
+  nameFormVisible: state.nameFormVisible,
+  playerNameInput: state.playerNameInput,
+  playerNameSaved: state.playerNameSaved,
+  nameAnswerVisible: state.nameAnswerVisible,
+  positionQuestionVisible: state.positionQuestionVisible,
+  positionFormVisible: state.positionFormVisible,
+  occupationAnswerCompleted: state.occupationAnswerCompleted,
+  askForPhoto: state.askForPhoto,
+  arrivedAtDesk: state.arrivedAtDesk,
+  firstWorkspace: state.firstWorkspace,
+  grabCoffee: state.grabCoffee,
+  phoneVisible: state.phoneVisible,
+  phoneCallOver: state.phoneCallOver,
+  secondWorkspace: state.secondWorkspace,
+  computerBroken: state.computerBroken
 });
 
 export default connect(map)(s01eWork);

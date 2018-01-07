@@ -3,44 +3,96 @@ export const showReceptionist = state => ({
   receptionistVisible: true
 });
 
+export const startBurning = state => {
+  // probably a bad idea
+  if (state.startBurning === true) {
+    const blowTrees = Math.floor(Math.random() * 100) + 20;
+    window.party.addsmoke(550, 400, blowTrees);
+    return;
+  }
+  return {
+    startBurning: true
+  };
+};
+
 export const showNameQuestion = state => ({
   receptionistVisible: false,
   nameQuestionVisible: true
 });
 
-// yes i am fully aware
+export const showPlayerNameField = state => ({
+  nameQuestionVisible: false,
+  nameFormVisible: true
+});
 
-// export const showNameQuesiton = state => ({
-//   receptionistVisible: false,
-//   nameQuestionVisible: true
+// saves currently inputted name value to global object
+// this is temporary within the form
+export const setNewPlayerName = value => state => ({ playerNameInput: value });
+
+// sets the player name
+// this is actually your name in the game state
+export const addPlayerName = state => ({
+  playerNameSaved: state.playerNameInput,
+  // but also now hide the form and show the next bit
+  nameFormVisible: false,
+  nameAnswerVisible: true
+});
+
+// export const showPlayerNameAnswer = state => ({
+//   nameFormVisible: false,
+//   nameAnswerVisible: true
 // });
-//
-// export const showNameQuesiton = state => ({
-//   receptionistVisible: false,
-//   nameQuestionVisible: true
-// });
-//
-// export const showNameQuesiton = state => ({
-//   receptionistVisible: false,
-//   nameQuestionVisible: true
-// });
-//
-// export const showNameQuesiton = state => ({
-//   receptionistVisible: false,
-//   nameQuestionVisible: true
-// });
-//
-// export const showNameQuesiton = state => ({
-//   receptionistVisible: false,
-//   nameQuestionVisible: true
-// });
-//
-// export const showNameQuesiton = state => ({
-//   receptionistVisible: false,
-//   nameQuestionVisible: true
-// });
-//
-// export const showNameQuesiton = state => ({
-//   receptionistVisible: false,
-//   nameQuestionVisible: true
-// });
+
+export const showPlayerJobQuestion = state => ({
+  nameAnswerVisible: false,
+  positionQuestionVisible: true
+});
+
+export const showPositionForm = state => ({
+  positionQuestionVisible: false,
+  positionFormVisible: true
+});
+
+export const showReceptionistSecurityAsk = state => ({
+  positionFormVisible: false,
+  occupationAnswerCompleted: true
+});
+
+export const showAskForPhoto = state => ({
+  occupationAnswerCompleted: false,
+  askForPhoto: true
+});
+
+export const showArrivedAtDesk = state => ({
+  askForPhoto: false,
+  arrivedAtDesk: true
+});
+
+export const showFirstWorkspace = state => ({
+  arrivedAtDesk: false,
+  firstWorkspace: true
+});
+
+export const showGrabCoffee = state => ({
+  firstWorkspace: false,
+  grabCoffee: true
+});
+
+export const showPhone = state => ({
+  phoneVisible: true
+});
+
+export const showPhoneCallOver = state => ({
+  phoneVisible: false,
+  phoneCallOver: true
+});
+
+export const showSecondWorkspace = state => ({
+  phoneCallOver: false,
+  secondWorkspace: true
+});
+
+export const showBrokenText = state => ({
+  secondWorkspace: false,
+  computerBroken: true
+});

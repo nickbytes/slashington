@@ -3,13 +3,24 @@ import { createTitle } from "../components/JobSelectionComponent/jobGenerator";
 const newInitialState = {
   // s01eWork
   initialBlock: true,
+  startBurning: false,
   receptionistVisible: false,
   nameQuestionVisible: false,
+  playerNameInput: "",
+  playerNameSaved: "",
   nameFormVisible: false,
   nameAnswerVisible: false,
   positionQuestionVisible: false,
   positionFormVisible: false,
   occupationAnswerCompleted: false,
+  askForPhoto: false,
+  arrivedAtDesk: false,
+  firstWorkspace: false,
+  grabCoffee: false,
+  phoneVisible: false,
+  phoneCallOver: false,
+  secondWorkspace: false,
+  computerBroken: false,
 
   // s02e
 
