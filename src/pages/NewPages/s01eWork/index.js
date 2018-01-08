@@ -68,7 +68,7 @@ const s01eWork = props => (
           </button>
           that nearly caused a fire in your apartment, not your nosy super Derek
           asking about your plans to renew your lease, not your forgotten badge,
-          and not the clerk's crabby mood.
+          and not the receptionist's crabby mood.
         </MainText>
         <MainText>
           It's Friday. It's the end of a long week. And after work today you're
@@ -172,7 +172,9 @@ const s01eWork = props => (
         </CustomContainer>
 
         <Container py={4}>
-          <MainText>The clerk looks at you with a suspicious glance.</MainText>
+          <MainText>
+            The receptionist looks at you with a suspicious glance.
+          </MainText>
           <UserQuote pt={"100px"} attrib={receptionist()}>
             "What is the name of a close friend or relative who owns a pet, the
             pets name, and the type of pet?"
