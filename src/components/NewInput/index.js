@@ -7,6 +7,7 @@ const NewInput = styled(Input)`
   width: 300px;
   font-size: 20px;
   margin-right: 35px;
+  display: block;
 `;
 
 export default NewInput;

@@ -99,7 +99,8 @@ export const addSecurityAnswers = state => ({
   petOwnerInputSaved: state.petOwnerInput,
   petTypeInputSaved: state.petTypeInput,
   petNameInputSaved: state.petNameInput,
-  securityQuestionsAnswered: true
+  securityFormShowing: false,
+  askForPhoto: true
 });
 
 export const showAskForPhoto = state => ({

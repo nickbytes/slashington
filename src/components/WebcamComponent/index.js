@@ -5,6 +5,7 @@ import Webcam from "react-webcam";
 import { receiveBadge } from "../../updaters/updaters";
 import UserQuote from "../UserQuote";
 import YourNewBadge from "../YourNewBadge";
+import buttonStyle from "../../utilities/buttonStyle";
 
 class WebcamComponent extends Component {
   constructor(props) {
@@ -33,20 +34,10 @@ class WebcamComponent extends Component {
       <div>
         {this.state.photoSrc ? (
           <div>
-            <UserQuote pl={"300px"}>
+            <UserQuote>
               "Here is your new{" "}
               <button
-                style={{
-                  fontFamily: "inherit",
-                  fontSize: "inherit",
-                  fontWeight: "700",
-                  lineHeight: "inherit",
-                  border: "0",
-                  background: "none",
-                  cursor: "pointer",
-                  borderBottom: "4px dotted",
-                  outline: "0"
-                }}
+                style={buttonStyle}
                 onClick={e => this.props.update(receiveBadge)}
               >
                 badge
@@ -63,8 +54,7 @@ class WebcamComponent extends Component {
         ) : (
           <div
             style={{
-              position: "relative",
-              textAlign: "center"
+              position: "relative"
             }}
           >
             <Webcam ref={this.setRef} audio={false} />
@@ -79,7 +69,6 @@ class WebcamComponent extends Component {
             >
               Take Photo
             </button>
-            <button>make true</button>
           </div>
         )}
       </div>
