@@ -1,3 +1,5 @@
+import { createTitle } from "../../../components/JobSelectionComponent/jobGenerator";
+
 export const showReceptionist = state => ({
   initialBlock: false,
   receptionistVisible: true
@@ -38,11 +40,6 @@ export const addPlayerName = state => ({
   nameAnswerVisible: true
 });
 
-// export const showPlayerNameAnswer = state => ({
-//   nameFormVisible: false,
-//   nameAnswerVisible: true
-// });
-
 export const showPlayerJobQuestion = state => ({
   nameAnswerVisible: false,
   positionQuestionVisible: true
@@ -53,9 +50,56 @@ export const showPositionForm = state => ({
   positionFormVisible: true
 });
 
-export const showReceptionistSecurityAsk = state => ({
+export const newJobs = state => ({
+  jobItems: [
+    {
+      id: 1,
+      title: createTitle()
+    },
+    {
+      id: 2,
+      title: createTitle()
+    },
+    {
+      id: 3,
+      title: createTitle()
+    }
+  ]
+});
+
+// saves currently selected radio group to global object
+// this is temporary within the form
+export const setNewPlayerOccupation = value => state => ({
+  playerOccupationRadio: value
+});
+
+// sets player occupation
+// this is actually your occuptation in game state
+export const addPlayerOccupation = state => ({
+  playerOccupationSaved: state.playerOccupationRadio,
   positionFormVisible: false,
+  playerOccupationFinished: true
+});
+
+export const showReceptionistSecurityAsk = state => ({
+  playerOccupationFinished: false,
   occupationAnswerCompleted: true
+});
+
+export const showSecurityForm = state => ({
+  occupationAnswerCompleted: false,
+  securityFormShowing: true
+});
+
+export const setNewPetOwner = value => state => ({ petOwnerInput: value });
+export const setNewPetType = value => state => ({ petTypeInput: value });
+export const setNewPetName = value => state => ({ petNameInput: value });
+
+export const addSecurityAnswers = state => ({
+  petOwnerInputSaved: state.petOwnerInput,
+  petTypeInputSaved: state.petTypeInput,
+  petNameInputSaved: state.petNameInput,
+  securityQuestionsAnswered: true
 });
 
 export const showAskForPhoto = state => ({

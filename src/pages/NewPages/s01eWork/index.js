@@ -7,22 +7,24 @@ import React from "react";
 
 import {
   addPlayerName,
+  addSecurityAnswers,
+  setNewPetName,
+  setNewPetOwner,
+  setNewPetType,
   setNewPlayerName,
   showFirstWorkspace,
   showNameQuestion,
   showPhone,
+  showPlayerJobQuestion,
   showPlayerNameField,
+  showPositionForm,
   showReceptionist,
+  showReceptionistSecurityAsk,
+  showSecurityForm,
   startBurning
 } from "./updaters";
-import {
-  addSecurityAnswers,
-  restartWork,
-  setNewPetName,
-  setNewPetOwner,
-  setNewPetType,
-  showPlayerOccupationField
-} from "../../../updaters/updaters";
+import { receptionist } from "../../../utilities/receptionist";
+import { restartWork } from "../../../updaters/updaters";
 import BrokenEmail from "../../../components/BrokenEmail";
 import CustomContainer from "../../../components/CustomContainer";
 import DreamText from "../../../components/DreamText";
@@ -44,7 +46,7 @@ const s01eWork = props => (
   <div>
     <SimpleScene isVisible={props.initialBlock}>
       <CustomContainer>
-        <UserQuote>
+        <UserQuote attrib="You">
           "Hello, I've forgotten my badge. Could I get a temporary one for
           today?"
         </UserQuote>
@@ -77,7 +79,7 @@ const s01eWork = props => (
     </SimpleScene>
     <SimpleScene isVisible={props.nameQuestionVisible}>
       <CustomContainer>
-        <UserQuote>
+        <UserQuote attrib={receptionist()}>
           "Name{" "}
           <button
             style={buttonStyle}
@@ -118,16 +120,19 @@ const s01eWork = props => (
       </CustomContainer>
     </SimpleScene>
     <SimpleScene isVisible={props.nameAnswerVisible}>
-      <UserQuote>"{props.playerNameSaved}."</UserQuote>
+      <CustomContainer>
+        <UserQuote attrib="You">"{props.playerNameSaved}."</UserQuote>
+        <NextButton onClick={() => props.update(showPlayerJobQuestion)} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.positionQuestionVisible}>
       <CustomContainer>
-        <UserQuote pl={"300px"}>
+        <UserQuote attrib={receptionist()}>
           "Position{" "}
           <button
             style={buttonStyle}
-            onClick={e => props.update(showPlayerOccupationField)}
+            onClick={e => props.update(showPositionForm)}
           >
             please
           </button>."
@@ -137,19 +142,21 @@ const s01eWork = props => (
 
     <SimpleScene isVisible={props.positionFormVisible}>
       <CustomContainer>
-        {!props.playerOccupationFinished && (
-          <JobSelectionComponent {...props} />
-        )}
-        {props.playerOccupationFinished && (
-          <UserQuote>"{props.playerOccupationSaved}."</UserQuote>
-        )}
+        <JobSelectionComponent {...props} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.playerOccupationFinished}>
+      <CustomContainer>
+        <UserQuote attrib="You">"{props.playerOccupationSaved}."</UserQuote>
+        <NextButton onClick={() => props.update(showReceptionistSecurityAsk)} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.occupationAnswerCompleted}>
       <div>
         <CustomContainer>
-          <UserQuote pl={"300px"}>...</UserQuote>
+          <UserQuote attrib={receptionist()}>...</UserQuote>
         </CustomContainer>
 
         <CustomContainer>
@@ -159,14 +166,14 @@ const s01eWork = props => (
         </CustomContainer>
 
         <CustomContainer>
-          <UserQuote pl={"300px"}>
+          <UserQuote attrib={receptionist()}>
             "THE ANSWERS TO YOUR SECURITY QUESTION."
           </UserQuote>
         </CustomContainer>
 
         <Container py={4}>
           <MainText>The clerk looks at you with a suspicious glance.</MainText>
-          <UserQuote pl={"300px"} pt={"100px"}>
+          <UserQuote pt={"100px"} attrib={receptionist()}>
             "What is the name of a close friend or relative who owns a pet, the
             pets name, and the type of pet?"
           </UserQuote>
@@ -175,53 +182,58 @@ const s01eWork = props => (
         <CustomContainer>
           <MainText>You don't remember filling out this question.</MainText>
         </CustomContainer>
-
         <CustomContainer>
-          <form
-            onSubmit={e => {
-              e.preventDefault();
-              props.update(addSecurityAnswers);
-            }}
-          >
-            <NewInput
-              defaultValue=""
-              placeholder="Aunt Millie"
-              value={props.newPetOwner}
-              onChange={e => props.update(setNewPetOwner(e.target.value))}
-            />
-            <span
-              style={{
-                fontFamily: "'Source Code Pro', monospace",
-                fontWeight: "700",
-                fontSize: "1.5rem",
-                border: "none"
-              }}
-            >
-              's
-            </span>
-
-            <NewInput
-              defaultValue=""
-              placeholder="parrot"
-              value={props.newPetType}
-              onChange={e => props.update(setNewPetType(e.target.value))}
-            />
-
-            <NewInput
-              defaultValue=""
-              placeholder="George"
-              value={props.newPetName}
-              onChange={e => props.update(setNewPetName(e.target.value))}
-            />
-            <div style={{ paddingLeft: "355px" }}>
-              <button
-                style={{ background: "none", border: "none" }}
-                children={<Arrow right />}
-              />
-            </div>
-          </form>
+          <NextButton onClick={() => props.update(showSecurityForm)} />
         </CustomContainer>
       </div>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.securityFormShowing}>
+      <CustomContainer>
+        <form
+          onSubmit={e => {
+            e.preventDefault();
+            props.update(addSecurityAnswers);
+          }}
+        >
+          <NewInput
+            defaultValue=""
+            placeholder="Aunt Millie"
+            value={props.newPetOwner}
+            onChange={e => props.update(setNewPetOwner(e.target.value))}
+          />
+          <span
+            style={{
+              fontFamily: "'Source Code Pro', monospace",
+              fontWeight: "700",
+              fontSize: "1.5rem",
+              border: "none"
+            }}
+          >
+            's
+          </span>
+
+          <NewInput
+            defaultValue=""
+            placeholder="parrot"
+            value={props.newPetType}
+            onChange={e => props.update(setNewPetType(e.target.value))}
+          />
+
+          <NewInput
+            defaultValue=""
+            placeholder="George"
+            value={props.newPetName}
+            onChange={e => props.update(setNewPetName(e.target.value))}
+          />
+          <div style={{ paddingLeft: "355px" }}>
+            <button
+              style={{ background: "none", border: "none" }}
+              children={<Arrow right />}
+            />
+          </div>
+        </form>
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.askForPhoto}>
@@ -345,7 +357,7 @@ const s01eWork = props => (
           <img src={keyboard} alt="keyboard" />
         </CustomContainer>
         <CustomContainer>
-          <UserQuote pl={"300px"}>"Keyboard issues?"</UserQuote>
+          <UserQuote>"Keyboard issues?"</UserQuote>
         </CustomContainer>
         <CustomContainer>
           <MainText>
@@ -359,7 +371,7 @@ const s01eWork = props => (
           </UserQuote>
         </CustomContainer>
         <CustomContainer>
-          <UserQuote pl={"300px"}>
+          <UserQuote>
             "Same thing happened to me about a year ago. I took it to a place
             near where I lived in DC. Fixed it up in a day, had it working good
             as new."
@@ -374,7 +386,7 @@ const s01eWork = props => (
         </CustomContainer>
 
         <CustomContainer>
-          <UserQuote pl={"300px"}>
+          <UserQuote>
             "Crazy coincidence! It's right off the Amtrak stop. You can't miss
             it, south east corner of the Mall. Open on weekends too, can
             probably pick it up on your way back."
@@ -398,8 +410,12 @@ const map = state => ({
   playerNameSaved: state.playerNameSaved,
   nameAnswerVisible: state.nameAnswerVisible,
   positionQuestionVisible: state.positionQuestionVisible,
+  playerOccupationSaved: state.playerOccupationSaved,
+  playerOccupationFinished: state.playerOccupationFinished,
+  playerOccupationRadio: state.playerOccupationRadio,
   positionFormVisible: state.positionFormVisible,
   occupationAnswerCompleted: state.occupationAnswerCompleted,
+  securityFormShowing: state.securityFormShowing,
   askForPhoto: state.askForPhoto,
   arrivedAtDesk: state.arrivedAtDesk,
   firstWorkspace: state.firstWorkspace,

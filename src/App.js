@@ -6,7 +6,6 @@ import Birthday from "./pages/Birthday";
 import Credits from "./pages/credits";
 import GoodMessengerScene from "./pages/Good-Messenger";
 import LeavingSlashington from "./pages/Slashington";
-import Office from "./pages/The-Office";
 import StartGame from "./components/StartGame/StartGame";
 import TheCouncil from "./pages/The-Council";
 import Train from "./pages/A-Train-to-Not-Washington";
@@ -18,7 +17,6 @@ const App = props => (
     <Route exact path="/" component={StartGame} />
     <Route path="/s01eWork" component={s01eWork} />
 
-    <Route path="/The-Office" component={Office} />
     <Route path="/A-Train-to-Not-Washington" component={Train} />
     <Route path="/The-Council" component={TheCouncil} />
     <Route path="/Slashington" component={LeavingSlashington} />

@@ -6,9 +6,9 @@ import {
   addPlayerOccupation,
   newJobs,
   setNewPlayerOccupation
-} from "../../updaters/updaters";
+} from "../../pages/NewPages/s01eWork/updaters";
 
-const JobSelectionComponent = props =>
+const JobSelectionComponent = props => (
   <form
     onSubmit={e => {
       e.preventDefault();
@@ -16,7 +16,7 @@ const JobSelectionComponent = props =>
     }}
   >
     <radiogroup>
-      {props.jobItems.map(jobItem =>
+      {props.jobItems.map(jobItem => (
         <Label
           key={jobItem.id}
           style={{
@@ -33,7 +33,7 @@ const JobSelectionComponent = props =>
           />
           {jobItem.title}
         </Label>
-      )}
+      ))}
     </radiogroup>
     <button
       onClick={e => {
@@ -62,7 +62,8 @@ const JobSelectionComponent = props =>
     >
       Save
     </button>
-  </form>;
+  </form>
+);
 
 const map = state => ({
   playerOccupationRadio: state.playerOccupationRadio,
