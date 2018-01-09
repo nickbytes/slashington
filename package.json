@@ -5,6 +5,7 @@
   "dependencies": {
     "funcup": "^1.0.0-1",
     "lodash": "^4.17.4",
+    "markdown-in-js": "^1.1.3",
     "react": "^15.6.1",
     "react-barcode": "^1.2.0",
     "react-dom": "^15.6.1",
