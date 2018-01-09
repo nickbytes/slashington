@@ -48,6 +48,7 @@ const newInitialState = {
   nieceName: "Emma",
   inLawName: "Jill",
   preferredTitle: "",
+  coworkerName: "Scott",
 
   // global jobItems
   jobItems: [

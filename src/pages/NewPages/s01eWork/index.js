@@ -447,7 +447,8 @@ const map = state => ({
   phoneCallOver: state.phoneCallOver,
   showFeelsDreamlike: state.showFeelsDreamlike,
   secondWorkspace: state.secondWorkspace,
-  computerBroken: state.computerBroken
+  computerBroken: state.computerBroken,
+  coworkerName: state.coworkerName
 });
 
 export default connect(map)(s01eWork);
