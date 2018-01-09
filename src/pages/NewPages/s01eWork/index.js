@@ -21,6 +21,7 @@ import {
   showReceptionist,
   showReceptionistSecurityAsk,
   showSecurityForm,
+  showWebcam,
   startBurning
 } from "./updaters";
 import { receptionist } from "../../../utilities/receptionist";
@@ -245,13 +246,18 @@ const s01eWork = props => (
         </CustomContainer>
 
         <CustomContainer>
-          <UserQuote pl={"300px"}>"Look towards the camera."</UserQuote>
-        </CustomContainer>
-
-        <CustomContainer>
-          <WebcamComponent />
+          <UserQuote pl={"300px"}>
+            "Look towards the{" "}
+            <button onClick={() => props.update(showWebcam)}>camera</button>."
+          </UserQuote>
         </CustomContainer>
       </div>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.webcamVisible}>
+      <CustomContainer>
+        <WebcamComponent />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.arrivedAtDesk}>
@@ -425,6 +431,7 @@ const map = state => ({
   petTypeInputSaved: state.petTypeInputSaved,
   petNameInputSaved: state.petNameInputSaved,
   askForPhoto: state.askForPhoto,
+  webcamVisible: state.webcamVisible,
   arrivedAtDesk: state.arrivedAtDesk,
   firstWorkspace: state.firstWorkspace,
   grabCoffee: state.grabCoffee,

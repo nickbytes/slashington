@@ -1,7 +1,7 @@
 import Icon from "react-geomicons";
 import React from "react";
 
-import { coffeeClicked } from "../../updaters/updaters";
+import { showGrabCoffee } from "../../pages/NewPages/s01eWork/updaters";
 import AreaChart from "../AreaChart";
 import DesktopBackground from "./DesktopBackground";
 import NotesApp from "../NotesApp";
@@ -54,7 +54,7 @@ const Workspace = props => (
               cursor: "pointer",
               outline: "0"
             }}
-            onClick={e => props.update(coffeeClicked)}
+            onClick={e => props.update(showGrabCoffee)}
           >
             <span role="img" aria-label="coffee">
               ☕️

@@ -108,8 +108,13 @@ export const showAskForPhoto = state => ({
   askForPhoto: true
 });
 
-export const showArrivedAtDesk = state => ({
+export const showWebcam = state => ({
   askForPhoto: false,
+  webcamVisible: true
+});
+
+export const hideBadge = state => ({
+  webcamVisible: false,
   arrivedAtDesk: true
 });
 

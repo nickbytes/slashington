@@ -1,8 +1,6 @@
 // eslint-disable-next-line
 /* global party */
 
-import { createTitle } from "../components/JobSelectionComponent/jobGenerator";
-
 // export const showPlayerNameField = state => ({ playerNameVisible: true });
 //
 // export const hidePlayerNameField = state => ({ playerNameVisible: false });

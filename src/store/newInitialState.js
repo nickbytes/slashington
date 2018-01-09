@@ -24,6 +24,7 @@ const newInitialState = {
   petTypeInputSaved: "",
   petNameInputSaved: "",
   askForPhoto: false,
+  webcamVisible: false,
   arrivedAtDesk: false,
   firstWorkspace: false,
   grabCoffee: false,
