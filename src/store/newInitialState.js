@@ -30,6 +30,7 @@ const newInitialState = {
   grabCoffee: false,
   phoneVisible: false,
   phoneCallOver: false,
+  showFeelsDreamlike: false,
   secondWorkspace: false,
   computerBroken: false,
 

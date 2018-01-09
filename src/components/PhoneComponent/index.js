@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { hidePhone } from "../../updaters/updaters";
+import { showPhoneCallOver } from "../../pages/NewPages/s01eWork/updaters";
 import Dots from "./Dots";
 
 //"Hey, you must be busy working. Anyway, we're looking forward to
@@ -56,7 +56,7 @@ class PhoneComponent extends Component {
             <div className="cd-ear" />
             <div
               className="cd-home"
-              onClick={e => this.props.update(hidePhone)}
+              onClick={e => this.props.update(showPhoneCallOver)}
               style={{ cursor: "pointer" }}
             />
             <div

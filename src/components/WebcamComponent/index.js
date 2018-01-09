@@ -48,6 +48,7 @@ class WebcamComponent extends Component {
                 imgSrc={this.state.photoSrc}
                 playerName={this.props.playerNameSaved}
                 playerOccupation={this.props.playerOccupationSaved}
+                {...this.props}
               />
             )}
           </div>

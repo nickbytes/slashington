@@ -137,8 +137,13 @@ export const showPhoneCallOver = state => ({
   phoneCallOver: true
 });
 
-export const showSecondWorkspace = state => ({
+export const feelDreamlike = state => ({
   phoneCallOver: false,
+  showFeelsDreamlike: true
+});
+
+export const showSecondWorkspace = state => ({
+  showFeelsDreamlike: false,
   secondWorkspace: true
 });
 

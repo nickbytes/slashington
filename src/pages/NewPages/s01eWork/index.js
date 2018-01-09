@@ -8,6 +8,7 @@ import React from "react";
 import {
   addPlayerName,
   addSecurityAnswers,
+  feelDreamlike,
   setNewPetName,
   setNewPetOwner,
   setNewPetType,
@@ -20,12 +21,12 @@ import {
   showPositionForm,
   showReceptionist,
   showReceptionistSecurityAsk,
+  showSecondWorkspace,
   showSecurityForm,
   showWebcam,
   startBurning
 } from "./updaters";
 import { receptionist } from "../../../utilities/receptionist";
-import { restartWork } from "../../../updaters/updaters";
 import BrokenEmail from "../../../components/BrokenEmail";
 import CustomContainer from "../../../components/CustomContainer";
 import DreamText from "../../../components/DreamText";
@@ -246,7 +247,7 @@ const s01eWork = props => (
         </CustomContainer>
 
         <CustomContainer>
-          <UserQuote pl={"300px"}>
+          <UserQuote pl={"300px"} attrib={receptionist()}>
             "Look towards the{" "}
             <button onClick={() => props.update(showWebcam)}>camera</button>."
           </UserQuote>
@@ -301,46 +302,53 @@ const s01eWork = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.phoneCallOver}>
-      <div>
-        <CustomContainer>
-          <MainText>
-            What did he mean by 'strange gift'...? You think back to Sam's last
-            birthday...
-          </MainText>
-        </CustomContainer>
+      <CustomContainer>
+        <MainText>
+          What did he mean by 'strange gift'...? You think back to Sam's last
+          birthday...
+        </MainText>
+      </CustomContainer>
 
-        <CustomContainer>
-          <DreamText>
-            barbeque, slipknot karaoke, did you have a few drinks...?
-          </DreamText>
-          <DreamText>
-            what did you get her...? how could you forget this...?
-          </DreamText>
-        </CustomContainer>
+      <CustomContainer>
+        <DreamText>
+          barbeque, slipknot karaoke, did you have a few drinks...?
+        </DreamText>
+        <DreamText>
+          what did you get her...? how could you{" "}
+          <button
+            style={buttonStyle}
+            onClick={() => props.update(feelDreamlike)}
+          >
+            forget
+          </button>{" "}
+          this...?
+        </DreamText>
+      </CustomContainer>
+    </SimpleScene>
 
-        <CustomContainer>
-          <MainText>
-            It all feels dreamlike. You're a{" "}
-            {props.playerOccupationSaved || "PLAYER_OCCUPATION"} – you pay such
-            great attention to detail. How could you forget something like
-            this...?
-          </MainText>
-          <MainText>
-            Maybe Alex <i>is</i> right.
-          </MainText>
-          <MainText>
-            All this work is pushing you to the edge. This weekend, you won't
-            take your laptop, you won't look at the Feeds, you'll disconnect.
-            You've just got to{" "}
-            <button
-              style={buttonStyle}
-              onClick={e => props.update(restartWork)}
-            >
-              get through the next few hours and deadlines.
-            </button>
-          </MainText>
-        </CustomContainer>
-      </div>
+    <SimpleScene isVisible={props.showFeelsDreamlike}>
+      <CustomContainer>
+        <MainText>
+          It all feels dreamlike. You're a{" "}
+          {props.playerOccupationSaved || "PLAYER_OCCUPATION"} – you pay such
+          great attention to detail. How could you forget something like
+          this...?
+        </MainText>
+        <MainText>
+          Maybe Alex <i>is</i> right.
+        </MainText>
+        <MainText>
+          All this work is pushing you to the edge. This weekend, you won't take
+          your laptop, you won't look at the Feeds, you'll disconnect. You've
+          just got to{" "}
+          <button
+            style={buttonStyle}
+            onClick={e => props.update(showSecondWorkspace)}
+          >
+            get through the next few hours and deadlines.
+          </button>
+        </MainText>
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.secondWorkspace}>
@@ -373,13 +381,13 @@ const s01eWork = props => (
           </MainText>
         </CustomContainer>
         <CustomContainer>
-          <UserQuote>
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
             "For some reason, every key is registering as only an n or b on the
             screen."
           </UserQuote>
         </CustomContainer>
         <CustomContainer>
-          <UserQuote>
+          <UserQuote attrib={props.coworkerName || "SCOTT_PLAYER_TEST"}>
             "Same thing happened to me about a year ago. I took it to a place
             near where I lived in DC. Fixed it up in a day, had it working good
             as new."
@@ -387,14 +395,14 @@ const s01eWork = props => (
         </CustomContainer>
 
         <CustomContainer>
-          <UserQuote>
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
             "I'm taking the Amtrak down there this weekend... It's my niece's
             birthday..."
           </UserQuote>
         </CustomContainer>
 
         <CustomContainer>
-          <UserQuote>
+          <UserQuote attrib={props.coworkerName || "SCOTT_PLAYER_TEST"}>
             "Crazy coincidence! It's right off the Amtrak stop. You can't miss
             it, south east corner of the Mall. Open on weekends too, can
             probably pick it up on your way back."
@@ -437,6 +445,7 @@ const map = state => ({
   grabCoffee: state.grabCoffee,
   phoneVisible: state.phoneVisible,
   phoneCallOver: state.phoneCallOver,
+  showFeelsDreamlike: state.showFeelsDreamlike,
   secondWorkspace: state.secondWorkspace,
   computerBroken: state.computerBroken
 });
