@@ -2,7 +2,6 @@ import { Route } from "react-router-dom";
 import { createProvider } from "funcup";
 import React from "react";
 
-import Credits from "./pages/credits";
 import StartGame from "./components/StartGame/StartGame";
 import newInitialState from "./store/newInitialState";
 import s01eWork from "./pages/NewPages/s01eWork";
@@ -21,8 +20,6 @@ const App = props => (
     <Route path="/s04eSlashington" component={s04eSlashington} />
     <Route path="/s05eBirthday" component={s05eBirthday} />
     <Route path="/s06eGoodMessenger" component={s06eGoodMessenger} />
-
-    <Route path="/credits" component={Credits} />
   </div>
 );
 
