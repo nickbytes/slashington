@@ -35,6 +35,8 @@ import MainText from "../../../components/MainText";
 import NewInput from "../../../components/NewInput";
 import NextButton from "../../../components/NextButton";
 import NotesApp from "../../../components/NotesApp";
+import PetFormInput from "../../../components/PetFormInput";
+import PetFormLabel from "../../../components/PetFormLabel";
 import PhoneComponent from "../../../components/PhoneComponent";
 import SimpleScene from "../../../components/SimpleScene";
 import Smoke from "../../../components/Smoke";
@@ -200,41 +202,31 @@ const s01eWork = props => (
             props.update(addSecurityAnswers);
           }}
         >
-          <NewInput
+          <PetFormLabel>Friend or relative w/ pet</PetFormLabel>
+          <PetFormInput
             defaultValue=""
             placeholder="Aunt Millie"
             value={props.newPetOwner}
             onChange={e => props.update(setNewPetOwner(e.target.value))}
           />
-          <span
-            style={{
-              fontFamily: "'Source Code Pro', monospace",
-              fontWeight: "700",
-              fontSize: "1.5rem",
-              border: "none"
-            }}
-          >
-            's
-          </span>
 
-          <NewInput
+          <PetFormLabel>Type of Pet</PetFormLabel>
+          <PetFormInput
             defaultValue=""
             placeholder="parrot"
             value={props.newPetType}
             onChange={e => props.update(setNewPetType(e.target.value))}
           />
 
-          <NewInput
+          <PetFormLabel>Pet Name</PetFormLabel>
+          <PetFormInput
             defaultValue=""
             placeholder="George"
             value={props.newPetName}
             onChange={e => props.update(setNewPetName(e.target.value))}
           />
-          <div style={{ paddingLeft: "355px" }}>
-            <button
-              style={{ background: "none", border: "none" }}
-              children={<Arrow right />}
-            />
+          <div>
+            <NextButton />
           </div>
         </form>
       </CustomContainer>

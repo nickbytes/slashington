@@ -63,8 +63,7 @@ class WebcamComponent extends Component {
               onClick={this.takePhoto}
               style={{
                 position: "absolute",
-                left: "50%",
-                right: "50%",
+                left: "280px",
                 bottom: "0"
               }}
             >
