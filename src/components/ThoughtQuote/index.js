@@ -1,16 +1,22 @@
-import { Text } from "rebass";
+import { Blockquote } from "rebass";
+import React from "react";
 import styled from "styled-components";
 
-const ThoughtQuote = styled(Text)`
-  font-family: serif;
-  line-height: 1.3em;
-  max-width: 38em;
-  font-size: 1.3rem;
-  margin-bottom: 1.5em;
-  font-style: italic;
-  transform: scale(1,3);
-  letter-spacing: 3px;
-  text-transform: uppercase;
+const UserQuoteContainer = styled(Blockquote)`
+  font-family: "Source Code Pro", monospace;
+  max-width: 700px;
+  margin-bottom: 44px;
 `;
+
+const Text = styled.h3`
+  font-size: 36px;
+  line-height: 36px;
+`;
+
+const ThoughtQuote = ({ children }) => (
+  <UserQuoteContainer>
+    <Text>{children}</Text>
+  </UserQuoteContainer>
+);
 
 export default ThoughtQuote;
