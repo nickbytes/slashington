@@ -2,7 +2,7 @@ import React from "react";
 
 import SimpleScene from "../../../components/SimpleScene";
 
-const s06eGoodMessenger = props => (
+const s07eGoodMessenger = props => (
   <div>
     <SimpleScene>
       <h1>TK TK</h1>
@@ -10,4 +10,4 @@ const s06eGoodMessenger = props => (
   </div>
 );
 
-export default s06eGoodMessenger;
+export default s07eGoodMessenger;
