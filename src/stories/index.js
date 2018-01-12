@@ -4,6 +4,7 @@ import { storiesOf } from "@storybook/react";
 
 import BrokenEmail from "../components/BrokenEmail";
 import CustomContainer from "../components/CustomContainer";
+import UserQuote from "../components/UserQuote";
 import DreamText from "../components/DreamText";
 import ItalicMind from "../components/ItalicMind";
 import NextButton from "../components/NextButton";
@@ -82,4 +83,36 @@ storiesOf("Pet Name Form", module).add("normal", () => (
       </div>
     </form>
   </CustomContainer>
+));
+
+storiesOf("Testing long text blocks", module).add("normal", () => (
+  <UserQuote attrib="Comrade Igglefort">
+    <UserQuote paragraph>
+      Then you should also understand it's importance. As I was saying...
+    </UserQuote>
+
+    <UserQuote paragraph>
+      You, NAME, have been selected for a task. First, we should give you a
+      little background on The Council and our Mission.
+    </UserQuote>
+    <UserQuote paragraph>
+      Magic has been passed down throughout the ages. It used to be taught
+      somewhat more openly, and accepted on some level, but rises in secular
+      conservatism saw it as a threat.{" "}
+    </UserQuote>
+    <UserQuote paragraph>
+      People persecuted magicial beings. Now it is hushed, but helps to keep
+      societal balance in some ways.
+    </UserQuote>
+    <UserQuote paragraph>
+      Today, magic is only taught to a handful of people, usually found in their
+      early teens, though in some cases, later. These teenagers possess
+      abilities and interests a number of fields including science, computing,
+      mathematics, humanities, history, languages – you get the gist.
+    </UserQuote>
+    <UserQuote paragraph>
+      The best magicians are critical thinkers. A few will go into politics, but
+      that can really go awry.
+    </UserQuote>
+  </UserQuote>
 ));

@@ -16,9 +16,9 @@ const AttribStyle = styled.h5`
   font-weight: normal;
 `;
 
-const UserQuote = ({ attrib, children }) => (
+const UserQuote = ({ attrib, children, paragraph }) => (
   <UserQuoteContainer>
-    <AttribStyle>{attrib ? attrib : "Person"}</AttribStyle>
+    {paragraph ? null : <AttribStyle>{attrib ? attrib : "Person"}</AttribStyle>}
     <div>{children}</div>
   </UserQuoteContainer>
 );
