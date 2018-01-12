@@ -133,38 +133,16 @@ class DigitalBoard extends Component {
   };
 
   scramble = () => {
-    console.log("scramble");
+    const s = Math.floor(Math.random() * 7) + 1;
 
-    // random sized array between 2-7
-
-    // calcuate this at a crazy fast rate
+    const newBoard = [...new Array(s)].map((_, i) => ({
+      id: i,
+      fakeTime: this.randomTime(),
+      fakeDestination: this.randomCity(),
+      fakeTrack: this.randomTrack()
+    }));
     this.setState({
-      fakeBoard: [
-        {
-          id: 1,
-          fakeTime: this.randomTime(),
-          fakeDestination: this.randomCity(),
-          fakeTrack: this.randomTrack()
-        },
-        {
-          id: 2,
-          fakeTime: this.randomTime(),
-          fakeDestination: this.randomCity(),
-          fakeTrack: this.randomTrack()
-        },
-        {
-          id: 3,
-          fakeTime: this.randomTime(),
-          fakeDestination: this.randomCity(),
-          fakeTrack: this.randomTrack()
-        },
-        {
-          id: 4,
-          fakeTime: this.randomTime(),
-          fakeDestination: this.randomCity(),
-          fakeTrack: this.randomTrack()
-        }
-      ]
+      fakeBoard: newBoard
     });
   };
   render() {
