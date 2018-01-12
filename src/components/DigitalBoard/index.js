@@ -134,6 +134,10 @@ class DigitalBoard extends Component {
 
   scramble = () => {
     console.log("scramble");
+
+    // random sized array between 2-7
+
+    // calcuate this at a crazy fast rate
     this.setState({
       fakeBoard: [
         {
