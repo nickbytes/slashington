@@ -1,5 +1,6 @@
 import React from "react";
 
+import InProgress from '../../../components/InProgress';
 import MainText from '../../../components/MainText';
 import PosterAnimation from '../../../components/PosterAnimation';
 import SimpleScene from "../../../components/SimpleScene";

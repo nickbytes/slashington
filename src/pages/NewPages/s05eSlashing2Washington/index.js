@@ -1,14 +1,10 @@
-import { Heading } from "rebass";
 import React from "react";
 
-import CustomContainer from "../../../components/CustomContainer";
-import InProgress from "../../../components/InProgress";
 import MainText from "../../../components/MainText";
-import PosterAnimation from "../../../components/PosterAnimation";
-import UserQuote from "../../../components/UserQuote";
-import ThoughtQuote from "../../../components/ThoughtQuote";
-import buttonStyle from "../../../utilities/buttonStyle";
 import SimpleScene from "../../../components/SimpleScene";
+import ThoughtQuote from "../../../components/ThoughtQuote";
+import UserQuote from "../../../components/UserQuote";
+import buttonStyle from "../../../utilities/buttonStyle";
 
 const s05eSlashing2Washington = props => (
   <div>

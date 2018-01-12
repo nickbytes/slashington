@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 
 import BrokenEmail from "../components/BrokenEmail";
 import CustomContainer from "../components/CustomContainer";
-import UserQuote from "../components/UserQuote";
+import DigitalBoard from '../components/DigitalBoard';
 import DreamText from "../components/DreamText";
 import ItalicMind from "../components/ItalicMind";
 import NextButton from "../components/NextButton";
@@ -14,6 +14,7 @@ import PetFormLabel from "../components/PetFormLabel";
 import ThoughtQuote from "../components/ThoughtQuote";
 import TitleModal from "../components/TitleModal";
 import TrainAnimation from "../components/TrainAnimation";
+import UserQuote from "../components/UserQuote";
 import Workspace from "../components/Workspace";
 
 storiesOf("DreamText", module)
@@ -116,3 +117,7 @@ storiesOf("Testing long text blocks", module).add("normal", () => (
     </UserQuote>
   </UserQuote>
 ));
+
+storiesOf('Digital train board', module).add('normal', () => (
+  <DigitalBoard />
+))
