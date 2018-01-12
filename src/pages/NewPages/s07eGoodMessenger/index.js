@@ -5,7 +5,7 @@ import SimpleScene from "../../../components/SimpleScene";
 const s07eGoodMessenger = props => (
   <div>
     <SimpleScene>
-      <h1>TK TK</h1>
+      {/* <InProgress>Memory wipe ending :scream: </InProgress> */}
     </SimpleScene>
   </div>
 );

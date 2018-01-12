@@ -5,77 +5,67 @@ import SimpleScene from "../../../components/SimpleScene";
 const s06eBirthdayParty = props => (
   <div>
     <SimpleScene>
-      <h1>Hello</h1>
+      <UserQuote>
+        Hey, ill take your stuff up to the guest room. You go relax and say //
+        hello to {props.nieceName} and {props.inLawName}.
+      </UserQuote>
+    </SimpleScene>
+
+    <SimpleScene>
+      <MainText>
+        You walk into the kitchen, dodging teenagers scurrying about the house,
+        past parents chatting.
+      </MainText>
+    </SimpleScene>
+
+    <SimpleScene>
+      <UserQuote>"{props.playerNameSaved || "Nick"}!"</UserQuote>
+      <MainText>you're met with a hug.</MainText>
+
+      <UserQuote>{props.inLawName}, thanks so much for having me.</UserQuote>
+    </SimpleScene>
+
+    <SimpleScene>
+      <UserQuote>
+        Of course. We're all glad to see you, Alex tells me you're spending far
+        too much time at the office. {props.nieceName} missed you. She's in the
+        backyard with her friends.
+      </UserQuote>
+    </SimpleScene>
+
+    <SimpleScene>
+      <MainText>
+        You walk out the back door. {props.nieceName} and her group of friends
+        are doing group _Slipknot karaoke_. How nice.
+      </MainText>
+    </SimpleScene>
+
+    <SimpleScene>
+      <UserQuote>"Comrade {props.playerNameSaved}!"</UserQuote>
+    </SimpleScene>
+
+    <SimpleScene>
+      <MainText>
+        She runs over and gives you a hug. At that exact moment The Council's
+        words bounce through your head. Why must such great risk be put on such
+        a young girl? Such a burden. What will this task do to her childhood...?
+      </MainText>
+    </SimpleScene>
+
+    <SimpleScene>
+      <MainText>Are you considering taking on this task yourself?</MainText>
+    </SimpleScene>
+
+    <SimpleScene>
+      <MainText>
+        Talk here about leaving her to hang out with her friends, and then
+        footsteps to take the keyboard.
+      </MainText>
     </SimpleScene>
   </div>
 );
 
 export default s06eBirthdayParty;
-
-// <CustomContainer>
-//   <UserQuote>
-//     "Hey, ill take your stuff up to the guest room. You go relax and say
-//     hello to {props.nieceName} and {props.inLawName}."
-//   </UserQuote>
-// </CustomContainer>
-
-// <CustomContainer>
-//   <MainText>
-//     You walk into the kitchen, dodging teenagers scurrying about the house,
-//     past parents chatting.
-//   </MainText>
-// </CustomContainer>
-
-// <CustomContainer>
-//   <UserQuote>"{props.playerNameSaved || "Nick"}!"</UserQuote>
-//   <MainText>you're met with a hug.</MainText>
-// </CustomContainer>
-
-// <CustomContainer>
-//   <UserQuote>"{props.inLawName}, thanks so much for having me."</UserQuote>
-// </CustomContainer>
-
-// <CustomContainer>
-//   <UserQuote>
-//     "Of course. We're all glad to see you, Alex tells me you're spending far
-//     too much time at the office. {props.nieceName} missed you. She's in the
-//     backyard with her friends."
-//   </UserQuote>
-// </CustomContainer>
-
-// <CustomContainer>
-//   <InProgress>Is this a garbage component? Maybe.</InProgress>
-//   Grab a can of fizzoda. - Keep your mind right Grab a can of Burrrrrr Beer.
-//   - Need this shit right about now.
-// </CustomContainer>
-
-// <CustomContainer>
-//   <MainText>
-//     You walk out the back door. {props.nieceName} and her group of friends
-//     are doing group _Slipknot karaoke_. It's adorable and hardcore as fuck.
-//     She's learned so well.
-//   </MainText>
-// </CustomContainer>
-
-// <CustomContainer>
-//   <UserQuote>"Comrade {props.playerNameSaved}!"</UserQuote>
-// </CustomContainer>
-
-// <CustomContainer>
-//   <MainText>
-//     She runs over and gives you a hug. At that exact moment The Council's
-//     words bounce through your head. Why must such great risk be put on such
-//     a young girl? Such a burden. What will this task do to her childhood...?
-//   </MainText>
-// </CustomContainer>
-
-// <CustomContainer>
-//   <MainText>...</MainText>
-// </CustomContainer>
-
-// <CustomContainer>
-//   <MainText>should you take on whatever the task is...?</MainText>
-// </CustomContainer>
 
 // <CustomContainer>
 //   <Heading>:: footsteps ::</Heading>
@@ -205,7 +195,7 @@ export default s06eBirthdayParty;
 //     <InProgress>
 //       Give in: easy, offer help, she appreciates, memory wipe still
 //     </InProgress>
-//     <InProgress>Memory wipe ending :scream: </InProgress>
+//
 //     </CustomContainer>
 //   )}
 // </div>
