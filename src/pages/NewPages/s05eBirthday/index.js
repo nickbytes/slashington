@@ -1,13 +1,15 @@
+import { Heading } from "rebass";
 import React from "react";
 
-import SimpleScene from "../../../components/SimpleScene";
+import CustomContainer from "../../../components/CustomContainer";
+import InProgress from "../../../components/InProgress";
+import MainText from "../../../components/MainText";
+import PosterAnimation from "../../../components/PosterAnimation";
+import UserQuote from "../../../components/UserQuote";
+import buttonStyle from "../../../utilities/buttonStyle";
 
 const s05eBirthday = props => (
   <div>
-    <CustomContainer>
-      <ChapterTitle>Birthday</ChapterTitle>
-    </CustomContainer>
-
     <CustomContainer>
       <UserQuote>
         "Hey, ill take your stuff up to the guest room. You go relax and say

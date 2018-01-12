@@ -7,17 +7,23 @@ import UserQuote from "../../../components/UserQuote";
 
 const s04eTheCouncil = props => (
   <div>
-    <SimpleScene>
+    <SimpleScene isVisible={props.initialCouncil}>
       <MainText>You stand inside an empty waiting room.</MainText>
       <MainText>
         You look up and see the digital train schedule board whizzing
         uncontrollably.
       </MainText>
     </SimpleScene>
-    <SimpleScene>
-      <MainText>Weird.</MainText>
+
+    <SimpleScene isVisible={props.boardWhizzing}>
+      <h1>Digital board whizzing accept one place says a train is arriving</h1>
     </SimpleScene>
-    <SimpleScene>
+
+    <SimpleScene isVisible={props.weirdText}>
+      <MainText> isVisibleWeird.</MainText>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.greetingShowing}>
       <UserQuote attrib="Unknown Voice, to your right">
         Ahhhhh, {props.playerNameSaved}, {props.playerOccupationSaved},
         Earthling of the Bauzort tribe.
@@ -45,9 +51,11 @@ const s04eTheCouncil = props => (
       </MainText>
     </SimpleScene>
 
-    <SimpleScene>"We, as you might know, are The Council."</SimpleScene>
+    <SimpleScene isVisible={props.weAreCouncil}>
+      <UserQuote>We, as you might know, are The Council.</UserQuote>
+    </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.reactionOptions}>
       <PlainButton onClick={() => console.log("something!")}>
         React Angrily
       </PlainButton>
