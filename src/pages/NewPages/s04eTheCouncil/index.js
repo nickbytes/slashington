@@ -63,6 +63,26 @@ const s04eTheCouncil = props => (
     </SimpleScene>
 
     <SimpleScene>
+      <UserQuote>What the fuck is going on?</UserQuote>
+      <UserQuote>Are they okay? They look like they might faint...</UserQuote>
+      <MainText>They are talking about you...</MainText>
+    </SimpleScene>
+
+    <SimpleScene>
+      <UserQuote>You have been--</UserQuote>
+    </SimpleScene>
+
+    <SimpleScene>
+      <UserQuote>
+        Must we really explain this each time Comrade Igglefort?
+      </UserQuote>
+      <UserQuote>
+        Is it... hmm... pertinent to give such details now Comrade Igglefort?
+        Look at the state of them...
+      </UserQuote>
+    </SimpleScene>
+
+    <SimpleScene>
       <UserQuote attrib="Comrade Igglefort">
         Rule 17, Article 405b states that the counselor must explain appropriate
         context for me the-
