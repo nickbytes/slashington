@@ -2,6 +2,7 @@ import React from "react";
 
 import InProgress from "../../../components/InProgress";
 import MainText from "../../../components/MainText";
+import PlainButton from "../../../components/PlainButton";
 import PosterAnimation from "../../../components/PosterAnimation";
 import SimpleScene from "../../../components/SimpleScene";
 import UserQuote from "../../../components/UserQuote";
@@ -10,8 +11,8 @@ const s06eBirthdayParty = props => (
   <div>
     <SimpleScene isVisible={props.b}>
       <UserQuote>
-        Hey, ill take your stuff up to the guest room. You go relax and say
-        hello to {props.nieceName} and {props.inLawName}.
+        I'll take your stuff up to the guest room. You go relax and say hello to{" "}
+        {props.nieceName} and {props.inLawName}.
       </UserQuote>
     </SimpleScene>
 
@@ -24,7 +25,12 @@ const s06eBirthdayParty = props => (
 
     <SimpleScene isVisible={props.b}>
       <UserQuote>{props.playerNameSaved}!</UserQuote>
-      <MainText>you're met with a hug.</MainText>
+      <MainText>
+        {props.inLawName} shouts at your from the other side of the kitchen. She
+        leaves a group of adults and walks over to give you a hug.
+      </MainText>
+
+      <MainText>You think about how good it feels to be hugged.</MainText>
 
       <UserQuote>{props.inLawName}, thanks so much for having me.</UserQuote>
     </SimpleScene>
@@ -35,6 +41,51 @@ const s06eBirthdayParty = props => (
         too much time at the office. {props.nieceName} missed you. She's in the
         backyard with her friends.
       </UserQuote>
+
+      <MainText>{props.inLawName} holds your arms and looks you over.</MainText>
+
+      <UserQuote>Is everything alright?</UserQuote>
+    </SimpleScene>
+
+    <SimpleScene>
+      <MainText>
+        Does she know anything? Does she know about what {props.nieceName} is?
+        Does she know what you're doing?
+      </MainText>
+
+      <MainText>
+        You feel like it's written across your forehead. Your palms are
+        sweating.
+      </MainText>
+    </SimpleScene>
+
+    <SimpleScene>
+      <PlainButton onClick={() => console.log("attempt to tell her")}>
+        Tell her
+      </PlainButton>
+      <PlainButton onClick={() => console.log("everything is fine")}>
+        Fine, I'm great.
+      </PlainButton>
+    </SimpleScene>
+
+    <SimpleScene>
+      {props.bToldHer && (
+        <div>
+          <MainText>You lead {props.inLawName} out the backdoor.</MainText>
+          <UserQuote>What is it?</UserQuote>
+          <MainText>
+            You wipe the sweat from your forehead, where do you start?
+          </MainText>
+
+          <PlainButton>
+            I know this is going to sound crazy, but there's something about{" "}
+            {props.nieceName} I need to tell you.
+          </PlainButton>
+          <PlainButton>
+            I think {props.nieceName} could possibly be in danger.
+          </PlainButton>
+        </div>
+      )}
     </SimpleScene>
 
     <SimpleScene isVisible={props.b}>
