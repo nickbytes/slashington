@@ -97,12 +97,12 @@ class DigitalBoard extends Component {
   };
   componentDidMount() {
     console.log("this mounted");
-    console.log();
-    this.scramble();
+    //  this.interval = setInterval(this.scramble, 100);
   }
 
   componentWillUnmount() {
     console.log("imma need to unmount the timer here");
+    clearInterval(this.interval);
   }
 
   randomTime = () => {
