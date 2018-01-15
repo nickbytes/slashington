@@ -86,25 +86,60 @@ const s06eBirthdayParty = props => (
           </PlainButton>
         </div>
       )}
+
+      {props.bFine && (
+        <div>
+          <UserQuote>
+            Fine. I'm fine. Great, really. It's great to be here.
+          </UserQuote>
+          <UserQuote>
+            Okay, well go outside and find {props.nieceName}, I'm sure she's
+            dying to see you.
+          </UserQuote>
+        </div>
+      )}
     </SimpleScene>
 
-    <SimpleScene isVisible={props.b}>
-      <MainText>
-        You walk out the back door. {props.nieceName} and her group of friends
-        are doing group _Slipknot karaoke_. How nice.
-      </MainText>
-    </SimpleScene>
+    <SimpleScene>
+      {props.bToldHer && (
+        <div>
+          <UserQuote>
+            I know this is going to sound crazy, but there's something about{" "}
+            {props.nieceName} I need to tell you.
+          </UserQuote>
+          <UserQuote>What is it?</UserQuote>
+          <UserQuote>{props.playerNameSaved}!</UserQuote>
+          <MainText>
+            {props.nieceName} runs towards you from across the yard.
+          </MainText>
+          <UserQuote>
+            I'm sure it's something we can talk about later. I'll let you and{" "}
+            {props.nieceName} catch up.
+          </UserQuote>
+          <MainText>
+            {props.inLawName} strolls over towards a group of parents chatting
+            nearby.
+          </MainText>
+        </div>
+      )}
 
-    <SimpleScene isVisible={props.b}>
-      <UserQuote>"Comrade {props.playerNameSaved}!"</UserQuote>
-    </SimpleScene>
+      {props.bFine && (
+        <div>
+          <MainText>
+            You walk out the back door. {props.nieceName} and her group of
+            friends are doing group _Slipknot karaoke_. How nice.
+          </MainText>
 
-    <SimpleScene isVisible={props.b}>
-      <MainText>
-        She runs over and gives you a hug. At that exact moment The Council's
-        words bounce through your head. Why must such great risk be put on such
-        a young girl? Such a burden. What will this task do to her childhood...?
-      </MainText>
+          <UserQuote>{props.playerNameSaved}!</UserQuote>
+
+          <MainText>
+            She runs over and gives you a hug. At that exact moment The
+            Council's words bounce through your head. Why must such great risk
+            be put on such a young girl? Such a burden. What will this task do
+            to her childhood...?
+          </MainText>
+        </div>
+      )}
     </SimpleScene>
 
     <SimpleScene isVisible={props.b}>
