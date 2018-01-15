@@ -30,7 +30,9 @@ const s06eBirthdayParty = props => (
         leaves a group of adults and walks over to give you a hug.
       </MainText>
 
-      <MainText>You think about how good it feels to be hugged.</MainText>
+      <MainText>
+        You think about how good it feels to be hugged right now.
+      </MainText>
 
       <UserQuote>{props.inLawName}, thanks so much for having me.</UserQuote>
     </SimpleScene>
@@ -54,8 +56,8 @@ const s06eBirthdayParty = props => (
       </MainText>
 
       <MainText>
-        You feel like it's written across your forehead. Your palms are
-        sweating.
+        You feel like it's written across your forehead. Your hands are clammy.
+        You're sweating.
       </MainText>
     </SimpleScene>
 
@@ -71,7 +73,10 @@ const s06eBirthdayParty = props => (
     <SimpleScene>
       {props.bToldHer && (
         <div>
-          <MainText>You lead {props.inLawName} out the backdoor.</MainText>
+          <UserQuote>Can we talk outside?</UserQuote>
+          <MainText>
+            You say as you lead {props.inLawName} out the backdoor.
+          </MainText>
           <UserQuote>What is it?</UserQuote>
           <MainText>
             You wipe the sweat from your forehead, where do you start?
@@ -93,8 +98,8 @@ const s06eBirthdayParty = props => (
             Fine. I'm fine. Great, really. It's great to be here.
           </UserQuote>
           <UserQuote>
-            Okay, well go outside and find {props.nieceName}, I'm sure she's
-            dying to see you.
+            Okay, well {props.nieceName} is in the backyard with some friends,
+            I'm sure she's dying to see you.
           </UserQuote>
         </div>
       )}
@@ -138,6 +143,8 @@ const s06eBirthdayParty = props => (
             be put on such a young girl? Such a burden. What will this task do
             to her childhood...?
           </MainText>
+
+          <MainText>TK TK, councils words bouncing through your head.</MainText>
         </div>
       )}
     </SimpleScene>
@@ -148,8 +155,8 @@ const s06eBirthdayParty = props => (
 
     <SimpleScene isVisible={props.b}>
       <MainText>
-        Talk here about leaving her to hang out with her friends, and then
-        footsteps to take the keyboard.
+        You could offer her help. The council never said anything about you
+        helping her. Or maybe, you could take the task yourself.
       </MainText>
     </SimpleScene>
 
