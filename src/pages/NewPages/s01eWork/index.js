@@ -29,6 +29,7 @@ import {
 import { receptionist } from "../../../utilities/receptionist";
 import BrokenEmail from "../../../components/BrokenEmail";
 import CustomContainer from "../../../components/CustomContainer";
+import DemoMode from "../../../components/DemoMode";
 import DreamText from "../../../components/DreamText";
 import JobSelectionComponent from "../../../components/JobSelectionComponent";
 import MainText from "../../../components/MainText";
@@ -48,6 +49,7 @@ import keyboard from "../../../images/keyboard.jpg";
 
 const s01eWork = props => (
   <div>
+    <DemoMode />
     <SimpleScene isVisible={props.initialBlock}>
       <CustomContainer>
         <UserQuote attrib="You">
@@ -401,7 +403,7 @@ const s01eWork = props => (
           </UserQuote>
         </CustomContainer>
         <CustomContainer>
-          <Link to="/A-Train-to-Not-Washington">Next</Link>
+          <Link to="/s02eTrain">Next</Link>
         </CustomContainer>
       </div>
     </SimpleScene>

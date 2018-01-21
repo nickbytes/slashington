@@ -176,7 +176,7 @@ const s02eTrain = props => (
       </CustomContainer>
 
       <CustomContainer>
-        <Link to="/The-Council">Next</Link>
+        <Link to="/s03eSlashington">Next</Link>
       </CustomContainer>
     </SimpleScene>
   </div>

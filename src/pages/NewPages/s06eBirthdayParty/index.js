@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 
 import InProgress from "../../../components/InProgress";
@@ -281,6 +282,10 @@ const s06eBirthdayParty = props => (
           </InProgress>
         </div>
       )}
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.b}>
+      <Link to={`/s07eGoodMessenger`}>Next</Link>
     </SimpleScene>
   </div>
 );

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React from "react";
 
 import MainText from "../../../components/MainText";
@@ -265,6 +266,10 @@ const s04eTheCouncil = props => (
         no harm. They will not harm such a young talented child, this would be a
         gift to them really, such magical talent at such a young age
       </UserQuote>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.b}>
+      <Link to={`/s05eSlashing2Washington`}>Next</Link>
     </SimpleScene>
   </div>
 );
