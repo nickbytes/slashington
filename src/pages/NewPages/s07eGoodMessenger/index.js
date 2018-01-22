@@ -1,3 +1,4 @@
+import { connect } from "funcup";
 import React from "react";
 
 import MainText from "../../../components/MainText";
@@ -14,4 +15,8 @@ const s07eGoodMessenger = props => (
   </div>
 );
 
-export default s07eGoodMessenger;
+const map = state => ({
+  b: state.b
+});
+
+export default connect(map)(s07eGoodMessenger);

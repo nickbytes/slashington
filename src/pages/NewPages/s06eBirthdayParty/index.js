@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { connect } from "funcup";
 import React from "react";
 
 import InProgress from "../../../components/InProgress";
@@ -290,4 +291,8 @@ const s06eBirthdayParty = props => (
   </div>
 );
 
-export default s06eBirthdayParty;
+const map = state => ({
+  b: state.b
+});
+
+export default connect(map)(s06eBirthdayParty);

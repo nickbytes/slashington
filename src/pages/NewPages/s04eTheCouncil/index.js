@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { connect } from "funcup";
 import React from "react";
 
 import MainText from "../../../components/MainText";
@@ -274,4 +275,8 @@ const s04eTheCouncil = props => (
   </div>
 );
 
-export default s04eTheCouncil;
+const map = state => ({
+  b: state.b
+});
+
+export default connect(map)(s04eTheCouncil);

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { connect } from "funcup";
 import React from "react";
 
 import {
@@ -182,4 +183,8 @@ const s02eTrain = props => (
   </div>
 );
 
-export default s02eTrain;
+const map = state => ({
+  b: state.b
+});
+
+export default connect(map)(s02eTrain);

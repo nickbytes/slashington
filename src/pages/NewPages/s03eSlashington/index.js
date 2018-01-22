@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { connect } from "funcup";
 import React from "react";
 
 import CustomContainer from "../../../components/CustomContainer";
@@ -84,4 +85,8 @@ const s03eSlashington = props => (
   </div>
 );
 
-export default s03eSlashington;
+const map = state => ({
+  b: state.b
+});
+
+export default connect(map)(s03eSlashington);
