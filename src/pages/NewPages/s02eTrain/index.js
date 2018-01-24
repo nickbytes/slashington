@@ -68,57 +68,13 @@ const s02eTrain = props => (
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.awakenAfterTrainRide}>
-      <CustomContainer>
-        <MainText>
-          You groggily awake to the sunshine on your face. The sky is bright and
-          clear.
-        </MainText>
-        <MainText>
-          As you stir awake, you notice the train car is completely silent. A
-          quick glance reveals that you are alone on the train.
-        </MainText>
-        <MainText>
-          You look out the{" "}
-          <button
-            style={buttonStyle}
-            onClick={e => props.update(lookOutWindowTrain)}
-          >
-            window
-          </button>.
-        </MainText>
-      </CustomContainer>
-    </SimpleScene>
+    <SimpleScene isVisible={props.awakenAfterTrainRide} />
 
-    <SimpleScene isVisible={props.afterLookOutWindow}>
-      <CustomContainer>
-        <MainText>
-          You must be dreaming. You are not in{" "}
-          <button
-            style={buttonStyle}
-            onClick={e => props.update(thinkMustBeDream)}
-          >
-            Washington, DC
-          </button>.
-        </MainText>
-      </CustomContainer>
-    </SimpleScene>
+    <SimpleScene isVisible={props.afterLookOutWindow} />
 
     <SimpleScene isVisible={props.afterYouMustBeDreaming}>
       <CustomContainer>
-        <MainText>
-          The morning sun is above you, but the landscape is bizarre. The ground
-          is a red clay-like dust and rock-covered surface.Small shrubs, deep
-          green with violet accents and flowrs speckle the harsh red clay
-          ground. The train has stopped along a small wooden platform, not much
-          different than those of the Metro North trains in small New England
-          towns. But the backdrop is all wrong. There's a very small ticket
-          patron standing a wooden both some 30 yards away from the platform.
-          Further, you see 10 or so small houses, or maybe huts. They are round,
-          though not primitive looking. They have cone tops, and their bone
-          white color nearly seems soft and as though they would be glow in a
-          translucent fashion if this were nighttime.
-        </MainText>
+        Not really the thing
         <MainText>
           There are no passengers waiting on the platform. You debate getting
           off the train. You debate whether this could be a dream, but it is
@@ -133,52 +89,21 @@ const s02eTrain = props => (
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.afterWalkingOffTrain}>
-      <CustomContainer>
-        <MainText>
-          You begin walking towards the small ticket booth. Astonished you see
-          not a human on the other side of the glass, but... no... it can't be.
-        </MainText>
-        <UserQuote pl={"300px"}>
-          "A little late, but I think everything should be fine. I was starting
-          to worry about you. I see you've got the keyboard, good good. Come on,
-          I'll lead you to the council."
-        </UserQuote>
-        <MainText>
-          says {props.petNameInputSaved} the {props.petTypeInputSaved}, dressed
-          in a old timey looking train conductors outfit.{" "}
-          {props.petNameInputSaved} is wearing a bowtie.
-        </MainText>
-        <UserQuote>
-          <button onClick={e => props.update(sayPetName)} style={buttonStyle}>
-            "{props.petNameInputSaved || "PET_NAME"}?!?!?"
-          </button>
-        </UserQuote>
-        <MainText>you stammer.</MainText>
-      </CustomContainer>
-    </SimpleScene>
+    <SimpleScene isVisible={props.afterWalkingOffTrain}>Something</SimpleScene>
 
     <SimpleScene isVisible={props.afterSayingPetName}>
-      <CustomContainer>
-        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          "You can speak! What in the hell is going on? Where are we.. what is
-          the council..."
-        </UserQuote>
-      </CustomContainer>
+      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+        "You can speak! What in the hell is going on? Where are we.. what is the
+        council..."
+      </UserQuote>
 
-      <CustomContainer>
-        <MainText>You feel your legs start to wobble.</MainText>
-      </CustomContainer>
-      <CustomContainer>
-        <UserQuote attrib={props.petNameInputSaved}>
-          "Oh yes, I always seem to forget this part...The Council will explain
-          it to you."
-        </UserQuote>
-      </CustomContainer>
+      <MainText>You feel your legs start to wobble.</MainText>
+      <UserQuote attrib={props.petNameInputSaved}>
+        "Oh yes, I always seem to forget this part...The Council will explain it
+        to you."
+      </UserQuote>
 
-      <CustomContainer>
-        <Link to="/s03eSlashington">Next</Link>
-      </CustomContainer>
+      <Link to="/s03eSlashington">Next</Link>
     </SimpleScene>
   </div>
 );

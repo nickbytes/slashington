@@ -86,8 +86,18 @@ export const showReceptionistSecurityAsk = state => ({
   occupationAnswerCompleted: true
 });
 
-export const showSecurityForm = state => ({
+export const showNearlySpit = state => ({
   occupationAnswerCompleted: false,
+  nearlySpit: true
+});
+
+export const showQuestionAskForm = state => ({
+  nearlySpit: false,
+  questionAskForm: true
+});
+
+export const showSecurityForm = state => ({
+  questionAskForm: false,
   securityFormShowing: true
 });
 
@@ -129,6 +139,7 @@ export const showGrabCoffee = state => ({
 });
 
 export const showPhone = state => ({
+  grabCoffee: false,
   phoneVisible: true
 });
 

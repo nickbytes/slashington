@@ -1,6 +1,6 @@
 import "../../../vendor/devices.min.css";
 
-import { Arrow, Container } from "rebass";
+import { Arrow } from "rebass";
 import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
@@ -15,10 +15,12 @@ import {
   setNewPlayerName,
   showFirstWorkspace,
   showNameQuestion,
+  showNearlySpit,
   showPhone,
   showPlayerJobQuestion,
   showPlayerNameField,
   showPositionForm,
+  showQuestionAskForm,
   showReceptionist,
   showReceptionistSecurityAsk,
   showSecondWorkspace,
@@ -26,6 +28,7 @@ import {
   showWebcam,
   startBurning
 } from "./updaters";
+import { coworker, coworkerFullTitle } from "../../../utilities/coworker";
 import { receptionist } from "../../../utilities/receptionist";
 import BrokenEmail from "../../../components/BrokenEmail";
 import CustomContainer from "../../../components/CustomContainer";
@@ -162,38 +165,53 @@ const s01eWork = props => (
     <SimpleScene isVisible={props.occupationAnswerCompleted}>
       <div>
         <CustomContainer>
-          <UserQuote attrib={receptionist()}>...</UserQuote>
+          <MainText>Eyes zoom in drawing (in progress)</MainText>
         </CustomContainer>
-
         <CustomContainer>
           <MainText>
-            You look back puzzled. The receptionist is sharing at you intently.
+            {receptionist()} is looking intensely at you. What's her deal? Why
+            is she grilling you like this?
           </MainText>
         </CustomContainer>
 
         <CustomContainer>
-          <UserQuote attrib={receptionist()}>
-            "THE ANSWERS TO YOUR SECURITY QUESTION."
-          </UserQuote>
-        </CustomContainer>
-
-        <Container py={4}>
-          <MainText>
-            The receptionist looks at you with a suspicious glance.
-          </MainText>
-          <UserQuote pt={"100px"} attrib={receptionist()}>
-            "What is the name of a close friend or relative who owns a pet, the
-            pets name, and the type of pet?"
-          </UserQuote>
-        </Container>
-
-        <CustomContainer>
-          <MainText>You don't remember filling out this question.</MainText>
-        </CustomContainer>
-        <CustomContainer>
-          <NextButton onClick={() => props.update(showSecurityForm)} />
+          <NextButton onClick={() => props.update(showNearlySpit)} />
         </CustomContainer>
       </div>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.nearlySpit}>
+      <CustomContainer>
+        <UserQuote attrib={receptionist()}>
+          "THE ANSWERS TO YOUR SECURITY QUESTION."
+        </UserQuote>
+      </CustomContainer>
+
+      <CustomContainer>
+        <MainText>
+          She nearly spits the words at you, her lower limb trembling.
+        </MainText>
+      </CustomContainer>
+
+      <CustomContainer>
+        <NextButton onClick={() => props.update(showQuestionAskForm)} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.questionAskForm}>
+      <CustomContainer>
+        <UserQuote pt={"100px"} attrib={receptionist()}>
+          "What is the name of a close friend or relative who owns a pet, the
+          pets name, and the type of pet?"
+        </UserQuote>
+      </CustomContainer>
+
+      <CustomContainer>
+        <MainText>You don't remember filling out this question.</MainText>
+      </CustomContainer>
+      <CustomContainer>
+        <NextButton onClick={() => props.update(showSecurityForm)} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.securityFormShowing}>
@@ -275,24 +293,27 @@ const s01eWork = props => (
 
     <SimpleScene isVisible={props.grabCoffee}>
       <div>
-        <CustomContainer>
-          <MainText>
-            You eject yourself from your desk and go grab a cup of coffee.
-          </MainText>
-        </CustomContainer>
-        <CustomContainer>
-          <MainText>
-            When you get back to your desk, you see that you have a{" "}
-            <button style={buttonStyle} onClick={e => props.update(showPhone)}>
-              voicemail from your brother
-            </button>.
-          </MainText>
-        </CustomContainer>
+        <MainText>Emails. Deadlines. Presentations. Calls.</MainText>
+        <MainText>
+          It's going to be a long day, you should really grab a cup of coffee
+          first.
+        </MainText>
+
+        <MainText>
+          When you get back to your desk, you see that you have a{" "}
+          <button style={buttonStyle} onClick={e => props.update(showPhone)}>
+            voicemail
+          </button>from your brother.
+        </MainText>
       </div>
     </SimpleScene>
 
     <SimpleScene isVisible={props.phoneVisible}>
       <PhoneComponent {...props} />
+      <MainText>
+        We need an audio transcript here, and this to be the only thing on the
+        page.
+      </MainText>
     </SimpleScene>
 
     <SimpleScene isVisible={props.phoneCallOver}>
@@ -366,46 +387,47 @@ const s01eWork = props => (
         <CustomContainer>
           <img src={keyboard} alt="keyboard" />
         </CustomContainer>
-        <CustomContainer>
-          <UserQuote>"Keyboard issues?"</UserQuote>
-        </CustomContainer>
-        <CustomContainer>
-          <MainText>
-            You look up and see {props.coworkerName || "SCOTT_PLAYER_TEST"}.
-          </MainText>
-        </CustomContainer>
-        <CustomContainer>
-          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-            "For some reason, every key is registering as only an n or b on the
-            screen."
-          </UserQuote>
-        </CustomContainer>
-        <CustomContainer>
-          <UserQuote attrib={props.coworkerName || "SCOTT_PLAYER_TEST"}>
-            "Same thing happened to me about a year ago. I took it to a place
-            near where I lived in DC. Fixed it up in a day, had it working good
-            as new."
-          </UserQuote>
-        </CustomContainer>
-
-        <CustomContainer>
-          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-            "I'm taking the Amtrak down there this weekend... It's my niece's
-            birthday..."
-          </UserQuote>
-        </CustomContainer>
-
-        <CustomContainer>
-          <UserQuote attrib={props.coworkerName || "SCOTT_PLAYER_TEST"}>
-            "Crazy coincidence! It's right off the Amtrak stop. You can't miss
-            it, south east corner of the Mall. Open on weekends too, can
-            probably pick it up on your way back."
-          </UserQuote>
-        </CustomContainer>
-        <CustomContainer>
-          <Link to="/s02eTrain">Next</Link>
-        </CustomContainer>
       </div>
+    </SimpleScene>
+
+    <SimpleScene>
+      <UserQuote attrib={coworkerFullTitle()}>"Keyboard issues?"</UserQuote>
+    </SimpleScene>
+
+    <SimpleScene>
+      <MainText>You look up and see {coworker()}. Describe him more.</MainText>
+    </SimpleScene>
+
+    <SimpleScene>
+      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+        For some reason, every key is registering as only an n or b on the
+        screen.
+      </UserQuote>
+    </SimpleScene>
+
+    <SimpleScene>
+      <UserQuote attrib={coworkerFullTitle()}>
+        Same thing happened to me about a year ago. I took it to a place near
+        where I lived in DC. Fixed it up in a day, had it working good as new.
+      </UserQuote>
+    </SimpleScene>
+
+    <SimpleScene>
+      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+        I'm taking the Amtrak down there this weekend... It's my niece's
+        birthday...
+      </UserQuote>
+    </SimpleScene>
+
+    <SimpleScene>
+      <UserQuote attrib={props.coworkerName || "SCOTT_PLAYER_TEST"}>
+        "Crazy coincidence! It's right off the Amtrak stop. You can't miss it,
+        south east corner of the Mall. Open on weekends too, can probably pick
+        it up on your way back."
+      </UserQuote>
+      <CustomContainer>
+        <Link to="/s02eTrain">Next</Link>
+      </CustomContainer>
     </SimpleScene>
   </div>
 );
@@ -425,6 +447,8 @@ const map = state => ({
   playerOccupationRadio: state.playerOccupationRadio,
   positionFormVisible: state.positionFormVisible,
   occupationAnswerCompleted: state.occupationAnswerCompleted,
+  nearlySpit: state.nearlySpit,
+  questionAskForm: state.questionAskForm,
   securityFormShowing: state.securityFormShowing,
   petOwnerInput: state.petOwnerInput,
   petTypeInput: state.petTypeInput,

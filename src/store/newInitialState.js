@@ -16,6 +16,8 @@ const newInitialState = {
   playerOccupationFinished: false,
   playerOccupationRadio: "",
   occupationAnswerCompleted: false,
+  nearlySpit: false,
+  questionAskForm: false,
   securityFormShowing: false,
   petOwnerInput: "",
   petTypeInput: "",
