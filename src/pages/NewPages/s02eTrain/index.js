@@ -2,16 +2,10 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
-import {
-  lookOutWindowTrain,
-  sayPetName,
-  showTrainAnimation,
-  thinkMustBeDream,
-  walkOffTrain
-} from "../../../updaters/NotWashingtonUpdaters";
-import { showWaves } from "../../../updaters/CouncilUpdaters";
+import { ns } from "./updaters";
 import CustomContainer from "../../../components/CustomContainer";
 import MainText from "../../../components/MainText";
+import NextButton from "../../../components/NextButton";
 import SimpleScene from "../../../components/SimpleScene";
 import TrainAnimation from "../../../components/TrainAnimation";
 import UserQuote from "../../../components/UserQuote";
@@ -32,18 +26,24 @@ const s02eTrain = props => (
         </MainText>
         <MainText>
           Relief washes over you like a series gentle{" "}
-          <button style={buttonStyle} onClick={e => props.update(showWaves)}>
+          <button
+            style={buttonStyle}
+            onClick={e => props.update(ns("scene2", "second"))}
+          >
             waves.
           </button>
         </MainText>
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.wavesVisible}>
+    <SimpleScene isVisible={props.second}>
       <CustomContainer>
         <Waves />
       </CustomContainer>
+      <NextButton onClick={() => props.update(ns("scene2", "third"))} />
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.third}>
       <CustomContainer>
         <MainText>
           The train nudges forward, and begins rolling out of the station. You
@@ -54,7 +54,7 @@ const s02eTrain = props => (
           The train has begun its slow wind along the coast. It lulls you to{" "}
           <button
             style={buttonStyle}
-            onClick={e => props.update(showTrainAnimation)}
+            onClick={e => props.update(ns("scene2", "fourth"))}
           >
             sleep.
           </button>
@@ -62,7 +62,7 @@ const s02eTrain = props => (
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.trainAnimationVisible}>
+    <SimpleScene isVisible={props.fourth}>
       <CustomContainer>
         <TrainAnimation {...props} />
       </CustomContainer>
@@ -82,7 +82,7 @@ const s02eTrain = props => (
           You measure your breaths. You wiggle your toes, feel the tips of your
           fingers. This is real. Bag, suitcase, and keyboard in hand, you slowly
           stand, and begin moving toward the{" "}
-          <button onClick={e => props.update(walkOffTrain)} style={buttonStyle}>
+          <button onClick={e => props.update()} style={buttonStyle}>
             open door
           </button>.
         </MainText>
@@ -109,7 +109,10 @@ const s02eTrain = props => (
 );
 
 const map = state => ({
-  initialS02: state.initialS02
+  initialS02: state.scene2.initialS02,
+  second: state.scene2.second,
+  third: state.scene2.third,
+  fourth: state.scene2.fourth
 });
 
 export default connect(map)(s02eTrain);

@@ -43,7 +43,12 @@ const newInitialState = {
   coincidence: false,
 
   // s02e
-  initialS02: true,
+  scene2: {
+    initialS02: true,
+    second: false,
+    third: false,
+    fourth: false
+  },
 
   // s03e
 
