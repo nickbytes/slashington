@@ -162,3 +162,33 @@ export const showBrokenText = state => ({
   secondWorkspace: false,
   computerBroken: true
 });
+
+export const showScott = state => ({
+  computerBroken: false,
+  scottShowing: true
+});
+
+export const describeScott = state => ({
+  scottShowing: false,
+  scottDescribed: true
+});
+
+export const explainYourself = state => ({
+  scottDescribed: false,
+  nOrB: true
+});
+
+export const saySameThing = state => ({
+  nOrB: false,
+  sameThing: true
+});
+
+export const sayBirthday = state => ({
+  sameThing: false,
+  herBirthday: true
+});
+
+export const sayCoincidence = state => ({
+  herBirthday: false,
+  coincidence: true
+});

@@ -8,7 +8,12 @@ import React from "react";
 import {
   addPlayerName,
   addSecurityAnswers,
+  describeScott,
+  explainYourself,
   feelDreamlike,
+  sayBirthday,
+  sayCoincidence,
+  saySameThing,
   setNewPetName,
   setNewPetOwner,
   setNewPetType,
@@ -23,6 +28,7 @@ import {
   showQuestionAskForm,
   showReceptionist,
   showReceptionistSecurityAsk,
+  showScott,
   showSecondWorkspace,
   showSecurityForm,
   showWebcam,
@@ -385,49 +391,54 @@ const s01eWork = props => (
           </MainText>
         </CustomContainer>
         <CustomContainer>
-          <img src={keyboard} alt="keyboard" />
+          <button onClick={() => props.update(showScott)}>
+            <img src={keyboard} alt="keyboard" />
+          </button>
         </CustomContainer>
       </div>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.scottShowing}>
       <UserQuote attrib={coworkerFullTitle()}>"Keyboard issues?"</UserQuote>
+      <NextButton onClick={() => props.update(describeScott)} />
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.scottDescribed}>
       <MainText>You look up and see {coworker()}. Describe him more.</MainText>
+      <NextButton onClick={() => props.update(explainYourself)} />
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.nOrB}>
       <UserQuote attrib={`You, ${props.playerNameSaved}`}>
         For some reason, every key is registering as only an n or b on the
         screen.
       </UserQuote>
+      <NextButton onClick={() => props.update(saySameThing)} />
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.sameThing}>
       <UserQuote attrib={coworkerFullTitle()}>
         Same thing happened to me about a year ago. I took it to a place near
         where I lived in DC. Fixed it up in a day, had it working good as new.
       </UserQuote>
+      <NextButton onClick={() => props.update(sayBirthday)} />
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.herBirthday}>
       <UserQuote attrib={`You, ${props.playerNameSaved}`}>
         I'm taking the Amtrak down there this weekend... It's my niece's
         birthday...
       </UserQuote>
+      <NextButton onClick={() => props.update(sayCoincidence)} />
     </SimpleScene>
 
-    <SimpleScene>
-      <UserQuote attrib={props.coworkerName || "SCOTT_PLAYER_TEST"}>
-        "Crazy coincidence! It's right off the Amtrak stop. You can't miss it,
+    <SimpleScene isVisible={props.coincidence}>
+      <UserQuote attrib={coworkerFullTitle()}>
+        Crazy coincidence! It's right off the Amtrak stop. You can't miss it,
         south east corner of the Mall. Open on weekends too, can probably pick
-        it up on your way back."
+        it up on your way back.
       </UserQuote>
-      <CustomContainer>
-        <Link to="/s02eTrain">Next</Link>
-      </CustomContainer>
+      <Link to="/s02eTrain">Next</Link>
     </SimpleScene>
   </div>
 );
@@ -466,7 +477,12 @@ const map = state => ({
   showFeelsDreamlike: state.showFeelsDreamlike,
   secondWorkspace: state.secondWorkspace,
   computerBroken: state.computerBroken,
-  coworkerName: state.coworkerName
+  scottShowing: state.scottShowing,
+  scottDescribed: state.scottDescribed,
+  nOrB: state.nOrB,
+  sameThing: state.sameThing,
+  herBirthday: state.herBirthday,
+  coincidence: state.coincidence
 });
 
 export default connect(map)(s01eWork);

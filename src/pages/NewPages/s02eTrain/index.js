@@ -109,7 +109,7 @@ const s02eTrain = props => (
 );
 
 const map = state => ({
-  b: state.b
+  initialS02: state.initialS02
 });
 
 export default connect(map)(s02eTrain);

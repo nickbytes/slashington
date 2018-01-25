@@ -35,8 +35,15 @@ const newInitialState = {
   showFeelsDreamlike: false,
   secondWorkspace: false,
   computerBroken: false,
+  scottShowing: false,
+  scottDescribed: false,
+  nOrB: false,
+  sameThing: false,
+  herBirthday: false,
+  coincidence: false,
 
   // s02e
+  initialS02: true,
 
   // s03e
 
