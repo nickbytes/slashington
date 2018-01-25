@@ -6,6 +6,7 @@ export const ns = (scene, clip) => state => {
 
   Object.keys(oldSceneState).map((key, index) => {
     allFalse[key] = false;
+    return allFalse;
   });
 
   return {
