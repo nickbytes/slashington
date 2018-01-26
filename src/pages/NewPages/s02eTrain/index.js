@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
-import { ns } from "./updaters";
+import { ns } from "../../../updaters/ns";
 import CustomContainer from "../../../components/CustomContainer";
 import MainText from "../../../components/MainText";
 import NextButton from "../../../components/NextButton";
@@ -14,7 +14,7 @@ import buttonStyle from "../../../utilities/buttonStyle";
 
 const s02eTrain = props => (
   <div>
-    <SimpleScene isVisible={props.initialS02}>
+    <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <MainText>
           You board the train, duffle bag slung over one shoulder, keyboard in
@@ -28,7 +28,7 @@ const s02eTrain = props => (
           Relief washes over you like a series gentle{" "}
           <button
             style={buttonStyle}
-            onClick={e => props.update(ns("scene2", "second"))}
+            onClick={e => props.update(ns("s2", "c2"))}
           >
             waves.
           </button>
@@ -36,14 +36,14 @@ const s02eTrain = props => (
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.second}>
+    <SimpleScene isVisible={props.c2}>
       <CustomContainer>
         <Waves />
       </CustomContainer>
-      <NextButton onClick={() => props.update(ns("scene2", "third"))} />
+      <NextButton onClick={() => props.update(ns("s2", "c3"))} />
     </SimpleScene>
 
-    <SimpleScene isVisible={props.third}>
+    <SimpleScene isVisible={props.c3}>
       <CustomContainer>
         <MainText>
           The train nudges forward, and begins rolling out of the station. You
@@ -54,7 +54,7 @@ const s02eTrain = props => (
           The train has begun its slow wind along the coast. It lulls you to{" "}
           <button
             style={buttonStyle}
-            onClick={e => props.update(ns("scene2", "fourth"))}
+            onClick={e => props.update(ns("s2", "c4"))}
           >
             sleep.
           </button>
@@ -62,7 +62,7 @@ const s02eTrain = props => (
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.fourth}>
+    <SimpleScene isVisible={props.c4}>
       <CustomContainer>
         <TrainAnimation {...props} />
       </CustomContainer>
@@ -109,10 +109,10 @@ const s02eTrain = props => (
 );
 
 const map = state => ({
-  initialS02: state.scene2.initialS02,
-  second: state.scene2.second,
-  third: state.scene2.third,
-  fourth: state.scene2.fourth
+  c1: state.s2.c1,
+  c2: state.s2.c2,
+  c3: state.s2.c3,
+  c4: state.s2.c4
 });
 
 export default connect(map)(s02eTrain);

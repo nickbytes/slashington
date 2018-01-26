@@ -43,20 +43,84 @@ const newInitialState = {
   coincidence: false,
 
   // s02e
-  scene2: {
-    initialS02: true,
-    second: false,
-    third: false,
-    fourth: false
+  s2: {
+    c1: true,
+    c2: false,
+    c3: false,
+    c4: false,
+    c5: false,
+    c6: false,
+    c7: false,
+    c8: false,
+    c9: false,
+    c10: false,
+    c11: false,
+    c12: false,
+    c13: false,
+    c14: false,
+    c15: false
   },
 
   // s03e
-
+  s3: {
+    c1: true,
+    c2: false,
+    c3: false,
+    c4: false,
+    c5: false
+  },
   // s04e
-
+  s4: {
+    c1: true,
+    c2: false,
+    c3: false,
+    c4: false,
+    c5: false,
+    c6: false,
+    c7: false,
+    c8: false,
+    c9: false,
+    c10: false,
+    c11: false,
+    c12: false,
+    c13: false
+  },
   // s05e
-
+  s5: {
+    c1: true,
+    c2: false,
+    c3: false,
+    c4: false,
+    c5: false,
+    c6: false,
+    c7: false,
+    c8: false,
+    c9: false,
+    c10: false,
+    c11: false,
+    c12: false,
+    c13: false,
+    c14: false,
+    c15: false
+  },
   // s06e
+  s6: {
+    c1: true,
+    c2: false,
+    c3: false,
+    c4: false,
+    c5: false,
+    c6: false,
+    c7: false,
+    c8: false,
+    c9: false,
+    c10: false,
+    c11: false,
+    c12: false,
+    c13: false,
+    c14: false,
+    c15: false
+  },
 
   // global
   nieceName: "Emma",

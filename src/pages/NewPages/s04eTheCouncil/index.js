@@ -2,30 +2,33 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
+import { ns } from "../../../updaters/ns";
 import MainText from "../../../components/MainText";
+import NextButton from "../../../components/NextButton";
 import PlainButton from "../../../components/PlainButton";
 import SimpleScene from "../../../components/SimpleScene";
 import UserQuote from "../../../components/UserQuote";
 
 const s04eTheCouncil = props => (
   <div>
-    <SimpleScene isVisible={props.initialCouncil}>
+    <SimpleScene isVisible={props.c1}>
       <MainText>You stand inside an empty waiting room.</MainText>
       <MainText>
         You look up and see the digital train schedule board whizzing
         uncontrollably.
       </MainText>
+      <NextButton onClick={() => props.update(ns("s4", "c2"))} />
     </SimpleScene>
 
-    <SimpleScene isVisible={props.boardWhizzing}>
+    <SimpleScene isVisible={props.c2}>
       <h1>Digital board whizzing accept one place says a train is arriving</h1>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.weirdText}>
-      <MainText> isVisibleWeird.</MainText>
+    <SimpleScene isVisible={props.c3}>
+      <MainText>Weird.</MainText>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.greetingShowing}>
+    <SimpleScene isVisible={props.c4}>
       <UserQuote attrib="Unknown Voice, to your right">
         Ahhhhh, {props.playerNameSaved}, {props.playerOccupationSaved},
         Earthling of the Bauzort tribe.
@@ -53,28 +56,28 @@ const s04eTheCouncil = props => (
       </MainText>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.weAreCouncil}>
+    <SimpleScene isVisible={props.c5}>
       <UserQuote>We, as you might know, are The Council.</UserQuote>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.reactionOptions}>
+    <SimpleScene isVisible={props.c6}>
       <PlainButton onClick={() => console.log("something!")}>
         React Angrily
       </PlainButton>
       <PlainButton onClick={() => console.log("something!")}>Nod</PlainButton>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c7}>
       <UserQuote>What the fuck is going on?</UserQuote>
       <UserQuote>Are they okay? They look like they might faint...</UserQuote>
       <MainText>They are talking about you...</MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c8}>
       <UserQuote>You have been--</UserQuote>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c9}>
       <UserQuote>
         Must we really explain this each time Comrade Igglefort?
       </UserQuote>
@@ -84,7 +87,7 @@ const s04eTheCouncil = props => (
       </UserQuote>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c10}>
       <UserQuote attrib="Comrade Igglefort">
         Rule 17, Article 405b states that the counselor must explain appropriate
         context for me the-
@@ -223,7 +226,7 @@ const s04eTheCouncil = props => (
       </MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c11}>
       <PlainButton onClick={() => console.log("plz fill me in")}>
         Demand to know the plan
       </PlainButton>
@@ -232,7 +235,7 @@ const s04eTheCouncil = props => (
       </PlainButton>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c12}>
       <UserQuote>
         TELL ME THE MISSION NOW. You're not going to put her at risk without
         telling me what's going on here.
@@ -269,14 +272,26 @@ const s04eTheCouncil = props => (
       </UserQuote>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.b}>
+    <SimpleScene isVisible={props.c13}>
       <Link to={`/s05eSlashing2Washington`}>Next</Link>
     </SimpleScene>
   </div>
 );
 
 const map = state => ({
-  b: state.b
+  c1: state.s4.c1,
+  c2: state.s4.c2,
+  c3: state.s4.c3,
+  c4: state.s4.c4,
+  c5: state.s4.c5,
+  c6: state.s4.c6,
+  c7: state.s4.c7,
+  c8: state.s4.c8,
+  c9: state.s4.c9,
+  c10: state.s4.c10,
+  c11: state.s4.c11,
+  c12: state.s4.c12,
+  c13: state.s4.c13
 });
 
 export default connect(map)(s04eTheCouncil);
