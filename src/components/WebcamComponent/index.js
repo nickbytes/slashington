@@ -2,7 +2,7 @@ import { connect } from "funcup";
 import React, { Component } from "react";
 import Webcam from "react-webcam";
 
-import { receiveBadge } from "../../updaters/updaters";
+import { ns } from "../../updaters/ns";
 import UserQuote from "../UserQuote";
 import YourNewBadge from "../YourNewBadge";
 import buttonStyle from "../../utilities/buttonStyle";
@@ -38,7 +38,7 @@ class WebcamComponent extends Component {
               "Here is your new{" "}
               <button
                 style={buttonStyle}
-                onClick={e => this.props.update(receiveBadge)}
+                onClick={e => this.props.update(ns("something", "something"))}
               >
                 badge
               </button>."
