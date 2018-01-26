@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
-import { ns } from "../../../updaters/ns";
-import MainText from "../../../components/MainText";
-import NextButton from "../../../components/NextButton";
-import SimpleScene from "../../../components/SimpleScene";
-import UserQuote from "../../../components/UserQuote";
+import { ns } from "../../updaters/ns";
+import MainText from "../../components/MainText";
+import NextButton from "../../components/NextButton";
+import SimpleScene from "../../components/SimpleScene";
+import UserQuote from "../../components/UserQuote";
 
 const s03eSlashington = props => (
   <div>

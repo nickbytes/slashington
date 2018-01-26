@@ -1,9 +1,9 @@
 import { connect } from "funcup";
 import React from "react";
 
-import MainText from "../../../components/MainText";
-import SimpleScene from "../../../components/SimpleScene";
-import UserQuote from "../../../components/UserQuote";
+import MainText from "../../components/MainText";
+import SimpleScene from "../../components/SimpleScene";
+import UserQuote from "../../components/UserQuote";
 
 const s07eGoodMessenger = props => (
   <div>

@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
-import InProgress from "../../../components/InProgress";
-import MainText from "../../../components/MainText";
-import PlainButton from "../../../components/PlainButton";
-import PosterAnimation from "../../../components/PosterAnimation";
-import SimpleScene from "../../../components/SimpleScene";
-import UserQuote from "../../../components/UserQuote";
+import InProgress from "../../components/InProgress";
+import MainText from "../../components/MainText";
+import PlainButton from "../../components/PlainButton";
+import PosterAnimation from "../../components/PosterAnimation";
+import SimpleScene from "../../components/SimpleScene";
+import UserQuote from "../../components/UserQuote";
 
 const s06eBirthdayParty = props => (
   <div>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { showBrokenText } from "../../pages/NewPages/s01eWork/updaters";
+import { showBrokenText } from "../../pages/s01eWork/updaters";
 import Blinking from "./Blinking";
 import EmailContainer from "./EmailContainer";
 import InputContainer from "./InputContainer";

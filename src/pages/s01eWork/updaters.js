@@ -1,4 +1,4 @@
-import { createTitle } from "../../../components/JobSelectionComponent/jobGenerator";
+import { createTitle } from "../../components/JobSelectionComponent/jobGenerator";
 
 export const showReceptionist = state => ({
   initialBlock: false,

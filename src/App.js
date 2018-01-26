@@ -4,13 +4,13 @@ import React from "react";
 
 import StartGame from "./components/StartGame/StartGame";
 import newInitialState from "./store/newInitialState";
-import s01eWork from "./pages/NewPages/s01eWork";
-import s02eTrain from "./pages/NewPages/s02eTrain";
-import s03eSlashington from "./pages/NewPages/s03eSlashington";
-import s04eTheCouncil from "./pages/NewPages/s04eTheCouncil";
-import s05eSlashing2Washington from "./pages/NewPages/s05eSlashing2Washington";
-import s06eBirthdayParty from "./pages/NewPages/s06eBirthdayParty";
-import s07eGoodMessenger from "./pages/NewPages/s07eGoodMessenger";
+import s01eWork from "./pages/s01eWork";
+import s02eTrain from "./pages/s02eTrain";
+import s03eSlashington from "./pages/s03eSlashington";
+import s04eTheCouncil from "./pages/s04eTheCouncil";
+import s05eSlashing2Washington from "./pages/s05eSlashing2Washington";
+import s06eBirthdayParty from "./pages/s06eBirthdayParty";
+import s07eGoodMessenger from "./pages/s07eGoodMessenger";
 
 const App = props => (
   <div>

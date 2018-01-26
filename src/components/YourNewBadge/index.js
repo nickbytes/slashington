@@ -2,7 +2,7 @@ import Barcode from "react-barcode";
 import React from "react";
 import styled from "styled-components";
 
-import { hideBadge } from "../../pages/NewPages/s01eWork/updaters";
+import { hideBadge } from "../../pages/s01eWork/updaters";
 import BadgeButton from "./BadgeButton";
 import YourFace from "./YourFace";
 import company from "../../images/company.png";

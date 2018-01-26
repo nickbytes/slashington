@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
-import MainText from "../../../components/MainText";
-import SimpleScene from "../../../components/SimpleScene";
-import ThoughtQuote from "../../../components/ThoughtQuote";
-import UserQuote from "../../../components/UserQuote";
-import buttonStyle from "../../../utilities/buttonStyle";
+import MainText from "../../components/MainText";
+import SimpleScene from "../../components/SimpleScene";
+import ThoughtQuote from "../../components/ThoughtQuote";
+import UserQuote from "../../components/UserQuote";
+import buttonStyle from "../../utilities/buttonStyle";
 
 const s05eSlashing2Washington = props => (
   <div>

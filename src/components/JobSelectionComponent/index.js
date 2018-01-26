@@ -6,7 +6,7 @@ import {
   addPlayerOccupation,
   newJobs,
   setNewPlayerOccupation
-} from "../../pages/NewPages/s01eWork/updaters";
+} from "../../pages/s01eWork/updaters";
 
 const JobSelectionComponent = props => (
   <form

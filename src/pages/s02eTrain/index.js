@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
-import { ns } from "../../../updaters/ns";
-import CustomContainer from "../../../components/CustomContainer";
-import MainText from "../../../components/MainText";
-import NextButton from "../../../components/NextButton";
-import SimpleScene from "../../../components/SimpleScene";
-import TrainAnimation from "../../../components/TrainAnimation";
-import UserQuote from "../../../components/UserQuote";
-import Waves from "../../../components/Waves";
-import buttonStyle from "../../../utilities/buttonStyle";
+import { ns } from "../../updaters/ns";
+import CustomContainer from "../../components/CustomContainer";
+import MainText from "../../components/MainText";
+import NextButton from "../../components/NextButton";
+import SimpleScene from "../../components/SimpleScene";
+import TrainAnimation from "../../components/TrainAnimation";
+import UserQuote from "../../components/UserQuote";
+import Waves from "../../components/Waves";
+import buttonStyle from "../../utilities/buttonStyle";
 
 const s02eTrain = props => (
   <div>
