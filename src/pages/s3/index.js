@@ -3,13 +3,15 @@ import { connect } from "funcup";
 import React from "react";
 
 import { ns } from "../../updaters/ns";
+import DemoMode from "../../components/DemoMode";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 
-const s03eSlashington = props => (
+const s3 = props => (
   <div>
+    <DemoMode />
     <SimpleScene isVisible={props.c1}>
       <MainText>
         {props.petNameInputSaved} jumps off the bench and starts walking towards
@@ -96,4 +98,4 @@ const map = state => ({
   c5: state.s3.c5
 });
 
-export default connect(map)(s03eSlashington);
+export default connect(map)(s3);

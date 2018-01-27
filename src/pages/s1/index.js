@@ -56,7 +56,7 @@ import Workspace from "../../components/Workspace";
 import buttonStyle from "../../utilities/buttonStyle";
 import keyboard from "../../images/keyboard.jpg";
 
-const s01eWork = props => (
+const s1 = props => (
   <div>
     <DemoMode />
     <SimpleScene isVisible={props.initialBlock}>
@@ -485,4 +485,4 @@ const map = state => ({
   coincidence: state.coincidence
 });
 
-export default connect(map)(s01eWork);
+export default connect(map)(s1);

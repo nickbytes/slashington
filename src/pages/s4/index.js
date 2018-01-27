@@ -3,14 +3,16 @@ import { connect } from "funcup";
 import React from "react";
 
 import { ns } from "../../updaters/ns";
+import DemoMode from "../../components/DemoMode";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
 import PlainButton from "../../components/PlainButton";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 
-const s04eTheCouncil = props => (
+const s4 = props => (
   <div>
+    <DemoMode />
     <SimpleScene isVisible={props.c1}>
       <MainText>You stand inside an empty waiting room.</MainText>
       <MainText>
@@ -294,4 +296,4 @@ const map = state => ({
   c13: state.s4.c13
 });
 
-export default connect(map)(s04eTheCouncil);
+export default connect(map)(s4);

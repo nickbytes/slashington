@@ -4,6 +4,7 @@ import React from "react";
 
 import { ns } from "../../updaters/ns";
 import CustomContainer from "../../components/CustomContainer";
+import DemoMode from "../../components/DemoMode";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
 import SimpleScene from "../../components/SimpleScene";
@@ -12,8 +13,9 @@ import UserQuote from "../../components/UserQuote";
 import Waves from "../../components/Waves";
 import buttonStyle from "../../utilities/buttonStyle";
 
-const s02eTrain = props => (
+const s2 = props => (
   <div>
+    <DemoMode />
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <MainText>
@@ -115,4 +117,4 @@ const map = state => ({
   c4: state.s2.c4
 });
 
-export default connect(map)(s02eTrain);
+export default connect(map)(s2);

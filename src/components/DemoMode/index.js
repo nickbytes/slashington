@@ -26,13 +26,13 @@ const DevTitle = styled.h1`
 const DemoMode = () => (
   <Container>
     <DevTitle>devtool</DevTitle>
-    <DevLink to={`/s01eWork`}>s01eWork</DevLink>
-    <DevLink to={`/s02eTrain`}>s02eTrain</DevLink>
-    <DevLink to={`/s03eSlashington`}>s03eSlashington</DevLink>
-    <DevLink to={`/s04eTheCouncil`}>s04eTheCouncil</DevLink>
-    <DevLink to={`/s05eSlashing2Washington`}>s05eSlashing2Washington</DevLink>
-    <DevLink to={`/s06eBirthdayParty`}>s06eBirthdayParty</DevLink>
-    <DevLink to={`/s07eGoodMessenger`}>s07eGoodMessenger</DevLink>
+    <DevLink to={`/the-office`}>The Office</DevLink>
+    <DevLink to={`/train-ride`}>Train Ride</DevLink>
+    <DevLink to={`/slashington`}>Slashington</DevLink>
+    <DevLink to={`/the-council`}>The Council</DevLink>
+    <DevLink to={`/to-washington`}>To Washington</DevLink>
+    <DevLink to={`/birthday-party`}>Birthday Party</DevLink>
+    <DevLink to={`/good-messenger`}>Good Messenger</DevLink>
   </Container>
 );
 

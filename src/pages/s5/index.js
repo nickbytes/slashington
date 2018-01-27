@@ -2,14 +2,16 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
+import DemoMode from "../../components/DemoMode";
 import MainText from "../../components/MainText";
 import SimpleScene from "../../components/SimpleScene";
 import ThoughtQuote from "../../components/ThoughtQuote";
 import UserQuote from "../../components/UserQuote";
 import buttonStyle from "../../utilities/buttonStyle";
 
-const s05eSlashing2Washington = props => (
+const s5 = props => (
   <div>
+    <DemoMode />
     <SimpleScene>
       <MainText>You sit down again in the same seat on the train.</MainText>
     </SimpleScene>
@@ -115,4 +117,4 @@ const map = state => ({
   b: state.b
 });
 
-export default connect(map)(s05eSlashing2Washington);
+export default connect(map)(s5);

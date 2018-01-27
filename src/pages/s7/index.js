@@ -1,12 +1,14 @@
 import { connect } from "funcup";
 import React from "react";
 
+import DemoMode from "../../components/DemoMode";
 import MainText from "../../components/MainText";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 
-const s07eGoodMessenger = props => (
+const s7 = props => (
   <div>
+    <DemoMode />
     <SimpleScene isVisible={props.b}>
       <MainText>This chair is comfortable.</MainText>
 
@@ -27,4 +29,4 @@ const map = state => ({
   b: state.b
 });
 
-export default connect(map)(s07eGoodMessenger);
+export default connect(map)(s7);

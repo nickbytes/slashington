@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
+import DemoMode from "../../components/DemoMode";
 import InProgress from "../../components/InProgress";
 import MainText from "../../components/MainText";
 import PlainButton from "../../components/PlainButton";
@@ -9,8 +10,9 @@ import PosterAnimation from "../../components/PosterAnimation";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 
-const s06eBirthdayParty = props => (
+const s6 = props => (
   <div>
+    <DemoMode />
     <SimpleScene isVisible={props.b}>
       <UserQuote>
         I'll take your stuff up to the guest room. You go relax and say hello to{" "}
@@ -286,7 +288,7 @@ const s06eBirthdayParty = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.b}>
-      <Link to={`/s07eGoodMessenger`}>Next</Link>
+      <Link to={`/s7`}>Next</Link>
     </SimpleScene>
   </div>
 );
@@ -295,4 +297,4 @@ const map = state => ({
   b: state.b
 });
 
-export default connect(map)(s06eBirthdayParty);
+export default connect(map)(s6);
