@@ -1,4 +1,4 @@
-import { Label, Radio } from "rebass";
+import { Radio } from "rebass";
 import { connect } from "funcup";
 import React from "react";
 
@@ -7,6 +7,8 @@ import {
   newJobs,
   setNewPlayerOccupation
 } from "../../pages/s01eWork/updaters";
+import JobButton from "./JobButton";
+import JobLabel from "./JobLabel";
 
 const JobSelectionComponent = props => (
   <form
@@ -17,14 +19,7 @@ const JobSelectionComponent = props => (
   >
     <radiogroup>
       {props.jobItems.map(jobItem => (
-        <Label
-          key={jobItem.id}
-          style={{
-            fontFamily: "'Source Code Pro', monospace",
-            fontWeight: "700",
-            fontSize: "20px"
-          }}
-        >
+        <JobLabel key={jobItem.id}>
           <Radio
             name="radio"
             value={jobItem.title}
@@ -32,36 +27,18 @@ const JobSelectionComponent = props => (
             onChange={e => props.update(setNewPlayerOccupation(e.target.value))}
           />
           {jobItem.title}
-        </Label>
+        </JobLabel>
       ))}
     </radiogroup>
-    <button
+    <JobButton
       onClick={e => {
         e.preventDefault();
         props.update(newJobs);
       }}
-      style={{
-        fontFamily: "'Source Code Pro', monospace",
-        fontSize: "17px",
-        marginRight: "10px",
-        marginTop: "10px",
-        background: "none",
-        border: "1px solid rgb(27, 29, 35)"
-      }}
     >
       Regenerate Jobs
-    </button>
-    <button
-      style={{
-        fontFamily: "'Source Code Pro', monospace",
-        fontSize: "17px",
-        marginTop: "10px",
-        background: "none",
-        border: "1px solid rgb(27, 29, 35)"
-      }}
-    >
-      Save
-    </button>
+    </JobButton>
+    <JobButton>Save</JobButton>
   </form>
 );
 
