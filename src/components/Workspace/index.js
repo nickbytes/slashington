@@ -1,7 +1,7 @@
 import Icon from "react-geomicons";
 import React from "react";
 
-import { showGrabCoffee } from "../../pages/s01eWork/updaters";
+import { showGrabCoffee } from "../../pages/s1/updaters";
 import AreaChart from "../AreaChart";
 import DesktopBackground from "./DesktopBackground";
 import NotesApp from "../NotesApp";

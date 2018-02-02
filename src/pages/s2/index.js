@@ -13,6 +13,8 @@ import UserQuote from "../../components/UserQuote";
 import Waves from "../../components/Waves";
 import buttonStyle from "../../utilities/buttonStyle";
 
+const scene = "s2";
+
 const s2 = props => (
   <div>
     <DemoMode />
@@ -30,7 +32,7 @@ const s2 = props => (
           Relief washes over you like a series gentle{" "}
           <button
             style={buttonStyle}
-            onClick={e => props.update(ns("s2", "c2"))}
+            onClick={e => props.update(ns(scene, "c2"))}
           >
             waves.
           </button>

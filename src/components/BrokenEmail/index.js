@@ -1,14 +1,13 @@
-import React, { Component } from "react";
-
-import { showBrokenText } from "../../pages/s01eWork/updaters";
+import { showBrokenText } from "../../pages/s1/updaters";
 import Blinking from "./Blinking";
 import EmailContainer from "./EmailContainer";
 import InputContainer from "./InputContainer";
 import MessageName from "./MessageName";
-import MessageText from "./MessageText";
 import MessagesContainer from "./MessagesContainer";
+import MessageText from "./MessageText";
 import SingleMessage from "./SingleMessage";
 import TopBar from "./TopBar";
+import React, { Component } from "react";
 
 class BrokenEmail extends Component {
   constructor(props) {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { showPhoneCallOver } from "../../pages/s01eWork/updaters";
+import { showPhoneCallOver } from "../../pages/s1/updaters";
 import Dots from "./Dots";
 
 //"Hey, you must be busy working. Anyway, we're looking forward to

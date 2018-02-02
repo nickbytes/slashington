@@ -42,7 +42,7 @@ const newInitialState = {
   herBirthday: false,
   coincidence: false,
 
-  // s02e
+  // s2
   s2: {
     c1: true,
     c2: false,

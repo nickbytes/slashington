@@ -6,7 +6,7 @@ import {
   addPlayerOccupation,
   newJobs,
   setNewPlayerOccupation
-} from "../../pages/s01eWork/updaters";
+} from "../../pages/s1/updaters";
 import JobButton from "./JobButton";
 import JobLabel from "./JobLabel";
 
