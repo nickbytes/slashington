@@ -72,7 +72,7 @@ const s2 = props => (
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c5}>
       <MainText>Half awake, you hear the sounds of the doors opening.</MainText>
       <MainText>
         You squirm in your seat, trying to get comfortable, holding on to the
@@ -84,7 +84,7 @@ const s2 = props => (
       </MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c6}>
       <MainText>
         Opening your eyes for a split second, you see you are still alone in the
         train cabin.
@@ -105,26 +105,26 @@ const s2 = props => (
       <MainText>You want for the expectantly for the announcement.</MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c7}>
       <MainText>...</MainText>
       <MainText>...</MainText>
       <MainText>...</MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c8}>
       <MainText>
         There must be some hold up. Possibly waiting for another train for
         people to transfer, someone asking the conductor about directions...
       </MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c9}>
       <MainText>...</MainText>
       <MainText>...</MainText>
       <MainText>...</MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c10}>
       <MainText>
         The car is quiet. You steal another glance, and twist your neck to see
         if anyone else in the car is awake and noticing the stop, but you are
@@ -140,7 +140,7 @@ const s2 = props => (
       <MainText>Which station is this?</MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c11}>
       <MainText>
         You look for a sign, but do not immediately see one. Your view must be
         obstructed by one of the brick pillars lining the platform.
@@ -153,7 +153,7 @@ const s2 = props => (
       <MainText>Each follow a similar layout:</MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c12}>
       <ul>
         <li>* small parking lot</li>
         <li>
@@ -178,11 +178,11 @@ const s2 = props => (
       </ul>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c13}>
       <MainText>This station is no different.</MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c14}>
       <MainText>
         Lights illuminate the platform, though no one is standing outside. You
         don't blame them, it's a bit chilly tonight, and they've likely already
@@ -190,35 +190,35 @@ const s2 = props => (
       </MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c15}>
       <MainText>
         Something catches your eye, nearly out of view from your seat, further
         along the platform.
       </MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c16}>
       <MainText>Sitting on one of the benches outside...</MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c17}>
       <MainText>...</MainText>
       <MainText>...</MainText>
       <MainText>...</MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c18}>
       <MainText>Is... that ...?</MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c19}>
       <MainText>
         Your eyes must be deceiving you. For a second, you thought you saw...
         no, no... surely not. Lack of sleep, exhaustion.
       </MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c20}>
       <MainText>
         You rub your eyes, and look out onto the platform again.
       </MainText>
@@ -229,11 +229,11 @@ const s2 = props => (
       </MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c21}>
       <MainText>... is that a PET?</MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c22}>
       <MainText>
         You stand, face pressed against the glass, peering wildly across the
         platform.
@@ -241,14 +241,14 @@ const s2 = props => (
       <MainText>... is it... waving at you?!?!</MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c23}>
       <MainText>
         You turn back to and look around the train car. There is no one else
         here to see this.
       </MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c24}>
       <MainText>
         You turn back to and look around the train car. There is no one else
         here to see this.
@@ -256,14 +256,14 @@ const s2 = props => (
       <MainText>You sit back down in your seat.</MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c25}>
       <ItalicMind>What is happening?</ItalicMind>
       <ItalicMind>Is this a dream?</ItalicMind>
       <ItalicMind>This must be a dream, Nick.</ItalicMind>
       <ItalicMind> Of course.</ItalicMind>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c26}>
       <MainText>
         You debate getting off the train. You debate whether this could be a
         dream, but it is much too real. You can feel the subtle tactile keys on
@@ -280,18 +280,18 @@ const s2 = props => (
       </MainText>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c27}>
       -- you can speak?! -- Yes, Nick. I can speak. This is all real. Come,
       we've been waiting for you, we thought the train would not make it
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c28}>
       WHERE WE NEED TO GET TO: Pet has already explained that you are going to
       see the council, they will explain, and that you now need to get the
       keyboard.
     </SimpleScene>
 
-    <SimpleScene isVisible={props.afterSayingPetName}>
+    <SimpleScene isVisible={props.c29}>
       <UserQuote attrib={`You, ${props.playerNameSaved}`}>
         "You can speak! What in the hell is going on? Where are we.. what is the
         council..."
@@ -303,7 +303,7 @@ const s2 = props => (
         to you."
       </UserQuote>
 
-      <Link to="/s03eSlashington">Next</Link>
+      <Link to="/slashington">Next</Link>
     </SimpleScene>
   </div>
 );
