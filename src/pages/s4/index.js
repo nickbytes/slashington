@@ -24,10 +24,12 @@ const s4 = props => (
 
     <SimpleScene isVisible={props.c2}>
       <h1>Digital board whizzing accept one place says a train is arriving</h1>
+      <NextButton onClick={() => props.update(ns("s4", "c3"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c3}>
       <MainText>Weird.</MainText>
+      <NextButton onClick={() => props.update(ns("s4", "c4"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c4}>
@@ -40,7 +42,10 @@ const s4 = props => (
         the small train station cafe, amongst a number of small empty tables, a
         table full of... {props.petTypeInputSaved}.
       </MainText>
+      <NextButton onClick={() => props.update(ns("s4", "c5"))} />
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c5}>
       <MainText>
         All of them are dressed similarly to {props.petNameInputSaved}, but more
         grandiose and intricate, like some weird game of thrones cosplay mixed
@@ -56,30 +61,34 @@ const s4 = props => (
         The {props.petTypeInputSaved} nods towards an empty seat at their table.
         Your feet seem to walk without you telling them to do so.
       </MainText>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c5}>
-      <UserQuote>We, as you might know, are The Council.</UserQuote>
+      <NextButton onClick={() => props.update(ns("s4", "c6"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c6}>
+      <UserQuote>We, as you might know, are The Council.</UserQuote>
+      <NextButton onClick={() => props.update(ns("s4", "c7"))} />
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c7}>
       <PlainButton onClick={() => console.log("something!")}>
         React Angrily
       </PlainButton>
       <PlainButton onClick={() => console.log("something!")}>Nod</PlainButton>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c7}>
+    <SimpleScene isVisible={props.c8}>
       <UserQuote>What the fuck is going on?</UserQuote>
       <UserQuote>Are they okay? They look like they might faint...</UserQuote>
       <MainText>They are talking about you...</MainText>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c8}>
-      <UserQuote>You have been--</UserQuote>
+      <NextButton onClick={() => props.update(ns("s4", "c9"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c9}>
+      <UserQuote>You have been--</UserQuote>
+      <NextButton onClick={() => props.update(ns("s4", "c10"))} />
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c10}>
       <UserQuote>
         Must we really explain this each time Comrade Igglefort?
       </UserQuote>
@@ -87,9 +96,10 @@ const s4 = props => (
         Is it... hmm... pertinent to give such details now Comrade Igglefort?
         Look at the state of them...
       </UserQuote>
+      <NextButton onClick={() => props.update(ns("s4", "c11"))} />
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c10}>
+    <SimpleScene isVisible={props.c11}>
       <UserQuote attrib="Comrade Igglefort">
         Rule 17, Article 405b states that the counselor must explain appropriate
         context for me the-
@@ -104,7 +114,10 @@ const s4 = props => (
         Some are rolling their eyes, some nodding in approval, one solemnly
         stirs it's coffee, paying little attention.
       </MainText>
+      <NextButton onClick={() => props.update(ns("s4", "c12"))} />
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c12}>
       <UserQuote attrib="Comrade Igglefort">
         <UserQuote paragraph>
           Then you should also understand it's importance. As I was saying...
@@ -114,6 +127,12 @@ const s4 = props => (
           You, NAME, have been selected for a task. First, we should give you a
           little background on The Council and our Mission.
         </UserQuote>
+      </UserQuote>
+      <NextButton onClick={() => props.update(ns("s4", "c13"))} />
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c13}>
+      <UserQuote attrib="Comrade Igglefort">
         <UserQuote paragraph>
           Magic has been passed down throughout the ages. It used to be taught
           somewhat more openly, and accepted on some level, but rises in secular
@@ -135,7 +154,10 @@ const s4 = props => (
           but that can really go awry.
         </UserQuote>
       </UserQuote>
+      <NextButton onClick={() => props.update(ns("s4", "c14"))} />
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c14}>
       <UserQuote attrib="Comrade Barringzen">
         Our mission, on the whole, is to increase the quality of life for all
         beings. We see this manifested itself through world peace and acceptance
@@ -158,7 +180,10 @@ const s4 = props => (
         {props.petTypeInputSaved}, apparently named Comrade Igglefort,
         continues.
       </MainText>
+      <NextButton onClick={() => props.update(ns("s4", "c15"))} />
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c15}>
       <UserQuote attrib="Comrade Igglefort">
         Next bit of training is the most important. We need an easy vessel for
         communication. Your keyboard, of course. Once items are made magical
@@ -171,7 +196,10 @@ const s4 = props => (
         Something sounds vaguely familiar about a blender. A moment of deja-vu
         almost...
       </MainText>
+      <NextButton onClick={() => props.update(ns("s4", "c16"))} />
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c16}>
       <UserQuote>
         "We have bound your keyboard to one of our own though a complicated
         series of spellwork, network protocols are too easily monitored, this
@@ -182,7 +210,10 @@ const s4 = props => (
       <UserQuote>You think to yourself. What kind of name is that?</UserQuote>
 
       <UserQuote>"What mission?"</UserQuote>
+      <NextButton onClick={() => props.update(ns("s4", "c17"))} />
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c17}>
       <MainText>
         There is quiet. PETs start to look around at each other. Comrade
         Igglefort shuffles some papers in front of him.
@@ -193,7 +224,10 @@ const s4 = props => (
       <MainText>
         Before Comrade Igglefort can finish, he's interrupted by another PET.
       </MainText>
+      <NextButton onClick={() => props.update(ns("s4", "c18"))} />
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c18}>
       <UserQuote>
         Comrade Igglefort, may we hear some possible doubts in this plan-
       </UserQuote>
@@ -207,7 +241,10 @@ const s4 = props => (
         Some Parrots look taken aback, or vaguely offended, though none continue
         to quarrel. You hear one of them mutter something like "too exposed."
       </MainText>
+      <NextButton onClick={() => props.update(ns("s4", "c19"))} />
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c19}>
       <UserQuote>
         Look if I'm going to be ... too exposed ... I want to know what im
         getting myself into.
@@ -226,18 +263,20 @@ const s4 = props => (
       <MainText>
         Again you feel your legs shake. Emma?!? She's involved in this.
       </MainText>
+      <NextButton onClick={() => props.update(ns("s4", "c20"))} />
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c11}>
+    <SimpleScene isVisible={props.c20}>
       <PlainButton onClick={() => console.log("plz fill me in")}>
         Demand to know the plan
       </PlainButton>
       <PlainButton onClick={() => console.log("plz fill me in")}>
         Say nothing
       </PlainButton>
+      <NextButton onClick={() => props.update(ns("s4", "c21"))} />
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c12}>
+    <SimpleScene isVisible={props.c21}>
       <UserQuote>
         TELL ME THE MISSION NOW. You're not going to put her at risk without
         telling me what's going on here.
@@ -246,7 +285,10 @@ const s4 = props => (
       <UserQuote>
         Your niece is going to place a curse on Frailty Stow.
       </UserQuote>
+      <NextButton onClick={() => props.update(ns("s4", "c22"))} />
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c22}>
       <UserQuote>... Frailty Stow... the... the pop singer...?</UserQuote>
 
       <UserQuote>It's technically country pop.</UserQuote>
@@ -254,7 +296,10 @@ const s4 = props => (
       <UserQuote>Yes, the pop singer.</UserQuote>
 
       <UserQuote>How..? Why..!?!</UserQuote>
+      <NextButton onClick={() => props.update(ns("s4", "c23"))} />
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c23}>
       <UserQuote>
         Frailty Stow has become a sort of figurehead for one of the larger
         opposition factions. We've set it up so that Emma has won backstage
@@ -263,7 +308,10 @@ const s4 = props => (
         before she goes on stage to perform. Frailty is being looked after quite
         closely, after another faction attempted to curse her.
       </UserQuote>
+      <NextButton onClick={() => props.update(ns("s4", "c24"))} />
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c24}>
       <UserQuote>And what happened to them? How were they caught?</UserQuote>
 
       <UserQuote>
@@ -272,10 +320,7 @@ const s4 = props => (
         no harm. They will not harm such a young talented child, this would be a
         gift to them really, such magical talent at such a young age
       </UserQuote>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c13}>
-      <Link to={`/s05eSlashing2Washington`}>Next</Link>
+      <Link to={`/to-washington`}>Next</Link>
     </SimpleScene>
   </div>
 );
@@ -293,7 +338,18 @@ const map = state => ({
   c10: state.s4.c10,
   c11: state.s4.c11,
   c12: state.s4.c12,
-  c13: state.s4.c13
+  c13: state.s4.c13,
+  c14: state.s4.c14,
+  c15: state.s4.c15,
+  c16: state.s4.c16,
+  c17: state.s4.c17,
+  c18: state.s4.c18,
+  c19: state.s4.c19,
+  c20: state.s4.c20,
+  c21: state.s4.c21,
+  c22: state.s4.c22,
+  c23: state.s4.c23,
+  c24: state.s4.c24
 });
 
 export default connect(map)(s4);

@@ -85,7 +85,7 @@ const newInitialState = {
     c12: false,
     c13: false
   },
-  // s05e
+  // s5
   s5: {
     c1: true,
     c2: false,
@@ -98,10 +98,7 @@ const newInitialState = {
     c9: false,
     c10: false,
     c11: false,
-    c12: false,
-    c13: false,
-    c14: false,
-    c15: false
+    c12: false
   },
   // s06e
   s6: {
