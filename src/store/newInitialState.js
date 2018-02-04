@@ -1,7 +1,7 @@
 import { createTitle } from "../components/JobSelectionComponent/jobGenerator";
 
 const newInitialState = {
-  // s01eWork
+  // s1
   initialBlock: true,
   startBurning: false,
   receptionistVisible: false,
@@ -61,7 +61,7 @@ const newInitialState = {
     c15: false
   },
 
-  // s03e
+  // s3
   s3: {
     c1: true,
     c2: false,
@@ -69,7 +69,8 @@ const newInitialState = {
     c4: false,
     c5: false
   },
-  // s04e
+
+  // s4
   s4: {
     c1: true,
     c2: false,
@@ -85,6 +86,7 @@ const newInitialState = {
     c12: false,
     c13: false
   },
+
   // s5
   s5: {
     c1: true,
@@ -100,7 +102,8 @@ const newInitialState = {
     c11: false,
     c12: false
   },
-  // s06e
+
+  // s6
   s6: {
     c1: true,
     c2: false,
@@ -116,7 +119,9 @@ const newInitialState = {
     c12: false,
     c13: false,
     c14: false,
-    c15: false
+    c15: false,
+    c16: false,
+    c17: false
   },
 
   // global
