@@ -19,7 +19,7 @@ class StartGame extends Component {
           </MainText>
         </CustomContainer>
         <CustomContainer>
-          <Link to={`/s01ework`}>Begin</Link>
+          <Link to={`/the-office`}>Begin</Link>
         </CustomContainer>
         <CustomContainer>
           <Link to={`/credits`}>Credits</Link>

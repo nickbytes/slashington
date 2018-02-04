@@ -20,9 +20,13 @@ const newInitialState = {
     c15: false,
     c16: false,
     c17: false,
-    c18: false
+    c18: false,
+    newBadgeReceived: false
   },
 
+  startBurning: false,
+  playerNameInput: "",
+  playerNameSaved: "",
   playerOccupationSaved: "",
   playerOccupationRadio: "",
   petOwnerInput: "",
@@ -115,13 +119,10 @@ const newInitialState = {
   },
 
   // global
-  playerNameInput: "",
-  playerNameSaved: "",
   nieceName: "Emma",
   inLawName: "Jill",
   preferredTitle: "",
   coworkerName: "Scott",
-  startBurning: false,
 
   // global jobItems
   jobItems: [

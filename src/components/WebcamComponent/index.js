@@ -1,11 +1,6 @@
-import buttonStyle from "../../utilities/buttonStyle";
-import UserQuote from "../UserQuote";
-import YourNewBadge from "../YourNewBadge";
-import { connect } from "funcup";
 import React, { Component } from "react";
 import Webcam from "react-webcam";
-
-import { badgeHelper } from "../../pages/s1/updaters";
+import { cameraHelper } from "../../pages/s1/updaters";
 
 class WebcamComponent extends Component {
   constructor(props) {
@@ -25,61 +20,34 @@ class WebcamComponent extends Component {
   takePhoto() {
     const imageSrc = this.webcam.getScreenshot();
 
-    this.setState({
-      photoSrc: imageSrc
-    });
+    // this.setState({
+    //   photoSrc: imageSrc
+    // });
+    this.props.update(cameraHelper(imageSrc));
   }
   render() {
     return (
       <div>
-        {this.state.photoSrc ? (
-          <div>
-            <UserQuote>
-              "Here is your new{" "}
-              <button
-                style={buttonStyle}
-                onClick={e => this.props.update(badgeHelper())}
-              >
-                badge
-              </button>."
-            </UserQuote>
-            {this.props.newBadgeReceived && (
-              <YourNewBadge
-                imgSrc={this.state.photoSrc}
-                playerName={this.props.playerNameSaved}
-                playerOccupation={this.props.playerOccupationSaved}
-                {...this.props}
-              />
-            )}
-          </div>
-        ) : (
-          <div
+        <div
+          style={{
+            position: "relative"
+          }}
+        >
+          <Webcam ref={this.setRef} audio={false} />
+          <button
+            onClick={this.takePhoto}
             style={{
-              position: "relative"
+              position: "absolute",
+              left: "280px",
+              bottom: "0"
             }}
           >
-            <Webcam ref={this.setRef} audio={false} />
-            <button
-              onClick={this.takePhoto}
-              style={{
-                position: "absolute",
-                left: "280px",
-                bottom: "0"
-              }}
-            >
-              Take Photo
-            </button>
-          </div>
-        )}
+            Take Photo
+          </button>
+        </div>
       </div>
     );
   }
 }
 
-const map = state => ({
-  newBadgeReceived: state.newBadgeReceived,
-  playerNameSaved: state.playerNameSaved,
-  playerOccupationSaved: state.playerOccupationSaved
-});
-
-export default connect(map)(WebcamComponent);
+export default WebcamComponent;

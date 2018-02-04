@@ -53,6 +53,7 @@ export const setNewPlayerOccupation = value => state => ({
 // sets player occupation
 // this is actually your occuptation in game state
 export const addPlayerOccupation = state => ({
+  ...state,
   playerOccupationSaved: state.playerOccupationRadio,
   s1: {
     c7: false,
@@ -61,6 +62,7 @@ export const addPlayerOccupation = state => ({
 });
 
 export const nsHelper = state => ({
+  ...state,
   s1: {
     c16: false,
     c17: true
@@ -68,10 +70,22 @@ export const nsHelper = state => ({
 });
 
 export const badgeHelper = state => ({
+  ...state,
   s1: {
     newBadgeReceived: true
   }
 });
+
+export const cameraHelper = value => state => {
+  return {
+    ...state,
+    photoSrc: value,
+    s1: {
+      c14: false,
+      c14c: true
+    }
+  };
+};
 
 export const setNewPetOwner = value => state => ({ petOwnerInput: value });
 export const setNewPetType = value => state => ({ petTypeInput: value });
@@ -81,6 +95,8 @@ export const addSecurityAnswers = state => ({
   petOwnerInputSaved: state.petOwnerInput,
   petTypeInputSaved: state.petTypeInput,
   petNameInputSaved: state.petNameInput,
-  securityFormShowing: false,
-  askForPhoto: true
+  s1: {
+    c12: false,
+    c13: true
+  }
 });

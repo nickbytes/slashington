@@ -19,6 +19,7 @@ import { receptionist } from "../../utilities/receptionist";
 import BrokenEmail from "../../components/BrokenEmail";
 import CustomContainer from "../../components/CustomContainer";
 import DemoMode from "../../components/DemoMode";
+import YourNewBadge from "../../components/YourNewBadge";
 import DreamText from "../../components/DreamText";
 import JobSelectionComponent from "../../components/JobSelectionComponent";
 import MainText from "../../components/MainText";
@@ -36,6 +37,7 @@ import Workspace from "../../components/Workspace";
 import buttonStyle from "../../utilities/buttonStyle";
 import keyboard from "../../images/keyboard.jpg";
 import { ns } from "../../updaters/ns";
+import { badgeHelper } from "../../pages/s1/updaters";
 
 const s1 = props => (
   <div>
@@ -262,8 +264,26 @@ const s1 = props => (
 
     <SimpleScene isVisible={props.c14}>
       <CustomContainer>
-        <WebcamComponent />
+        <WebcamComponent {...props} />
       </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c14b}>
+      <UserQuote>
+        Here is your new{" "}
+        <button style={buttonStyle} onClick={() => props.update(badgeHelper())}>
+          badge
+        </button>.
+      </UserQuote>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c14c}>
+      <YourNewBadge
+        imgSrc={props.photoSrc}
+        playerName={props.playerNameSaved}
+        playerOccupation={props.playerOccupationSaved}
+        {...props}
+      />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c15}>
@@ -434,45 +454,49 @@ const s1 = props => (
 );
 
 const map = state => ({
-  initialBlock: state.initialBlock,
+  c1: state.s1.c1,
+  c2: state.s1.c2,
+  c3: state.s1.c3,
+  c4: state.s1.c4,
+  c5: state.s1.c5,
+  c6: state.s1.c6,
+  c7: state.s1.c7,
+  c8: state.s1.c8,
+  c9: state.s1.c9,
+  c10: state.s1.c10,
+  c11: state.s1.c11,
+  c12: state.s1.c12,
+  c13: state.s1.c13,
+  c14: state.s1.c14,
+  c14b: state.s1.c14b,
+  c14c: state.s1.c14c,
+  c15: state.s1.c15,
+  c16: state.s1.c16,
+  c17: state.s1.c17,
+  c18: state.s1.c18,
+  c19: state.s1.c19,
+  c20: state.s1.c20,
+  c21: state.s1.c21,
+  c22: state.s1.c22,
+  c23: state.s1.c23,
+  c24: state.s1.c24,
+  c25: state.s1.c25,
+  c26: state.s1.c26,
+  c27: state.s1.c27,
+  c28: state.s1.c28,
+  newBadgeReceived: state.s1.newBadgeReceived,
   startBurning: state.startBurning,
-  receptionistVisible: state.receptionistVisible,
-  nameQuestionVisible: state.nameQuestionVisible,
-  nameFormVisible: state.nameFormVisible,
   playerNameInput: state.playerNameInput,
   playerNameSaved: state.playerNameSaved,
-  nameAnswerVisible: state.nameAnswerVisible,
-  positionQuestionVisible: state.positionQuestionVisible,
   playerOccupationSaved: state.playerOccupationSaved,
-  playerOccupationFinished: state.playerOccupationFinished,
   playerOccupationRadio: state.playerOccupationRadio,
-  positionFormVisible: state.positionFormVisible,
-  occupationAnswerCompleted: state.occupationAnswerCompleted,
-  nearlySpit: state.nearlySpit,
-  questionAskForm: state.questionAskForm,
-  securityFormShowing: state.securityFormShowing,
   petOwnerInput: state.petOwnerInput,
   petTypeInput: state.petTypeInput,
   petNameInput: state.petNameInput,
   petOwnerInputSaved: state.petOwnerInputSaved,
   petTypeInputSaved: state.petTypeInputSaved,
   petNameInputSaved: state.petNameInputSaved,
-  askForPhoto: state.askForPhoto,
-  webcamVisible: state.webcamVisible,
-  arrivedAtDesk: state.arrivedAtDesk,
-  firstWorkspace: state.firstWorkspace,
-  grabCoffee: state.grabCoffee,
-  phoneVisible: state.phoneVisible,
-  phoneCallOver: state.phoneCallOver,
-  showFeelsDreamlike: state.showFeelsDreamlike,
-  secondWorkspace: state.secondWorkspace,
-  computerBroken: state.computerBroken,
-  scottShowing: state.scottShowing,
-  scottDescribed: state.scottDescribed,
-  nOrB: state.nOrB,
-  sameThing: state.sameThing,
-  herBirthday: state.herBirthday,
-  coincidence: state.coincidence
+  photoSrc: state.photoSrc
 });
 
 export default connect(map)(s1);
