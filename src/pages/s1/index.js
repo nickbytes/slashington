@@ -448,7 +448,7 @@ const s1 = props => (
         south east corner of the Mall. Open on weekends too, can probably pick
         it up on your way back.
       </UserQuote>
-      <Link to="/s02eTrain">Next</Link>
+      <Link to="/train-ride">Next</Link>
     </SimpleScene>
   </div>
 );

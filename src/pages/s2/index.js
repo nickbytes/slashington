@@ -246,7 +246,7 @@ const s2 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c21}>
-      <MainText>... is that a PET?</MainText>
+      <MainText>... is that a {props.petTypeInputSaved}?</MainText>
       <NextButton onClick={() => props.update(ns("s2", "c22"))} />
     </SimpleScene>
 
@@ -338,7 +338,34 @@ const map = state => ({
   c1: state.s2.c1,
   c2: state.s2.c2,
   c3: state.s2.c3,
-  c4: state.s2.c4
+  c4: state.s2.c4,
+  c5: state.s2.c5,
+  c6: state.s2.c6,
+  c7: state.s2.c7,
+  c8: state.s2.c8,
+  c9: state.s2.c9,
+  c10: state.s2.c10,
+  c11: state.s2.c11,
+  c12: state.s2.c12,
+  c13: state.s2.c13,
+  c14: state.s2.c14,
+  c15: state.s2.c15,
+  c16: state.s2.c16,
+  c17: state.s2.c17,
+  c18: state.s2.c18,
+  c19: state.s2.c19,
+  c20: state.s2.c20,
+  c21: state.s2.c21,
+  c22: state.s2.c22,
+  c23: state.s2.c23,
+  c24: state.s2.c24,
+  c25: state.s2.c25,
+  c26: state.s2.c26,
+  c27: state.s2.c27,
+  c28: state.s2.c28,
+  c29: state.s2.c29,
+  petTypeInputSaved: state.petTypeInputSaved,
+  playerNameSaved: state.playerNameSaved
 });
 
 export default connect(map)(s2);

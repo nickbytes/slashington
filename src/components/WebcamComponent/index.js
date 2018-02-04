@@ -6,10 +6,6 @@ class WebcamComponent extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      photoSrc: ""
-    };
-
     this.takePhoto = this.takePhoto.bind(this);
     this.setRef = this.setRef.bind(this);
   }
@@ -20,9 +16,6 @@ class WebcamComponent extends Component {
   takePhoto() {
     const imageSrc = this.webcam.getScreenshot();
 
-    // this.setState({
-    //   photoSrc: imageSrc
-    // });
     this.props.update(cameraHelper(imageSrc));
   }
   render() {

@@ -4,6 +4,9 @@ import styled from "styled-components";
 const NextButtonStyle = styled.button`
   border: none;
   background-color: transparent;
+  font-size: 64px;
+  line-height: 64px;
+  padding: 20px;
 `;
 
 const NextButton = props => (

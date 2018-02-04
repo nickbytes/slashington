@@ -7,7 +7,7 @@ import train from "../../images/train.png";
 const TrainAnimation = props => (
   <div
     style={{ position: "relative" }}
-    onClick={e => props.update(ns("s2", "c5"))}
+    onClick={() => props.update(ns("s2", "c5"))}
   >
     <MapCircle top="50%" left="33%" />
     <MapCircle top="34%" left="46%" />

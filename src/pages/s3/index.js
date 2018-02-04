@@ -85,7 +85,7 @@ const s3 = props => (
         You walk forward, keyboard in hand, and push through the doors.
       </MainText>
 
-      <Link to={`/s04eTheCouncil`}>Next</Link>
+      <Link to={`/the-council`}>Next</Link>
     </SimpleScene>
   </div>
 );
