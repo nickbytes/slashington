@@ -303,7 +303,7 @@ const s6 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c17}>
-      <Link to={`/s7`}>Next</Link>
+      <Link to={`/good-messenger`}>Next</Link>
     </SimpleScene>
   </div>
 );
