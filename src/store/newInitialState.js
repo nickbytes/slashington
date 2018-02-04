@@ -2,13 +2,27 @@ import { createTitle } from "../components/JobSelectionComponent/jobGenerator";
 
 const newInitialState = {
   // s1
-  initialBlock: true,
-  startBurning: false,
-  receptionistVisible: false,
-  nameQuestionVisible: false,
-  playerNameInput: "",
-  playerNameSaved: "",
-  nameFormVisible: false,
+  s1: {
+    c1: true,
+    c2: false,
+    c3: false,
+    c4: false,
+    c5: false,
+    c6: false,
+    c7: false,
+    c8: false,
+    c9: false,
+    c10: false,
+    c11: false,
+    c12: false,
+    c13: false,
+    c14: false,
+    c15: false,
+    c16: false,
+    c17: false,
+    c18: false
+  },
+
   nameAnswerVisible: false,
   positionQuestionVisible: false,
   positionFormVisible: false,
@@ -125,10 +139,13 @@ const newInitialState = {
   },
 
   // global
+  playerNameInput: "",
+  playerNameSaved: "",
   nieceName: "Emma",
   inLawName: "Jill",
   preferredTitle: "",
   coworkerName: "Scott",
+  startBurning: false,
 
   // global jobItems
   jobItems: [

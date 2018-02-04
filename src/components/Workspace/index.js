@@ -1,7 +1,7 @@
 import Icon from "react-geomicons";
 import React from "react";
 
-import { showGrabCoffee } from "../../pages/s1/updaters";
+import { nsHelper } from "../../pages/s1/updaters";
 import AreaChart from "../AreaChart";
 import DesktopBackground from "./DesktopBackground";
 import NotesApp from "../NotesApp";
@@ -12,28 +12,73 @@ import TopBar from "./TopBar";
 import WorkspaceContainer from "./WorkspaceContainer";
 import dunno from "../../images/dunno.jpg";
 import galaxy from "../../images/galaxy.png";
+import styled from "styled-components";
+
+const InnerBar = styled.div`
+  padding-left: 20px;
+`;
+
+const IconText = styled.span`
+  color: rgba(255, 255, 255, 0.7);
+  padding-left: 20px;
+  line-height: 1rem;
+`;
+
+const NoButton = styled.button`
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: 0;
+`;
+
+const SpaceContainer = styled.div`
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  border: 1px dotted rgba(255, 255, 255, 0.5);
+  width: 90px;
+  height: 90px;
+`;
+
+const SpaceText = styled.h1`
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 0.5rem;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 2px black;
+  letter-spacing: 1px;
+`;
+
+const WindowText = styled.h1`
+  margin: 0;
+  padding: 5px 0 6px;
+  font-size: 0.85rem;
+  font-weight: normal;
+  text-align: center;
+`;
+
+const WindowContainer = styled.div`
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  background-color: rgb(218, 216, 218);
+  border: 1px solid rgb(218, 216, 218);
+  width: 400px;
+`;
 
 const Workspace = props => (
   <WorkspaceContainer>
     <TopBar className="desktop-topBar">
-      <div
-        style={{
-          paddingLeft: "20px"
-        }}
-      >
+      <InnerBar>
         <span role="img" aria-label="crystal ball">
           🔮
         </span>
-        <span
-          style={{
-            color: "rgba(255,255,255,0.7)",
-            paddingLeft: "20px",
-            lineHeight: "1rem"
-          }}
-        >
-          Computer
-        </span>
-      </div>
+        <IconText>Computer</IconText>
+      </InnerBar>
       <div
         style={{
           paddingRight: "15px"
@@ -44,22 +89,11 @@ const Workspace = props => (
             paddingRight: "10px"
           }}
         >
-          <button
-            style={{
-              fontFamily: "inherit",
-              fontSize: "inherit",
-              lineHeight: "inherit",
-              border: "0",
-              background: "none",
-              cursor: "pointer",
-              outline: "0"
-            }}
-            onClick={e => props.update(showGrabCoffee)}
-          >
+          <NoButton onClick={e => props.update(nsHelper)}>
             <span role="img" aria-label="coffee">
               ☕️
             </span>
-          </button>
+          </NoButton>
         </span>
         <span
           style={{
@@ -87,28 +121,9 @@ const Workspace = props => (
       </NotificationWindow>
       <NotesApp />
       <AreaChart />
-      <div
-        style={{
-          position: "absolute",
-          top: "200px",
-          left: "200px",
-          backgroundColor: "rgb(218, 216, 218)",
-          border: "1px solid rgb(218, 216, 218)",
-          width: "400px"
-        }}
-      >
+      <WindowContainer>
         <div>
-          <h1
-            style={{
-              margin: "0",
-              padding: "5px 0 6px",
-              fontSize: "0.85rem",
-              fontWeight: "normal",
-              textAlign: "center"
-            }}
-          >
-            Window
-          </h1>
+          <WindowText>Window</WindowText>
         </div>
         <img
           style={{
@@ -118,17 +133,8 @@ const Workspace = props => (
           src={dunno}
           alt={"dunno"}
         />
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          top: "50px",
-          right: "20px",
-          border: "1px dotted rgba(255,255,255,0.5)",
-          width: "90px",
-          height: "90px"
-        }}
-      >
+      </WindowContainer>
+      <SpaceContainer>
         <img
           src={galaxy}
           alt={"Space"}
@@ -137,20 +143,8 @@ const Workspace = props => (
             maxWidth: "100%"
           }}
         />
-        <h1
-          style={{
-            margin: "0",
-            padding: "0",
-            textAlign: "center",
-            fontSize: "0.5rem",
-            color: "rgba(255,255,255,1)",
-            textShadow: "1px 1px 2px black",
-            letterSpacing: "1px"
-          }}
-        >
-          Space
-        </h1>
-      </div>
+        <SpaceText>Space</SpaceText>
+      </SpaceContainer>
     </DesktopBackground>
   </WorkspaceContainer>
 );
