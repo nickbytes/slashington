@@ -8,25 +8,10 @@ import React from "react";
 import {
   addPlayerName,
   addSecurityAnswers,
-  describeScott,
-  explainYourself,
-  feelDreamlike,
-  sayBirthday,
-  sayCoincidence,
-  saySameThing,
   setNewPetName,
   setNewPetOwner,
   setNewPetType,
   setNewPlayerName,
-  showFirstWorkspace,
-  showNearlySpit,
-  showPhone,
-  showQuestionAskForm,
-  showReceptionistSecurityAsk,
-  showScott,
-  showSecondWorkspace,
-  showSecurityForm,
-  showWebcam,
   startBurning
 } from "./updaters";
 import { coworker, coworkerFullTitle } from "../../utilities/coworker";
@@ -309,14 +294,17 @@ const s1 = props => (
 
         <MainText>
           When you get back to your desk, you see that you have a{" "}
-          <button style={buttonStyle} onClick={e => props.update(showPhone)}>
+          <button
+            style={buttonStyle}
+            onClick={e => props.update(ns("s1", "c18"))}
+          >
             voicemail
           </button>from your brother.
         </MainText>
       </div>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.phoneVisible}>
+    <SimpleScene isVisible={props.c18}>
       <PhoneComponent {...props} />
       <MainText>
         We need an audio transcript here, and this to be the only thing on the
@@ -324,7 +312,7 @@ const s1 = props => (
       </MainText>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c17}>
+    <SimpleScene isVisible={props.c19}>
       <CustomContainer>
         <MainText>
           What did he mean by 'strange gift'...? You think back to Sam's last
@@ -340,7 +328,7 @@ const s1 = props => (
           what did you get her...? how could you{" "}
           <button
             style={buttonStyle}
-            onClick={() => props.update(ns("s1", "c18"))}
+            onClick={() => props.update(ns("s1", "c20"))}
           >
             forget
           </button>{" "}
@@ -349,7 +337,7 @@ const s1 = props => (
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c18}>
+    <SimpleScene isVisible={props.c20}>
       <CustomContainer>
         <MainText>
           It all feels dreamlike. You're a{" "}
@@ -366,7 +354,7 @@ const s1 = props => (
           just got to{" "}
           <button
             style={buttonStyle}
-            onClick={e => props.update(ns("s1", "c19"))}
+            onClick={e => props.update(ns("s1", "c21"))}
           >
             get through the next few hours and deadlines.
           </button>
@@ -374,14 +362,14 @@ const s1 = props => (
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c19}>
+    <SimpleScene isVisible={props.c21}>
       <Workspace>
         <BrokenEmail {...props} />
         <NotesApp />
       </Workspace>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c20}>
+    <SimpleScene isVisible={props.c22}>
       <div>
         <CustomContainer>
           <MainText>
@@ -393,48 +381,48 @@ const s1 = props => (
           </MainText>
         </CustomContainer>
         <CustomContainer>
-          <button onClick={() => props.update(ns("s1", "c21"))}>
+          <button onClick={() => props.update(ns("s1", "c23"))}>
             <img src={keyboard} alt="keyboard" />
           </button>
         </CustomContainer>
       </div>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c21}>
-      <UserQuote attrib={coworkerFullTitle()}>"Keyboard issues?"</UserQuote>
-      <NextButton onClick={() => props.update(ns("s1", "c22"))} />
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c22}>
-      <MainText>You look up and see {coworker()}. Describe him more.</MainText>
-      <NextButton onClick={() => props.update(ns("s1", "c23"))} />
-    </SimpleScene>
-
     <SimpleScene isVisible={props.c23}>
-      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-        For some reason, every key is registering as only an n or b on the
-        screen.
-      </UserQuote>
+      <UserQuote attrib={coworkerFullTitle()}>"Keyboard issues?"</UserQuote>
       <NextButton onClick={() => props.update(ns("s1", "c24"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c24}>
-      <UserQuote attrib={coworkerFullTitle()}>
-        Same thing happened to me about a year ago. I took it to a place near
-        where I lived in DC. Fixed it up in a day, had it working good as new.
-      </UserQuote>
+      <MainText>You look up and see {coworker()}. Describe him more.</MainText>
       <NextButton onClick={() => props.update(ns("s1", "c25"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c25}>
       <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-        I'm taking the Amtrak down there this weekend... It's my niece's
-        birthday...
+        For some reason, every key is registering as only an n or b on the
+        screen.
       </UserQuote>
       <NextButton onClick={() => props.update(ns("s1", "c26"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c26}>
+      <UserQuote attrib={coworkerFullTitle()}>
+        Same thing happened to me about a year ago. I took it to a place near
+        where I lived in DC. Fixed it up in a day, had it working good as new.
+      </UserQuote>
+      <NextButton onClick={() => props.update(ns("s1", "c27"))} />
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c27}>
+      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+        I'm taking the Amtrak down there this weekend... It's my niece's
+        birthday...
+      </UserQuote>
+      <NextButton onClick={() => props.update(ns("s1", "c28"))} />
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c28}>
       <UserQuote attrib={coworkerFullTitle()}>
         Crazy coincidence! It's right off the Amtrak stop. You can't miss it,
         south east corner of the Mall. Open on weekends too, can probably pick

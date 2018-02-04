@@ -2,10 +2,10 @@ import Barcode from "react-barcode";
 import React from "react";
 import styled from "styled-components";
 
-import { hideBadge } from "../../pages/s1/updaters";
 import BadgeButton from "./BadgeButton";
 import YourFace from "./YourFace";
 import company from "../../images/company.png";
+import { ns } from "../../updaters/ns";
 
 const OuterContainer = styled.div`
   width: 280px;
@@ -55,7 +55,7 @@ const YourNewBadge = props => (
     <OuterContainer>
       <InnerContainer />
       <Logo src={company} alt={"Corp A"} />
-      <BadgeButton onClick={() => props.update(hideBadge)}>
+      <BadgeButton onClick={() => props.update(ns("s1", "c15"))}>
         <YourFace src={props.imgSrc} alt={"Definitely you."} />
       </BadgeButton>
       <div>

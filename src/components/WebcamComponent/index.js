@@ -1,11 +1,11 @@
+import buttonStyle from "../../utilities/buttonStyle";
+import UserQuote from "../UserQuote";
+import YourNewBadge from "../YourNewBadge";
 import { connect } from "funcup";
 import React, { Component } from "react";
 import Webcam from "react-webcam";
 
-import { ns } from "../../updaters/ns";
-import UserQuote from "../UserQuote";
-import YourNewBadge from "../YourNewBadge";
-import buttonStyle from "../../utilities/buttonStyle";
+import { badgeHelper } from "../../pages/s1/updaters";
 
 class WebcamComponent extends Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class WebcamComponent extends Component {
               "Here is your new{" "}
               <button
                 style={buttonStyle}
-                onClick={e => this.props.update(ns("something", "something"))}
+                onClick={e => this.props.update(badgeHelper())}
               >
                 badge
               </button>."

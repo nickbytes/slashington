@@ -1,4 +1,3 @@
-import { showBrokenText } from "../../pages/s1/updaters";
 import Blinking from "./Blinking";
 import EmailContainer from "./EmailContainer";
 import InputContainer from "./InputContainer";
@@ -7,6 +6,7 @@ import MessagesContainer from "./MessagesContainer";
 import MessageText from "./MessageText";
 import SingleMessage from "./SingleMessage";
 import TopBar from "./TopBar";
+import { ns } from "../../updaters/ns";
 import React, { Component } from "react";
 
 class BrokenEmail extends Component {
@@ -26,7 +26,7 @@ class BrokenEmail extends Component {
 
   typingMess = () => {
     if (this.state.wordJumble.length > 35) {
-      this.props.update(showBrokenText);
+      this.props.update(ns("s1", "c22"));
     } else {
       const textArray = ["n", "b", " "];
       const randomNumber = Math.floor(Math.random() * textArray.length);

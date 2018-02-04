@@ -9,7 +9,7 @@ import UserQuote from "../../components/UserQuote";
 const s7 = props => (
   <div>
     <DemoMode />
-    <SimpleScene isVisible={props.b}>
+    <SimpleScene isVisible={props.c}>
       <MainText>This chair is comfortable.</MainText>
 
       <UserQuote>
@@ -26,7 +26,7 @@ const s7 = props => (
 );
 
 const map = state => ({
-  b: state.b
+  c: state.s7.c
 });
 
 export default connect(map)(s7);

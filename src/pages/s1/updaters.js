@@ -67,6 +67,12 @@ export const nsHelper = state => ({
   }
 });
 
+export const badgeHelper = state => ({
+  s1: {
+    newBadgeReceived: true
+  }
+});
+
 export const setNewPetOwner = value => state => ({ petOwnerInput: value });
 export const setNewPetType = value => state => ({ petTypeInput: value });
 export const setNewPetName = value => state => ({ petNameInput: value });
