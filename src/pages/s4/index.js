@@ -162,8 +162,8 @@ const s4 = props => (
         </UserQuote>
 
         <UserQuote paragraph>
-          You, NAME, have been selected for a task. First, we should give you a
-          little background on The Council and our Mission.
+          You, {props.playerNameSaved}, have been selected for a task. First, we
+          should give you a little background on The Council and our Mission.
         </UserQuote>
       </UserQuote>
       <NextButton onClick={() => props.update(ns("s4", "c13"))} />
