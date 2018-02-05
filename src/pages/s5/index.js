@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
+import { ns } from "../../updaters/ns";
 import DemoMode from "../../components/DemoMode";
 import MainText from "../../components/MainText";
+import NextButton from "../../components/NextButton";
 import SimpleScene from "../../components/SimpleScene";
 import ThoughtQuote from "../../components/ThoughtQuote";
 import UserQuote from "../../components/UserQuote";
 import buttonStyle from "../../utilities/buttonStyle";
-import NextButton from "../../components/NextButton";
-import { ns } from "../../updaters/ns";
 
 const s5 = props => (
   <div>

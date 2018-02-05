@@ -91,7 +91,9 @@ const newInitialState = {
     c10: false,
     c11: false,
     c12: false,
-    c13: false
+    c13: false,
+    reactedAngry: false,
+    reactedNod: false
   },
 
   // s5

@@ -137,7 +137,7 @@ const s2 = props => (
       </MainText>
 
       <MainText>
-        You're awake now. Hopefully there is no issue with the train.
+        You're awake now. Hopefully, there is no issue with the train.
       </MainText>
 
       <MainText>You sit up straight and glance out at the station.</MainText>
@@ -228,7 +228,10 @@ const s2 = props => (
     <SimpleScene isVisible={props.c19}>
       <MainText>
         Your eyes must be deceiving you. For a second, you thought you saw...
-        no, no... surely not. Lack of sleep, exhaustion.
+        no, no... surely not.
+      </MainText>
+      <MainText>
+        Lack of sleep, exhaustion... work has you all out of wack.
       </MainText>
       <NextButton onClick={() => props.update(ns("s2", "c20"))} />
     </SimpleScene>
@@ -261,30 +264,25 @@ const s2 = props => (
 
     <SimpleScene isVisible={props.c23}>
       <MainText>
-        You turn back to and look around the train car. There is no one else
-        here to see this.
+        You turn back to and look around the train car, but there is still no
+        one there.
       </MainText>
+      <MainText>Dishelved, you sit back down in your seat.</MainText>
       <NextButton onClick={() => props.update(ns("s2", "c24"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c24}>
-      <MainText>
-        You turn back to and look around the train car. There is no one else
-        here to see this.
-      </MainText>
-      <MainText>You sit back down in your seat.</MainText>
+      <ul>
+        <ItalicMind>What is happening?</ItalicMind>
+        <ItalicMind>Is this a dream?</ItalicMind>
+        <ItalicMind>This must be a dream, {props.playerNameSaved}.</ItalicMind>
+        <ItalicMind> Of course.</ItalicMind>
+      </ul>
+
       <NextButton onClick={() => props.update(ns("s2", "c25"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c25}>
-      <ItalicMind>What is happening?</ItalicMind>
-      <ItalicMind>Is this a dream?</ItalicMind>
-      <ItalicMind>This must be a dream, Nick.</ItalicMind>
-      <ItalicMind> Of course.</ItalicMind>
-      <NextButton onClick={() => props.update(ns("s2", "c26"))} />
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c26}>
       <MainText>
         You debate getting off the train. You debate whether this could be a
         dream, but it is much too real. You can feel the subtle tactile keys on
@@ -292,21 +290,27 @@ const s2 = props => (
         tips of your fingers. This is real. Bag, suitcase, and keyboard in hand,
         you slowly stand, and begin moving toward the{" "}
         <button
-          onClick={e => props.update(ns("s2", "c27"))}
+          onClick={e => props.update(ns("s2", "c26"))}
           style={buttonStyle}
         >
           open door
         </button>.
       </MainText>
       <MainText>
-        You look back and cannot see the PET. You stand and walk along the aisle
-        of the train.
+        You look back and cannot see the {props.petTypeInputSaved}. You stand
+        and walk along the aisle of the train.
       </MainText>
+      <NextButton onClick={() => props.update(ns("s2", "c26"))} />
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c26}>
+      <UserQuote>
+        -- you can speak?! -- Yes, Nick. I can speak. This is all real. Come,
+        we've been waiting for you, we thought the train would not make it
+      </UserQuote>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c27}>
-      -- you can speak?! -- Yes, Nick. I can speak. This is all real. Come,
-      we've been waiting for you, we thought the train would not make it
       <NextButton onClick={() => props.update(ns("s2", "c28"))} />
     </SimpleScene>
 

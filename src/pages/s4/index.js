@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
+import { angryReaction, nodReaction } from "./updaters";
 import { ns } from "../../updaters/ns";
 import DemoMode from "../../components/DemoMode";
 import MainText from "../../components/MainText";
@@ -70,17 +71,45 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c7}>
-      <PlainButton onClick={() => console.log("something!")}>
-        React Angrily
-      </PlainButton>
-      <PlainButton onClick={() => console.log("something!")}>Nod</PlainButton>
+      <ul>
+        <li>
+          <PlainButton onClick={() => props.update(angryReaction())}>
+            React Angrily
+          </PlainButton>
+        </li>
+        <li>
+          <PlainButton onClick={() => props.update(nodReaction())}>
+            Nod
+          </PlainButton>
+        </li>
+      </ul>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c8}>
-      <UserQuote>What the fuck is going on?</UserQuote>
-      <UserQuote>Are they okay? They look like they might faint...</UserQuote>
-      <MainText>They are talking about you...</MainText>
-      <NextButton onClick={() => props.update(ns("s4", "c9"))} />
+      {props.reactedAngry && (
+        <div>
+          <UserQuote>What the fuck is going on?</UserQuote>
+          <UserQuote>
+            Such a temper... are they even fit for this task?
+          </UserQuote>
+          <UserQuote>
+            This is a valid question. Look at them... dishevled, mad... how can
+            we know they'll fulfill the task and not... well, who knows... take
+            it for themself...?
+          </UserQuote>
+          <NextButton onClick={() => props.update(ns("s4", "c9"))} />
+        </div>
+      )}
+
+      {props.reactedNod && (
+        <div>
+          <UserQuote>
+            Are they okay? They look like they might faint...
+          </UserQuote>
+          <MainText>They are talking about you...</MainText>
+          <NextButton onClick={() => props.update(ns("s4", "c9"))} />
+        </div>
+      )}
     </SimpleScene>
 
     <SimpleScene isVisible={props.c9}>
@@ -349,7 +378,9 @@ const map = state => ({
   c21: state.s4.c21,
   c22: state.s4.c22,
   c23: state.s4.c23,
-  c24: state.s4.c24
+  c24: state.s4.c24,
+  reactedAngry: state.s4reactedAngry,
+  reactedNod: state.s4reactedNod
 });
 
 export default connect(map)(s4);
