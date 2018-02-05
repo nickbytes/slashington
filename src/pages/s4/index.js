@@ -118,14 +118,23 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c10}>
-      <UserQuote>
-        Must we really explain this each time Comrade Igglefort?
-      </UserQuote>
-      <UserQuote>
-        Is it... hmm... pertinent to give such details now Comrade Igglefort?
-        Look at the state of them...
-      </UserQuote>
-      <NextButton onClick={() => props.update(ns("s4", "c11"))} />
+      {props.reactedAngry && (
+        <div>
+          <UserQuote>
+            Must we really explain this each time Comrade Igglefort?
+          </UserQuote>
+          <NextButton onClick={() => props.update(ns("s4", "c11"))} />
+        </div>
+      )}
+      {props.reactedNod && (
+        <div>
+          <UserQuote>
+            Is it... hmm... pertinent to give such details now Comrade
+            Igglefort? Look at the state of them...
+          </UserQuote>
+          <NextButton onClick={() => props.update(ns("s4", "c11"))} />
+        </div>
+      )}
     </SimpleScene>
 
     <SimpleScene isVisible={props.c11}>

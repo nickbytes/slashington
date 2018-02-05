@@ -7,6 +7,7 @@ const NextButtonStyle = styled.button`
   font-size: 64px;
   line-height: 64px;
   padding: 20px;
+  margin-left: -20px;
   cursor: pointer;
 `;
 
