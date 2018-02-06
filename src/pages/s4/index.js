@@ -207,23 +207,29 @@ const s4 = props => (
       <UserQuote attrib="Comrade Igglefort">
         <UserQuote paragraph>
           Magic has been passed down throughout the ages. It used to be taught
-          somewhat more openly, and accepted on some level, but rises in secular
-          conservatism saw it as a threat.{" "}
+          somewhat more openly, and accepted on some level. The rise secular
+          conservatism saw magic not as a threat, but as a living manifestion of
+          sainthood. Many magicians themselves agreed, and turned to religion to
+          answer why they were given power.
         </UserQuote>
         <UserQuote paragraph>
-          People persecuted magicial beings. Now it is hushed, but helps to keep
-          societal balance in some ways.
+          The problem became when animals revealed themselves as magicians as
+          well. The first were snakes. Christians saw this as a direct
+          correlation to the Garden of Eden. They were terrified. They believed
+          these animals were not saints, but demons, regardless of what forms
+          they appeared in afterwards.
         </UserQuote>
         <UserQuote paragraph>
-          Today, magic is only taught to a handful of people, usually found in
-          their early teens, though in some cases, later. These teenagers
-          possess abilities and interests a number of fields including science,
-          computing, mathematics, humanities, history, languages – you get the
-          gist.
+          Today, magic is only taught to a handful of people and creatures,
+          usually found in their adolescence, though in some cases, later. These
+          "teenagers" possess abilities and interests a number of fields
+          including science, computing, mathematics, humanities, history,
+          languages – you get the gist. Animals possess similar talents, though
+          more suited to their species.
         </UserQuote>
         <UserQuote paragraph>
           The best magicians are critical thinkers. A few will go into politics,
-          but that can really go awry.
+          but that can really go awry...
         </UserQuote>
       </UserQuote>
       <NextButton onClick={() => props.update(ns("s4", "c14"))} />
@@ -231,20 +237,14 @@ const s4 = props => (
 
     <SimpleScene isVisible={props.c14}>
       <UserQuote attrib="Comrade Barringzen">
-        Our mission, on the whole, is to increase the quality of life for all
-        beings. We see this manifested itself through world peace and acceptance
-        of all lifestyles, peoples, and creatures. A bit lofty, but a
-        reasonability we take quite seriously. Of course, we have opposition.
-        Yes, other magical beings.
+        Our mission, on the whole, is to unify magicians to live in harmony
+        amongst non-magical beings. Accept all forms of magic, whether you
+        believe it to be a divine gift or not.
       </UserQuote>
 
-      <UserQuote attrib="Comrade Igglefort">
-        Some believe they, too, are working towards this goal – though they care
-        only to do it for their magical faction. Yes, we magical beings are
-        quite fractured. Others of course are thieves, swindlers, cons – but
-        they too hold certain amounts of power and benefit from a level of
-        chaos. It's... complicated. Rest assured... you are helping the 'good
-        ones'...
+      <UserQuote>
+        We do this through science and research in our origins. Philosophical
+        discussions. Opening minds.
       </UserQuote>
 
       <MainText>
@@ -273,28 +273,29 @@ const s4 = props => (
 
     <SimpleScene isVisible={props.c16}>
       <UserQuote>
-        "We have bound your keyboard to one of our own though a complicated
+        We have bound your keyboard to one of our own though a complicated
         series of spellwork, network protocols are too easily monitored, this
         connection is unhackable. Messages about the mission delivered to the
-        keyboard will be viewable on the computer from a program called... vim."
+        keyboard will be viewable on the computer from a program called... vim.
       </UserQuote>
 
       <UserQuote>You think to yourself. What kind of name is that?</UserQuote>
 
-      <UserQuote>"What mission?"</UserQuote>
+      <UserQuote>What mission?</UserQuote>
       <NextButton onClick={() => props.update(ns("s4", "c17"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c17}>
       <MainText>
-        There is quiet. PETs start to look around at each other. Comrade
-        Igglefort shuffles some papers in front of him.
+        There is quiet. {props.petTypeInputSaved}s start to look around at each
+        other. Comrade Igglefort shuffles some papers in front of him.
       </MainText>
 
       <UserQuote>It is not important––</UserQuote>
 
       <MainText>
-        Before Comrade Igglefort can finish, he's interrupted by another PET.
+        Before Comrade Igglefort can finish, he's interrupted by another{" "}
+        {props.petTypeInputSaved}.
       </MainText>
       <NextButton onClick={() => props.update(ns("s4", "c18"))} />
     </SimpleScene>
@@ -310,8 +311,9 @@ const s4 = props => (
       </UserQuote>
 
       <MainText>
-        Some Parrots look taken aback, or vaguely offended, though none continue
-        to quarrel. You hear one of them mutter something like "too exposed."
+        Some {props.petTypeInputSaved}s look taken aback, or vaguely offended,
+        though none continue to quarrel. You hear one of them mutter something
+        like "too exposed."
       </MainText>
       <NextButton onClick={() => props.update(ns("s4", "c19"))} />
     </SimpleScene>
@@ -328,32 +330,22 @@ const s4 = props => (
 
       <UserQuote>
         Yes, the plan is quite dangerous. But you are only a messenger. You will
-        deliver this keyboard to your niece tonight as a gift for her 13th
+        deliver this keyboard to your niece tonight as a gift for her 16th
         birthday.
       </UserQuote>
 
       <MainText>
-        Again you feel your legs shake. Emma?!? She's involved in this.
+        Again you feel your legs shake. {props.nieceName}?!? She's involved in
+        this.
       </MainText>
       <NextButton onClick={() => props.update(ns("s4", "c20"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c20}>
-      <PlainButton onClick={() => console.log("plz fill me in")}>
-        Demand to know the plan
-      </PlainButton>
-      <PlainButton onClick={() => console.log("plz fill me in")}>
-        Say nothing
-      </PlainButton>
-      <NextButton onClick={() => props.update(ns("s4", "c21"))} />
+      <UserQuote>What's going on here...?</UserQuote>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c21}>
-      <UserQuote>
-        TELL ME THE MISSION NOW. You're not going to put her at risk without
-        telling me what's going on here.
-      </UserQuote>
-
       <UserQuote>
         Your niece is going to place a curse on Frailty Stow.
       </UserQuote>
