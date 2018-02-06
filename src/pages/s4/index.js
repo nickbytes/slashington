@@ -35,8 +35,8 @@ const s4 = props => (
 
     <SimpleScene isVisible={props.c4}>
       <UserQuote attrib="Unknown Voice, to your right">
-        Ahhhhh, {props.playerNameSaved}, {props.playerOccupationSaved},
-        Earthling of the Bauzort tribe.
+        Ahhhhh, {props.playerNameSaved || "Nick"},{" "}
+        {props.playerOccupationSaved || "Digital Archivist"}. Welcome.
       </UserQuote>
       <MainText>
         You nearly jump at the sound of a voice. When you turn, you see inside
@@ -94,27 +94,61 @@ const s4 = props => (
           </UserQuote>
           <UserQuote>
             This is a valid question. Look at them... dishevled, mad... how can
-            we know they'll fulfill the task and not... well, who knows... take
-            it for themself...?
+            we know they'll fulfill the task and not...
           </UserQuote>
+          <MainText>
+            All around the table, eyes look over every inch of you.
+          </MainText>
           <NextButton onClick={() => props.update(ns("s4", "c9"))} />
         </div>
       )}
 
       {props.reactedNod && (
         <div>
+          <UserQuote>Did you already know that...?</UserQuote>
+          <MainText>
+            Glancing around the table, one {props.petTypeInputSaved} mutters to
+            another
+          </MainText>
           <UserQuote>
             Are they okay? They look like they might faint...
           </UserQuote>
+
           <MainText>They are talking about you...</MainText>
+          <UserQuote>
+            {props.petNameInputSaved}... {props.petNameInputSaved} told me.
+          </UserQuote>
           <NextButton onClick={() => props.update(ns("s4", "c9"))} />
         </div>
       )}
     </SimpleScene>
 
     <SimpleScene isVisible={props.c9}>
-      <UserQuote>You have been--</UserQuote>
-      <NextButton onClick={() => props.update(ns("s4", "c10"))} />
+      {props.reactedAngry && (
+        <div>
+          <UserQuote>
+            Completely normal response. You all saw the week{" "}
+            {props.playerNameSaved} had. All fine. fine.
+          </UserQuote>
+          <MainText>
+            Some of the {props.petTypeInputSaved}s whisper to each other, as the{" "}
+            {props.petTypeInputSaved} tries to reassure them of your reaction.
+          </MainText>
+          <UserQuote>You have been--</UserQuote>
+          <NextButton onClick={() => props.update(ns("s4", "c10"))} />
+        </div>
+      )}
+      {props.reactedNod && (
+        <div>
+          <UserQuote>Well, good. Good, good. Okay, then.</UserQuote>
+          <MainText>
+            Some tension seems to have been released from the group. There is
+            nodding.
+          </MainText>
+          <UserQuote>You have been--</UserQuote>
+          <NextButton onClick={() => props.update(ns("s4", "c10"))} />
+        </div>
+      )}
     </SimpleScene>
 
     <SimpleScene isVisible={props.c10}>
