@@ -415,7 +415,10 @@ const map = state => ({
   c23: state.s4.c23,
   c24: state.s4.c24,
   reactedAngry: state.s4reactedAngry,
-  reactedNod: state.s4reactedNod
+  reactedNod: state.s4reactedNod,
+  playerNameSaved: state.playerNameSaved,
+  petTypeInputSaved: state.petTypeInputSaved,
+  nieceName: state.nieceName
 });
 
 export default connect(map)(s4);
