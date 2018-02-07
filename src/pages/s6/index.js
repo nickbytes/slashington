@@ -16,7 +16,7 @@ const s6 = props => (
   <div>
     <DemoMode />
     <SimpleScene isVisible={props.c1}>
-      <UserQuote>
+      <UserQuote attrib={`Alex, brother`}>
         I'll take your stuff up to the guest room. You go relax and say hello to{" "}
         {props.nieceName} and {props.inLawName}.
       </UserQuote>
@@ -28,7 +28,9 @@ const s6 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c2}>
-      <UserQuote>{props.playerNameSaved}!</UserQuote>
+      <UserQuote attrib={`${props.inLawName}, sister-in-law`}>
+        {props.playerNameSaved}!
+      </UserQuote>
       <MainText>
         {props.inLawName} shouts at your from the other side of the kitchen. She
         leaves a group of adults and walks over to give you a hug.
@@ -38,12 +40,14 @@ const s6 = props => (
         You think about how good it feels to be hugged right now.
       </MainText>
 
-      <UserQuote>{props.inLawName}, thanks so much for having me.</UserQuote>
+      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+        {props.inLawName}, thanks so much for having me.
+      </UserQuote>
       <NextButton onClick={() => props.update(ns("s6", "c3"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c3}>
-      <UserQuote>
+      <UserQuote attrib={`${props.inLawName}, sister-in-law`}>
         Of course. We're all glad to see you, Alex tells me you're spending far
         too much time at the office. {props.nieceName} missed you. She's in the
         backyard with her friends.
@@ -51,7 +55,9 @@ const s6 = props => (
 
       <MainText>{props.inLawName} holds your arms and looks you over.</MainText>
 
-      <UserQuote>Is everything alright?</UserQuote>
+      <UserQuote attrib={`${props.inLawName}, sister-in-law`}>
+        Is everything alright?
+      </UserQuote>
       <NextButton onClick={() => props.update(ns("s6", "c4"))} />
     </SimpleScene>
 
@@ -81,22 +87,33 @@ const s6 = props => (
     <SimpleScene isVisible={props.c6}>
       {props.bToldHer && (
         <div>
-          <UserQuote>Can we talk outside?</UserQuote>
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+            Can we talk outside?
+          </UserQuote>
           <MainText>
             You say as you lead {props.inLawName} out the backdoor.
           </MainText>
-          <UserQuote>What is it?</UserQuote>
+          <UserQuote attrib={`${props.inLawName}, sister-in-law`}>
+            What is it?
+          </UserQuote>
           <MainText>
             You wipe the sweat from your forehead, where do you start?
           </MainText>
 
-          <PlainButton>
-            I know this is going to sound crazy, but there's something about{" "}
-            {props.nieceName} I need to tell you.
-          </PlainButton>
-          <PlainButton>
-            I think {props.nieceName} could possibly be in danger.
-          </PlainButton>
+          <ul>
+            <li>
+              <PlainButton>
+                I know this is going to sound crazy, but there's something about{" "}
+                {props.nieceName} I need to tell you.
+              </PlainButton>
+            </li>
+            <li>
+              <PlainButton>
+                I think {props.nieceName} could possibly be in danger.
+              </PlainButton>
+            </li>
+          </ul>
+
           <NextButton onClick={() => props.update(ns("s6", "c7"))} />
         </div>
       )}
@@ -106,7 +123,7 @@ const s6 = props => (
           <UserQuote>
             Fine. I'm fine. Great, really. It's great to be here.
           </UserQuote>
-          <UserQuote>
+          <UserQuote attrib={`${props.inLawName}, sister-in-law`}>
             Okay, well {props.nieceName} is in the backyard with some friends,
             I'm sure she's dying to see you.
           </UserQuote>
@@ -122,12 +139,16 @@ const s6 = props => (
             I know this is going to sound crazy, but there's something about{" "}
             {props.nieceName} I need to tell you.
           </UserQuote>
-          <UserQuote>What is it?</UserQuote>
-          <UserQuote>{props.playerNameSaved}!</UserQuote>
+          <UserQuote attrib={`${props.inLawName}, sister-in-law`}>
+            What is it?
+          </UserQuote>
+          <UserQuote attrib={`${props.nieceName}, niece`}>
+            {props.playerNameSaved}!
+          </UserQuote>
           <MainText>
             {props.nieceName} runs towards you from across the yard.
           </MainText>
-          <UserQuote>
+          <UserQuote attrib={`${props.inLawName}, sister-in-law`}>
             I'm sure it's something we can talk about later. I'll let you and{" "}
             {props.nieceName} catch up.
           </UserQuote>
@@ -146,7 +167,9 @@ const s6 = props => (
             friends are doing group _Slipknot karaoke_. How nice.
           </MainText>
 
-          <UserQuote>{props.playerNameSaved}!</UserQuote>
+          <UserQuote attrib={`${props.nieceName}, niece`}>
+            {props.playerNameSaved}!
+          </UserQuote>
 
           <MainText>
             She runs over and gives you a hug. At that exact moment The
