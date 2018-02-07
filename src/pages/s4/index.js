@@ -57,7 +57,7 @@ const s4 = props => (
       <UserQuote
         attrib={`${props.petTypeInputSaved}, sitting at head of table`}
       >
-        Have a seat.
+        Have a seat. I am Comrade {props.leadPet}.
       </UserQuote>
       <MainText>
         The {props.petTypeInputSaved} nods towards an empty seat at their table.
@@ -67,7 +67,7 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c6}>
-      <UserQuote>We, as you might know, are The Council.</UserQuote>
+      <UserQuote attrib={`Comrade ${props.leadPet}`}>We, as you might know, are The Council.</UserQuote>
       <NextButton onClick={() => props.update(ns("s4", "c7"))} />
     </SimpleScene>
 
@@ -89,11 +89,11 @@ const s4 = props => (
     <SimpleScene isVisible={props.c8}>
       {props.reactedAngry && (
         <div>
-          <UserQuote>What the fuck is going on?</UserQuote>
-          <UserQuote>
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>What the fuck is going on?</UserQuote>
+          <UserQuote attrib={`Comrade ${props.petThree}`}>
             Such a temper... are they even fit for this task?
           </UserQuote>
-          <UserQuote>
+          <UserQuote attrib={`Comrade ${props.petTwo}`}>
             This is a valid question. Look at them... dishevled, mad... how can
             we know they'll fulfill the task and not...
           </UserQuote>
@@ -106,17 +106,17 @@ const s4 = props => (
 
       {props.reactedNod && (
         <div>
-          <UserQuote>Did you already know that...?</UserQuote>
+          <UserQuote attrib={`Comrade ${props.petTwo}`}>Did you already know that...?</UserQuote>
           <MainText>
             Glancing around the table, one {props.petTypeInputSaved} mutters to
             another
           </MainText>
-          <UserQuote>
+          <UserQuote attrib={`Comrade ${props.petFour}`}>
             Are they okay? They look like they might faint...
           </UserQuote>
 
           <MainText>They are talking about you...</MainText>
-          <UserQuote>
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
             {props.petNameInputSaved}... {props.petNameInputSaved} told me.
           </UserQuote>
           <NextButton onClick={() => props.update(ns("s4", "c9"))} />
@@ -127,7 +127,7 @@ const s4 = props => (
     <SimpleScene isVisible={props.c9}>
       {props.reactedAngry && (
         <div>
-          <UserQuote>
+          <UserQuote attrib={`Comrade ${props.leadPet}`}>
             Completely normal response. You all saw the week{" "}
             {props.playerNameSaved} had. All fine, fine.
           </UserQuote>
@@ -136,18 +136,18 @@ const s4 = props => (
             lead {props.petTypeInputSaved} tries to reassure them of your
             reaction.
           </MainText>
-          <UserQuote>You have been--</UserQuote>
+          <UserQuote attrib={`Comrade ${props.leadPet}`}>You have been--</UserQuote>
           <NextButton onClick={() => props.update(ns("s4", "c10"))} />
         </div>
       )}
       {props.reactedNod && (
         <div>
-          <UserQuote>Well, good. Good, good. Okay, then.</UserQuote>
+          <UserQuote attrib={`Comrade ${props.leadPet}`}>Well, good. Good, good. Okay, then.</UserQuote>
           <MainText>
             Some tension seems to have been released from the group. There is
             nodding.
           </MainText>
-          <UserQuote>You have been--</UserQuote>
+          <UserQuote attrib={`Comrade ${props.leadPet}`}>You have been--</UserQuote>
           <NextButton onClick={() => props.update(ns("s4", "c10"))} />
         </div>
       )}
@@ -156,7 +156,7 @@ const s4 = props => (
     <SimpleScene isVisible={props.c10}>
       {props.reactedAngry && (
         <div>
-          <UserQuote>
+          <UserQuote attrib={`Comrade ${props.petThree}`}>
             Must we really explain this each time Comrade Igglefort?
           </UserQuote>
           <NextButton onClick={() => props.update(ns("s4", "c11"))} />
@@ -164,7 +164,7 @@ const s4 = props => (
       )}
       {props.reactedNod && (
         <div>
-          <UserQuote>
+          <UserQuote attrib={`Comrade ${props.petFour}`}>
             Is it... hmm... pertinent to give such details now Comrade
             Igglefort? Look at the state of them...
           </UserQuote>
@@ -174,13 +174,13 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c11}>
-      <UserQuote attrib="Comrade Igglefort">
+      <UserQuote attrib={`Comrade ${props.leadPet}`}>
         Rule 17, Article 405b states that the counselor must explain appropriate
         context for me the-
       </UserQuote>
 
-      <UserQuote attrib="Comrade Najj">
-        I know what the article states.
+      <UserQuote attrib={`Comrade ${props.petTwo}`}>
+        I know what the article states, Comrade {props.leadPet}.
       </UserQuote>
 
       <MainText>
@@ -192,7 +192,7 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c12}>
-      <UserQuote attrib="Comrade Igglefort">
+      <UserQuote attrib={`Comrade ${props.leadPet}`}>
         <UserQuote paragraph>
           Then you should also understand it's importance. As I was saying...
         </UserQuote>
@@ -206,7 +206,7 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c13}>
-      <UserQuote attrib="Comrade Igglefort">
+      <UserQuote attrib={`Comrade ${props.leadPet}`}
         <UserQuote paragraph>
           Magic has been passed down throughout the ages. It used to be taught
           somewhat more openly, and accepted on some level. The rise secular
@@ -237,13 +237,13 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c14}>
-      <UserQuote attrib="Comrade Barringzen">
+      <UserQuote attrib={`Comrade ${props.petThree}`}>
         Our mission, on the whole, is to unify magicians to live in harmony
         amongst non-magical beings. Accept all forms of magic, whether you
         believe it to be a divine gift or not.
       </UserQuote>
 
-      <UserQuote>
+      <UserQuote attrib={`Comrade ${props.petFour}`}>
         We do this through science and research in our origins, philosophical
         discussions, and compromise.
       </UserQuote>
@@ -257,7 +257,7 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c15}>
-      <UserQuote attrib="Comrade Igglefort">
+      <UserQuote attrib={`Comrade ${props.leadPet}`}>
         Next bit of training is the most important. We need an easy vessel for
         communication. Your keyboard, of course. Once the item is made magical
         we'll be able to communicate. Items like this will be hard to detect
@@ -273,7 +273,7 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c16}>
-      <UserQuote>
+      <UserQuote attrib={`Comrade ${props.leadPet}`}>
         We will bound your keyboard to one of our own though a complicated
         series of spellwork, as network protocols are too easily monitored. This
         connection, we believe, is unhackable. Messages about the mission
@@ -295,7 +295,9 @@ const s4 = props => (
         other. Comrade Igglefort shuffles some papers in front of him.
       </MainText>
 
-      <UserQuote>It is not important––</UserQuote>
+      <UserQuote attrib={`Comrade ${props.leadPet}`}>
+        It is not important––
+      </UserQuote>
 
       <MainText>
         Before Comrade Igglefort can finish, he's interrupted by another{" "}
@@ -305,11 +307,11 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c18}>
-      <UserQuote>
+      <UserQuote attrib={`Comrade ${props.petTwo}`}>
         Comrade Igglefort, may we hear some possible doubts in this plan-
       </UserQuote>
 
-      <UserQuote>
+      <UserQuote attrib={`Comrade ${props.leadPet}`}>
         The Council has decided. There will be no further discussions. We are
         moving forward with the candidate.
       </UserQuote>
@@ -328,13 +330,15 @@ const s4 = props => (
         getting myself into.
       </UserQuote>
 
-      <UserQuote>There is almost no danger to you.</UserQuote>
+      <UserQuote attrib={`Comrade ${props.leadPet}`}>
+        There is almost no danger to you.
+      </UserQuote>
 
       <UserQuote attrib={`You, ${props.playerNameSaved}`}>
         But, they just said...
       </UserQuote>
 
-      <UserQuote>
+      <UserQuote attrib={`Comrade ${props.leadPet}`}>
         Yes, the plan is quite dangerous. But you are only a{" "}
         <span>messenger</span>. You will deliver this keyboard to your{" "}
         <span>niece</span>
@@ -356,29 +360,35 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c21}>
-      <UserQuote>
+      <UserQuote attrib={`Comrade ${props.leadPet}`}>
         Your niece is going to place a curse on Frailty Stow.
       </UserQuote>
       <NextButton onClick={() => props.update(ns("s4", "c22"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c22}>
-      <UserQuote>... Frailty Stow... the... the pop singer...?</UserQuote>
+      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+        ... Frailty Stow... the... the pop singer...?
+      </UserQuote>
 
-      <UserQuote>It's technically country pop.</UserQuote>
+      <UserQuote attrib={`Comrade ${props.petThree}`}>
+        It's technically country pop.
+      </UserQuote>
 
       <MainText>
         Some murmuring about <span>country pop</span>.
       </MainText>
 
-      <UserQuote>Yes, the pop singer.</UserQuote>
+      <UserQuote attrib={`Comrade ${props.leadPet}`}>
+        Yes, the pop singer.
+      </UserQuote>
 
       <UserQuote>How..? Why..!?!</UserQuote>
       <NextButton onClick={() => props.update(ns("s4", "c23"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c23}>
-      <UserQuote>
+      <UserQuote attrib={`Comrade ${props.petTwo}`}>
         Frailty Stow has become a sort of figurehead for one of the larger
         opposition factions of magicians. We've set it up so that{" "}
         {props.playerNameSaved} has won backstage passes and a meet and greet
@@ -387,13 +397,13 @@ const s4 = props => (
         perform.
       </UserQuote>
 
-      <UserQuote>
+      <UserQuote attrib={`Comrade ${props.petThree}`}>
         Frailty is being looked after quite closely. Other groups of magicians
         have tried to persuade her to join their causes. She has expressed
         ideological leanings towards one of our rival factions.
       </UserQuote>
 
-      <UserQuote>
+      <UserQuote attrib={`Comrade ${props.leadPet}`}>
         The task is great. We are not sure what should happen is{" "}
         {props.playerNameSaved} is caught.
       </UserQuote>
@@ -401,7 +411,7 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c24}>
-      <UserQuote>
+      <UserQuote attrib={`Comrade ${props.petThree}`}>
         They will not suspect such a young child. And anyway, they would not
         harm such a young talented child. This would be a gift to them really,
         such magical talent at such a young age.
