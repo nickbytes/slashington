@@ -68,11 +68,9 @@ const s3 = props => (
         {props.petNameInputSaved}'s eyes are watery.
       </MainText>
       <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-        "What was that?"
+        What was that?
       </UserQuote>
-      <MainText>
-        , you ask and surprise yourself with a sensitive tone.
-      </MainText>
+      <MainText>You surprise yourself with a sensitive tone.</MainText>
       <UserQuote attrib={props.petNameInputSaved}>
         Aw it's nothing. C'mon, they're waiting for you. I'll be waiting out
         here once you're finished.
