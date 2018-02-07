@@ -4,6 +4,7 @@ import React from "react";
 
 import { ns } from "../../updaters/ns";
 import DemoMode from "../../components/DemoMode";
+import ItalicMind from "../../components/ItalicMind";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
 import SimpleScene from "../../components/SimpleScene";
@@ -18,7 +19,7 @@ const s3 = props => (
         you. You're standing there dumbfounded.
       </MainText>
       <UserQuote attrib={props.petNameInputSaved}>
-        "C'mon now, the keyboard."
+        C'mon now, the keyboard, you're going to need that.
       </UserQuote>
       <MainText>{props.petNameInputSaved} taps you on the leg.</MainText>
       <MainText>You slowly turn and walk back into the train car.</MainText>
@@ -26,23 +27,28 @@ const s3 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c2}>
-      WHAT THE FUCK IS GOING ON WHERE AM I WHERE IS EVERYONE ELSE IS THIS A
-      DREAM HOW IS THIS HAPPENING HAVE I LOST MY MIND
+      <ItalicMind>
+        WHAT THE FUCK IS GOING ON WHERE AM I WHERE IS EVERYONE ELSE IS THIS A
+        DREAM HOW IS THIS HAPPENING HAVE I LOST MY MIND
+      </ItalicMind>
+
       <NextButton onClick={() => props.update(ns("s3", "c3"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c3}>
-      {props.petNameInputSaved} IS TALKING WHY THE HELL AM I HOLDING THIS
-      KEYBOARD
+      <ItalicMind>
+        {props.petNameInputSaved} IS TALKING WHY THE HELL AM I HOLDING THIS
+        KEYBOARD
+      </ItalicMind>
+
       <NextButton onClick={() => props.update(ns("s3", "c4"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c4}>
       <MainText>
         You're on autopilot. You grabbed the keyboard and feel its tactile keys.
-        You attempt to measure your breaths. Light shines in the train window
-        over the keys. Cherry MX. You tap the keys and hear the soft clicks.
-        Wiggle your toes. This is real.
+        You attempt to measure your breaths. You tap the keys and hear the soft
+        clicks. Cherry MX. Wiggle your toes. This is real.
       </MainText>
 
       <MainText>

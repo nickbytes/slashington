@@ -5,6 +5,7 @@ import React from "react";
 import { angryReaction, nodReaction } from "./updaters";
 import { ns } from "../../updaters/ns";
 import DemoMode from "../../components/DemoMode";
+import DigitalBoard from "../../components/DigitalBoard";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
 import PlainButton from "../../components/PlainButton";
@@ -24,7 +25,7 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c2}>
-      <h1>Digital board whizzing accept one place says a train is arriving</h1>
+      <DigitalBoard />
       <NextButton onClick={() => props.update(ns("s4", "c3"))} />
     </SimpleScene>
 
