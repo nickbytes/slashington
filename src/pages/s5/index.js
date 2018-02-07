@@ -83,7 +83,7 @@ const s5 = props => (
         trunk of his car.
       </MainText>
 
-      <UserQuote>What's with the keyboard?</UserQuote>
+      <UserQuote attrib={`Alex, brother`}>What's with the keyboard?</UserQuote>
 
       <MainText>
         You hear the concern in his voice. He thinks you brought it to complete
@@ -93,7 +93,9 @@ const s5 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c9}>
-      <UserQuote>A gift for Sam.</UserQuote>
+      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+        A gift for Sam.
+      </UserQuote>
       <NextButton onClick={() => props.update(ns("s5", "c10"))} />
     </SimpleScene>
 
@@ -106,7 +108,9 @@ const s5 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c11}>
-      <UserQuote>"That's great, real great."</UserQuote>
+      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+        That's great, real great.
+      </UserQuote>
       <NextButton onClick={() => props.update(ns("s5", "c12"))} />
     </SimpleScene>
 
