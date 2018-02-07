@@ -2,15 +2,16 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
+import { fine, toldHer } from "./updaters";
+import { ns } from "../../updaters/ns";
 import DemoMode from "../../components/DemoMode";
 import InProgress from "../../components/InProgress";
 import MainText from "../../components/MainText";
+import NextButton from "../../components/NextButton";
 import PlainButton from "../../components/PlainButton";
 import PosterAnimation from "../../components/PosterAnimation";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
-import { ns } from "../../updaters/ns";
-import NextButton from "../../components/NextButton";
 
 const s6 = props => (
   <div>
@@ -75,13 +76,18 @@ const s6 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c5}>
-      <PlainButton onClick={() => console.log("attempt to tell her")}>
-        Tell her
-      </PlainButton>
-      <PlainButton onClick={() => console.log("everything is fine")}>
-        Fine, I'm great.
-      </PlainButton>
-      <NextButton onClick={() => props.update(ns("s6", "c6"))} />
+      <ul>
+        <li>
+          <PlainButton onClick={() => props.update(toldHer())}>
+            Tell her
+          </PlainButton>
+        </li>
+        <li>
+          <PlainButton onClick={() => props.update(fine())}>
+            Fine, I'm great.
+          </PlainButton>
+        </li>
+      </ul>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c6}>
@@ -99,20 +105,6 @@ const s6 = props => (
           <MainText>
             You wipe the sweat from your forehead, where do you start?
           </MainText>
-
-          <ul>
-            <li>
-              <PlainButton>
-                I know this is going to sound crazy, but there's something about{" "}
-                {props.nieceName} I need to tell you.
-              </PlainButton>
-            </li>
-            <li>
-              <PlainButton>
-                I think {props.nieceName} could possibly be in danger.
-              </PlainButton>
-            </li>
-          </ul>
 
           <NextButton onClick={() => props.update(ns("s6", "c7"))} />
         </div>
@@ -135,7 +127,7 @@ const s6 = props => (
     <SimpleScene isVisible={props.c7}>
       {props.bToldHer && (
         <div>
-          <UserQuote>
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
             I know this is going to sound crazy, but there's something about{" "}
             {props.nieceName} I need to tell you.
           </UserQuote>
@@ -185,14 +177,15 @@ const s6 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c8}>
+      {/* This is where words should echo in head */}
       <MainText>Are you considering taking on this task yourself?</MainText>
       <NextButton onClick={() => props.update(ns("s6", "c9"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c9}>
       <MainText>
-        You could offer her help. The council never said anything about you
-        helping her. Or maybe, you could take the task yourself.
+        You could offer her help. The Council never said anything about you
+        helping her. Or maybe, you <span>should</span> take the task yourself.
       </MainText>
       <NextButton onClick={() => props.update(ns("s6", "c10"))} />
     </SimpleScene>
@@ -232,19 +225,23 @@ const s6 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c14}>
-      <UserQuote>
-        "{props.preferredTitle} {props.playerNameSaved}, what are you doing in
-        here?"
+      <UserQuote attrib={`${props.nieceName}, niece`}>
+        {props.playerNameSaved}, what are you doing in here?
       </UserQuote>
       <NextButton onClick={() => props.update(ns("s6", "c15"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c15}>
-      <MainText>Fulfill your role - You set down the item</MainText>
-      <MainText>
-        Take on the task yourself - hide the item behind your back.
-      </MainText>
-      <NextButton onClick={() => props.update(ns("s6", "c16"))} />
+      <ul>
+        <li>
+          <PlainButton>Give her the keyboard.</PlainButton>
+        </li>
+        <li>
+          <PlainButton>
+            Take the task yourself. Hide the keyboard behind your back.
+          </PlainButton>
+        </li>
+      </ul>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c16}>
