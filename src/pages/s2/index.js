@@ -293,6 +293,11 @@ const s2 = props => (
         Good morning, {props.playerNameSaved}! A little late, but it should be
         fine.
       </UserQuote>
+      <MainText>
+        There, standing in front of you, is {props.petNameInputSaved}. Not only
+        that, but {props.petNameInputSaved} is wearing a small train conductors
+        outfit...
+      </MainText>
       <NextButton onClick={() => props.update(ns("s2", "c29"))} />
     </SimpleScene>
 
