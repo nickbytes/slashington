@@ -129,11 +129,12 @@ const s4 = props => (
         <div>
           <UserQuote>
             Completely normal response. You all saw the week{" "}
-            {props.playerNameSaved} had. All fine. fine.
+            {props.playerNameSaved} had. All fine, fine.
           </UserQuote>
           <MainText>
-            Some of the {props.petTypeInputSaved}s whisper to each other, as the{" "}
-            {props.petTypeInputSaved} tries to reassure them of your reaction.
+            Some of the {props.petTypeInputSaved}s whisper to each other, as the
+            lead {props.petTypeInputSaved} tries to reassure them of your
+            reaction.
           </MainText>
           <UserQuote>You have been--</UserQuote>
           <NextButton onClick={() => props.update(ns("s4", "c10"))} />
@@ -185,7 +186,7 @@ const s4 = props => (
       <MainText>
         You look around the table as the two {props.petTypeInputSaved} bicker.
         Some are rolling their eyes, some nodding in approval, one solemnly
-        stirs it's coffee, paying little attention.
+        stirs its coffee, paying little attention.
       </MainText>
       <NextButton onClick={() => props.update(ns("s4", "c12"))} />
     </SimpleScene>
@@ -229,8 +230,7 @@ const s4 = props => (
           more suited to their species.
         </UserQuote>
         <UserQuote paragraph>
-          The best magicians are critical thinkers. A few will go into politics,
-          but that can really go awry...
+          The best magicians are critical thinkers.
         </UserQuote>
       </UserQuote>
       <NextButton onClick={() => props.update(ns("s4", "c14"))} />
@@ -244,8 +244,8 @@ const s4 = props => (
       </UserQuote>
 
       <UserQuote>
-        We do this through science and research in our origins. Philosophical
-        discussions. Opening minds.
+        We do this through science and research in our origins, philosophical
+        discussions, and compromise.
       </UserQuote>
 
       <MainText>
@@ -259,10 +259,10 @@ const s4 = props => (
     <SimpleScene isVisible={props.c15}>
       <UserQuote attrib="Comrade Igglefort">
         Next bit of training is the most important. We need an easy vessel for
-        communication. Your keyboard, of course. Once items are made magical
+        communication. Your keyboard, of course. Once the item is made magical
         we'll be able to communicate. Items like this will be hard to detect
-        obviously, looks as though a product of modern tech. Last time tried a
-        blender, obvious fluke...
+        obviously, looks as though a product of modern tech. Last time, we tried
+        a blender, obvious fluke...
       </UserQuote>
 
       <MainText>
@@ -274,15 +274,18 @@ const s4 = props => (
 
     <SimpleScene isVisible={props.c16}>
       <UserQuote>
-        We have bound your keyboard to one of our own though a complicated
-        series of spellwork, network protocols are too easily monitored, this
-        connection is unhackable. Messages about the mission delivered to the
-        keyboard will be viewable on the computer from a program called... vim.
+        We will bound your keyboard to one of our own though a complicated
+        series of spellwork, as network protocols are too easily monitored. This
+        connection, we believe, is unhackable. Messages about the mission
+        delivered to the keyboard will be viewable on the computer from a
+        program called... vim.
       </UserQuote>
 
-      <UserQuote>You think to yourself. What kind of name is that?</UserQuote>
+      <MainText>You think to yourself. What kind of name is that?</MainText>
 
-      <UserQuote>What mission?</UserQuote>
+      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+        What mission?
+      </UserQuote>
       <NextButton onClick={() => props.update(ns("s4", "c17"))} />
     </SimpleScene>
 
@@ -320,19 +323,22 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c19}>
-      <UserQuote>
+      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
         Look if I'm going to be ... too exposed ... I want to know what im
         getting myself into.
       </UserQuote>
 
       <UserQuote>There is almost no danger to you.</UserQuote>
 
-      <UserQuote>But, they just said...</UserQuote>
+      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+        But, they just said...
+      </UserQuote>
 
       <UserQuote>
-        Yes, the plan is quite dangerous. But you are only a messenger. You will
-        deliver this keyboard to your niece tonight as a gift for her 16th
-        birthday.
+        Yes, the plan is quite dangerous. But you are only a{" "}
+        <span>messenger</span>. You will deliver this keyboard to your{" "}
+        <span>niece</span>
+        tonight as a gift for her 16th birthday.
       </UserQuote>
 
       <MainText>
@@ -343,7 +349,10 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c20}>
-      <UserQuote>What's going on here...?</UserQuote>
+      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+        What's going on here...?
+      </UserQuote>
+      <NextButton onClick={() => props.update(ns("s4", "c21"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c21}>
@@ -358,6 +367,10 @@ const s4 = props => (
 
       <UserQuote>It's technically country pop.</UserQuote>
 
+      <MainText>
+        Some murmuring about <span>country pop</span>.
+      </MainText>
+
       <UserQuote>Yes, the pop singer.</UserQuote>
 
       <UserQuote>How..? Why..!?!</UserQuote>
@@ -367,24 +380,37 @@ const s4 = props => (
     <SimpleScene isVisible={props.c23}>
       <UserQuote>
         Frailty Stow has become a sort of figurehead for one of the larger
-        opposition factions. We've set it up so that Emma has won backstage
-        passes and a meet and greet with Frailty next weekend. Once there, she
-        will have approximately three minutes to place a curse upon Frailty
-        before she goes on stage to perform. Frailty is being looked after quite
-        closely, after another faction attempted to curse her.
+        opposition factions of magicians. We've set it up so that{" "}
+        {props.playerNameSaved} has won backstage passes and a meet and greet
+        with Frailty next weekend. Once there, she will have approximately three
+        minutes to place a curse upon Frailty before she goes on stage to
+        perform.
+      </UserQuote>
+
+      <UserQuote>
+        Frailty is being looked after quite closely. Other groups of magicians
+        have tried to persuade her to join their causes. She has expressed
+        ideological leanings towards one of our rival factions.
+      </UserQuote>
+
+      <UserQuote>
+        The task is great. We are not sure what should happen is{" "}
+        {props.playerNameSaved} is caught.
       </UserQuote>
       <NextButton onClick={() => props.update(ns("s4", "c24"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c24}>
-      <UserQuote>And what happened to them? How were they caught?</UserQuote>
-
       <UserQuote>
-        It doesn't matter how they were caught _and killed_, our plan is better.
-        They will not suspect such a young child. And fear not, she will be in
-        no harm. They will not harm such a young talented child, this would be a
-        gift to them really, such magical talent at such a young age
+        They will not suspect such a young child. And anyway, they would not
+        harm such a young talented child. This would be a gift to them really,
+        such magical talent at such a young age.
       </UserQuote>
+
+      <MainText>
+        The way they talk about your niece with such reckless abandon sickens
+        you.
+      </MainText>
       <Link to={`/to-washington`}>Next</Link>
     </SimpleScene>
   </div>
@@ -419,7 +445,11 @@ const map = state => ({
   reactedNod: state.s4reactedNod,
   playerNameSaved: state.playerNameSaved,
   petTypeInputSaved: state.petTypeInputSaved,
-  nieceName: state.nieceName
+  nieceName: state.nieceName,
+  leadPet: state.leadPet,
+  petTwo: state.petTwo,
+  petThree: state.petThree,
+  petFour: state.petFour
 });
 
 export default connect(map)(s4);

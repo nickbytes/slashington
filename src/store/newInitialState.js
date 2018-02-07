@@ -138,6 +138,10 @@ const newInitialState = {
   inLawName: "Jill",
   preferredTitle: "",
   coworkerName: "Scott",
+  leadPet: "Igglefort",
+  petTwo: "Najj",
+  petThree: "Barringzen",
+  petFour: "Tapien",
 
   // global jobItems
   jobItems: [
