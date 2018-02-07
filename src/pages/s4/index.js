@@ -67,7 +67,9 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c6}>
-      <UserQuote attrib={`Comrade ${props.leadPet}`}>We, as you might know, are The Council.</UserQuote>
+      <UserQuote attrib={`Comrade ${props.leadPet}`}>
+        We, as you might know, are The Council.
+      </UserQuote>
       <NextButton onClick={() => props.update(ns("s4", "c7"))} />
     </SimpleScene>
 
@@ -89,7 +91,9 @@ const s4 = props => (
     <SimpleScene isVisible={props.c8}>
       {props.reactedAngry && (
         <div>
-          <UserQuote attrib={`You, ${props.playerNameSaved}`}>What the fuck is going on?</UserQuote>
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+            What the fuck is going on?
+          </UserQuote>
           <UserQuote attrib={`Comrade ${props.petThree}`}>
             Such a temper... are they even fit for this task?
           </UserQuote>
@@ -106,7 +110,9 @@ const s4 = props => (
 
       {props.reactedNod && (
         <div>
-          <UserQuote attrib={`Comrade ${props.petTwo}`}>Did you already know that...?</UserQuote>
+          <UserQuote attrib={`Comrade ${props.petTwo}`}>
+            Did you already know that...?
+          </UserQuote>
           <MainText>
             Glancing around the table, one {props.petTypeInputSaved} mutters to
             another
@@ -136,18 +142,24 @@ const s4 = props => (
             lead {props.petTypeInputSaved} tries to reassure them of your
             reaction.
           </MainText>
-          <UserQuote attrib={`Comrade ${props.leadPet}`}>You have been--</UserQuote>
+          <UserQuote attrib={`Comrade ${props.leadPet}`}>
+            You have been--
+          </UserQuote>
           <NextButton onClick={() => props.update(ns("s4", "c10"))} />
         </div>
       )}
       {props.reactedNod && (
         <div>
-          <UserQuote attrib={`Comrade ${props.leadPet}`}>Well, good. Good, good. Okay, then.</UserQuote>
+          <UserQuote attrib={`Comrade ${props.leadPet}`}>
+            Well, good. Good, good. Okay, then.
+          </UserQuote>
           <MainText>
             Some tension seems to have been released from the group. There is
             nodding.
           </MainText>
-          <UserQuote attrib={`Comrade ${props.leadPet}`}>You have been--</UserQuote>
+          <UserQuote attrib={`Comrade ${props.leadPet}`}>
+            You have been--
+          </UserQuote>
           <NextButton onClick={() => props.update(ns("s4", "c10"))} />
         </div>
       )}
@@ -206,7 +218,7 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c13}>
-      <UserQuote attrib={`Comrade ${props.leadPet}`}
+      <UserQuote attrib={`Comrade ${props.leadPet}`}>
         <UserQuote paragraph>
           Magic has been passed down throughout the ages. It used to be taught
           somewhat more openly, and accepted on some level. The rise secular
