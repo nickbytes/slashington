@@ -377,77 +377,126 @@ const s6 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c19}>
-      <MainText>She looks striaght into your eyes. So confident.</MainText>
-      <UserQuote>
-        Are you sure...? I wouldn't tell anyone. Whatever you need.
-      </UserQuote>
-      <MainText>She smiles.</MainText>
-      <UserQuote>
-        And they told me to tell you something. They said it'd be extremely
-        important.
-      </UserQuote>
-      <UserQuote>What's that?</UserQuote>
+      {props.roleFulfilled && (
+        <div>
+          <MainText>She looks striaght into your eyes. So confident.</MainText>
+          <UserQuote>
+            Are you sure...? I wouldn't tell anyone. Whatever you need.
+          </UserQuote>
+          <MainText>She smiles.</MainText>
+          <UserQuote>
+            And they told me to tell you something. They said it'd be extremely
+            important.
+          </UserQuote>
+          <UserQuote>What's that?</UserQuote>
+          <NextButton onClick={() => props.update(ns("s6", "c20"))} />
+        </div>
+      )}
     </SimpleScene>
 
-    <SimpleScene>
-      <UserQuote>They said to tell you...</UserQuote>
-      <NextButton onClick={() => props.update(ns("s6", "c"))} />
+    <SimpleScene isVisible={props.c20}>
+      {props.roleFulfilled && (
+        <div>
+          <UserQuote>They said to tell you...</UserQuote>
+          <NextButton onClick={() => props.update(ns("s6", "c21"))} />
+        </div>
+      )}
     </SimpleScene>
 
-    <SimpleScene>{`ESC + : + q`}</SimpleScene>
-
-    <SimpleScene>
-      <UserQuote>I don't know what it means though... do you?</UserQuote>
-      <MainText>She laughs.</MainText>
-      <UserQuote>
-        Of course, of course. Vim. Right. No one would ever think of using it,
-        it'll be the perfect place to hide instructions. Is that all{" "}
-        {props.playerNameSaved}?
-      </UserQuote>
-      <UserQuote>Yes.</UserQuote>
+    <SimpleScene isVisible={props.c21}>
+      {props.roleFulfilled && (
+        <div>
+          {`ESC + : + q`}
+          <NextButton onClick={() => props.update(ns("s6", "c22"))} />
+        </div>
+      )}
     </SimpleScene>
 
-    <SimpleScene>
-      <UserQuote> Then I think it's time.</UserQuote>
-      <UserQuote>To head back down to the party?</UserQuote>
-      <MainText>
-        You feel a slight twinge of relief. You're not crazy, this is happening.
-      </MainText>
+    <SimpleScene isVisible={props.c22}>
+      {props.roleFulfilled && (
+        <div>
+          <UserQuote>I don't know what it means though... do you?</UserQuote>
+          <MainText>She laughs.</MainText>
+          <UserQuote>
+            Of course, of course. Vim. Right. No one would ever think of using
+            it, it'll be the perfect place to hide instructions. Is that all{" "}
+            {props.playerNameSaved}?
+          </UserQuote>
+          <UserQuote>Yes.</UserQuote>
+          <NextButton onClick={() => props.update(ns("s6", "c23"))} />
+        </div>
+      )}
     </SimpleScene>
 
-    <SimpleScene>
-      <UserQuote>
-        Yes, but first, could you take a look at something on my computer...
-      </UserQuote>
-      <UserQuote>
-        Well, I don't know how much I can help you now...You'll know more about
-        it than me... But, of course...{" "}
-      </UserQuote>
-      <MainText>
-        She plugs in the keyboard, quickly, and in a matter of seconds, brings
-        up a terminal screen. She fires away command after command, you can't
-        even keep up with what she's doing. And then she stops, and steps away.
-      </MainText>
+    <SimpleScene isVisible={props.c23}>
+      {props.roleFulfilled && (
+        <div>
+          <UserQuote> Then I think it's time.</UserQuote>
+          <UserQuote>To head back down to the party?</UserQuote>
+          <MainText>
+            You feel a slight twinge of relief. You're not crazy, this is
+            happening.
+          </MainText>
+          <NextButton onClick={() => props.update(ns("s6", "c24"))} />
+        </div>
+      )}
     </SimpleScene>
 
-    <SimpleScene>
-      <UserQuote>Right here... this line...</UserQuote>
-
-      <UserQuote>Okay. It says POEM RIGHT HERE</UserQuote>
+    <SimpleScene isVisible={props.c24}>
+      {props.roleFulfilled && (
+        <div>
+          <UserQuote>
+            Yes, but first, could you take a look at something on my computer...
+          </UserQuote>
+          <UserQuote>
+            Well, I don't know how much I can help you now...You'll know more
+            about it than me... But, of course...{" "}
+          </UserQuote>
+          <MainText>
+            She plugs in the keyboard, quickly, and in a matter of seconds,
+            brings up a terminal screen. She fires away command after command,
+            you can't even keep up with what she's doing. And then she stops,
+            and steps away.
+          </MainText>
+          <NextButton onClick={() => props.update(ns("s6", "c25"))} />
+        </div>
+      )}
     </SimpleScene>
 
-    <SimpleScene>
-      <MainText>
-        You feel lightheaded, but you cannot stop looking at the screen. You
-        attempt to mumble some words to {props.nieceName}, but they do not
-        completely form.
-      </MainText>
-      <UserQuote>Wazzuiitttmeeaan</UserQuote>
+    <SimpleScene isVisible={props.c25}>
+      {props.roleFulfilled && (
+        <div>
+          <UserQuote>Right here... this line...</UserQuote>
+
+          <UserQuote>Okay. It says POEM RIGHT HERE</UserQuote>
+          <NextButton onClick={() => props.update(ns("s6", "c26"))} />
+        </div>
+      )}
     </SimpleScene>
 
-    <SimpleScene>
-      <MainText>The screen shakes, and colors swim into your vision.</MainText>
-      <Link to={`/good-messenger`}>Next</Link>
+    <SimpleScene isVisible={props.c26}>
+      {props.roleFulfilled && (
+        <div>
+          <MainText>
+            You feel lightheaded, but you cannot stop looking at the screen. You
+            attempt to mumble some words to {props.nieceName}, but they do not
+            completely form.
+          </MainText>
+          <UserQuote>Wazzuiitttmeeaan</UserQuote>
+          <NextButton onClick={() => props.update(ns("s6", "c27"))} />
+        </div>
+      )}
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c27}>
+      {props.roleFulfilled && (
+        <div>
+          <MainText>
+            The screen shakes, and colors swim into your vision.
+          </MainText>
+          <Link to={`/good-messenger`}>Next</Link>
+        </div>
+      )}
     </SimpleScene>
   </div>
 );
