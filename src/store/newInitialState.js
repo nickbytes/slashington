@@ -21,7 +21,6 @@ const newInitialState = {
     c16: false,
     c17: false,
     c18: false,
-    newBadgeReceived: false
   },
 
   startBurning: false,
@@ -35,6 +34,7 @@ const newInitialState = {
   petOwnerInputSaved: "",
   petTypeInputSaved: "",
   petNameInputSaved: "",
+  newBadgeReceived: false
 
   // s2
   s2: {
@@ -92,9 +92,10 @@ const newInitialState = {
     c11: false,
     c12: false,
     c13: false,
-    reactedAngry: false,
-    reactedNod: false
+
   },
+  reactedAngry: false,
+  reactedNod: false
 
   // s5
   s5: {
@@ -134,9 +135,10 @@ const newInitialState = {
     c18: false,
     c19: false,
     c20: false,
-    taskTaken: false,
-    roleFulfilled: false
+
   },
+  taskTaken: false,
+  roleFulfilled: false
 
   // global
   nieceName: "Emma",
