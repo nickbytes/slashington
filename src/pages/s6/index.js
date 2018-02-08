@@ -291,8 +291,6 @@ const s6 = props => (
     <SimpleScene isVisible={props.c17}>
       {props.roleFulfilled && (
         <div>
-          <UserQuote attrib={`You, ${props.playerNameSaved}`}>It is?</UserQuote>
-          <MainText>You attempt to hold back tears.</MainText>
           <UserQuote attrib={`You, ${props.playerNameSaved}`}>
             But i dont understand why. I don't understand what is happening...
           </UserQuote>
@@ -300,7 +298,7 @@ const s6 = props => (
             She guides you over towards the chair at her computer.
           </MainText>
 
-          <NextButton onClick={() => props.update(ns("s6", "c17"))} />
+          <NextButton onClick={() => props.update(ns("s6", "c18"))} />
         </div>
       )}
 
