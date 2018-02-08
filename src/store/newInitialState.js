@@ -130,14 +130,18 @@ const newInitialState = {
     c14: false,
     c15: false,
     c16: false,
-    c17: false
+    c17: false,
+    c18: false,
+    c19: false,
+    c20: false,
+    taskTaken: false,
+    roleFulfilled: false
   },
 
   // global
   nieceName: "Emma",
   inLawName: "Jill",
-  preferredTitle: "",
-  coworkerName: "Scott",
+  coworkerName: "Dempsey",
   leadPet: "Igglefort",
   petTwo: "Najj",
   petThree: "Barringzen",

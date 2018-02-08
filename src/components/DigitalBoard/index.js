@@ -3,26 +3,30 @@ import styled from "styled-components";
 import FlexContainer from "react-styled-flexbox";
 
 const OuterContainer = styled.div`
-  border: 2px solid #000;
-  background-color: #21252b;
+  background-color: #000;
   border-radius: 6px;
   width: 600px;
   height: 400px;
 `;
 
 const InnerContainer = styled.div`
-  color: #e6c16e;
+  color: #fff;
 `;
 
 const Header = styled.div`
-  margin: 0 0 45px;
+  margin: 0 0 20px;
 `;
 
 const Title = styled.h1`
   font-family: Arial;
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 22px;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 48px;
+  color: #fff;
+  padding: 20px 0;
+  margin: 0;
+  text-align: center;
 `;
 
 const Table = styled(FlexContainer)`
@@ -52,7 +56,7 @@ const SubHead = styled.h2`
   font-weight: normal;
   font-size: 18px;
   line-height: 19px;
-  border-bottom: 2px solid #e6c16e;
+  border-bottom: 2px solid #fff;
 `;
 
 const NormalRow = styled.h4`
@@ -97,7 +101,7 @@ class DigitalBoard extends Component {
   };
   componentDidMount() {
     console.log("this mounted");
-    // this.interval = setInterval(this.scramble, 300);
+    // this.interval = setInterval(this.scramble, 10);
   }
 
   componentWillUnmount() {
@@ -150,7 +154,7 @@ class DigitalBoard extends Component {
       <OuterContainer>
         <InnerContainer>
           <Header>
-            <Title>Slashington Arrivals</Title>
+            <Title>Train Information</Title>
           </Header>
 
           <Table justifyCenter contentSpaceAround>
@@ -163,7 +167,7 @@ class DigitalBoard extends Component {
             </TimeColumn>
 
             <DestionationColumn directionColumn>
-              <SubHead>Destionation</SubHead>
+              <SubHead>Destination</SubHead>
               <NormalRow>Union Station (DC)</NormalRow>
               {this.state.fakeBoard.map(fakeItem => (
                 <NormalRow key={fakeItem.id}>

@@ -2,10 +2,9 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
-import { fine, toldHer } from "./updaters";
+import { fine, giveKeys, takeTask, toldHer } from "./updaters";
 import { ns } from "../../updaters/ns";
 import DemoMode from "../../components/DemoMode";
-import InProgress from "../../components/InProgress";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
 import PlainButton from "../../components/PlainButton";
@@ -184,8 +183,8 @@ const s6 = props => (
 
     <SimpleScene isVisible={props.c9}>
       <MainText>
-        You could offer her help. The Council never said anything about you
-        helping her. Or maybe, you <span>should</span> take the task yourself.
+        You could offer her help... The Council never said anything about you
+        helping her. Or maybe, you <span>should</span> take the task yourself...
       </MainText>
       <NextButton onClick={() => props.update(ns("s6", "c10"))} />
     </SimpleScene>
@@ -234,10 +233,12 @@ const s6 = props => (
     <SimpleScene isVisible={props.c15}>
       <ul>
         <li>
-          <PlainButton>Give her the keyboard.</PlainButton>
+          <PlainButton onClick={() => console.log(props.update(giveKeys()))}>
+            Give her the keyboard.
+          </PlainButton>
         </li>
         <li>
-          <PlainButton>
+          <PlainButton onClick={() => console.log(props.update(takeTask()))}>
             Take the task yourself. Hide the keyboard behind your back.
           </PlainButton>
         </li>
@@ -247,21 +248,21 @@ const s6 = props => (
     <SimpleScene isVisible={props.c16}>
       {props.roleFulfilled && (
         <div>
-          <UserQuote>
-            Iwasjustdroppingoffthegiftidon'tknowwhatisgoingon
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+            Iwasjustdroppingoffthekeyboardidon'tknowwhatisgoingon
           </UserQuote>
-          <UserQuote>
-            It's okay {props.preferredTitle} {props.playerNameSaved}.
+          <UserQuote attrib={`${props.nieceName}, niece`}>
+            It's okay {props.playerNameSaved}. It's okay.
           </UserQuote>
-          <UserQuote>it is?</UserQuote>
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>It is?</UserQuote>
           <MainText>You attempt to hold back tears.</MainText>
-          <UserQuote>
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
             but i dont understand why. I don't understand what is happening
           </UserQuote>
           <MainText>
             She guides you over towards the chair at her computer.
           </MainText>
-          <InProgress>Memory wipe ending :scream: </InProgress>
+
           <NextButton onClick={() => props.update(ns("s6", "c17"))} />
         </div>
       )}
@@ -272,17 +273,41 @@ const s6 = props => (
             Your pulse races as you look for an explanation of why you've snuck
             into her room.
           </MainText>
-          <UserQuote>
-            "Just wanted to see if you still had my old computer with all those
-            great games on it."
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+            Just wanted to see if you still had my old computer with all those
+            great games on it.
           </UserQuote>
-          <UserQuote>"Oh yea, it's over here."</UserQuote>
+          <UserQuote attrib={`${props.nieceName}, niece`}>
+            Oh yea, it's over here.
+          </UserQuote>
           <MainText>
             She points to the section of computers and hardware in the corner,
             then leads you over.
           </MainText>
-          <UserQuote>
-            "Still works like a charm, added a new graphics card a year ago"
+        </div>
+      )}
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c17}>
+      {props.roleFulfilled && (
+        <div>
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>It is?</UserQuote>
+          <MainText>You attempt to hold back tears.</MainText>
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+            But i dont understand why. I don't understand what is happening...
+          </UserQuote>
+          <MainText>
+            She guides you over towards the chair at her computer.
+          </MainText>
+
+          <NextButton onClick={() => props.update(ns("s6", "c17"))} />
+        </div>
+      )}
+
+      {props.taskTaken && (
+        <div>
+          <UserQuote attrib={`${props.nieceName}, niece`}>
+            Still works like a charm, added a new graphics card a year ago.
           </UserQuote>
           <MainText>
             You smile as she walks you through the changes she's made to the
@@ -290,39 +315,56 @@ const s6 = props => (
             knowledge greatly surpassing yours at this point, and you feel
             proud.
           </MainText>
-          <UserQuote>
-            "that's amazing, you've taken the shell of an entirely old PC and
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+            That's amazing, you've taken the shell of an entirely old PC and
             turned it into a powerful computing machine."
           </UserQuote>
-          <UserQuote>"thanks, theres only one piece left."</UserQuote>
-          <UserQuote>"whats that"</UserQuote>
-          <MainText>you ask, as your palms becoming sweaty.</MainText>
-          <UserQuote>
-            "oh {props.preferredTitle} {props.playerNameSaved}, i thought we'd
-            passed this..."
+          <UserQuote attrib={`${props.nieceName}, niece`}>
+            Thanks, theres only one piece left.
           </UserQuote>
-          <MainText>
-            you're confused. what does she know. how could she?
-          </MainText>
-          <UserQuote>
-            {props.petNameInputSaved} passed info said you were taking it
-            especially rough this time...
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+            What's that?
           </UserQuote>
-          <MainText>
-            How does she know? She reaches for you bag and removes it from your
-            clutches.
-          </MainText>
-          <InProgress>Choice again to resist or give in.</InProgress>
-          <InProgress>Resist: uses cords to subdue you with magic</InProgress>
-          <InProgress>
-            Give in: easy, offer help, she appreciates, memory wipe still
-          </InProgress>
-          <NextButton onClick={() => props.update(ns("s6", "c17"))} />
+          <NextButton onClick={() => props.update(ns("s6", "c18"))} />
         </div>
       )}
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c17}>
+    <SimpleScene isVisible={props.c18}>
+      {props.roleFulfilled && (
+        <div>
+          <UserQuote attrib={`${props.nieceName}, niece`}>
+            I know, {props.playerNameSaved}.
+          </UserQuote>
+
+          <NextButton onClick={() => props.update(ns("s6", "c19"))} />
+        </div>
+      )}
+
+      {props.taskTaken && (
+        <div>
+          <MainText>
+            You can feel your palms sweating as you hold the keyboard.
+          </MainText>
+          <UserQuote attrib={`${props.nieceName}, niece`}>
+            Oh {props.playerNameSaved}, I thought we were passed this...
+          </UserQuote>
+          <MainText>What does she know?</MainText>
+          <UserQuote attrib={`${props.nieceName}, niece`}>
+            {props.petNameInputSaved} passed info through the neighbors{" "}
+            {props.petNameInputSaved}. They said you were taking it especially
+            rough this time...
+          </UserQuote>
+          <MainText>
+            How does she know? She reaches for your bag and removes it from your
+            clutches.
+          </MainText>
+          <NextButton onClick={() => props.update(ns("s6", "c19"))} />
+        </div>
+      )}
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c}>
       <Link to={`/good-messenger`}>Next</Link>
     </SimpleScene>
   </div>
@@ -346,7 +388,10 @@ const map = state => ({
   c15: state.s6.c15,
   c16: state.s6.c16,
   c17: state.s6.c17,
-  c18: state.s6.c18
+  c18: state.s6.c18,
+  c19: state.s6.c19,
+  taskTaken: state.s6.taskTaken,
+  roleFulfilled: state.s6.roleFulfilled
 });
 
 export default connect(map)(s6);
