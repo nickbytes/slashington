@@ -366,8 +366,8 @@ const s6 = props => (
             rough this time...
           </UserQuote>
           <MainText>
-            How does she know? She reaches for your bag and removes it from your
-            clutches.
+            How does she know? She reaches for keyboard, you reluctantly hand it
+            to her.
           </MainText>
           <NextButton onClick={() => props.update(ns("s6", "c19"))} />
         </div>
@@ -392,6 +392,18 @@ const s6 = props => (
           <NextButton onClick={() => props.update(ns("s6", "c20"))} />
         </div>
       )}
+
+      {props.taskTaken && (
+        <div>
+          <UserQuote attrib={`${props.nieceName}, niece`}>
+            I know you're trying to help, {props.playerNameSaved}, but this task
+            isn't for you. You role is small, but important. You are the
+            messenger... I'll take it from here.
+          </UserQuote>
+
+          <UserQuote />
+        </div>
+      )}
     </SimpleScene>
 
     <SimpleScene isVisible={props.c20}>
@@ -403,6 +415,12 @@ const s6 = props => (
           <NextButton onClick={() => props.update(ns("s6", "c21"))} />
         </div>
       )}
+
+      {props.taskTaken && (
+        <div>
+          <UserQuote />
+        </div>
+      )}
     </SimpleScene>
 
     <SimpleScene isVisible={props.c21}>
@@ -412,6 +430,8 @@ const s6 = props => (
           <NextButton onClick={() => props.update(ns("s6", "c22"))} />
         </div>
       )}
+
+      {props.taskTaken && <div>here</div>}
     </SimpleScene>
 
     <SimpleScene isVisible={props.c22}>
@@ -430,6 +450,8 @@ const s6 = props => (
           <NextButton onClick={() => props.update(ns("s6", "c23"))} />
         </div>
       )}
+
+      {props.taskTaken && <div>here</div>}
     </SimpleScene>
 
     <SimpleScene isVisible={props.c23}>
@@ -448,6 +470,8 @@ const s6 = props => (
           <NextButton onClick={() => props.update(ns("s6", "c24"))} />
         </div>
       )}
+
+      {props.taskTaken && <div>here</div>}
     </SimpleScene>
 
     <SimpleScene isVisible={props.c24}>
@@ -469,6 +493,8 @@ const s6 = props => (
           <NextButton onClick={() => props.update(ns("s6", "c25"))} />
         </div>
       )}
+
+      {props.taskTaken && <div>here</div>}
     </SimpleScene>
 
     <SimpleScene isVisible={props.c25}>
@@ -484,6 +510,8 @@ const s6 = props => (
           <NextButton onClick={() => props.update(ns("s6", "c26"))} />
         </div>
       )}
+
+      {props.taskTaken && <div>here</div>}
     </SimpleScene>
 
     <SimpleScene isVisible={props.c26}>
@@ -500,6 +528,8 @@ const s6 = props => (
           <NextButton onClick={() => props.update(ns("s6", "c27"))} />
         </div>
       )}
+
+      {props.taskTaken && <div>here</div>}
     </SimpleScene>
 
     <SimpleScene isVisible={props.c27}>
@@ -508,6 +538,13 @@ const s6 = props => (
           <MainText>
             The screen shakes, and colors swim into your vision.
           </MainText>
+          <Link to={`/good-messenger`}>Next</Link>
+        </div>
+      )}
+
+      {props.taskTaken && (
+        <div>
+          here
           <Link to={`/good-messenger`}>Next</Link>
         </div>
       )}
