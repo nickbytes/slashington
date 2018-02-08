@@ -537,8 +537,20 @@ const map = state => ({
   c17: state.s6.c17,
   c18: state.s6.c18,
   c19: state.s6.c19,
-  taskTaken: state.s6.taskTaken,
-  roleFulfilled: state.s6.roleFulfilled
+  c20: state.s6.c20,
+  c21: state.s6.c21,
+  c22: state.s6.c22,
+  c23: state.s6.c23,
+  c24: state.s6.c24,
+  c25: state.s6.c25,
+  c26: state.s6.c26,
+  c27: state.s6.c27,
+  taskTaken: state.taskTaken,
+  roleFulfilled: state.roleFulfilled,
+  bToldHer: state.bToldHer,
+  bFine: state.bFine,
+  nieceName: state.nieceName,
+  inLawName: state.inLawName
 });
 
 export default connect(map)(s6);
