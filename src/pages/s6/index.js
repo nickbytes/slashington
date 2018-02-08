@@ -401,7 +401,10 @@ const s6 = props => (
             messenger... I'll take it from here.
           </UserQuote>
 
-          <UserQuote />
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+            I was worried for you... I don't trust them. I don't understand any
+            of it.
+          </UserQuote>
         </div>
       )}
     </SimpleScene>
