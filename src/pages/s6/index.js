@@ -239,7 +239,8 @@ const s6 = props => (
         </li>
         <li>
           <PlainButton onClick={() => console.log(props.update(takeTask()))}>
-            Take the task yourself. Hide the keyboard behind your back.
+            Take the task yourself. Keep the keyboard. You can probably figure
+            it out.
           </PlainButton>
         </li>
       </ul>
@@ -281,8 +282,7 @@ const s6 = props => (
             Oh yea, it's over here.
           </UserQuote>
           <MainText>
-            She points to the section of computers and hardware in the corner,
-            then leads you over.
+            She points to the section of computers and hardware in the corner.
           </MainText>
         </div>
       )}
@@ -309,13 +309,12 @@ const s6 = props => (
           </UserQuote>
           <MainText>
             You smile as she walks you through the changes she's made to the
-            computer, and though you taught her some of the basics, her
-            knowledge greatly surpassing yours at this point, and you feel
-            proud.
+            computer. You remember back to teaching her some of the basics, her
+            knowledge greatly surpassing yours at this point. You feel proud.
           </MainText>
           <UserQuote attrib={`You, ${props.playerNameSaved}`}>
             That's amazing, you've taken the shell of an entirely old PC and
-            turned it into a powerful computing machine."
+            turned it into a powerful computing machine.
           </UserQuote>
           <UserQuote attrib={`${props.nieceName}, niece`}>
             Thanks, theres only one piece left.
@@ -365,10 +364,7 @@ const s6 = props => (
             {props.petNameInputSaved}. They said you were taking it especially
             rough this time...
           </UserQuote>
-          <MainText>
-            How does she know? She reaches for keyboard, you reluctantly hand it
-            to her.
-          </MainText>
+          <MainText>How does she know? She points at the keyboard.</MainText>
           <NextButton onClick={() => props.update(ns("s6", "c19"))} />
         </div>
       )}
@@ -402,8 +398,8 @@ const s6 = props => (
           </UserQuote>
 
           <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-            I was worried for you... I don't trust them. I don't understand any
-            of it.
+            I'm worried for you... I don't trust them. I don't understand any of
+            it. I thought I could help. I can help...
           </UserQuote>
         </div>
       )}
@@ -421,136 +417,115 @@ const s6 = props => (
 
       {props.taskTaken && (
         <div>
-          <UserQuote />
+          <UserQuote attrib={`${props.nieceName}, niece`}>
+            I can take it from here.
+          </UserQuote>
+          <MainText>
+            You see a calmness in her eyes. You begin to think you may have
+            underestimated her.
+          </MainText>
+          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+            There's something they wanted me to tell you.
+          </UserQuote>
+          <UserQuote attrib={`${props.nieceName}, niece`}>
+            What's that?
+          </UserQuote>
         </div>
       )}
     </SimpleScene>
 
     <SimpleScene isVisible={props.c21}>
-      {props.roleFulfilled && (
-        <div>
-          {`ESC + : + q`}
-          <NextButton onClick={() => props.update(ns("s6", "c22"))} />
-        </div>
-      )}
-
-      {props.taskTaken && <div>here</div>}
+      <div>
+        {`ESC + : + q`}
+        <NextButton onClick={() => props.update(ns("s6", "c22"))} />
+      </div>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c22}>
-      {props.roleFulfilled && (
-        <div>
-          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-            I don't know what it means though... do you?
-          </UserQuote>
-          <MainText>She laughs.</MainText>
-          <UserQuote attrib={`${props.nieceName}, niece`}>
-            Of course, of course. Vim. Right. No one would ever think of using
-            it, it'll be the perfect place to hide instructions. Is that all{" "}
-            {props.playerNameSaved}?
-          </UserQuote>
-          <UserQuote attrib={`You, ${props.playerNameSaved}`}>Yes.</UserQuote>
-          <NextButton onClick={() => props.update(ns("s6", "c23"))} />
-        </div>
-      )}
-
-      {props.taskTaken && <div>here</div>}
+      <div>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          I don't know what it means though... do you?
+        </UserQuote>
+        <MainText>She laughs.</MainText>
+        <UserQuote attrib={`${props.nieceName}, niece`}>
+          Of course, of course. Vim. Right. No one would ever think of using it,
+          it'll be the perfect place to hide instructions. Is that all{" "}
+          {props.playerNameSaved}?
+        </UserQuote>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>Yes.</UserQuote>
+        <NextButton onClick={() => props.update(ns("s6", "c23"))} />
+      </div>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c23}>
-      {props.roleFulfilled && (
-        <div>
-          <UserQuote attrib={`${props.nieceName}, niece`}>
-            Then I think it's time.
-          </UserQuote>
-          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-            To head back down to the party?
-          </UserQuote>
-          <MainText>
-            You feel a slight twinge of relief. You're not crazy, this is
-            happening.
-          </MainText>
-          <NextButton onClick={() => props.update(ns("s6", "c24"))} />
-        </div>
-      )}
-
-      {props.taskTaken && <div>here</div>}
+      <div>
+        <UserQuote attrib={`${props.nieceName}, niece`}>
+          Then I think it's time.
+        </UserQuote>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          To head back down to the party?
+        </UserQuote>
+        <MainText>
+          You feel a slight twinge of relief. You're not crazy, this is
+          happening.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s6", "c24"))} />
+      </div>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c24}>
-      {props.roleFulfilled && (
-        <div>
-          <UserQuote attrib={`${props.nieceName}, niece`}>
-            Yes, but first, could you take a look at something on my computer...
-          </UserQuote>
-          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-            Well, I don't know how much I can help you now...You'll know more
-            about it than me... But, of course...{" "}
-          </UserQuote>
-          <MainText>
-            She plugs in the keyboard, quickly, and in a matter of seconds,
-            brings up a terminal screen. She fires away command after command,
-            you can't even keep up with what she's doing. And then she stops,
-            and steps away.
-          </MainText>
-          <NextButton onClick={() => props.update(ns("s6", "c25"))} />
-        </div>
-      )}
-
-      {props.taskTaken && <div>here</div>}
+      <div>
+        <UserQuote attrib={`${props.nieceName}, niece`}>
+          Yes, but first, could you take a look at something on my computer...
+        </UserQuote>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          Well, I don't know how much I can help you now...You'll know more
+          about it than me... But, of course...{" "}
+        </UserQuote>
+        <MainText>
+          She plugs in the keyboard, quickly, and in a matter of seconds, brings
+          up a terminal screen. She fires away command after command, you can't
+          even keep up with what she's doing. And then she stops, and steps
+          away.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s6", "c25"))} />
+      </div>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c25}>
-      {props.roleFulfilled && (
-        <div>
-          <UserQuote attrib={`${props.nieceName}, niece`}>
-            Right here... this line...
-          </UserQuote>
+      <div>
+        <UserQuote attrib={`${props.nieceName}, niece`}>
+          Right here... this line...
+        </UserQuote>
 
-          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-            Okay. It says POEM RIGHT HERE
-          </UserQuote>
-          <NextButton onClick={() => props.update(ns("s6", "c26"))} />
-        </div>
-      )}
-
-      {props.taskTaken && <div>here</div>}
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          Okay. It says POEM RIGHT HERE
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s6", "c26"))} />
+      </div>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c26}>
-      {props.roleFulfilled && (
-        <div>
-          <MainText>
-            You feel lightheaded, but you cannot stop looking at the screen. You
-            attempt to mumble some words to {props.nieceName}, but they do not
-            completely form.
-          </MainText>
-          <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-            Wazzuiitttmeeaan? Wazzzuittt?
-          </UserQuote>
-          <NextButton onClick={() => props.update(ns("s6", "c27"))} />
-        </div>
-      )}
-
-      {props.taskTaken && <div>here</div>}
+      <div>
+        <MainText>
+          You feel lightheaded, but you cannot stop looking at the screen. You
+          attempt to mumble some words to {props.nieceName}, but they do not
+          completely form.
+        </MainText>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          Wazzuiitttmeeaan? Wazzzuittt?
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s6", "c27"))} />
+      </div>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c27}>
-      {props.roleFulfilled && (
-        <div>
-          <MainText>
-            The screen shakes, and colors swim into your vision.
-          </MainText>
-          <Link to={`/good-messenger`}>Next</Link>
-        </div>
-      )}
-
-      {props.taskTaken && (
-        <div>
-          here
-          <Link to={`/good-messenger`}>Next</Link>
-        </div>
-      )}
+      <div>
+        <MainText>
+          The screen shakes, and colors swim into your vision.
+        </MainText>
+        <Link to={`/good-messenger`}>Next</Link>
+      </div>
     </SimpleScene>
   </div>
 );
