@@ -3,13 +3,13 @@ import { connect } from "funcup";
 import React from "react";
 
 import { ns } from "../../updaters/ns";
+import Clickable from "../../components/Clickable";
 import DemoMode from "../../components/DemoMode";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
 import SimpleScene from "../../components/SimpleScene";
 import ThoughtQuote from "../../components/ThoughtQuote";
 import UserQuote from "../../components/UserQuote";
-import buttonStyle from "../../utilities/buttonStyle";
 
 const s5 = props => (
   <div>
@@ -67,12 +67,11 @@ const s5 = props => (
 
     <SimpleScene isVisible={props.c7}>
       <MainText>
-        Three or four seconds. Suddenly the car{" "}
-        <button style={buttonStyle}>bursts</button> with light, you grimace and
-        squint in the stark contrast. When you open your eyes, the train car is
-        again packed with people, regular people. People reading their tablets,
-        morning papers, talking on cell phones, glancing out the window as you
-        pass through Baltimore.
+        Three or four seconds. Suddenly the car <Clickable>bursts</Clickable>{" "}
+        with light, you grimace and squint in the stark contrast. When you open
+        your eyes, the train car is again packed with people, regular people.
+        People reading their tablets, morning papers, talking on cell phones,
+        glancing out the window as you pass through Baltimore.
       </MainText>
       <NextButton onClick={() => props.update(ns("s5", "c8"))} />
     </SimpleScene>

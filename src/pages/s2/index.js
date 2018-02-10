@@ -1,17 +1,18 @@
+import { Link } from "react-router-dom";
+import { connect } from "funcup";
+import React from "react";
+
+import { ns } from "../../updaters/ns";
+import Clickable from "../../components/Clickable";
 import CustomContainer from "../../components/CustomContainer";
 import DemoMode from "../../components/DemoMode";
+import ItalicMind from "../../components/ItalicMind";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
 import SimpleScene from "../../components/SimpleScene";
 import TrainAnimation from "../../components/TrainAnimation";
-import ItalicMind from "../../components/ItalicMind";
 import UserQuote from "../../components/UserQuote";
 import Waves from "../../components/Waves";
-import { ns } from "../../updaters/ns";
-import buttonStyle from "../../utilities/buttonStyle";
-import { connect } from "funcup";
-import React from "react";
-import { Link } from "react-router-dom";
 
 const scene = "s2";
 
@@ -30,12 +31,9 @@ const s2 = props => (
         </MainText>
         <MainText>
           Relief washes over you like a series gentle{" "}
-          <button
-            style={buttonStyle}
-            onClick={e => props.update(ns(scene, "c2"))}
-          >
+          <Clickable clickFn={e => props.update(ns(scene, "c2"))}>
             waves.
-          </button>
+          </Clickable>
         </MainText>
       </CustomContainer>
     </SimpleScene>
@@ -54,12 +52,9 @@ const s2 = props => (
         </MainText>
         <MainText>
           The train has begun its slow wind along the coast. It lulls you to{" "}
-          <button
-            style={buttonStyle}
-            onClick={e => props.update(ns("s2", "c4"))}
-          >
+          <Clickable clickFn={() => props.update(ns("s2", "c4"))}>
             sleep.
-          </button>
+          </Clickable>
         </MainText>
       </CustomContainer>
     </SimpleScene>
@@ -279,12 +274,9 @@ const s2 = props => (
 
     <SimpleScene isVisible={props.c27}>
       <UserQuote>
-        <button
-          styled={buttonStyle}
-          onClick={() => props.update(ns("s2", "c28"))}
-        >
+        <Clickable clickFn={() => props.update(ns("s2", "c28"))}>
           {props.petNameInputSaved}?!?!?!?!
-        </button>
+        </Clickable>
       </UserQuote>
     </SimpleScene>
 

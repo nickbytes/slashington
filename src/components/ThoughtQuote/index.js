@@ -2,8 +2,10 @@ import { Blockquote } from "rebass";
 import React from "react";
 import styled from "styled-components";
 
+import { T_FF } from "../../utilities/constants";
+
 const UserQuoteContainer = styled(Blockquote)`
-  font-family: "Source Code Pro", monospace;
+  font-family: ${T_FF};
   max-width: 700px;
   margin-bottom: 44px;
 `;

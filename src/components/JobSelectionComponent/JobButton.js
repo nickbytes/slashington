@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
+import { T_FF } from "../../utilities/constants";
+
 const JobButton = styled.button`
-  font-family: "Source Code Pro", monospace;
+  font-family: ${T_FF};
   font-size: 17px;
   margin-right: 10px;
   margin-top: 10px;

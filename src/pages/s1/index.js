@@ -1,6 +1,5 @@
 import "../../vendor/devices.min.css";
 
-import { Arrow } from "rebass";
 import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
@@ -14,12 +13,14 @@ import {
   setNewPlayerName,
   startBurning
 } from "./updaters";
+import { badgeHelper } from "../../pages/s1/updaters";
 import { coworker, coworkerFullTitle } from "../../utilities/coworker";
+import { ns } from "../../updaters/ns";
 import { receptionist } from "../../utilities/receptionist";
 import BrokenEmail from "../../components/BrokenEmail";
+import Clickable from "../../components/Clickable";
 import CustomContainer from "../../components/CustomContainer";
 import DemoMode from "../../components/DemoMode";
-import YourNewBadge from "../../components/YourNewBadge";
 import DreamText from "../../components/DreamText";
 import JobSelectionComponent from "../../components/JobSelectionComponent";
 import MainText from "../../components/MainText";
@@ -31,13 +32,12 @@ import PetFormLabel from "../../components/PetFormLabel";
 import PhoneComponent from "../../components/PhoneComponent";
 import SimpleScene from "../../components/SimpleScene";
 import Smoke from "../../components/Smoke";
+import SubmitButton from "../../components/SubmitButton";
 import UserQuote from "../../components/UserQuote";
 import WebcamComponent from "../../components/WebcamComponent";
 import Workspace from "../../components/Workspace";
-import buttonStyle from "../../utilities/buttonStyle";
+import YourNewBadge from "../../components/YourNewBadge";
 import keyboard from "../../images/keyboard.jpg";
-import { ns } from "../../updaters/ns";
-import { badgeHelper } from "../../pages/s1/updaters";
 
 const s1 = props => (
   <div>
@@ -45,8 +45,7 @@ const s1 = props => (
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <UserQuote attrib="You">
-          "Hello, I've forgotten my badge. Could I get a temporary one for
-          today?"
+          Hello, I've forgotten my badge. Could I get a temporary one for today?
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s1", "c2"))} />
       </CustomContainer>
@@ -59,12 +58,11 @@ const s1 = props => (
         </MainText>
         <MainText>
           Nothing is getting on your nerves today. Not the{" "}
-          <button style={buttonStyle} onClick={e => props.update(startBurning)}>
-            <div style={{ position: "relative" }}>
-              burnt toast
-              {props.startBurning && <Smoke />}
-            </div>
-          </button>
+          <Clickable clickFn={e => props.update(startBurning)}>
+            <span style={{ position: "relative" }}>
+              burnt toast {props.startBurning && <Smoke />}
+            </span>
+          </Clickable>{" "}
           that nearly caused a fire in your apartment, not your nosy super Derek
           asking about your plans to renew your lease, not your forgotten badge,
           and not the receptionist's crabby mood.
@@ -80,13 +78,10 @@ const s1 = props => (
     <SimpleScene isVisible={props.c3}>
       <CustomContainer>
         <UserQuote attrib={receptionist()}>
-          "Name{" "}
-          <button
-            style={buttonStyle}
-            onClick={e => props.update(ns("s1", "c4"))}
-          >
+          Name{" "}
+          <Clickable clickFn={e => props.update(ns("s1", "c4"))}>
             please
-          </button>."
+          </Clickable>.
         </UserQuote>
       </CustomContainer>
     </SimpleScene>
@@ -98,9 +93,6 @@ const s1 = props => (
             e.preventDefault();
             props.update(addPlayerName);
           }}
-          style={{
-            display: "flex"
-          }}
         >
           <NewInput
             defaultValue=""
@@ -109,21 +101,14 @@ const s1 = props => (
             onChange={e => props.update(setNewPlayerName(e.target.value))}
           />
 
-          <button
-            style={{
-              background: "none",
-              border: "none",
-              cursor: "pointer"
-            }}
-            children={<Arrow right />}
-          />
+          <SubmitButton />
         </form>
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c5}>
       <CustomContainer>
-        <UserQuote attrib="You">"{props.playerNameSaved}."</UserQuote>
+        <UserQuote attrib="You">{props.playerNameSaved}.</UserQuote>
         <NextButton onClick={() => props.update(ns("s1", "c6"))} />
       </CustomContainer>
     </SimpleScene>
@@ -131,13 +116,10 @@ const s1 = props => (
     <SimpleScene isVisible={props.c6}>
       <CustomContainer>
         <UserQuote attrib={receptionist()}>
-          "Position{" "}
-          <button
-            style={buttonStyle}
-            onClick={e => props.update(ns("s1", "c7"))}
-          >
+          Position{" "}
+          <Clickable clickFn={e => props.update(ns("s1", "c7"))}>
             please
-          </button>."
+          </Clickable>.
         </UserQuote>
       </CustomContainer>
     </SimpleScene>
@@ -150,7 +132,7 @@ const s1 = props => (
 
     <SimpleScene isVisible={props.c8}>
       <CustomContainer>
-        <UserQuote attrib="You">"{props.playerOccupationSaved}."</UserQuote>
+        <UserQuote attrib="You">{props.playerOccupationSaved}.</UserQuote>
         <NextButton onClick={() => props.update(ns("s1", "c9"))} />
       </CustomContainer>
     </SimpleScene>
@@ -176,7 +158,7 @@ const s1 = props => (
     <SimpleScene isVisible={props.c10}>
       <CustomContainer>
         <UserQuote attrib={receptionist()}>
-          "THE ANSWERS TO YOUR SECURITY QUESTION."
+          THE ANSWERS TO YOUR SECURITY QUESTION!
         </UserQuote>
       </CustomContainer>
 
@@ -194,8 +176,8 @@ const s1 = props => (
     <SimpleScene isVisible={props.c11}>
       <CustomContainer>
         <UserQuote pt={"100px"} attrib={receptionist()}>
-          "What is the name of a close friend or relative who owns a pet, the
-          pets name, and the type of pet?"
+          What is the name of a close friend or relative who owns a pet, the
+          pets name, and the type of pet?
         </UserQuote>
       </CustomContainer>
 
@@ -253,10 +235,10 @@ const s1 = props => (
 
         <CustomContainer>
           <UserQuote pl={"300px"} attrib={receptionist()}>
-            "Look towards the{" "}
-            <button onClick={() => props.update(ns("s1", "c14"))}>
+            Look towards the{" "}
+            <Clickable clickFn={() => props.update(ns("s1", "c14"))}>
               camera
-            </button>."
+            </Clickable>.
           </UserQuote>
         </CustomContainer>
       </div>
@@ -271,9 +253,7 @@ const s1 = props => (
     <SimpleScene isVisible={props.c14b}>
       <UserQuote>
         Here is your new{" "}
-        <button style={buttonStyle} onClick={() => props.update(badgeHelper())}>
-          badge
-        </button>.
+        <Clickable clickFn={() => props.update(badgeHelper())}>badge</Clickable>.
       </UserQuote>
     </SimpleScene>
 
@@ -290,12 +270,9 @@ const s1 = props => (
       <CustomContainer>
         <MainText>
           Once you arrive at your desk, you turn on your{" "}
-          <button
-            style={buttonStyle}
-            onClick={e => props.update(ns("s1", "c16"))}
-          >
+          <Clickable clickFn={e => props.update(ns("s1", "c16"))}>
             computer
-          </button>.
+          </Clickable>.
         </MainText>
       </CustomContainer>
     </SimpleScene>
@@ -314,12 +291,9 @@ const s1 = props => (
 
         <MainText>
           When you get back to your desk, you see that you have a{" "}
-          <button
-            style={buttonStyle}
-            onClick={e => props.update(ns("s1", "c18"))}
-          >
+          <Clickable clickFn={e => props.update(ns("s1", "c18"))}>
             voicemail
-          </button>from your brother.
+          </Clickable>from your brother.
         </MainText>
       </div>
     </SimpleScene>
@@ -346,12 +320,9 @@ const s1 = props => (
         </DreamText>
         <DreamText>
           what did you get her...? how could you{" "}
-          <button
-            style={buttonStyle}
-            onClick={() => props.update(ns("s1", "c20"))}
-          >
+          <Clickable clickFn={() => props.update(ns("s1", "c20"))}>
             forget
-          </button>{" "}
+          </Clickable>{" "}
           this...?
         </DreamText>
       </CustomContainer>
@@ -372,12 +343,9 @@ const s1 = props => (
           All this work is pushing you to the edge. This weekend, you won't take
           your laptop, you won't look at the Feeds, you'll disconnect. You've
           just got to{" "}
-          <button
-            style={buttonStyle}
-            onClick={e => props.update(ns("s1", "c21"))}
-          >
+          <Clickable clickFn={e => props.update(ns("s1", "c21"))}>
             get through the next few hours and deadlines.
-          </button>
+          </Clickable>
         </MainText>
       </CustomContainer>
     </SimpleScene>
