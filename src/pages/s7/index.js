@@ -56,6 +56,10 @@ const s7 = props => (
         that sort of thing. She was locked away in her room all the time toying
         with it. It was a hit. Too bad someone stole it at school.
       </UserQuote>
+
+      <MainText>
+        What a great gift suggestion from {props.coworkerName}.
+      </MainText>
     </SimpleScene>
   </div>
 );
