@@ -5,6 +5,7 @@ import { T_FF } from "../../utilities/constants";
 
 const NewInput = styled(Input)`
   border: 0;
+  border-bottom: 1px solid #000;
   font-family: ${T_FF};
   width: 300px;
   font-size: 22px;
