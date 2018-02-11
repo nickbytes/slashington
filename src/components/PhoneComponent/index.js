@@ -215,7 +215,7 @@ class PhoneComponent extends Component {
                     margin: "0"
                   }}
                 >
-                  Hello, {this.props.playerNameSaved || "Nick"}
+                  👋 {this.props.playerNameSaved || "Nick"}
                 </h1>
                 <h2
                   style={{

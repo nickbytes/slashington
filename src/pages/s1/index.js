@@ -22,6 +22,7 @@ import Clickable from "../../components/Clickable";
 import CustomContainer from "../../components/CustomContainer";
 import DemoMode from "../../components/DemoMode";
 import DreamText from "../../components/DreamText";
+import ItalicText from "../../components/ItalicText";
 import JobSelectionComponent from "../../components/JobSelectionComponent";
 import MainText from "../../components/MainText";
 import NewInput from "../../components/NewInput";
@@ -300,10 +301,15 @@ const s1 = props => (
 
     <SimpleScene isVisible={props.c18}>
       <PhoneComponent {...props} />
-      <MainText>
-        We need an audio transcript here, and this to be the only thing on the
-        page.
-      </MainText>
+      <ItalicText>
+        Hey {props.playerNameSaved}, know you're probably busy at work...
+      </ItalicText>
+      <ItalicText>
+        We're really excited to have you down here this weekend. I'll pick you
+        up at the train station in the morning, give me a call if your train
+        gets delayed.
+      </ItalicText>
+      <ItalicText>Alright, uh, excited to see you. Talk soon.</ItalicText>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c19}>
