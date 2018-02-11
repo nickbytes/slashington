@@ -5,10 +5,10 @@ import React from "react";
 import { ns } from "../../updaters/ns";
 import Clickable from "../../components/Clickable";
 import DemoMode from "../../components/DemoMode";
+import Echo from "../../components/Echo";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
 import SimpleScene from "../../components/SimpleScene";
-import ThoughtQuote from "../../components/ThoughtQuote";
 import UserQuote from "../../components/UserQuote";
 
 const s5 = props => (
@@ -52,8 +52,8 @@ const s5 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c5}>
-      <ThoughtQuote>We are unaware of where the magician is now.</ThoughtQuote>
-      <ThoughtQuote>They may have had their memory erased.</ThoughtQuote>
+      <Echo>We are unaware of where the magician is now.</Echo>
+      <Echo>They may have had their memory erased.</Echo>
       <NextButton onClick={() => props.update(ns("s5", "c6"))} />
     </SimpleScene>
 
@@ -117,10 +117,10 @@ const s5 = props => (
       <MainText>
         Words gotta come to mind again to end the scene. maybe the below
       </MainText>
-      <ThoughtQuote>
+      <Echo>
         The burden is too great for one so young. Surely some adult can take on
         responsibility.
-      </ThoughtQuote>
+      </Echo>
       <Link to={`/birthday-party`}>Next</Link>
     </SimpleScene>
   </div>
