@@ -27,7 +27,6 @@ import JobSelectionComponent from "../../components/JobSelectionComponent";
 import MainText from "../../components/MainText";
 import NewInput from "../../components/NewInput";
 import NextButton from "../../components/NextButton";
-import NotesApp from "../../components/NotesApp";
 import PetFormInput from "../../components/PetFormInput";
 import PetFormLabel from "../../components/PetFormLabel";
 import PhoneComponent from "../../components/PhoneComponent";
@@ -359,7 +358,6 @@ const s1 = props => (
     <SimpleScene isVisible={props.c21}>
       <Workspace>
         <BrokenEmail {...props} />
-        <NotesApp />
       </Workspace>
     </SimpleScene>
 
