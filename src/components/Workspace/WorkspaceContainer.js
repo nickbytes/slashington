@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { T_FF_SYS } from "../../utilities/constants";
+
 const WorkspaceContainer = styled.div`
   position: fixed;
   top: 0;
@@ -10,6 +12,10 @@ const WorkspaceContainer = styled.div`
   width: 100%;
   overflow: hidden;
   margin: 0;
+
+  & > * {
+    font-family: ${T_FF_SYS};
+  }
 `;
 
 export default WorkspaceContainer;
