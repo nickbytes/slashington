@@ -1,9 +1,8 @@
-import Draggable, { DraggableCore } from "react-draggable";
+import Draggable from "react-draggable";
 import Icon from "react-geomicons";
 import React from "react";
 import styled from "styled-components";
 
-import { nsHelper } from "../../pages/s1/updaters";
 import AreaChart from "../AreaChart";
 import DesktopBackground from "./DesktopBackground";
 import EmailAssistant from "./EmailAssistant";
