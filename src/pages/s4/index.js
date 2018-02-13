@@ -11,7 +11,7 @@ import NextButton from "../../components/NextButton";
 import PlainButton from "../../components/PlainButton";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
-import vim from "../../assets/vim.png";
+import vim from "../../images/vim.png";
 
 const s4 = props => (
   <div>
