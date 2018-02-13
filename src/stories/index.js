@@ -4,14 +4,13 @@ import { storiesOf } from "@storybook/react";
 
 import BrokenEmail from "../components/BrokenEmail";
 import CustomContainer from "../components/CustomContainer";
-import DigitalBoard from '../components/DigitalBoard';
+import DigitalBoard from "../components/DigitalBoard";
 import DreamText from "../components/DreamText";
+import EmailAssistant from "../components/Workspace/EmailAssistant";
 import ItalicMind from "../components/ItalicMind";
 import NextButton from "../components/NextButton";
-import NotesApp from "../components/NotesApp";
 import PetFormInput from "../components/PetFormInput";
 import PetFormLabel from "../components/PetFormLabel";
-import ThoughtQuote from "../components/ThoughtQuote";
 import TitleModal from "../components/TitleModal";
 import TrainAnimation from "../components/TrainAnimation";
 import UserQuote from "../components/UserQuote";
@@ -33,12 +32,6 @@ storiesOf("TrainAnimation", module).add("TrainAnimation", () => (
 
 storiesOf("Workspace", module).add("Workspace", () => <Workspace />);
 
-storiesOf("ThoughtQuote", module)
-  .add("with text", () => <ThoughtQuote>How could you forget?</ThoughtQuote>)
-  .add("longer text", () => (
-    <ThoughtQuote>You can barely remember last year's birthday.</ThoughtQuote>
-  ));
-
 storiesOf("ItalicMind", module)
   .add("with text", () => <ItalicMind>How could you forget?</ItalicMind>)
   .add("longer text", () => (
@@ -48,8 +41,6 @@ storiesOf("ItalicMind", module)
 storiesOf("TitleModal", module).add("normal", () => (
   <TitleModal chapterNumber={"01"} chapterTitle={"The Office"} />
 ));
-
-storiesOf("Notes App", module).add("normal", () => <NotesApp />);
 
 storiesOf("Pet Name Form", module).add("normal", () => (
   <CustomContainer>
@@ -118,6 +109,6 @@ storiesOf("Testing long text blocks", module).add("normal", () => (
   </UserQuote>
 ));
 
-storiesOf('Digital train board', module).add('normal', () => (
-  <DigitalBoard />
-))
+storiesOf("Digital train board", module).add("normal", () => <DigitalBoard />);
+
+storiesOf("EmailAssistant", module).add("normal", () => <EmailAssistant />);
