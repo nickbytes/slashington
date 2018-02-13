@@ -11,6 +11,7 @@ import NextButton from "../../components/NextButton";
 import PlainButton from "../../components/PlainButton";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
+import vim from "../../assets/vim.png";
 
 const s4 = props => (
   <div>
@@ -290,18 +291,23 @@ const s4 = props => (
         series of spellwork, as network protocols are too easily monitored. This
         connection, we believe, is unhackable. Messages about the mission
         delivered to the keyboard will be viewable on the computer from a
-        program called... vim.
+        program called...
       </UserQuote>
 
+      <NextButton onClick={() => props.update(ns("s4", "c17"))} />
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c17}>
+      <img src={vim} alt="vim" />
       <MainText>You think to yourself. What kind of name is that?</MainText>
 
       <UserQuote attrib={`You, ${props.playerNameSaved}`}>
         What mission?
       </UserQuote>
-      <NextButton onClick={() => props.update(ns("s4", "c17"))} />
+      <NextButton onClick={() => props.update(ns("s4", "c18"))} />
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c17}>
+    <SimpleScene isVisible={props.c18}>
       <MainText>
         There is quiet. {props.petTypeInputSaved}s start to look around at each
         other. Comrade Igglefort shuffles some papers in front of him.
@@ -315,10 +321,10 @@ const s4 = props => (
         Before Comrade Igglefort can finish, he's interrupted by another{" "}
         {props.petTypeInputSaved}.
       </MainText>
-      <NextButton onClick={() => props.update(ns("s4", "c18"))} />
+      <NextButton onClick={() => props.update(ns("s4", "c19"))} />
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c18}>
+    <SimpleScene isVisible={props.c19}>
       <UserQuote attrib={`Comrade ${props.petTwo}`}>
         Comrade Igglefort, may we hear some possible doubts in this plan-
       </UserQuote>
@@ -333,10 +339,10 @@ const s4 = props => (
         though none continue to quarrel. You hear one of them mutter something
         like "too exposed."
       </MainText>
-      <NextButton onClick={() => props.update(ns("s4", "c19"))} />
+      <NextButton onClick={() => props.update(ns("s4", "c20"))} />
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c19}>
+    <SimpleScene isVisible={props.c20}>
       <UserQuote attrib={`You, ${props.playerNameSaved}`}>
         Look if I'm going to be ... too exposed ... I want to know what im
         getting myself into.
@@ -361,24 +367,24 @@ const s4 = props => (
         Again you feel your legs shake. {props.nieceName}?!? She's involved in
         this.
       </MainText>
-      <NextButton onClick={() => props.update(ns("s4", "c20"))} />
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c20}>
-      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-        What's going on here...?
-      </UserQuote>
       <NextButton onClick={() => props.update(ns("s4", "c21"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c21}>
-      <UserQuote attrib={`Comrade ${props.leadPet}`}>
-        Your niece is going to place a curse on Frailty Stow.
+      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+        What's going on here...?
       </UserQuote>
       <NextButton onClick={() => props.update(ns("s4", "c22"))} />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c22}>
+      <UserQuote attrib={`Comrade ${props.leadPet}`}>
+        Your niece is going to place a curse on Frailty Stow.
+      </UserQuote>
+      <NextButton onClick={() => props.update(ns("s4", "c23"))} />
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c23}>
       <UserQuote attrib={`You, ${props.playerNameSaved}`}>
         ... Frailty Stow... the... the pop singer...?
       </UserQuote>
@@ -396,10 +402,10 @@ const s4 = props => (
       </UserQuote>
 
       <UserQuote>How..? Why..!?!</UserQuote>
-      <NextButton onClick={() => props.update(ns("s4", "c23"))} />
+      <NextButton onClick={() => props.update(ns("s4", "c24"))} />
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c23}>
+    <SimpleScene isVisible={props.c24}>
       <UserQuote attrib={`Comrade ${props.petTwo}`}>
         Frailty Stow has become a sort of figurehead for one of the larger
         opposition factions of magicians. We've set it up so that{" "}
@@ -419,10 +425,10 @@ const s4 = props => (
         The task is great. We are not sure what should happen is{" "}
         {props.playerNameSaved} is caught.
       </UserQuote>
-      <NextButton onClick={() => props.update(ns("s4", "c24"))} />
+      <NextButton onClick={() => props.update(ns("s4", "c25"))} />
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c24}>
+    <SimpleScene isVisible={props.c25}>
       <UserQuote attrib={`Comrade ${props.petThree}`}>
         They will not suspect such a young child. And anyway, they would not
         harm such a young talented child. This would be a gift to them really,
@@ -463,6 +469,7 @@ const map = state => ({
   c22: state.s4.c22,
   c23: state.s4.c23,
   c24: state.s4.c24,
+  c25: state.s4.c25,
   reactedAngry: state.reactedAngry,
   reactedNod: state.reactedNod,
   playerNameSaved: state.playerNameSaved,

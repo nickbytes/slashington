@@ -79,7 +79,7 @@ const newInitialState = {
 
   // s4
   s4: {
-    c1: true,
+    c1: false,
     c2: false,
     c3: false,
     c4: false,
@@ -91,7 +91,19 @@ const newInitialState = {
     c10: false,
     c11: false,
     c12: false,
-    c13: false
+    c13: false,
+    c14: false,
+    c15: false,
+    c16: false,
+    c17: false,
+    c18: false,
+    c19: false,
+    c20: false,
+    c21: false,
+    c22: false,
+    c23: false,
+    c24: false,
+    c25: false
   },
   reactedAngry: false,
   reactedNod: false,
