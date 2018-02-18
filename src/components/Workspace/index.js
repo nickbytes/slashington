@@ -14,13 +14,12 @@ import place1 from "../../images/snow.jpg";
 
 const WindowContainer = styled.div`
   position: absolute;
-  top: 200px;
-  left: 200px;
   background-color: ${props =>
     props.bgColor ? props.bgColor : "rgb(218, 216, 218)"};
   width: 400px;
   border: ${props =>
     props.bColor ? `1px solid ${props.bColor}` : `1px solid #323d47`};
+  z-index: 1;
 `;
 
 const WindowHeader = styled.div`
@@ -28,6 +27,10 @@ const WindowHeader = styled.div`
     props.bgColor ? props.bgColor : "rgb(218, 216, 218)"};
   border-bottom: ${props =>
     props.bColor ? `1px solid ${props.bColor}` : `1px solid #323d47`};
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const WindowTitle = styled.h4`
@@ -60,7 +63,10 @@ const Workspace = props => (
     <DesktopBackground className="desktop-bg">
       {props.children}
       <Draggable>
-        <WindowContainer bgColor={"rgba(104, 159, 182, 1.000)"}>
+        <WindowContainer
+          style={{ right: "100px", top: "55px" }}
+          bgColor={"rgba(104, 159, 182, 1.000)"}
+        >
           <WindowHeader
             className="handle"
             bgColor={"rgba(83, 135, 245, 0.700)"}
@@ -77,7 +83,7 @@ const Workspace = props => (
         </WindowContainer>
       </Draggable>
       <Draggable handle=".handle">
-        <WindowContainer>
+        <WindowContainer style={{ top: "40%", left: "30%" }}>
           <WindowHeader className="handle">
             <WindowTitle>Raw Photos</WindowTitle>
           </WindowHeader>
@@ -87,7 +93,11 @@ const Workspace = props => (
         </WindowContainer>
       </Draggable>
       <Draggable handle=".handle">
-        <WindowContainer bgColor={"#e5c273"} bColor={"#d29b62"}>
+        <WindowContainer
+          style={{ right: "123px", top: "185px" }}
+          bgColor={"#e5c273"}
+          bColor={"#d29b62"}
+        >
           <WindowHeader
             className="handle"
             bgColor={"rgba(230, 195, 109, 0.7)"}

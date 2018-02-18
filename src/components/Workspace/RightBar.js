@@ -5,6 +5,8 @@ import { nsHelper } from "../../pages/s1/updaters";
 
 const Container = styled.div`
   padding-right: 15px;
+  display: flex;
+  align-items: center;
 `;
 
 const NoButton = styled.button`
@@ -15,6 +17,18 @@ const NoButton = styled.button`
   background: none;
   cursor: pointer;
   outline: 0;
+  padding: 0;
+  margin: 0;
+`;
+
+const Time = styled.time`
+  font-weight: 700px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 14px;
+  opacity: 0.7;
 `;
 
 const RightBar = props => (
@@ -41,7 +55,7 @@ const RightBar = props => (
         🌱
       </span>
     </span>
-    <time style={{ color: "white" }}>12:34</time>
+    <Time>12:34</Time>
   </Container>
 );
 

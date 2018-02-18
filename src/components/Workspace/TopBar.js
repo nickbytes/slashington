@@ -8,7 +8,7 @@ const TopBar = styled.div`
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid black;
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   top: 0;
 `;

@@ -8,6 +8,9 @@ const Container = styled.div`
   background-color: #fff;
   border: 4px double #295ac5;
   border-radius: 6px;
+  position: absolute;
+  top: 50px;
+  left: 25px;
 `;
 
 const HeaderText = styled.h2`
@@ -18,6 +21,10 @@ const HeaderText = styled.h2`
   font-size: 19px;
   line-height: 19px;
   font-weight: normal;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &::before {
     content: "";
