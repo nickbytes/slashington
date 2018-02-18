@@ -5,7 +5,6 @@ import FlexContainer from "react-styled-flexbox";
 
 const Container = styled.div`
   width: 600px;
-  height: 450px;
   background-color: #fff;
   border: 4px double #295ac5;
   border-radius: 6px;
@@ -95,6 +94,43 @@ const data = [
     id: 5,
     sender: "Frank",
     subject: "Center For Consulting Therapy Open House"
+  },
+  {
+    id: 6,
+    sender: "Isabel",
+    subject: "Stay out of the break room, Carl's dog puked everywhere"
+  },
+  {
+    id: 7,
+    sender: "Isabel",
+    subject:
+      "Bring Ur Pet 2 Work Day cancelled: Carl's dog has pooped everywhere"
+  },
+  {
+    id: 8,
+    sender: "Frankie",
+    subject: "I know you took my cactus."
+  },
+  {
+    id: 9,
+    sender: "Drew",
+    subject: "Last chance to donate to this month's Fun Run"
+  },
+  {
+    id: 10,
+    sender: "Matt",
+    subject: "URGENT: Did you get that thing I sent you?"
+  },
+  {
+    id: 11,
+    sender: "Matthew",
+    subject: "re: looking to buy some urine"
+  },
+  {
+    id: 12,
+    sender: "Skyler",
+    subject:
+      "Re: RE: Re: Re: Re: Re: RE: When I'm Mistakenly Put on an Email Chain, Should I Hit 'Reply All' Asking to Be Removed?"
   }
 ];
 

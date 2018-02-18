@@ -2,6 +2,9 @@ import { VictoryArea, VictoryBar, VictoryGroup } from "victory";
 import React, { Component } from "react";
 
 class AreaChart extends Component {
+  // made this component months ago and I already think it's horrible
+  // and i could do much better, wow.
+  // every day is winding road
   constructor(props) {
     super(props);
 
@@ -9,21 +12,23 @@ class AreaChart extends Component {
       randomNumbers: [1, 2, 3, 4, 5]
     };
   }
-  startTimer = () => {
-    setInterval(() => {
-      var arr = [];
-      while (arr.length < 5) {
-        var randomnumber = Math.ceil(Math.random() * 8);
-        if (arr.indexOf(randomnumber) > -1) continue;
-        arr[arr.length] = randomnumber;
-      }
-      this.setState({
-        randomNumbers: arr
-      });
-    }, 1000);
+  scramble = () => {
+    var arr = [];
+    while (arr.length < 5) {
+      var randomnumber = Math.ceil(Math.random() * 8);
+      if (arr.indexOf(randomnumber) > -1) continue;
+      arr[arr.length] = randomnumber;
+    }
+    this.setState({
+      randomNumbers: arr
+    });
   };
   componentDidMount() {
-    this.startTimer();
+    this.counter = setInterval(this.scramble, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.counter);
   }
   render() {
     return (
