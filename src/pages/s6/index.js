@@ -4,7 +4,6 @@ import React from "react";
 
 import { fine, giveKeys, takeTask, toldHer } from "./updaters";
 import { ns } from "../../updaters/ns";
-import DemoMode from "../../components/DemoMode";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
 import PlainButton from "../../components/PlainButton";
@@ -14,7 +13,6 @@ import UserQuote from "../../components/UserQuote";
 
 const s6 = props => (
   <div>
-    <DemoMode />
     <SimpleScene isVisible={props.c1}>
       <UserQuote attrib={`Alex, brother`}>
         I'll take your stuff up to the guest room. You go relax and say hello to{" "}

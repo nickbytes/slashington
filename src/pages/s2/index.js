@@ -5,7 +5,6 @@ import React from "react";
 import { ns } from "../../updaters/ns";
 import Clickable from "../../components/Clickable";
 import CustomContainer from "../../components/CustomContainer";
-import DemoMode from "../../components/DemoMode";
 import ItalicMind from "../../components/ItalicMind";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
@@ -18,7 +17,6 @@ const scene = "s2";
 
 const s2 = props => (
   <div>
-    <DemoMode />
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <MainText>

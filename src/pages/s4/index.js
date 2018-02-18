@@ -4,7 +4,6 @@ import React from "react";
 
 import { angryReaction, nodReaction } from "./updaters";
 import { ns } from "../../updaters/ns";
-import DemoMode from "../../components/DemoMode";
 import DigitalBoard from "../../components/DigitalBoard";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
@@ -15,7 +14,6 @@ import vim from "../../images/vim.png";
 
 const s4 = props => (
   <div>
-    <DemoMode />
     <SimpleScene isVisible={props.c1}>
       <MainText>You stand inside an empty waiting room.</MainText>
       <MainText>

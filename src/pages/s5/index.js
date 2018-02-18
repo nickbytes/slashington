@@ -4,7 +4,6 @@ import React from "react";
 
 import { ns } from "../../updaters/ns";
 import Clickable from "../../components/Clickable";
-import DemoMode from "../../components/DemoMode";
 import Echo from "../../components/Echo";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
@@ -13,7 +12,6 @@ import UserQuote from "../../components/UserQuote";
 
 const s5 = props => (
   <div>
-    <DemoMode />
     <SimpleScene isVisible={props.c1}>
       <MainText>You sit down again in the same seat on the train.</MainText>
       <NextButton onClick={() => props.update(ns("s5", "c2"))} />

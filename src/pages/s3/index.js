@@ -3,7 +3,6 @@ import { connect } from "funcup";
 import React from "react";
 
 import { ns } from "../../updaters/ns";
-import DemoMode from "../../components/DemoMode";
 import ItalicMind from "../../components/ItalicMind";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
@@ -12,7 +11,6 @@ import UserQuote from "../../components/UserQuote";
 
 const s3 = props => (
   <div>
-    <DemoMode />
     <SimpleScene isVisible={props.c1}>
       <MainText>
         {props.petNameInputSaved} jumps off the bench and starts walking towards

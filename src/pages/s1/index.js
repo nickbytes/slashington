@@ -20,7 +20,6 @@ import { receptionist } from "../../utilities/receptionist";
 import BrokenEmail from "../../components/BrokenEmail";
 import Clickable from "../../components/Clickable";
 import CustomContainer from "../../components/CustomContainer";
-import DemoMode from "../../components/DemoMode";
 import DreamText from "../../components/DreamText";
 import ItalicText from "../../components/ItalicText";
 import JobSelectionComponent from "../../components/JobSelectionComponent";
@@ -41,7 +40,6 @@ import keyboard from "../../images/keyboard.jpg";
 
 const s1 = props => (
   <div>
-    <DemoMode />
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <UserQuote attrib="You">

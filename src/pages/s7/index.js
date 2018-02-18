@@ -1,7 +1,6 @@
 import { connect } from "funcup";
 import React from "react";
 
-import DemoMode from "../../components/DemoMode";
 import Leaves from "../../components/Leaves";
 import MainText from "../../components/MainText";
 import SimpleScene from "../../components/SimpleScene";
@@ -9,7 +8,6 @@ import UserQuote from "../../components/UserQuote";
 
 const s7 = props => (
   <div>
-    <DemoMode />
     <SimpleScene isVisible={props.c}>
       <Leaves />
     </SimpleScene>
