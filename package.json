@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "concurrently": "^3.5.1",
     "funcup": "^1.0.0-1",
     "lodash": "^4.17.4",
     "markdown-in-js": "^1.1.3",
@@ -36,6 +37,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "deploy": "yarn run build && netlify deploy"
+    "deploy": "yarn run build && netlify deploy",
+    "game": "concurrently \"yarn start\" \"yarn run storybook\""
   }
 }
