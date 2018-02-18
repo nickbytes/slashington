@@ -18,18 +18,21 @@ const WindowContainer = styled.div`
   left: 200px;
   background-color: ${props =>
     props.bgColor ? props.bgColor : "rgb(218, 216, 218)"};
-  border: ${props => (props.color ? props.color : "rgb(218, 216, 218)")};
   width: 400px;
+  border: ${props =>
+    props.bColor ? `1px solid ${props.bColor}` : `1px solid #323d47`};
 `;
 
 const WindowHeader = styled.div`
   background-color: ${props =>
     props.bgColor ? props.bgColor : "rgb(218, 216, 218)"};
-  border: ${props => (props.color ? props.color : "rgb(218, 216, 218)")};
+  border-bottom: ${props =>
+    props.bColor ? `1px solid ${props.bColor}` : `1px solid #323d47`};
 `;
 
 const WindowTitle = styled.h4`
   margin: 0;
+  padding: 5px 0;
   text-align: center;
 `;
 
@@ -84,8 +87,12 @@ const Workspace = props => (
         </WindowContainer>
       </Draggable>
       <Draggable handle=".handle">
-        <WindowContainer bgColor={"#e5c273"}>
-          <WindowHeader className="handle" bgColor={"rgba(230, 195, 109, 0.7)"}>
+        <WindowContainer bgColor={"#e5c273"} bColor={"#d29b62"}>
+          <WindowHeader
+            className="handle"
+            bgColor={"rgba(230, 195, 109, 0.7)"}
+            bColor={"#d29b62"}
+          >
             <WindowTitle>Notes</WindowTitle>
           </WindowHeader>
           <WindowBody>
