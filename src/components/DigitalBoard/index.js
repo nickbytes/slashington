@@ -57,6 +57,7 @@ const SubHead = styled.h2`
   font-size: 18px;
   line-height: 19px;
   border-bottom: 2px solid #fff;
+  padding: 0 0 0 60px;
 `;
 
 const NormalRow = styled.h4`
@@ -64,6 +65,7 @@ const NormalRow = styled.h4`
   line-height: 18px;
   font-weight: normal;
   margin: 0 0 5px;
+  padding: 0 0 0 60px;
 `;
 
 class DigitalBoard extends Component {
