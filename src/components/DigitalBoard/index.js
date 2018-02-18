@@ -103,7 +103,7 @@ class DigitalBoard extends Component {
   };
   componentDidMount() {
     console.log("this mounted");
-    // this.interval = setInterval(this.scramble, 10);
+    this.interval = setInterval(this.scramble, 300);
   }
 
   componentWillUnmount() {
