@@ -23,7 +23,7 @@ const HeaderText = styled.h2`
     content: "";
     position: absolute;
     left: 10px;
-    top: 13px;
+    top: calc(50% - 9px);
     width: 12px;
     height: 12px;
     border-radius: 100%;
@@ -36,7 +36,7 @@ const Sender = styled.h1`
   font-size: 15px;
   line-height: 15px;
   font-weight: normal;
-  flex-basis: 175px;
+  flex-basis: 105px;
 `;
 
 const Subject = styled.h2`
@@ -67,6 +67,12 @@ const EmailCount = styled.span`
   line-height: 12px;
   font-weight: normal;
   opacity: 0.75;
+`;
+
+const EmailContainer = styled.div`
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 `;
 
 const data = [
@@ -122,6 +128,11 @@ const data = [
     subject: "URGENT: Did you get that thing I sent you?"
   },
   {
+    id: 18,
+    sender: "Kevin, HR",
+    subject: "I think something is living in the fridge"
+  },
+  {
     id: 11,
     sender: "Matthew",
     subject: "re: looking to buy some urine"
@@ -131,6 +142,46 @@ const data = [
     sender: "Skyler",
     subject:
       "Re: RE: Re: Re: Re: Re: RE: When I'm Mistakenly Put on an Email Chain, Should I Hit 'Reply All' Asking to Be Removed?"
+  },
+  {
+    id: 13,
+    sender: "Jimmy",
+    subject: "Re: Toilet Seat Again"
+  },
+  {
+    id: 14,
+    sender: "Jimmy",
+    subject: "Chad's Work Anniversary RSVP"
+  },
+  {
+    id: 15,
+    sender: "Morgane",
+    subject: "Have you enabled 2FA yet"
+  },
+  {
+    id: 21,
+    sender: "Matthew",
+    subject: "re: Lost s04e12"
+  },
+  {
+    id: 16,
+    sender: "Steve",
+    subject: "Happy Birthday Janice (from accounting), cake in breakroom"
+  },
+  {
+    id: 17,
+    sender: "Kevin, HR",
+    subject: "Can you call me on my personal phone?"
+  },
+  {
+    id: 19,
+    sender: "Kevin, HR",
+    subject: "! Regarding some rumors I heard"
+  },
+  {
+    id: 20,
+    sender: "Matt",
+    subject: "Clogged urinals on 3rd floor"
   }
 ];
 
@@ -141,12 +192,14 @@ const EmailAssistant = () => (
         EmailAssistant <EmailCount>({data.length} new emails)</EmailCount>
       </HeaderText>
     </div>
-    {data.map(email => (
-      <EachEmail key={email.id} itemsCenter>
-        <Sender>{email.sender}</Sender>
-        <Subject>{email.subject}</Subject>
-      </EachEmail>
-    ))}
+    <EmailContainer>
+      {data.map(email => (
+        <EachEmail key={email.id} itemsCenter>
+          <Sender>{email.sender}</Sender>
+          <Subject>{email.subject}</Subject>
+        </EachEmail>
+      ))}
+    </EmailContainer>
   </Container>
 );
 
