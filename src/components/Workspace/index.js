@@ -1,5 +1,4 @@
 import Draggable from "react-draggable";
-import Icon from "react-geomicons";
 import React from "react";
 import styled from "styled-components";
 
@@ -7,14 +6,10 @@ import AreaChart from "../AreaChart";
 import DesktopBackground from "./DesktopBackground";
 import EmailAssistant from "./EmailAssistant";
 import LeftBar from "./LeftBar";
-import NotificationEvent from "./NotificationEvent";
-import NotificationTopBar from "./NotificationTopBar";
-import NotificationWindow from "./NotificationWindow";
 import Programs from "./Programs";
 import RightBar from "./RightBar";
 import TopBar from "./TopBar";
 import WorkspaceContainer from "./WorkspaceContainer";
-
 import place1 from "../../images/snow.jpg";
 
 const WindowContainer = styled.div`
@@ -62,19 +57,25 @@ const Workspace = props => (
     <DesktopBackground className="desktop-bg">
       {props.children}
       <Draggable>
-        <NotificationWindow className="desktop-notif">
-          <NotificationTopBar> Agenda </NotificationTopBar>
-          <NotificationEvent>
-            <Icon name="clock" /> You have 39 meetings today.
-          </NotificationEvent>
-          <NotificationEvent>
-            <Icon name="skull" /> You have 7 deadlines today.
-          </NotificationEvent>
-        </NotificationWindow>
+        <WindowContainer bgColor={"rgba(104, 159, 182, 1.000)"}>
+          <WindowHeader
+            className="handle"
+            bgColor={"rgba(83, 135, 245, 0.700)"}
+          >
+            <WindowTitle>{`Good Morning, ${props.playerNameSaved ||
+              "Nick"}`}</WindowTitle>
+          </WindowHeader>
+          <WindowBody>
+            <ul>
+              <li>You have 39 meetings today.</li>
+              <li>You have 7 deadlines today.</li>
+            </ul>
+          </WindowBody>
+        </WindowContainer>
       </Draggable>
-      <Draggable>
+      <Draggable handle=".handle">
         <WindowContainer>
-          <WindowHeader>
+          <WindowHeader className="handle">
             <WindowTitle>Raw Photos</WindowTitle>
           </WindowHeader>
           <WindowBody>
@@ -82,9 +83,9 @@ const Workspace = props => (
           </WindowBody>
         </WindowContainer>
       </Draggable>
-      <Draggable>
+      <Draggable handle=".handle">
         <WindowContainer bgColor={"#e5c273"}>
-          <WindowHeader bgColor={"#e5c273"}>
+          <WindowHeader className="handle" bgColor={"rgba(230, 195, 109, 0.7)"}>
             <WindowTitle>Notes</WindowTitle>
           </WindowHeader>
           <WindowBody>
@@ -100,7 +101,7 @@ const Workspace = props => (
       </Draggable>
       <AreaChart />
 
-      <Draggable>
+      <Draggable handle=".handle">
         <div>
           <EmailAssistant />
         </div>

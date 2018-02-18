@@ -137,7 +137,7 @@ const data = [
 const EmailAssistant = () => (
   <Container>
     <div>
-      <HeaderText>
+      <HeaderText className="handle">
         EmailAssistant <EmailCount>({data.length} new emails)</EmailCount>
       </HeaderText>
     </div>
