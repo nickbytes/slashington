@@ -38,7 +38,7 @@ class BrokenEmail extends Component {
   };
   render() {
     return (
-      <EmailContainer>
+      <EmailContainer className="handle">
         <TopBar>WorkplaceAIM</TopBar>
         <MessagesContainer>
           <SingleMessage>

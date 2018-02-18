@@ -78,6 +78,11 @@ const Workspace = props => (
             <ul>
               <li>You have 39 meetings today.</li>
               <li>You have 7 deadlines today.</li>
+              <li>You have not enabled 2FA.</li>
+              <li>You nearly review is in 3 days.</li>
+              <li>
+                You have not contributed to your 401k, would you like to start?
+              </li>
             </ul>
           </WindowBody>
         </WindowContainer>

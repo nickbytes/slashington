@@ -4,20 +4,17 @@
 
 * computer
 
-  * agenda - could be cooler
+  * add icons
 
 * posters
 
   * door photo
   * 4 clickable photos
 
-* digital board
-
-  * add letter spaces
-
 #### photos needed
 
 * train empty
+* waves (sorry)
 * train full
 * empty platform
 * tree/leaves overhead

@@ -4,6 +4,7 @@ import React from "react";
 
 import { ns } from "../../updaters/ns";
 import Clickable from "../../components/Clickable";
+import CustomContainer from "../../components/CustomContainer";
 import Echo from "../../components/Echo";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
@@ -13,113 +14,140 @@ import UserQuote from "../../components/UserQuote";
 const s5 = props => (
   <div>
     <SimpleScene isVisible={props.c1}>
-      <MainText>You sit down again in the same seat on the train.</MainText>
-      <NextButton onClick={() => props.update(ns("s5", "c2"))} />
+      <CustomContainer>
+        <MainText>You sit down again in the same seat on the train.</MainText>
+        <NextButton onClick={() => props.update(ns("s5", "c2"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c2}>
-      <MainText>
-        You watch outside, as {props.petNameInputSaved} waves to you.
-      </MainText>
+      <CustomContainer>
+        <MainText>
+          You watch outside, as {props.petNameInputSaved} waves to you.
+        </MainText>
 
-      <MainText>
-        You feel the familiar jolt of the train as it begins to move forward.
-        There are no passengers in sight. The train slowly pulls away from the
-        station.
-      </MainText>
-      <NextButton onClick={() => props.update(ns("s5", "c3"))} />
+        <MainText>
+          You feel the familiar jolt of the train as it begins to move forward.
+          There are no passengers in sight. The train slowly pulls away from the
+          station.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s5", "c3"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c3}>
-      <MainText>
-        The landscape is familiar. Rolling hills, small forests, and tributaries
-        pass along side the train. The sun is about to peek out from behind the
-        horizon.
-      </MainText>
+      <CustomContainer>
+        <MainText>
+          The landscape is familiar. Rolling hills, small forests, and
+          tributaries pass along side the train. The sun is about to peek out
+          from behind the horizon.
+        </MainText>
 
-      <MainText>Would like a gif graphic here.</MainText>
-      <NextButton onClick={() => props.update(ns("s5", "c4"))} />
+        <MainText>Would like a gif graphic here.</MainText>
+        <NextButton onClick={() => props.update(ns("s5", "c4"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c4}>
-      <MainText>
-        The Council's words begin to reverberate through you head. What had they
-        said about the person who was caught by Frailty Stow's guards...?
-      </MainText>
-      <NextButton onClick={() => props.update(ns("s5", "c5"))} />
+      <CustomContainer>
+        <MainText>
+          The Council's words begin to reverberate through you head. What had
+          they said about the person who was caught by Frailty Stow's guards...?
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s5", "c5"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c5}>
-      <Echo>We are unaware of where the magician is now.</Echo>
-      <Echo>They may have had their memory erased.</Echo>
-      <NextButton onClick={() => props.update(ns("s5", "c6"))} />
+      <CustomContainer>
+        <Echo>We are unaware of where the magician is now.</Echo>
+        <Echo>They may have had their memory erased.</Echo>
+        <NextButton onClick={() => props.update(ns("s5", "c6"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c6}>
-      <MainText>
-        There's a tunnel approaching. The Northeast Regional does not have a
-        tunnel...
-      </MainText>
-      <NextButton onClick={() => props.update(ns("s5", "c7"))} />
+      <CustomContainer>
+        <MainText>
+          There's a tunnel approaching. The Northeast Regional does not have a
+          tunnel...
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s5", "c7"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c7}>
-      <MainText>
-        Three or four seconds. Suddenly the car <Clickable>bursts</Clickable>{" "}
-        with light, you grimace and squint in the stark contrast. When you open
-        your eyes, the train car is again packed with people, regular people.
-        People reading their tablets, morning papers, talking on cell phones,
-        glancing out the window as you pass through Baltimore.
-      </MainText>
-      <NextButton onClick={() => props.update(ns("s5", "c8"))} />
+      <CustomContainer>
+        <MainText>
+          Three or four seconds. Suddenly the car <Clickable>bursts</Clickable>{" "}
+          with light, you grimace and squint in the stark contrast. When you
+          open your eyes, the train car is again packed with people, regular
+          people. People reading their tablets, morning papers, talking on cell
+          phones, glancing out the window as you pass through Baltimore.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s5", "c8"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c8}>
-      <MainText>
-        Alex greets you at the station. You load your bags and keyboard into the
-        trunk of his car.
-      </MainText>
+      <CustomContainer>
+        <MainText>
+          Alex greets you at the station. You load your bags and keyboard into
+          the trunk of his car.
+        </MainText>
 
-      <UserQuote attrib={`Alex, brother`}>What's with the keyboard?</UserQuote>
+        <UserQuote attrib={`Alex, brother`}>
+          What's with the keyboard?
+        </UserQuote>
 
-      <MainText>
-        You hear the concern in his voice. He thinks you brought it to complete
-        some work this weekend. If only...
-      </MainText>
-      <NextButton onClick={() => props.update(ns("s5", "c9"))} />
+        <MainText>
+          You hear the concern in his voice. He thinks you brought it to
+          complete some work this weekend. If only...
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s5", "c9"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c9}>
-      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-        A gift for Sam.
-      </UserQuote>
-      <NextButton onClick={() => props.update(ns("s5", "c10"))} />
+      <CustomContainer>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          A gift for Sam.
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s5", "c10"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c10}>
-      <MainText>
-        He goes on chatting about work, neighbors, Jill's job, only do you take
-        notice when he mentions the exception grades Emma has been getting.
-      </MainText>
-      <NextButton onClick={() => props.update(ns("s5", "c11"))} />
+      <CustomContainer>
+        <MainText>
+          He goes on chatting about work, neighbors, Jill's job, only do you
+          take notice when he mentions the exception grades Emma has been
+          getting.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s5", "c11"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c11}>
-      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-        That's great, real great.
-      </UserQuote>
-      <NextButton onClick={() => props.update(ns("s5", "c12"))} />
+      <CustomContainer>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          That's great, real great.
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s5", "c12"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c12}>
-      <MainText>
-        Words gotta come to mind again to end the scene. maybe the below
-      </MainText>
-      <Echo>
-        The burden is too great for one so young. Surely some adult can take on
-        responsibility.
-      </Echo>
-      <Link to={`/birthday-party`}>Next</Link>
+      <CustomContainer>
+        <MainText>
+          Words gotta come to mind again to end the scene. maybe the below
+        </MainText>
+        <Echo>
+          The burden is too great for one so young. Surely some adult can take
+          on responsibility.
+        </Echo>
+        <Link to={`/birthday-party`}>Next</Link>
+      </CustomContainer>
     </SimpleScene>
   </div>
 );

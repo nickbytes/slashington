@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
+import Draggable from "react-draggable";
+
 import {
   addPlayerName,
   addSecurityAnswers,
@@ -355,7 +357,9 @@ const s1 = props => (
 
     <SimpleScene isVisible={props.c21}>
       <Workspace>
-        <BrokenEmail {...props} />
+        <Draggable handle=".handle">
+          <BrokenEmail {...props} />
+        </Draggable>
       </Workspace>
     </SimpleScene>
 

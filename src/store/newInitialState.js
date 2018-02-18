@@ -74,12 +74,14 @@ const newInitialState = {
     c2: false,
     c3: false,
     c4: false,
-    c5: false
+    c5: false,
+    c6: false,
+    c7: false
   },
 
   // s4
   s4: {
-    c1: false,
+    c1: true,
     c2: false,
     c3: false,
     c4: false,
@@ -149,6 +151,12 @@ const newInitialState = {
   },
   taskTaken: false,
   roleFulfilled: false,
+
+  s7: {
+    c1: true,
+    c2: false,
+    c3: false
+  },
 
   // global
   nieceName: "Emma",
