@@ -277,7 +277,7 @@ const s1 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c16}>
-      <Workspace {...props} />
+      <Workspace {...props} coffee />
     </SimpleScene>
 
     <SimpleScene isVisible={props.c17}>

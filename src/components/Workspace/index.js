@@ -77,7 +77,7 @@ const Workspace = props => (
   <WorkspaceContainer>
     <TopBar className="desktop-topBar">
       <LeftBar />
-      <RightBar coffee {...props} />
+      <RightBar coffee={props.coffee} {...props} />
     </TopBar>
     <DesktopBackground className="desktop-bg">
       {props.children}
