@@ -11,6 +11,7 @@ import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
+import Waiting from "../../components/Waiting";
 import Waves from "../../components/Waves";
 
 const scene = "s2";
@@ -100,16 +101,16 @@ const s2 = props => (
           'Be Careful Of The Closing Doors', and the train will continue onward.
         </MainText>
 
-        <MainText>You want for the expectantly for the announcement.</MainText>
+        <MainText>You wait for the expectantly for the announcement.</MainText>
         <NextButton onClick={() => props.update(ns("s2", "c7"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c7}>
       <CustomContainer>
-        <MainText>...</MainText>
-        <MainText>...</MainText>
-        <MainText>...</MainText>
+        <Waiting />
+        <Waiting delay={200} />
+        <Waiting delay={300} />
         <NextButton onClick={() => props.update(ns("s2", "c8"))} />
       </CustomContainer>
     </SimpleScene>
@@ -125,9 +126,9 @@ const s2 = props => (
     </SimpleScene>
     <SimpleScene isVisible={props.c9}>
       <CustomContainer>
-        <MainText>...</MainText>
-        <MainText>...</MainText>
-        <MainText>...</MainText>
+        <Waiting />
+        <Waiting delay={200} />
+        <Waiting delay={300} />
         <NextButton onClick={() => props.update(ns("s2", "c10"))} />
       </CustomContainer>
     </SimpleScene>
@@ -232,9 +233,9 @@ const s2 = props => (
 
     <SimpleScene isVisible={props.c17}>
       <CustomContainer>
-        <MainText>...</MainText>
-        <MainText>...</MainText>
-        <MainText>...</MainText>
+        <Waiting />
+        <Waiting delay={200} />
+        <Waiting delay={300} />
         <NextButton onClick={() => props.update(ns("s2", "c18"))} />
       </CustomContainer>
     </SimpleScene>
