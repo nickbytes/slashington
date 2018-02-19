@@ -125,8 +125,8 @@ const map = state => ({
   c3: state.s3.c3,
   c4: state.s3.c4,
   c5: state.s3.c5,
-  c5: state.s3.c6,
-  c5: state.s3.c7
+  c6: state.s3.c6,
+  c7: state.s3.c7
 });
 
 export default connect(map)(s3);
