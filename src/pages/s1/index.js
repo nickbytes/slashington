@@ -2,9 +2,8 @@ import "../../vendor/devices.min.css";
 
 import { Link } from "react-router-dom";
 import { connect } from "funcup";
-import React from "react";
-
 import Draggable from "react-draggable";
+import React from "react";
 
 import {
   addPlayerName,
@@ -383,46 +382,60 @@ const s1 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c23}>
-      <UserQuote attrib={coworkerFullTitle()}>"Keyboard issues?"</UserQuote>
-      <NextButton onClick={() => props.update(ns("s1", "c24"))} />
+      <CustomContainer>
+        <UserQuote attrib={coworkerFullTitle()}>Keyboard issues?</UserQuote>
+        <NextButton onClick={() => props.update(ns("s1", "c24"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c24}>
-      <MainText>You look up and see {coworker()}. Describe him more.</MainText>
-      <NextButton onClick={() => props.update(ns("s1", "c25"))} />
+      <CustomContainer>
+        <MainText>
+          You look up and see {coworker()}. Describe him more.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s1", "c25"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c25}>
-      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-        For some reason, every key is registering as only an n or b on the
-        screen.
-      </UserQuote>
-      <NextButton onClick={() => props.update(ns("s1", "c26"))} />
+      <CustomContainer>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          For some reason, every key is registering as only an <code>n</code> or{" "}
+          <code>b</code> on the screen.
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s1", "c26"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c26}>
-      <UserQuote attrib={coworkerFullTitle()}>
-        Same thing happened to me about a year ago. I took it to a place near
-        where I lived in DC. Fixed it up in a day, had it working good as new.
-      </UserQuote>
-      <NextButton onClick={() => props.update(ns("s1", "c27"))} />
+      <CustomContainer>
+        <UserQuote attrib={coworkerFullTitle()}>
+          Same thing happened to me about a year ago. I took it to a place near
+          where I lived in DC. Fixed it up in a day, had it working good as new.
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s1", "c27"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c27}>
-      <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-        I'm taking the Amtrak down there this weekend... It's my niece's
-        birthday...
-      </UserQuote>
-      <NextButton onClick={() => props.update(ns("s1", "c28"))} />
+      <CustomContainer>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          I'm taking the Amtrak down there this weekend... It's my niece's
+          birthday...
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s1", "c28"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c28}>
-      <UserQuote attrib={coworkerFullTitle()}>
-        Crazy coincidence! It's right off the Amtrak stop. You can't miss it,
-        south east corner of the Mall. Open on weekends too, can probably pick
-        it up on your way back.
-      </UserQuote>
-      <Link to="/train-ride">Next</Link>
+      <CustomContainer>
+        <UserQuote attrib={coworkerFullTitle()}>
+          Crazy coincidence! It's right off the Amtrak stop. You can't miss it,
+          south east corner of the Mall. Open on weekends too, can probably pick
+          it up on your way back.
+        </UserQuote>
+        <Link to="/train-ride">Next</Link>
+      </CustomContainer>
     </SimpleScene>
   </div>
 );
