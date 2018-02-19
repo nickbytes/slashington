@@ -11,6 +11,7 @@
     "react-barcode": "^1.2.0",
     "react-dom": "^15.6.1",
     "react-draggable": "^3.0.5",
+    "react-feather": "^1.0.8",
     "react-geomicons": "^2.1.0",
     "react-markdown": "^3.2.0",
     "react-player": "^0.20.0",

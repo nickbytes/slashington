@@ -12,6 +12,15 @@ import TopBar from "./TopBar";
 import WorkspaceContainer from "./WorkspaceContainer";
 import place1 from "../../images/snow.jpg";
 
+import DollarSign from "react-feather/dist/icons/dollar-sign";
+import Lock from "react-feather/dist/icons/lock";
+import Eye from "react-feather/dist/icons/eye";
+import Watch from "react-feather/dist/icons/watch";
+import Briefcase from "react-feather/dist/icons/briefcase";
+import Sun from "react-feather/dist/icons/sun";
+import Clipboard from "react-feather/dist/icons/clipboard";
+import Camera from "react-feather/dist/icons/camera";
+
 const WindowContainer = styled.div`
   position: absolute;
   background-color: ${props =>
@@ -37,6 +46,9 @@ const WindowTitle = styled.h4`
   margin: 0;
   padding: 5px 0;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const WindowBody = styled.div`
@@ -52,6 +64,13 @@ const WindowBody = styled.div`
 const Raw = styled.img`
   width: 100%;
   max-width: 100%;
+`;
+
+const ListItem = styled.li`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
 `;
 
 const Workspace = props => (
@@ -71,18 +90,36 @@ const Workspace = props => (
             className="handle"
             bgColor={"rgba(83, 135, 245, 0.700)"}
           >
-            <WindowTitle>{`Good Morning, ${props.playerNameSaved ||
-              "Nick"}`}</WindowTitle>
+            <WindowTitle>
+              <Sun size={18} style={{ marginRight: "5px" }} />
+              <span>{`Good Morning, ${props.playerNameSaved || "Nick"}`}</span>
+            </WindowTitle>
           </WindowHeader>
           <WindowBody>
             <ul>
-              <li>You have 39 meetings today.</li>
-              <li>You have 7 deadlines today.</li>
-              <li>You have not enabled 2FA.</li>
-              <li>You nearly review is in 3 days.</li>
-              <li>
-                You have not contributed to your 401k, would you like to start?
-              </li>
+              <ListItem>
+                <Briefcase style={{ marginRight: "10px" }} />
+                <span>You have 39 meetings today.</span>
+              </ListItem>
+              <ListItem>
+                <Watch style={{ marginRight: "10px" }} />
+                <span>You have 7 deadlines today.</span>
+              </ListItem>
+              <ListItem>
+                <Lock style={{ marginRight: "10px" }} />
+                <span>You have not enabled 2FA.</span>
+              </ListItem>
+              <ListItem>
+                <Eye style={{ marginRight: "10px" }} />
+                <span>You nearly review is in 3 days.</span>
+              </ListItem>
+              <ListItem>
+                <DollarSign style={{ marginRight: "10px" }} />
+                <span>
+                  You have not contributed to your 401k, would you like to
+                  start?
+                </span>
+              </ListItem>
             </ul>
           </WindowBody>
         </WindowContainer>
@@ -90,7 +127,10 @@ const Workspace = props => (
       <Draggable handle=".handle">
         <WindowContainer style={{ top: "40%", left: "30%" }}>
           <WindowHeader className="handle">
-            <WindowTitle>Raw Photos</WindowTitle>
+            <WindowTitle>
+              <Camera size={18} style={{ marginRight: "5px" }} />
+              <span>Raw Photos</span>
+            </WindowTitle>
           </WindowHeader>
           <WindowBody>
             <Raw src={place1} alt={"something"} />
@@ -108,15 +148,18 @@ const Workspace = props => (
             bgColor={"rgba(230, 195, 109, 0.7)"}
             bColor={"#d29b62"}
           >
-            <WindowTitle>Notes</WindowTitle>
+            <WindowTitle>
+              <Clipboard size={18} style={{ marginRight: "5px" }} />
+              <span>Notes</span>
+            </WindowTitle>
           </WindowHeader>
           <WindowBody>
             <ul>
-              <li> Research system dynamics </li>
-              <li> Review Ethical Investments from Frontier Imaginaries </li>
-              <li> Process emulation fever dream, due EOD. </li>
-              <li> Military cybernetics ? ! ? ! </li>
-              <li> 4, 8, 15, 16, 23, 42 </li>
+              <li>Research system dynamics</li>
+              <li>Review Ethical Investments from Frontier Imaginaries</li>
+              <li>Process emulation fever dream, due EOD.</li>
+              <li>Military cybernetics?!?!</li>
+              <li>4, 8, 15, 16, 23, 42</li>
             </ul>
           </WindowBody>
         </WindowContainer>

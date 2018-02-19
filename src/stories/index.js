@@ -7,7 +7,6 @@ import CustomContainer from "../components/CustomContainer";
 import DigitalBoard from "../components/DigitalBoard";
 import DreamText from "../components/DreamText";
 import EmailAssistant from "../components/Workspace/EmailAssistant";
-import ItalicMind from "../components/ItalicMind";
 import NextButton from "../components/NextButton";
 import PetFormInput from "../components/PetFormInput";
 import PetFormLabel from "../components/PetFormLabel";
@@ -31,12 +30,6 @@ storiesOf("TrainAnimation", module).add("TrainAnimation", () => (
 ));
 
 storiesOf("Workspace", module).add("Workspace", () => <Workspace />);
-
-storiesOf("ItalicMind", module)
-  .add("with text", () => <ItalicMind>How could you forget?</ItalicMind>)
-  .add("longer text", () => (
-    <ItalicMind>You can barely remember last year's birthday.</ItalicMind>
-  ));
 
 storiesOf("TitleModal", module).add("normal", () => (
   <TitleModal chapterNumber={"01"} chapterTitle={"The Office"} />
