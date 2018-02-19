@@ -111,7 +111,7 @@ const Workspace = props => (
               </ListItem>
               <ListItem>
                 <Eye style={{ marginRight: "10px" }} />
-                <span>You nearly review is in 3 days.</span>
+                <span>You yearly review is in 3 days.</span>
               </ListItem>
               <ListItem>
                 <DollarSign style={{ marginRight: "10px" }} />
