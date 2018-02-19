@@ -143,8 +143,8 @@ const s1 = props => (
         </CustomContainer>
         <CustomContainer>
           <MainText>
-            {receptionist()} is looking intensely at you. What's her deal? Why
-            is she grilling you like this?
+            {receptionist()} is looking intensely at you. What's his deal? Why
+            is his grilling you like this?
           </MainText>
         </CustomContainer>
 
@@ -163,7 +163,7 @@ const s1 = props => (
 
       <CustomContainer>
         <MainText>
-          She nearly spits the words at you, her lower limb trembling.
+          He nearly spits the words at you, his lower limb trembling.
         </MainText>
       </CustomContainer>
 
