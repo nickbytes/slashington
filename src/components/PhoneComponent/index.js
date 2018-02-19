@@ -215,7 +215,10 @@ class PhoneComponent extends Component {
                     margin: "0"
                   }}
                 >
-                  👋 {this.props.playerNameSaved || "Nick"}
+                  <span role="img" aria-label="Hand Wave">
+                    👋
+                  </span>
+                  {this.props.playerNameSaved || "Nick"}
                 </h1>
                 <h2
                   style={{
