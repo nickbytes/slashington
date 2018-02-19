@@ -2,10 +2,6 @@
 
 #### leftover tasks
 
-* computer
-
-  * add icons
-
 * posters
 
   * door photo
