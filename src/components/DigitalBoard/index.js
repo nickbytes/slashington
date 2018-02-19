@@ -3,7 +3,7 @@ import styled from "styled-components";
 import FlexContainer from "react-styled-flexbox";
 
 const OuterContainer = styled.div`
-  background-color: #000;
+  background-color: #292829;
   border-radius: 6px;
   width: 600px;
   height: 400px;
@@ -57,7 +57,7 @@ const SubHead = styled.h2`
   font-size: 18px;
   line-height: 19px;
   border-bottom: 2px solid #fff;
-  padding: 0 0 0 60px;
+  padding: 0 0 0 30px;
 `;
 
 const NormalRow = styled.h4`
@@ -65,90 +65,81 @@ const NormalRow = styled.h4`
   line-height: 18px;
   font-weight: normal;
   margin: 0 0 5px;
-  padding: 0 0 0 60px;
+  padding: 0 0 0 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
+const B = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: #252526;
+  position: relative;
+  margin: 0 1px;
+  font-weight: 700;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.25);
+    z-index: 1;
+    top: 45%;
+  }
 `;
 
 class DigitalBoard extends Component {
   state = {
-    fakeBoard: [
-      {
-        id: 1,
-        fakeTime: "4:32",
-        fakeSunset: "am",
-        fakeDestination: "Something Capitalized",
-        fakeTrack: "02"
-      },
-      {
-        id: 2,
-        fakeTime: "5:32",
-        fakeSunset: "am",
-        fakeDestination: "City Oz",
-        fakeTrack: "02"
-      },
-      {
-        id: 3,
-        fakeTime: "6:32",
-        fakeSunset: "am",
-        fakeDestination: "Some Land",
-        fakeTrack: "02"
-      },
-      {
-        id: 4,
-        fakeTime: "7:32",
-        fakeSunset: "am",
-        fakeDestination: "What Ever ",
-        fakeTrack: "02"
-      }
-    ]
+    a1: "x",
+    a2: "y",
+    a3: "z",
+    a4: " ",
+    a5: " ",
+    a6: " ",
+    a7: " ",
+    a8: " ",
+    a9: " ",
+    a10: " ",
+    a11: " ",
+    a12: " ",
+    a13: " ",
+    a14: " ",
+    a15: " "
   };
+
   componentDidMount() {
-    console.log("this mounted");
-    this.interval = setInterval(this.scramble, 300);
+    this.interval = setInterval(this.scramble, 50);
   }
 
   componentWillUnmount() {
-    console.log("imma need to unmount the timer here");
     clearInterval(this.interval);
   }
 
-  randomTime = () => {
-    const hr = Math.floor(Math.random() * 24);
-    const min = Math.floor(Math.random() * 59);
-    return `${hr < 10 ? `0${hr}` : `${hr}`}:${min < 10 ? `0${min}` : `${min}`}`;
-  };
-
-  randomCity = () => {
+  wow = () => {
     const p = Math.random();
     if (p > 0.5) {
-      // one word
+      // one edit the thing
       return Math.random()
         .toString(36)
-        .substring(3, 9);
+        .substring(2, 3);
     } else {
-      // two words
-      return `${Math.random()
-        .toString(36)
-        .substring(3, 8)} ${Math.random()
-        .toString(36)
-        .substring(3, 13)}`;
+      // dont edit
+      return ` `;
     }
   };
 
-  randomTrack = () => {
-    return `${Math.floor(Math.random() * 10)}${Math.floor(Math.random() * 10)}`;
-  };
-
   scramble = () => {
-    const s = Math.floor(Math.random() * 7) + 1;
+    const n = Math.floor(Math.random() * 15) + 1;
 
-    const newBoard = [...new Array(s)].map((_, i) => ({
-      id: i,
-      fakeTime: this.randomTime(),
-      fakeDestination: this.randomCity(),
-      fakeTrack: this.randomTrack()
-    }));
     this.setState({
-      fakeBoard: newBoard
+      [`a${n}`]: this.wow()
     });
   };
   render() {
@@ -162,28 +153,109 @@ class DigitalBoard extends Component {
           <Table justifyCenter contentSpaceAround>
             <TimeColumn directionColumn>
               <SubHead>Time</SubHead>
-              <NormalRow>5:32</NormalRow>
-              {this.state.fakeBoard.map(fakeItem => (
-                <NormalRow key={fakeItem.id}>{fakeItem.fakeTime}</NormalRow>
-              ))}
+              <NormalRow>
+                <B>5</B>:<B>3</B>
+                <B>2</B>
+              </NormalRow>
+              <NormalRow>
+                <B>{this.state.a2}</B>:
+                <B>{this.state.a3}</B>
+                <B> {this.state.a6}</B>
+              </NormalRow>
+              <NormalRow>
+                <B>{this.state.a12}</B>:
+                <B>{this.state.a13}</B>
+                <B>{this.state.a4}</B>
+              </NormalRow>
+              <NormalRow>
+                <B>{this.state.a3}</B>:
+                <B>{this.state.a8}</B>
+                <B>{this.state.a14}</B>
+              </NormalRow>
             </TimeColumn>
-
             <DestionationColumn directionColumn>
               <SubHead>Destination</SubHead>
-              <NormalRow>Union Station (DC)</NormalRow>
-              {this.state.fakeBoard.map(fakeItem => (
-                <NormalRow key={fakeItem.id}>
-                  {fakeItem.fakeDestination}
-                </NormalRow>
-              ))}
+              <NormalRow>
+                <B>U</B>
+                <B>N</B>
+                <B>I</B>
+                <B>O</B>
+                <B>N</B>
+                <B> </B>
+                <B>S</B>
+                <B>T</B>
+                <B>A</B>
+                <B>T</B>
+                <B>I</B>
+                <B>O</B>
+                <B>N</B>
+              </NormalRow>
+
+              <NormalRow>
+                <B>{this.state.a1}</B>
+                <B>{this.state.a2}</B>
+                <B>{this.state.a3}</B>
+                <B>{this.state.a4}</B>
+                <B>{this.state.a5}</B>
+                <B>{this.state.a6}</B>
+                <B>{this.state.a7}</B>
+                <B>{this.state.a2}</B>
+                <B>{this.state.a6}</B>
+                <B>{this.state.a1}</B>
+                <B>{this.state.a3}</B>
+                <B>{this.state.a7}</B>
+                <B>{this.state.a4}</B>
+              </NormalRow>
+              <NormalRow>
+                <B>{this.state.a7}</B>
+                <B>{this.state.a5}</B>
+                <B>{this.state.a4}</B>
+                <B>{this.state.a3}</B>
+                <B>{this.state.a5}</B>
+                <B>{this.state.a1}</B>
+                <B>{this.state.a2}</B>
+                <B>{this.state.a4}</B>
+                <B>{this.state.a5}</B>
+                <B>{this.state.a7}</B>
+                <B>{this.state.a2}</B>
+                <B>{this.state.a3}</B>
+                <B>{this.state.a1}</B>
+              </NormalRow>
+              <NormalRow>
+                <B>{this.state.a9}</B>
+                <B>{this.state.a3}</B>
+                <B>{this.state.a1}</B>
+                <B>{this.state.a13}</B>
+                <B>{this.state.a6}</B>
+                <B>{this.state.a5}</B>
+                <B>{this.state.a10}</B>
+                <B>{this.state.a3}</B>
+                <B>{this.state.a8}</B>
+                <B>{this.state.a5}</B>
+                <B>{this.state.a12}</B>
+                <B>{this.state.a13}</B>
+                <B>{this.state.a1}</B>
+              </NormalRow>
             </DestionationColumn>
 
             <TrackColumn directionColumn>
               <SubHead>Track</SubHead>
-              <NormalRow>01</NormalRow>
-              {this.state.fakeBoard.map(fakeItem => (
-                <NormalRow key={fakeItem.id}>{fakeItem.fakeTrack}</NormalRow>
-              ))}
+              <NormalRow>
+                <B>0</B>
+                <B>3</B>
+              </NormalRow>
+              <NormalRow>
+                <B>{this.state.a1}</B>
+                <B>{this.state.a7}</B>
+              </NormalRow>
+              <NormalRow>
+                <B>{this.state.a2}</B>
+                <B>{this.state.a12}</B>
+              </NormalRow>
+              <NormalRow>
+                <B>{this.state.a3}</B>
+                <B>{this.state.a4}</B>
+              </NormalRow>
             </TrackColumn>
           </Table>
         </InnerContainer>

@@ -13,7 +13,7 @@ const shake = keyframes`
   }
 `;
 
-const EchoContainer = styled.h3`
+const EchoContainer = styled.span`
   font-family: ${T_FF};
   font-weight: normal;
   font-size: 22px;
@@ -22,6 +22,6 @@ const EchoContainer = styled.h3`
   animation: ${shake} 0.1s linear infinite;
 `;
 
-const Echo = ({ children }) => <EchoContainer>{children}</EchoContainer>;
+const EchoInline = ({ children }) => <EchoContainer>{children}</EchoContainer>;
 
-export default Echo;
+export default EchoInline;
