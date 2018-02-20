@@ -86,6 +86,7 @@ const s3 = props => (
           What was that?
         </UserQuote>
         <MainText>You surprise yourself with a sensitive tone.</MainText>
+        <NextButton onClick={() => props.update(ns("s3", "c6"))} />
       </CustomContainer>
     </SimpleScene>
 
@@ -99,6 +100,7 @@ const s3 = props => (
           {props.petNameInputSaved} leads you towards the train station and
           points towards the double doors.
         </MainText>
+        <NextButton onClick={() => props.update(ns("s3", "c7"))} />
       </CustomContainer>
     </SimpleScene>
 
