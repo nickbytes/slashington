@@ -10,7 +10,7 @@ import { ns } from "../../updaters/ns";
 const OuterContainer = styled.div`
   width: 280px;
   margin: 0;
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 25px 25px 0;
   text-align: center;
   height: 450px;
@@ -19,6 +19,7 @@ const OuterContainer = styled.div`
   justify-content: center;
   border-radius: 20px;
   position: relative;
+  box-shadow: -1px 1px 3px black;
 `;
 
 const InnerContainer = styled.div`

@@ -43,10 +43,12 @@ class WebcamComponent extends Component {
     return (
       <div>
         <Container>
-          <Webcam ref={this.setRef} audio={false} />
-          <Button onClick={this.takePhoto} style={{}}>
-            Take Photo
-          </Button>
+          <Webcam
+            ref={this.setRef}
+            audio={false}
+            style={{ border: "4px double #000" }}
+          />
+          <Button onClick={this.takePhoto}>Take Photo</Button>
         </Container>
       </div>
     );
