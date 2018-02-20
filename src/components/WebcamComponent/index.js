@@ -1,6 +1,27 @@
 import React, { Component } from "react";
 import Webcam from "react-webcam";
 import { cameraHelper } from "../../pages/s1/updaters";
+import styled from "styled-components";
+
+const Button = styled.button`
+  position: absolute;
+  left: calc(50% - 85px);
+  width: 170px;
+  bottom: 20px;
+  background-color: #abb2c0;
+  border: none;
+  color: #000;
+  font-size: 22px;
+  line-height: 26px;
+  border-radius: 3px;
+  padding: 7px 12px;
+  border: 4px double #000;
+`;
+
+const Container = styled.div`
+  width: 640px;
+  position: relative;
+`;
 
 class WebcamComponent extends Component {
   constructor(props) {
@@ -21,23 +42,12 @@ class WebcamComponent extends Component {
   render() {
     return (
       <div>
-        <div
-          style={{
-            position: "relative"
-          }}
-        >
+        <Container>
           <Webcam ref={this.setRef} audio={false} />
-          <button
-            onClick={this.takePhoto}
-            style={{
-              position: "absolute",
-              left: "280px",
-              bottom: "0"
-            }}
-          >
+          <Button onClick={this.takePhoto} style={{}}>
             Take Photo
-          </button>
-        </div>
+          </Button>
+        </Container>
       </div>
     );
   }

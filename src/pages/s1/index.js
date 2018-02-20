@@ -38,6 +38,7 @@ import WebcamComponent from "../../components/WebcamComponent";
 import Workspace from "../../components/Workspace";
 import YourNewBadge from "../../components/YourNewBadge";
 import keyboard from "../../images/keyboard.jpg";
+import leonard from "../../images/leonard.gif";
 
 const s1 = props => (
   <div>
@@ -52,8 +53,11 @@ const s1 = props => (
 
     <SimpleScene isVisible={props.c2}>
       <CustomContainer>
+        <MainText>Leonard looks at you, annoyed.</MainText>
         <MainText>
-          The receptionist looks at you, annoyed. You're not bothered by it.
+          Leonard works the front desk at your office. His main responsibility
+          is to hassle you when you've forgotten your badge. He scowls at all
+          visitors from behind large plastic glasses.
         </MainText>
         <MainText>
           Nothing is getting on your nerves today. Not the{" "}
@@ -64,7 +68,7 @@ const s1 = props => (
           </Clickable>{" "}
           that nearly caused a fire in your apartment, not your nosy super Derek
           asking about your plans to renew your lease, not your forgotten badge,
-          and not the receptionist's crabby mood.
+          and not the Leonard's crabby mood.
         </MainText>
         <MainText>
           It's Friday. It's the end of a long week. And after work today you're
@@ -82,6 +86,9 @@ const s1 = props => (
             please
           </Clickable>.
         </UserQuote>
+        <MainText>
+          Leonard definitely knows your name, but is going through the motions.
+        </MainText>
       </CustomContainer>
     </SimpleScene>
 
@@ -139,7 +146,11 @@ const s1 = props => (
     <SimpleScene isVisible={props.c9}>
       <div>
         <CustomContainer>
-          <MainText>Eyes zoom in drawing (in progress)</MainText>
+          <img
+            src={leonard}
+            alt="Goddamnit, Leonard"
+            style={{ width: "100%", maxWidth: "600px" }}
+          />
         </CustomContainer>
         <CustomContainer>
           <MainText>

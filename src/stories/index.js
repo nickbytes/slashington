@@ -13,6 +13,7 @@ import PetFormLabel from "../components/PetFormLabel";
 import TitleModal from "../components/TitleModal";
 import TrainAnimation from "../components/TrainAnimation";
 import UserQuote from "../components/UserQuote";
+import WebcamComponent from "../components/WebcamComponent";
 import Workspace from "../components/Workspace";
 
 storiesOf("DreamText", module)
@@ -105,3 +106,5 @@ storiesOf("Testing long text blocks", module).add("normal", () => (
 storiesOf("Digital train board", module).add("normal", () => <DigitalBoard />);
 
 storiesOf("EmailAssistant", module).add("normal", () => <EmailAssistant />);
+
+storiesOf("Webcam", module).add("normal", () => <WebcamComponent />);

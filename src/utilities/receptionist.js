@@ -1,1 +1,1 @@
-export const receptionist = () => "Leonard, Receptionist";
+export const receptionist = () => "Leonard, Front Desk";
