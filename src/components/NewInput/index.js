@@ -12,6 +12,7 @@ const NewInput = styled(Input)`
   line-height: 26px;
   margin-bottom: 40px;
   display: block;
+  border-radius: 0;
 `;
 
 export default NewInput;

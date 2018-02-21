@@ -12,6 +12,7 @@ const PetFormInput = styled(Input)`
   line-height: 26px;
   margin-bottom: 40px;
   padding-left: 0;
+  border-radius: 0;
   display: block;
 `;
 
