@@ -148,7 +148,7 @@ const s1 = props => (
         <CustomContainer>
           <img
             src={leonard}
-            alt="Goddamnit, Leonard"
+            alt="Leonard"
             style={{ width: "100%", maxWidth: "600px" }}
           />
         </CustomContainer>
@@ -210,7 +210,7 @@ const s1 = props => (
           <PetFormLabel>Friend or relative w/ pet</PetFormLabel>
           <PetFormInput
             defaultValue=""
-            placeholder="Aunt Millie"
+            placeholder="Aunt Muriel"
             value={props.newPetOwner}
             onChange={e => props.update(setNewPetOwner(e.target.value))}
           />
@@ -218,7 +218,7 @@ const s1 = props => (
           <PetFormLabel>Type of Pet</PetFormLabel>
           <PetFormInput
             defaultValue=""
-            placeholder="parrot"
+            placeholder="cat"
             value={props.newPetType}
             onChange={e => props.update(setNewPetType(e.target.value))}
           />
@@ -226,7 +226,7 @@ const s1 = props => (
           <PetFormLabel>Pet Name</PetFormLabel>
           <PetFormInput
             defaultValue=""
-            placeholder="George"
+            placeholder="Wilbur"
             value={props.newPetName}
             onChange={e => props.update(setNewPetName(e.target.value))}
           />

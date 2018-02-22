@@ -31,7 +31,7 @@ const s7 = props => (
 
     <SimpleScene isVisible={props.c3}>
       <CustomContainer>
-        <UserQuote>
+        <UserQuote attrib={`Alex, brother`}>
           Have a bit of a nap there? They've really got you working hard, glad
           you are relaxing.
         </UserQuote>
@@ -40,14 +40,16 @@ const s7 = props => (
           Alex hands you a cold creme soda. Damn, you love creme soda.
         </MainText>
 
-        <UserQuote>Thanks. Yea, I guess so.</UserQuote>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          Thanks. Yea, I guess so.
+        </UserQuote>
 
         <MainText>
           You barely remember sitting down here... what a week. You're glad you
           came to {props.nieceName}'s birthday. This is exactly what you needed.
         </MainText>
 
-        <UserQuote>
+        <UserQuote attrib={`Alex, brother`}>
           Oh, and {props.nieceName} just told me about the gift. Wow,{" "}
           {props.playerNameSaved}. I don't know how you know exaclty just what
           to get her every year. She was going on about how perfect it will be
@@ -63,7 +65,9 @@ const s7 = props => (
         </UserQuote>
 
         <MainText>
-          What a great gift suggestion from {props.coworkerName}.
+          What a great gift suggestion from {props.coworkerName}. With all that
+          work piled up you'd forgotten a gift. You've got to thank that{" "}
+          {props.coworkerName}.
         </MainText>
       </CustomContainer>
     </SimpleScene>
