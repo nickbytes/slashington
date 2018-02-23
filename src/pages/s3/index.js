@@ -93,8 +93,8 @@ const s3 = props => (
     <SimpleScene isVisible={props.c6}>
       <CustomContainer>
         <UserQuote attrib={props.petNameInputSaved}>
-          Aw it's nothing. C'mon, they're waiting for you. I'll be waiting out
-          here once you're finished.
+          It's nothing. C'mon, they're waiting for you. I'll be out here once
+          you're finished.
         </UserQuote>
         <MainText>
           {props.petNameInputSaved} leads you towards the train station and
