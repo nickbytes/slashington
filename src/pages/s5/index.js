@@ -111,7 +111,7 @@ const s5 = props => (
     <SimpleScene isVisible={props.c9}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          A gift for Sam.
+          A gift for {props.nieceName}.
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s5", "c10"))} />
       </CustomContainer>
@@ -120,9 +120,9 @@ const s5 = props => (
     <SimpleScene isVisible={props.c10}>
       <CustomContainer>
         <MainText>
-          He goes on chatting about work, neighbors, Jill's job, only do you
-          take notice when he mentions the exception grades Emma has been
-          getting.
+          He goes on chatting about work, neighbors, {props.inLawName}'s job,
+          only do you take notice when he mentions the exception grades{" "}
+          {props.nieceName} has been getting.
         </MainText>
         <NextButton onClick={() => props.update(ns("s5", "c11"))} />
       </CustomContainer>
@@ -139,13 +139,8 @@ const s5 = props => (
 
     <SimpleScene isVisible={props.c12}>
       <CustomContainer>
-        <MainText>
-          Words gotta come to mind again to end the scene. maybe the below
-        </MainText>
-        <Echo>
-          The burden is too great for one so young. Surely some adult can take
-          on responsibility.
-        </Echo>
+        <Echo>The burden is too great for one so young.</Echo>
+        <MainText>Surely some adult can take on responsibility.</MainText>
         <Link to={`/birthday-party`}>Next</Link>
       </CustomContainer>
     </SimpleScene>
