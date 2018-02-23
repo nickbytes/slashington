@@ -128,7 +128,10 @@ const map = state => ({
   c4: state.s3.c4,
   c5: state.s3.c5,
   c6: state.s3.c6,
-  c7: state.s3.c7
+  c7: state.s3.c7,
+  petTypeInputSaved: state.petTypeInputSaved,
+  playerNameSaved: state.playerNameSaved,
+  petNameInputSaved: state.petNameInputSaved
 });
 
 export default connect(map)(s3);

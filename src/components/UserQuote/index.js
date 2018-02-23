@@ -31,9 +31,9 @@ const TextStyle = styled.h3`
     color: #fff;
     border-radius: 4px;
     padding: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 13px;
+    line-height: 13px;
+    display: inline-block;
   }
 `;
 

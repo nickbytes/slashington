@@ -45,8 +45,8 @@ const s7 = props => (
         </UserQuote>
 
         <MainText>
-          You barely remember sitting down here... what a week. You're glad you
-          came to {props.nieceName}'s birthday. This is exactly what you needed.
+          You barely remember sitting down here... You're glad you came to{" "}
+          {props.nieceName}'s birthday. This is exactly what you needed.
         </MainText>
 
         <UserQuote attrib={`Alex, brother`}>
@@ -57,11 +57,12 @@ const s7 = props => (
         </UserQuote>
 
         <UserQuote>
-          I've gotta admit, I never know what to think of the gifts. I guess
-          your kids always surprise you with their interests. I mean last years
-          gift, the bizarre chemistry set and blender... I had no idea she was
-          even into that sort of thing. She was locked away in her room all the
-          time toying with it. It was a hit. Too bad someone stole it at school.
+          I've gotta admit, I never know what to think of the gifts you pick
+          out. I guess your kids always surprise you with their interests. I
+          mean last years gift, the bizarre chemistry set and blender... I had
+          no idea she was even into that sort of thing. She was locked away in
+          her room all the time toying with it. It was a hit. Too bad someone
+          stole it at school.
         </UserQuote>
 
         <MainText>

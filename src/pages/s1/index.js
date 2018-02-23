@@ -330,11 +330,12 @@ const s1 = props => (
       <ItalicText>
         – hey, by the way, don't worry about a gift this year... I know last
         year was tough on you, but the gift you brought was a little... well,
-        strange...
+        strange... I mean, {props.nieceName} liked it, but {props.inLawName} and
+        I were just a little concerned... you know...
       </ItalicText>
       <ItalicText>
         Look – {props.nieceName} doesn't need anything, she just wants to see
-        you, okay?
+        you, and we just want to have a nice relaxing weekend, okay?
       </ItalicText>
       <ItalicText>Alright, see you soon.</ItalicText>
     </SimpleScene>

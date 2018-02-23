@@ -427,7 +427,8 @@ const map = state => ({
   c28: state.s2.c28,
   c29: state.s2.c29,
   petTypeInputSaved: state.petTypeInputSaved,
-  playerNameSaved: state.playerNameSaved
+  playerNameSaved: state.playerNameSaved,
+  petNameInputSaved: state.petNameInputSaved
 });
 
 export default connect(map)(s2);

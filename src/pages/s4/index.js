@@ -80,7 +80,10 @@ const s4 = props => (
     <SimpleScene isVisible={props.c6}>
       <CustomContainer>
         <UserQuote attrib={`Comrade ${props.leadPet}`}>
-          We, as you might know, are The Council.
+          We, as you might know, are The Council. These are Comrades{" "}
+          {props.petTwo},
+          {props.petThree}, and
+          {props.petFour}.
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s4", "c7"))} />
       </CustomContainer>
@@ -529,7 +532,8 @@ const map = state => ({
   leadPet: state.leadPet,
   petTwo: state.petTwo,
   petThree: state.petThree,
-  petFour: state.petFour
+  petFour: state.petFour,
+  petNameInputSaved: state.petNameInputSaved
 });
 
 export default connect(map)(s4);
