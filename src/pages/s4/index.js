@@ -67,7 +67,7 @@ const s4 = props => (
         <UserQuote
           attrib={`${props.petTypeInputSaved}, sitting at head of table`}
         >
-          Have a seat. I am Comrade {props.leadPet}.
+          Have a seat, {props.playerNameSaved}. I am Comrade {props.leadPet}.
         </UserQuote>
         <MainText>
           The {props.petTypeInputSaved} nods towards an empty seat at their
@@ -80,10 +80,7 @@ const s4 = props => (
     <SimpleScene isVisible={props.c6}>
       <CustomContainer>
         <UserQuote attrib={`Comrade ${props.leadPet}`}>
-          We, as you might know, are The Council. These are Comrades{" "}
-          {props.petTwo},
-          {props.petThree}, and
-          {props.petFour}.
+          We, as you might know, are The Council.
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s4", "c7"))} />
       </CustomContainer>
@@ -111,7 +108,7 @@ const s4 = props => (
         {props.reactedAngry && (
           <div>
             <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-              What the fuck is going on?
+              What the <i>fuck</i> is going on?
             </UserQuote>
             <UserQuote attrib={`Comrade ${props.petThree}`}>
               Such a temper... are they even fit for this task?
