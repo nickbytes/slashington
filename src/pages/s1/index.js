@@ -461,8 +461,8 @@ const s1 = props => (
       <CustomContainer>
         <UserQuote attrib={coworkerFullTitle()}>
           Crazy coincidence! It's right off the Amtrak stop. You can't miss it,
-          south east corner of the Mall. Open on weekends too, can probably pick
-          it up on your way back.
+          south east corner of H Street and 4th. Open on weekends too, can
+          probably pick it up on your way back.
         </UserQuote>
         <Link to="/train-ride">Next</Link>
       </CustomContainer>
@@ -513,7 +513,9 @@ const map = state => ({
   petOwnerInputSaved: state.petOwnerInputSaved,
   petTypeInputSaved: state.petTypeInputSaved,
   petNameInputSaved: state.petNameInputSaved,
-  photoSrc: state.photoSrc
+  photoSrc: state.photoSrc,
+  nieceName: state.nieceName,
+  inLawName: state.inLawName
 });
 
 export default connect(map)(s1);

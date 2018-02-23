@@ -350,7 +350,7 @@ const s2 = props => (
 
     <SimpleScene isVisible={props.c27}>
       <CustomContainer>
-        <UserQuote>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           <Clickable clickFn={() => props.update(ns("s2", "c28"))}>
             {props.petNameInputSaved}?!?!?!?!
           </Clickable>

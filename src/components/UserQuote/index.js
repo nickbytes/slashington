@@ -30,11 +30,14 @@ const TextStyle = styled.h3`
     text-transform: uppercase;
     font-family: ${T_FF_SYS};
     color: #fff;
+    padding: 11px;
     border-radius: 4px;
-    padding: 2px;
     font-size: 13px;
     line-height: 13px;
     display: inline-block;
+    height: 14px;
+    width: 14px;
+    text-align: center;
   }
 `;
 
