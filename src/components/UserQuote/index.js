@@ -2,7 +2,7 @@ import { Blockquote } from "rebass";
 import React from "react";
 import styled from "styled-components";
 
-import { T_FF } from "../../utilities/constants";
+import { T_FF, T_FF_SYS } from "../../utilities/constants";
 
 const UserQuoteContainer = styled(Blockquote)`
   font-family: ${T_FF};
@@ -28,6 +28,7 @@ const TextStyle = styled.h3`
   code {
     background-color: #000;
     text-transform: uppercase;
+    font-family: ${T_FF_SYS};
     color: #fff;
     border-radius: 4px;
     padding: 2px;
