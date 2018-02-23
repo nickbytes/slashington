@@ -21,6 +21,9 @@ const s2 = props => (
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <MainText>
+          This would be the spot for the GC/PS shot walking with keyboard.
+        </MainText>
+        <MainText>
           You board the train, duffle bag slung over one shoulder, keyboard in
           the other hand.
         </MainText>
@@ -170,6 +173,9 @@ const s2 = props => (
 
     <SimpleScene isVisible={props.c12}>
       <CustomContainer>
+        <MainText>
+          These are all photos with text at Rye/New Rochelle stop.
+        </MainText>
         <ul>
           <li>* small parking lot</li>
           <li>
