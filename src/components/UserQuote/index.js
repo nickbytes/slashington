@@ -24,6 +24,17 @@ const TextStyle = styled.h3`
   line-height: 29px;
   font-weight: normal;
   margin: 0;
+
+  code {
+    background-color: #000;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 4px;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const UserQuote = ({ attrib, children, paragraph }) => (

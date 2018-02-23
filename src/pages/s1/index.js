@@ -16,6 +16,7 @@ import {
 } from "./updaters";
 import { badgeHelper } from "../../pages/s1/updaters";
 import { coworker, coworkerFullTitle } from "../../utilities/coworker";
+import { createTitle } from "../../components/JobSelectionComponent/jobGenerator";
 import { ns } from "../../updaters/ns";
 import { receptionist } from "../../utilities/receptionist";
 import BrokenEmail from "../../components/BrokenEmail";
@@ -55,24 +56,19 @@ const s1 = props => (
       <CustomContainer>
         <MainText>Leonard looks at you, annoyed.</MainText>
         <MainText>
-          Leonard works the front desk at your office. His main responsibility
-          is to hassle you when you've forgotten your badge. He scowls at all
-          visitors from behind large plastic glasses.
-        </MainText>
-        <MainText>
           Nothing is getting on your nerves today. Not the{" "}
           <Clickable clickFn={e => props.update(startBurning)}>
             <span style={{ position: "relative" }}>
               burnt toast {props.startBurning && <Smoke />}
             </span>
           </Clickable>{" "}
-          that nearly caused a fire in your apartment, not your nosy super Derek
-          asking about your plans to renew your lease, not your forgotten badge,
-          and not the Leonard's crabby mood.
+          that nearly caused a fire in your apartment, not your nosy super,
+          Derek, asking about your plans to renew your lease, not your forgotten
+          badge, and not the Leonard's crabby mood.
         </MainText>
         <MainText>
-          It's Friday. It's the end of a long week. And after work today you're
-          headed to from New York to Washington, DC for your niece's birthday.
+          It's Friday. It's the end of a long week. And after work today, you're
+          headed to Washington, DC for your niece's birthday.
         </MainText>
         <NextButton onClick={() => props.update(ns("s1", "c3"))} />
       </CustomContainer>
@@ -87,7 +83,8 @@ const s1 = props => (
           </Clickable>.
         </UserQuote>
         <MainText>
-          Leonard definitely knows your name, but is going through the motions.
+          Leonard definitely knows your name, but he is going through the
+          motions.
         </MainText>
       </CustomContainer>
     </SimpleScene>
@@ -115,6 +112,9 @@ const s1 = props => (
     <SimpleScene isVisible={props.c5}>
       <CustomContainer>
         <UserQuote attrib="You">{props.playerNameSaved}.</UserQuote>
+        <UserQuote attrib={receptionist()}>
+          Right, right... {props.playerNameSaved}.
+        </UserQuote>
         <NextButton onClick={() => props.update(ns("s1", "c6"))} />
       </CustomContainer>
     </SimpleScene>
@@ -138,7 +138,10 @@ const s1 = props => (
 
     <SimpleScene isVisible={props.c8}>
       <CustomContainer>
-        <UserQuote attrib="You">{props.playerOccupationSaved}.</UserQuote>
+        <UserQuote attrib="You">
+          {props.playerOccupationSaved} at Tinsel Corp.
+        </UserQuote>
+
         <NextButton onClick={() => props.update(ns("s1", "c9"))} />
       </CustomContainer>
     </SimpleScene>
@@ -154,8 +157,9 @@ const s1 = props => (
         </CustomContainer>
         <CustomContainer>
           <MainText>
-            {receptionist()} is looking intensely at you. What's his deal? Why
-            is his grilling you like this?
+            More click-clacking on the keyboard.{receptionist()} is looking
+            intensely at you. You wonder what his deal is... why is he looking
+            at you so intensely?
           </MainText>
         </CustomContainer>
 
@@ -170,12 +174,12 @@ const s1 = props => (
         <UserQuote attrib={receptionist()}>
           THE ANSWERS TO YOUR SECURITY QUESTION!
         </UserQuote>
-      </CustomContainer>
 
-      <CustomContainer>
         <MainText>
           He nearly spits the words at you, his lower limb trembling.
         </MainText>
+
+        <MainText>You can't seem to remember any "security" question.</MainText>
       </CustomContainer>
 
       <CustomContainer>
@@ -192,7 +196,10 @@ const s1 = props => (
       </CustomContainer>
 
       <CustomContainer>
-        <MainText>You don't remember filling out this question.</MainText>
+        <MainText>
+          You don't remember filling out this question. Leonard continues to
+          look at you suspiciously.
+        </MainText>
       </CustomContainer>
       <CustomContainer>
         <NextButton onClick={() => props.update(ns("s1", "c12"))} />
@@ -293,11 +300,12 @@ const s1 = props => (
 
     <SimpleScene isVisible={props.c17}>
       <div>
-        <MainText>Emails. Deadlines. Presentations. Calls.</MainText>
         <MainText>
           It's going to be a long day, you should really grab a cup of coffee
           first.
         </MainText>
+
+        <MainText>Coffee Graphic</MainText>
 
         <MainText>
           When you get back to your desk, you see that you have a{" "}
@@ -311,7 +319,7 @@ const s1 = props => (
     <SimpleScene isVisible={props.c18}>
       <PhoneComponent {...props} />
       <ItalicText>
-        Hey {props.playerNameSaved}, know you're probably busy at work...
+        Hey {props.playerNameSaved}, I know you're probably busy at work...
       </ItalicText>
       <ItalicText>
         We're really excited to have you down here this weekend. I'll pick you
@@ -319,13 +327,23 @@ const s1 = props => (
         gets delayed.
       </ItalicText>
       <ItalicText>Alright, uh, excited to see you. Talk soon.</ItalicText>
+      <ItalicText>
+        – hey, by the way, don't worry about a gift this year... I know last
+        year was tough on you, but the gift you brought was a little... well,
+        strange...
+      </ItalicText>
+      <ItalicText>
+        Look – {props.nieceName} doesn't need anything, she just wants to see
+        you, okay?
+      </ItalicText>
+      <ItalicText>Alright, see you soon.</ItalicText>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c19}>
       <CustomContainer>
         <MainText>
-          What did he mean by 'strange gift'...? You think back to Sam's last
-          birthday...
+          What did he mean by 'strange gift'...? You think back to{" "}
+          {props.nieceName}'s last birthday...
         </MainText>
       </CustomContainer>
 
@@ -346,7 +364,7 @@ const s1 = props => (
     <SimpleScene isVisible={props.c20}>
       <CustomContainer>
         <MainText>
-          It all feels dreamlike. You're a{" "}
+          It all feels hazy... You're a{" "}
           {props.playerOccupationSaved || "PLAYER_OCCUPATION"} – you pay such
           great attention to detail. How could you forget something like
           this...?
@@ -356,8 +374,7 @@ const s1 = props => (
         </MainText>
         <MainText>
           All this work is pushing you to the edge. This weekend, you won't take
-          your laptop, you won't look at the Feeds, you'll disconnect. You've
-          just got to{" "}
+          your laptop. You'll <i>disconnect</i>. You've just got to{" "}
           <Clickable clickFn={e => props.update(ns("s1", "c21"))}>
             get through the next few hours and deadlines.
           </Clickable>
@@ -402,7 +419,8 @@ const s1 = props => (
     <SimpleScene isVisible={props.c24}>
       <CustomContainer>
         <MainText>
-          You look up and see {coworker()}. Describe him more.
+          You look up and see {coworker()}. {coworker()} is an {createTitle()},
+          and a damn good one.
         </MainText>
         <NextButton onClick={() => props.update(ns("s1", "c25"))} />
       </CustomContainer>
