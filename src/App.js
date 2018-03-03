@@ -4,7 +4,7 @@ import React from "react";
 
 import NoMatch from "./components/NoMatch";
 import credits from "./pages/credits";
-import newInitialState from "./store/newInitialState";
+import initialState from "./store/initialState";
 import s0 from "./pages/s0";
 import s1 from "./pages/s1";
 import s2 from "./pages/s2";
@@ -31,4 +31,4 @@ const App = props => (
   </div>
 );
 
-export default createProvider(newInitialState)(App);
+export default createProvider(initialState)(App);

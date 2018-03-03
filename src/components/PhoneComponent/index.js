@@ -215,7 +215,16 @@ class PhoneComponent extends Component {
                     margin: "0"
                   }}
                 >
-                  <span role="img" aria-label="Hand Wave">
+                  <span
+                    role="img"
+                    aria-label="Hand Wave"
+                    style={{
+                      position: "relative",
+                      backgroundColor: "rgb(27, 29, 35)",
+                      fontWeight: "normal",
+                      margin: "0"
+                    }}
+                  >
                     👋
                   </span>
                   {this.props.playerNameSaved || "Nick"}

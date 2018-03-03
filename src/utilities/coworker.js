@@ -1,3 +1,3 @@
-export const coworker = () => "Scott";
+export const coworker = () => "Paolo";
 
-export const coworkerFullTitle = () => "Scott, Coworker";
+export const coworkerFullTitle = () => "Paolo, Coworker";

@@ -38,7 +38,7 @@ import UserQuote from "../../components/UserQuote";
 import WebcamComponent from "../../components/WebcamComponent";
 import Workspace from "../../components/Workspace";
 import YourNewBadge from "../../components/YourNewBadge";
-import keyboard from "../../images/keyboard.jpg";
+import keyboard2 from "../../images/keyboard2.jpg";
 import leonard from "../../images/leonard.gif";
 
 const s1 = props => (
@@ -54,7 +54,7 @@ const s1 = props => (
 
     <SimpleScene isVisible={props.c2}>
       <CustomContainer>
-        <MainText>Leonard looks at you, annoyed.</MainText>
+        <MainText>Leonard the receptionist, looks at you, annoyed.</MainText>
         <MainText>
           Nothing is getting on your nerves today. Not the{" "}
           <Clickable clickFn={e => props.update(startBurning)}>
@@ -157,9 +157,9 @@ const s1 = props => (
         </CustomContainer>
         <CustomContainer>
           <MainText>
-            More click-clacking on the keyboard.{receptionist()} is looking
+            More click-clacking on the keyboard. {receptionist()} is looking
             intensely at you. You wonder what his deal is... why is he looking
-            at you so intensely?
+            at you like this?
           </MainText>
         </CustomContainer>
 
@@ -178,8 +178,6 @@ const s1 = props => (
         <MainText>
           He nearly spits the words at you, his lower limb trembling.
         </MainText>
-
-        <MainText>You can't seem to remember any "security" question.</MainText>
       </CustomContainer>
 
       <CustomContainer>
@@ -343,7 +341,7 @@ const s1 = props => (
     <SimpleScene isVisible={props.c19}>
       <CustomContainer>
         <MainText>
-          What did he mean by 'strange gift'...? You think back to{" "}
+          What did he mean by <i>strange gift</i>...? You think back to{" "}
           {props.nieceName}'s last birthday...
         </MainText>
       </CustomContainer>
@@ -403,8 +401,17 @@ const s1 = props => (
           </MainText>
         </CustomContainer>
         <CustomContainer>
-          <button onClick={() => props.update(ns("s1", "c23"))}>
-            <img src={keyboard} alt="keyboard" />
+          <button
+            onClick={() => props.update(ns("s1", "c23"))}
+            style={{
+              backgroundColor: "transparent",
+              border: "none",
+              margin: "0",
+              padding: "0",
+              cursor: "pointer"
+            }}
+          >
+            <img src={keyboard2} alt="keyboard" />
           </button>
         </CustomContainer>
       </div>

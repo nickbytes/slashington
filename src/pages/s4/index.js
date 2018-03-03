@@ -50,7 +50,7 @@ const s4 = props => (
         <MainText>
           You nearly jump at the sound of a voice. When you turn, you see inside
           the small train station cafe, amongst a number of small empty tables,
-          a table full of... {props.petTypeInputSaved}.
+          a table full of... {props.petTypeInputSaved}s.
         </MainText>
         <NextButton onClick={() => props.update(ns("s4", "c5"))} />
       </CustomContainer>
@@ -60,8 +60,8 @@ const s4 = props => (
       <CustomContainer>
         <MainText>
           All of them are dressed similarly to {props.petNameInputSaved}, but
-          more grandiose and intricate, like some weird game of thrones cosplay
-          mixed with a model train fanatic.
+          more grandiose and intricate. They look like a mix between model train
+          fanatics and Game of Thrones fans.
         </MainText>
 
         <UserQuote
@@ -111,7 +111,8 @@ const s4 = props => (
               What the <i>fuck</i> is going on?
             </UserQuote>
             <UserQuote attrib={`Comrade ${props.petThree}`}>
-              Such a temper... are they even fit for this task?
+              Such a temper... are they even fit for this task, Comrade
+              Igglefort?
             </UserQuote>
             <UserQuote attrib={`Comrade ${props.petTwo}`}>
               This is a valid question. Look at them... dishevled, mad... how
@@ -134,7 +135,8 @@ const s4 = props => (
               to another
             </MainText>
             <UserQuote attrib={`Comrade ${props.petFour}`}>
-              Are they okay? They look like they might faint...
+              Are they okay? They look like they might faint...I told Comrade
+              Igglefort...
             </UserQuote>
 
             <MainText>They are talking about you...</MainText>
@@ -153,12 +155,13 @@ const s4 = props => (
           <div>
             <UserQuote attrib={`Comrade ${props.leadPet}`}>
               Completely normal response. You all saw the week{" "}
-              {props.playerNameSaved} had. All fine, fine.
+              {props.playerNameSaved} had {props.petThree}. All fine, fine{" "}
+              {props.petFour}.
             </UserQuote>
             <MainText>
               Some of the {props.petTypeInputSaved}s whisper to each other, as
-              the lead {props.petTypeInputSaved} tries to reassure them of your
-              reaction.
+              the lead {props.petTypeInputSaved}, Comrade Igglefort, tries to
+              reassure them of your reaction.
             </MainText>
             <UserQuote attrib={`Comrade ${props.leadPet}`}>
               You have been--
@@ -230,7 +233,8 @@ const s4 = props => (
       <CustomContainer>
         <UserQuote attrib={`Comrade ${props.leadPet}`}>
           <UserQuote paragraph>
-            Then you should also understand it's importance. As I was saying...
+            Then you should also understand it's importance, {props.petFour}. As
+            I was saying...
           </UserQuote>
 
           <UserQuote paragraph>
@@ -243,35 +247,32 @@ const s4 = props => (
       </CustomContainer>
     </SimpleScene>
 
+    <SimpleScene>
+      <CustomContainer>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          Is this real?
+        </UserQuote>
+        <MainText>
+          You can't tell if you feel like laughing, or crying.
+        </MainText>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          Who are you? Where did you come from?
+        </UserQuote>
+        <MainText>You can't think about what else to say.</MainText>
+      </CustomContainer>
+    </SimpleScene>
+
     <SimpleScene isVisible={props.c13}>
       <CustomContainer>
         <UserQuote attrib={`Comrade ${props.leadPet}`}>
           <UserQuote paragraph>
-            Magic has been passed down throughout the ages. It used to be taught
-            somewhat more openly, and accepted on some level. The rise secular
-            conservatism saw magic not as a threat, but as a living manifestion
-            of sainthood. Many magicians themselves agreed, and turned to
-            religion to answer why they were given power.
+            As I've said, we are <i>The Council</i>. We, as{" "}
+            {props.petTypeInputSaved}s, act as intermediaries between all
+            magician creatures and humans.
           </UserQuote>
-          <UserQuote paragraph>
-            The problem became when animals revealed themselves as magicians as
-            well. The first were snakes. Christians saw this as a direct
-            correlation to the Garden of Eden. They were terrified. They
-            believed these animals were not saints, but demons, regardless of
-            what forms they appeared in afterwards.
-          </UserQuote>
-          <UserQuote paragraph>
-            Today, magic is only taught to a handful of people and creatures,
-            usually found in their adolescence, though in some cases, later.
-            These "teenagers" possess abilities and interests a number of fields
-            including science, computing, mathematics, humanities, history,
-            languages – you get the gist. Animals possess similar talents,
-            though more suited to their species.
-          </UserQuote>
-          <UserQuote paragraph>
-            The best magicians are critical thinkers.
-          </UserQuote>
+          <UserQuote paragraph>We've always been here.</UserQuote>
         </UserQuote>
+        <MainText>There are humble smiles and nods around the table.</MainText>
         <NextButton onClick={() => props.update(ns("s4", "c14"))} />
       </CustomContainer>
     </SimpleScene>
@@ -279,14 +280,12 @@ const s4 = props => (
     <SimpleScene isVisible={props.c14}>
       <CustomContainer>
         <UserQuote attrib={`Comrade ${props.petThree}`}>
-          Our mission, on the whole, is to unify magicians to live in harmony
-          amongst non-magical beings. Accept all forms of magic, whether you
-          believe it to be a divine gift or not.
+          Magicians have always existed. We animals took much longer to hone our
+          powers, to learn to cooperate and communicate with human magicians.
         </UserQuote>
 
         <UserQuote attrib={`Comrade ${props.petFour}`}>
-          We do this through science and research in our origins, philosophical
-          discussions, and compromise.
+          In the beginning, some humans saw magicial creatures as
         </UserQuote>
 
         <MainText>
@@ -333,16 +332,22 @@ const s4 = props => (
     <SimpleScene isVisible={props.c17}>
       <CustomContainer>
         <img src={vim} alt="Vim" style={{ width: "100%", maxWidth: "200px" }} />
-        <MainText>You think to yourself. What kind of name is that?</MainText>
-
-        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          What mission?
-        </UserQuote>
         <NextButton onClick={() => props.update(ns("s4", "c18"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c18}>
+      <CustomContainer>
+        <MainText>You think to yourself. What kind of name is that?</MainText>
+
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          What mission?
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s4", "c19"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c19}>
       <CustomContainer>
         <MainText>
           There is quiet. {props.petTypeInputSaved}s start to look around at
@@ -357,11 +362,11 @@ const s4 = props => (
           Before Comrade Igglefort can finish, he's interrupted by another{" "}
           {props.petTypeInputSaved}.
         </MainText>
-        <NextButton onClick={() => props.update(ns("s4", "c19"))} />
+        <NextButton onClick={() => props.update(ns("s4", "c20"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c19}>
+    <SimpleScene isVisible={props.c20}>
       <CustomContainer>
         <UserQuote attrib={`Comrade ${props.petTwo}`}>
           Comrade Igglefort, may we hear some possible doubts in this plan-
@@ -377,11 +382,11 @@ const s4 = props => (
           though none continue to quarrel. You hear one of them mutter something
           like "too exposed."
         </MainText>
-        <NextButton onClick={() => props.update(ns("s4", "c20"))} />
+        <NextButton onClick={() => props.update(ns("s4", "c21"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c20}>
+    <SimpleScene isVisible={props.c21}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           Look if I'm going to be ... too exposed ... I want to know what im
@@ -407,29 +412,29 @@ const s4 = props => (
           Again you feel your legs shake. {props.nieceName}?!? She's involved in
           this.
         </MainText>
-        <NextButton onClick={() => props.update(ns("s4", "c21"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c21}>
-      <CustomContainer>
-        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          What's going on here...?
-        </UserQuote>
         <NextButton onClick={() => props.update(ns("s4", "c22"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c22}>
       <CustomContainer>
-        <UserQuote attrib={`Comrade ${props.leadPet}`}>
-          Your niece is going to place a curse on Frailty Stow.
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          What's going on here...?
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s4", "c23"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c23}>
+      <CustomContainer>
+        <UserQuote attrib={`Comrade ${props.leadPet}`}>
+          Your niece is going to place a curse on Frailty Stow.
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s4", "c24"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c24}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           ... Frailty Stow... the... the pop singer...?
@@ -448,11 +453,11 @@ const s4 = props => (
         </UserQuote>
 
         <UserQuote>How..? Why..!?!</UserQuote>
-        <NextButton onClick={() => props.update(ns("s4", "c24"))} />
+        <NextButton onClick={() => props.update(ns("s4", "c25"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c24}>
+    <SimpleScene isVisible={props.c25}>
       <CustomContainer>
         <UserQuote attrib={`Comrade ${props.petTwo}`}>
           Frailty Stow has become a sort of figurehead for one of the larger
@@ -473,11 +478,11 @@ const s4 = props => (
           The task is great. We are not sure what should happen is{" "}
           {props.playerNameSaved} is caught.
         </UserQuote>
-        <NextButton onClick={() => props.update(ns("s4", "c25"))} />
+        <NextButton onClick={() => props.update(ns("s4", "c26"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c25}>
+    <SimpleScene isVisible={props.c26}>
       <CustomContainer>
         <UserQuote attrib={`Comrade ${props.petThree}`}>
           They will not suspect such a young child. And anyway, they would not
@@ -521,6 +526,7 @@ const map = state => ({
   c23: state.s4.c23,
   c24: state.s4.c24,
   c25: state.s4.c25,
+  c26: state.s4.c26,
   reactedAngry: state.reactedAngry,
   reactedNod: state.reactedNod,
   playerNameSaved: state.playerNameSaved,

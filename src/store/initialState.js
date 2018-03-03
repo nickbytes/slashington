@@ -1,6 +1,6 @@
 import { createTitle } from "../components/JobSelectionComponent/jobGenerator";
 
-const newInitialState = {
+const initialState = {
   // s1
   s1: {
     c1: true,
@@ -105,7 +105,8 @@ const newInitialState = {
     c22: false,
     c23: false,
     c24: false,
-    c25: false
+    c25: false,
+    c26: false
   },
   reactedAngry: false,
   reactedNod: false,
@@ -159,9 +160,9 @@ const newInitialState = {
   },
 
   // global
-  nieceName: "Emma",
-  inLawName: "Olivia",
-  coworkerName: "Dempsey",
+  nieceName: "Olive",
+  inLawName: "Dena",
+  coworkerName: "Paolo",
   leadPet: "Igglefort",
   petTwo: "Najj",
   petThree: "Barringzen",
@@ -175,4 +176,4 @@ const newInitialState = {
   ]
 };
 
-export default newInitialState;
+export default initialState;

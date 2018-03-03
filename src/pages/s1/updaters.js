@@ -93,7 +93,7 @@ export const setNewPetName = value => state => ({ petNameInput: value });
 
 export const addSecurityAnswers = state => ({
   petOwnerInputSaved: state.petOwnerInput,
-  petTypeInputSaved: state.petTypeInput,
+  petTypeInputSaved: state.petTypeInput.toLowerCase(),
   petNameInputSaved: state.petNameInput,
   s1: {
     c12: false,

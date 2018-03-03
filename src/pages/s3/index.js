@@ -15,8 +15,8 @@ const s3 = props => (
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <MainText>
-          {props.petNameInputSaved} jumps off the bench and starts walking
-          towards you. You're standing there dumbfounded.
+          {props.petNameInputSaved} jumps off the bench and starts walking,
+          upright, towards you. You're standing there dumbfounded.
         </MainText>
         <UserQuote attrib={props.petNameInputSaved}>
           C'mon now, the keyboard, you're going to need that.

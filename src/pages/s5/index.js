@@ -159,7 +159,9 @@ const map = state => ({
   c9: state.s5.c9,
   c10: state.s5.c10,
   c11: state.s5.c11,
-  c12: state.s5.c12
+  c12: state.s5.c12,
+  nieceName: state.nieceName,
+  inLawName: state.inLawName
 });
 
 export default connect(map)(s5);
