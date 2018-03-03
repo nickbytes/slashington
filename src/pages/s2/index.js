@@ -101,7 +101,8 @@ const s2 = props => (
 
         <MainText>
           Soon, the conductor will announce the next stop, advise passengers to
-          'Be Careful Of The Closing Doors', and the train will continue onward.
+          <i>Stand Clear Of The Closing Doors</i>, accompanied by the soft{" "}
+          <i>ding dong ding dong</i>, and the train will continue onward.
         </MainText>
 
         <MainText>You wait for the expectantly for the announcement.</MainText>
