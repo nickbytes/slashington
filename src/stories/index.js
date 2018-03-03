@@ -7,6 +7,7 @@ import CustomContainer from "../components/CustomContainer";
 import DigitalBoard from "../components/DigitalBoard";
 import DreamText from "../components/DreamText";
 import EmailAssistant from "../components/Workspace/EmailAssistant";
+import Hypnotize from "../components/Hypnotize";
 import NextButton from "../components/NextButton";
 import PetFormInput from "../components/PetFormInput";
 import PetFormLabel from "../components/PetFormLabel";
@@ -108,3 +109,5 @@ storiesOf("Digital train board", module).add("normal", () => <DigitalBoard />);
 storiesOf("EmailAssistant", module).add("normal", () => <EmailAssistant />);
 
 storiesOf("Webcam", module).add("normal", () => <WebcamComponent />);
+
+storiesOf("Hypnotize", module).add("normal", () => <Hypnotize />);

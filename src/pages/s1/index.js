@@ -40,6 +40,7 @@ import Workspace from "../../components/Workspace";
 import YourNewBadge from "../../components/YourNewBadge";
 import keyboard2 from "../../images/keyboard2.jpg";
 import leonard from "../../images/leonard.gif";
+import coffee from "../../images/s1/coffee.jpeg";
 
 const s1 = props => (
   <div>
@@ -303,7 +304,16 @@ const s1 = props => (
           first.
         </MainText>
 
-        <MainText>Coffee Graphic</MainText>
+        <MainText>
+          <img
+            src={coffee}
+            alt="Going to need this."
+            style={{
+              width: "100%",
+              maxWidth: "600px"
+            }}
+          />
+        </MainText>
 
         <MainText>
           When you get back to your desk, you see that you have a{" "}
