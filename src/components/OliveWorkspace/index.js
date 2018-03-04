@@ -1,19 +1,13 @@
-import DollarSign from "react-feather/dist/icons/dollar-sign";
-import Lock from "react-feather/dist/icons/lock";
-import Eye from "react-feather/dist/icons/eye";
-import Watch from "react-feather/dist/icons/watch";
 import Briefcase from "react-feather/dist/icons/briefcase";
-import Sun from "react-feather/dist/icons/sun";
 import Clipboard from "react-feather/dist/icons/clipboard";
-
+import DollarSign from "react-feather/dist/icons/dollar-sign";
 import Draggable from "react-draggable";
+import Eye from "react-feather/dist/icons/eye";
+import Lock from "react-feather/dist/icons/lock";
 import React from "react";
-
-import place1 from "../../images/keys.jpg";
-import place2 from "../../images/bridge.png";
-import truth from "../../images/truth.gif";
-import frailty from "../../images/frailty.png";
-import plains from "../../images/plains.jpg";
+import Sun from "react-feather/dist/icons/sun";
+import Watch from "react-feather/dist/icons/watch";
+import styled, { keyframes } from "styled-components";
 
 import {
   ListItem,
@@ -23,13 +17,15 @@ import {
   WindowHeader,
   WindowTitle
 } from "../Workspace";
-
-import styled from "styled-components";
-
 import LeftBar from "../Workspace/LeftBar";
 import RightBar from "../Workspace/RightBar";
 import TopBar from "../Workspace/TopBar";
 import WorkspaceContainer from "../Workspace/WorkspaceContainer";
+import frailty from "../../images/frailty.png";
+import place1 from "../../images/keys.jpg";
+import place2 from "../../images/bridge.png";
+import plains from "../../images/plains.jpg";
+import truth from "../../images/truth.gif";
 
 const DesktopBackground = styled.div`
   background-color: rgba(31, 34, 40, 1);
@@ -41,6 +37,30 @@ const DesktopBackground = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
+`;
+
+const PoemText = styled.p`
+  color: #fff;
+  font-style: italic;
+  margin: 0 0 15px;
+`;
+
+const shake = keyframes`
+  from {
+    transform: translate(-1px, 0px);
+  }
+
+  to {
+    transform: translate(1px, 0px);
+  }
+`;
+
+const ShakyWindow = WindowContainer.extend`
+  animation: ${shake} 0.1s linear infinite;
+`;
+
+const WhiteWindow = WindowTitle.extend`
+  color: #fff;
 `;
 
 const OliveWorkspace = props => (
@@ -170,6 +190,28 @@ const OliveWorkspace = props => (
             </ul>
           </WindowBody>
         </WindowContainer>
+      </Draggable>
+
+      <Draggable handle=".handle">
+        <ShakyWindow
+          style={{ right: "calc(50% - 180px)", top: "30%" }}
+          bgColor={"#fe4d87"}
+          bColor={"#e2194e"}
+        >
+          <WindowHeader
+            className="handle"
+            bgColor={"rgba(254, 77, 135, 0.7)"}
+            bColor={"#e2194e"}
+          >
+            <WhiteWindow>
+              <span>READ HERE {props.playerNameSaved}</span>
+            </WhiteWindow>
+          </WindowHeader>
+          <WindowBody>
+            <PoemText>Something something something</PoemText>
+            <PoemText>Here here here</PoemText>
+          </WindowBody>
+        </ShakyWindow>
       </Draggable>
     </DesktopBackground>
   </WorkspaceContainer>
