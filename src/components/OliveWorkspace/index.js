@@ -11,6 +11,8 @@ import React from "react";
 
 import place1 from "../../images/keys.jpg";
 import place2 from "../../images/bridge.png";
+import truth from "../../images/truth.gif";
+import frailty from "../../images/frailty.png";
 import plains from "../../images/plains.jpg";
 
 import {
@@ -96,8 +98,7 @@ const OliveWorkspace = props => (
         <WindowContainer style={{ top: "40%", left: "30%" }}>
           <WindowHeader className="handle">
             <WindowTitle>
-              <Camera size={18} style={{ marginRight: "5px" }} />
-              <span>Raw Photos</span>
+              <span>Device per source</span>
             </WindowTitle>
           </WindowHeader>
           <WindowBody>
@@ -109,12 +110,37 @@ const OliveWorkspace = props => (
         <WindowContainer style={{ top: "50%", left: "50%" }}>
           <WindowHeader className="handle">
             <WindowTitle>
-              <Camera size={18} style={{ marginRight: "5px" }} />
-              <span>Raw Photos</span>
+              <span>Fekkfyzystem</span>
             </WindowTitle>
           </WindowHeader>
           <WindowBody>
             <Raw src={place2} alt={"something"} />
+          </WindowBody>
+        </WindowContainer>
+      </Draggable>
+
+      <Draggable handle=".handle">
+        <WindowContainer style={{ top: "60%", left: "10%" }}>
+          <WindowHeader className="handle">
+            <WindowTitle>
+              <span>Frailty Stow</span>
+            </WindowTitle>
+          </WindowHeader>
+          <WindowBody>
+            <Raw src={frailty} alt={"something"} />
+          </WindowBody>
+        </WindowContainer>
+      </Draggable>
+
+      <Draggable handle=".handle">
+        <WindowContainer style={{ top: "60%", left: "70%" }}>
+          <WindowHeader className="handle">
+            <WindowTitle>
+              <span>Raw recording</span>
+            </WindowTitle>
+          </WindowHeader>
+          <WindowBody>
+            <Raw src={truth} alt={"something"} />
           </WindowBody>
         </WindowContainer>
       </Draggable>
