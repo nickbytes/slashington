@@ -133,7 +133,7 @@ const OliveWorkspace = props => (
       </Draggable>
 
       <Draggable handle=".handle">
-        <WindowContainer style={{ top: "60%", left: "70%" }}>
+        <WindowContainer style={{ top: "10%", left: "10%" }}>
           <WindowHeader className="handle">
             <WindowTitle>
               <span>Raw recording</span>
