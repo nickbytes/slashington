@@ -5,7 +5,7 @@ import Watch from "react-feather/dist/icons/watch";
 import Briefcase from "react-feather/dist/icons/briefcase";
 import Sun from "react-feather/dist/icons/sun";
 import Clipboard from "react-feather/dist/icons/clipboard";
-import Camera from "react-feather/dist/icons/camera";
+
 import Draggable from "react-draggable";
 import React from "react";
 
