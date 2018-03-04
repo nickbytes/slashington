@@ -20,7 +20,7 @@ const Bold = styled.h1`
 `;
 
 const input =
-  "[Learning Gardens](https://learning-gardens.co/), Fantom, Commander Keen, Seers' Catalogue, Night in the Woods, Kentucky Route Zero, Choose Your Own Adventure, Morgane, James, Ed, Dempsey, Kunal, Ryan, Postlight Humans";
+  "[Learning Gardens](https://learning-gardens.co/), Fantom, Commander Keen, Seers' Catalogue, Night in the Woods, Kentucky Route Zero, Choose Your Own Adventure, Morgane, James, Ed, Dempsey, Kunal, Ryan, Postlight Humans, Slade House, Eric, Jumpcity Records, Tom Riddle";
 
 const credits = () => (
   <AbsoluteWrapper justifyCenter itemsCenter directionColumn>
