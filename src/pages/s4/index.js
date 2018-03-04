@@ -44,8 +44,8 @@ const s4 = props => (
     <SimpleScene isVisible={props.c4}>
       <CustomContainer>
         <UserQuote attrib="Unknown Voice, to your right">
-          Ahhhhh, {props.playerNameSaved || "Nick"},{" "}
-          {props.playerOccupationSaved || "Digital Archivist"}. Welcome.
+          Ahhhhh, {props.playerNameSaved}, {props.playerOccupationSaved}.
+          Welcome.
         </UserQuote>
         <MainText>
           You nearly jump at the sound of a voice. When you turn, you see inside
@@ -531,6 +531,7 @@ const map = state => ({
   reactedNod: state.reactedNod,
   playerNameSaved: state.playerNameSaved,
   petTypeInputSaved: state.petTypeInputSaved,
+  playerOccupationSaved: state.playerOccupationSaved,
   nieceName: state.nieceName,
   leadPet: state.leadPet,
   petTwo: state.petTwo,

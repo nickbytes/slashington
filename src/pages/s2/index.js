@@ -213,8 +213,10 @@ const s2 = props => (
     <SimpleScene isVisible={props.c14}>
       <CustomContainer>
         <MainText>
-          Lights illuminate the platform, though no one is standing outside. You
-          don't blame them, it's a bit chilly tonight, and they've likely
+          Lights illuminate the platform, though no one is standing outside.
+        </MainText>
+        <MainText>
+          You don't blame them, it's a bit chilly tonight, and they've likely
           already boarded the train.
         </MainText>
         <NextButton onClick={() => props.update(ns("s2", "c15"))} />
@@ -331,9 +333,9 @@ const s2 = props => (
       <CustomContainer>
         <MainText>
           You've got to go see... You stand and begin walking through the aisle,
-          leaving your belongings, peering wildly out on to the platform. You
-          are nearly at a jog.
+          leaving your belongings, peering wildly out on to the platform.
         </MainText>
+        <MainText>You are nearly at a jog.</MainText>
         <NextButton onClick={() => props.update(ns("s2", "c26"))} />
       </CustomContainer>
     </SimpleScene>
@@ -369,8 +371,8 @@ const s2 = props => (
           There, standing in front of you, is {props.petNameInputSaved}.
         </MainText>
         <MainText>
-          Not only that, but {props.petNameInputSaved} is wearing a small train
-          conductors outfit...
+          Not only that, but {props.petNameInputSaved} is wearing a small,
+          shabby train conductors outfit...
         </MainText>
         <NextButton onClick={() => props.update(ns("s2", "c29"))} />
       </CustomContainer>

@@ -383,10 +383,16 @@ const s1 = props => (
         </MainText>
         <MainText>
           All this work is pushing you to the edge. This weekend, you won't take
-          your laptop. You'll <i>disconnect</i>. You've just got to{" "}
+          your laptop.
+        </MainText>
+        <MainText>
+          You'll <i>disconnect</i>.
+        </MainText>
+        <MainText>
+          You've just got to get through the next few hours and
           <Clickable clickFn={e => props.update(ns("s1", "c21"))}>
-            get through the next few hours and deadlines.
-          </Clickable>
+            deadlines
+          </Clickable>.
         </MainText>
       </CustomContainer>
     </SimpleScene>
