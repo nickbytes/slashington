@@ -10,7 +10,7 @@ import Draggable from "react-draggable";
 import React from "react";
 
 import place1 from "../../images/keys.jpg";
-import place2 from "../../images/map.jpg";
+import place2 from "../../images/bridge.png";
 import plains from "../../images/plains.jpg";
 
 import {
