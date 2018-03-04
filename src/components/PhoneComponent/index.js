@@ -1,32 +1,21 @@
 import React, { Component } from "react";
-
-import Dots from "./Dots";
+import ReactPlayer from "react-player";
 import { ns } from "../../updaters/ns";
-
-//"Hey, you must be busy working. Anyway, we're looking forward to
-//  having you down this weekend. And listen, don't worry about a
-//  gift, Emma is just excited to have you down here this weekend. We
-//  all are. Hope work hasn't been stressing you out too much – I know
-//  how you bury yourself away from time to time. Okay well, I'll pick
-//  you up at the train station at normal time. Talk soon. "
+import Dots from "./Dots";
 
 class PhoneComponent extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    randomValues: [],
+    playing: false
+  };
 
-    this.state = {
-      randomValues: []
-    };
-
-    this.updateRandomValues = this.updateRandomValues.bind(this);
-  }
   componentDidMount() {
     this.interval = setInterval(() => {
       this.updateRandomValues();
     }, 2000);
   }
 
-  updateRandomValues() {
+  updateRandomValues = () => {
     const randoms = Array.from(
       { length: 13 },
       () => Math.floor(Math.random() * 100) + "%"
@@ -35,7 +24,7 @@ class PhoneComponent extends Component {
     this.setState({
       randomValues: randoms
     });
-  }
+  };
   componentWillUnmount() {
     clearInterval(this.interval);
   }
@@ -48,6 +37,13 @@ class PhoneComponent extends Component {
           right: "25px"
         }}
       >
+        <ReactPlayer
+          url="https://www.youtube.com/watch?v=jtgKUJMpVlo"
+          style={{
+            display: "none"
+          }}
+          playing={this.state.playing}
+        />
         <div className="cd-iphone-6 cd-scale-60 cd-center cd-padded-device cd-blueprint">
           <div className="cd-body">
             <div className="cd-sound" />
@@ -253,8 +249,13 @@ class PhoneComponent extends Component {
                     padding: "3px 5px 5px",
                     cursor: "pointer"
                   }}
+                  onClick={() =>
+                    this.setState({
+                      playing: !this.state.playing
+                    })
+                  }
                 >
-                  Play now?
+                  {this.state.playing ? "Stop?" : "Play now?"}
                 </button>
               </div>
             </div>
