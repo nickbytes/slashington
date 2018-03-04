@@ -7,6 +7,7 @@ import { ns } from "../../updaters/ns";
 import CustomContainer from "../../components/CustomContainer";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
+import OliveWorkspace from "../../components/OliveWorkspace";
 import PlainButton from "../../components/PlainButton";
 import PosterAnimation from "../../components/PosterAnimation";
 import SimpleScene from "../../components/SimpleScene";
@@ -551,9 +552,15 @@ const s6 = props => (
         </UserQuote>
 
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          Okay. It says POEM RIGHT HERE
+          Okay. It says
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s6", "c26"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <OliveWorkspace {...props} />
       </CustomContainer>
     </SimpleScene>
 
