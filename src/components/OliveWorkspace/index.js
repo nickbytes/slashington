@@ -1,17 +1,3 @@
-import Draggable from "react-draggable";
-import React from "react";
-import styled from "styled-components";
-
-import AreaChart from "../AreaChart";
-import DesktopBackground from "./DesktopBackground";
-import EmailAssistant from "./EmailAssistant";
-import LeftBar from "./LeftBar";
-import Programs from "./Programs";
-import RightBar from "./RightBar";
-import TopBar from "./TopBar";
-import WorkspaceContainer from "./WorkspaceContainer";
-import place1 from "../../images/snow.jpg";
-
 import DollarSign from "react-feather/dist/icons/dollar-sign";
 import Lock from "react-feather/dist/icons/lock";
 import Eye from "react-feather/dist/icons/eye";
@@ -20,60 +6,42 @@ import Briefcase from "react-feather/dist/icons/briefcase";
 import Sun from "react-feather/dist/icons/sun";
 import Clipboard from "react-feather/dist/icons/clipboard";
 import Camera from "react-feather/dist/icons/camera";
+import Draggable from "react-draggable";
+import React from "react";
 
-export const WindowContainer = styled.div`
+import place1 from "../../images/keys.jpg";
+import place2 from "../../images/map.jpg";
+import plains from "../../images/plains.jpg";
+
+import {
+  ListItem,
+  Raw,
+  WindowBody,
+  WindowContainer,
+  WindowHeader,
+  WindowTitle
+} from "../Workspace";
+
+import styled from "styled-components";
+
+import LeftBar from "../Workspace/LeftBar";
+import RightBar from "../Workspace/RightBar";
+import TopBar from "../Workspace/TopBar";
+import WorkspaceContainer from "../Workspace/WorkspaceContainer";
+
+const DesktopBackground = styled.div`
+  background-color: rgba(31, 34, 40, 1);
+  background-image: url(${plains});
+  background-position: center center;
+  background-size: cover;
   position: absolute;
-  background-color: ${props =>
-    props.bgColor ? props.bgColor : "rgb(218, 216, 218)"};
-  width: 400px;
-  border: ${props =>
-    props.bColor ? `1px solid ${props.bColor}` : `1px solid #323d47`};
-  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 `;
 
-export const WindowHeader = styled.div`
-  background-color: ${props =>
-    props.bgColor ? props.bgColor : "rgb(218, 216, 218)"};
-  border-bottom: ${props =>
-    props.bColor ? `1px solid ${props.bColor}` : `1px solid #323d47`};
-
-  &:hover {
-    cursor: pointer;
-  }
-`;
-
-export const WindowTitle = styled.h4`
-  margin: 0;
-  padding: 5px 0;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const WindowBody = styled.div`
-  margin: 0;
-  padding: 5px;
-  line-height: 0;
-
-  > * {
-    line-height: 1.3em;
-  }
-`;
-
-export const Raw = styled.img`
-  width: 100%;
-  max-width: 100%;
-`;
-
-export const ListItem = styled.li`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 15px;
-`;
-
-const Workspace = props => (
+const OliveWorkspace = props => (
   <WorkspaceContainer>
     <TopBar className="desktop-topBar">
       <LeftBar />
@@ -138,6 +106,19 @@ const Workspace = props => (
         </WindowContainer>
       </Draggable>
       <Draggable handle=".handle">
+        <WindowContainer style={{ top: "50%", left: "50%" }}>
+          <WindowHeader className="handle">
+            <WindowTitle>
+              <Camera size={18} style={{ marginRight: "5px" }} />
+              <span>Raw Photos</span>
+            </WindowTitle>
+          </WindowHeader>
+          <WindowBody>
+            <Raw src={place2} alt={"something"} />
+          </WindowBody>
+        </WindowContainer>
+      </Draggable>
+      <Draggable handle=".handle">
         <WindowContainer
           style={{ right: "123px", top: "185px" }}
           bgColor={"#e5c273"}
@@ -164,16 +145,8 @@ const Workspace = props => (
           </WindowBody>
         </WindowContainer>
       </Draggable>
-      <AreaChart />
-
-      <Draggable handle=".handle">
-        <div>
-          <EmailAssistant />
-        </div>
-      </Draggable>
-      <Programs />
     </DesktopBackground>
   </WorkspaceContainer>
 );
 
-export default Workspace;
+export default OliveWorkspace;

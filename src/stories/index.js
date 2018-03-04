@@ -9,6 +9,7 @@ import DreamText from "../components/DreamText";
 import EmailAssistant from "../components/Workspace/EmailAssistant";
 import Hypnotize from "../components/Hypnotize";
 import NextButton from "../components/NextButton";
+import OliveWorkspace from "../components/OliveWorkspace";
 import PetFormInput from "../components/PetFormInput";
 import PetFormLabel from "../components/PetFormLabel";
 import TitleModal from "../components/TitleModal";
@@ -32,6 +33,8 @@ storiesOf("TrainAnimation", module).add("TrainAnimation", () => (
 ));
 
 storiesOf("Workspace", module).add("Workspace", () => <Workspace />);
+
+storiesOf("OliveWorkspace", module).add("normal", () => <OliveWorkspace />);
 
 storiesOf("TitleModal", module).add("normal", () => (
   <TitleModal chapterNumber={"01"} chapterTitle={"The Office"} />

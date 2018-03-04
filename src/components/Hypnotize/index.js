@@ -36,11 +36,12 @@ const Hypnotize = () => (
     </div>
 
     <PinkContainer>
+      <PoemText>Messenger, messenger</PoemText>
+      <PoemText>How misunderstood</PoemText>
+      <PoemText>For what they deliver is not in package form</PoemText>
+      <PoemText>The give their time and memory</PoemText>
       <PoemText>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-      </PoemText>
-      <PoemText>
-        Duis aute irure dolor in reprehenderit in voluptate velit
+        Take away the package and they have still deliver with their time
       </PoemText>
     </PinkContainer>
   </Container>
