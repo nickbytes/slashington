@@ -38,7 +38,7 @@ const s4 = props => (
       <CustomContainer>
         <MainText>
           For some reason, it reminds you of stars in the night sky, and you
-          almost forget that you've just spoken to a {props.petTypeInputSaved}
+          almost forget that you've just spoken to a {props.petTypeInputSaved}.
         </MainText>
         <NextButton onClick={() => props.update(ns("s4", "c4"))} />
       </CustomContainer>
