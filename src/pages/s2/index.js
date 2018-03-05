@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
+import { List, ListItem } from "../../components/ListUtils";
 import { ns } from "../../updaters/ns";
 import Clickable from "../../components/Clickable";
 import CustomContainer from "../../components/CustomContainer";
@@ -13,6 +14,8 @@ import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 import Waiting from "../../components/Waiting";
 import Waves from "../../components/Waves";
+import train from "../../images/s2/train.gif";
+import train_cabin from "../../images/s2/train_cabin.gif";
 
 const scene = "s2";
 
@@ -20,11 +23,6 @@ const s2 = props => (
   <div>
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
-        <MainText>And just like that, it was decided.</MainText>
-        <MainText>
-          You'd take your keyboard, drop it off at the repair store, then all
-          Alex to pick you up at Union Station.
-        </MainText>
         <MainText>
           You board the train, duffle bag slung over one shoulder, keyboard in
           the other hand.
@@ -51,9 +49,21 @@ const s2 = props => (
     <SimpleScene isVisible={props.c3}>
       <CustomContainer>
         <MainText>
-          The train nudges forward, and begins rolling out of the station. You
-          lean against the window as city lights slowly give in to the darkness
-          of the outer edges of the city.
+          The train nudges forward, and begins rolling out of the station.
+        </MainText>
+        <MainText>
+          <img
+            src={train}
+            alt={"Leaving the station"}
+            style={{
+              width: "100%",
+              maxWidth: "600px"
+            }}
+          />
+        </MainText>
+        <MainText>
+          You lean against the window as city lights slowly give in to the
+          darkness of the outer edges of the city.
         </MainText>
         <MainText>
           The train has begun its slow wind along the coast. It lulls you to{" "}
@@ -66,10 +76,19 @@ const s2 = props => (
 
     <SimpleScene isVisible={props.c4}>
       <CustomContainer>
-        <MainText>need some sort of train animation here</MainText>
         <NextButton onClick={() => props.update(ns("s2", "c5"))} />
       </CustomContainer>
     </SimpleScene>
+
+    <SimpleScene isVisible={props.c4}>
+      <CustomContainer>
+        <Waiting />
+        <Waiting delay={200} />
+        <Waiting delay={300} />
+        <NextButton onClick={() => props.update(ns("s2", "c5"))} />
+      </CustomContainer>
+    </SimpleScene>
+
     <SimpleScene isVisible={props.c5}>
       <CustomContainer>
         <MainText>
@@ -94,6 +113,16 @@ const s2 = props => (
           the train cabin.
         </MainText>
         <MainText>
+          <img
+            src={train_cabin}
+            alt="No one here."
+            style={{
+              width: "100%",
+              maxWidth: "600px"
+            }}
+          />
+        </MainText>
+        <MainText>
           The sky was still dark. There are no blue hues fading into black sky
           yet. You must be somewhere between Baltimore and Washington, D.C.
         </MainText>
@@ -107,7 +136,7 @@ const s2 = props => (
           <i>ding dong ding dong</i>, and the train will continue onward.
         </MainText>
 
-        <MainText>You wait for the expectantly for the announcement.</MainText>
+        <MainText>You wait for the announcement.</MainText>
         <NextButton onClick={() => props.update(ns("s2", "c7"))} />
       </CustomContainer>
     </SimpleScene>
@@ -147,10 +176,6 @@ const s2 = props => (
           the only one in the car.
         </MainText>
 
-        <MainText>
-          You're awake now. Hopefully, there is no issue with the train.
-        </MainText>
-
         <MainText>You sit up straight and glance out at the station.</MainText>
 
         <MainText>Which station is this?</MainText>
@@ -161,8 +186,7 @@ const s2 = props => (
     <SimpleScene isVisible={props.c11}>
       <CustomContainer>
         <MainText>
-          You look for a sign, but do not immediately see one. Your view must be
-          obstructed by one of the brick pillars lining the platform.
+          You look for a sign, but do not immediately see one.
         </MainText>
 
         <MainText>
@@ -179,28 +203,25 @@ const s2 = props => (
         <MainText>
           These are all photos with text at Rye/New Rochelle stop.
         </MainText>
-        <ul>
-          <li>* small parking lot</li>
-          <li>
-            * variety of weathered vending machines inside and out, usually out
-            of order and/or stock
-          </li>
-          <li>
-            * a waiting room, in case of cold weather, equipped with an analogue
-            or digital train times board
-          </li>
-          <li>
-            * a small snack bar/cafe selling tar black coffee, breakfast
+        <List>
+          <ListItem>1. a small parking lot</ListItem>
+          <ListItem>
+            2. a variety of weathered vending machines inside and out, usually
+            out-of-order and/or stock
+          </ListItem>
+          <ListItem>3. a waiting room, in case of inclimate weather</ListItem>
+          <ListItem>
+            4. a small snack bar/cafe selling tar black coffee, breakfast
             pastries wrapped in Saran Wrap, fruit snacks, magazines, energy
             drinks, beer, wine coolers, chips, candy, gum
-          </li>
-          <li>* a sadly restroom</li>
-          <li>
-            * and a plastic wall mount distributing pamphlets for attractions,
+          </ListItem>
+          <ListItem>5. a sadly restroom</ListItem>
+          <ListItem>
+            6. and a plastic wall mount distributing pamphlets for attractions,
             restaurants, golf courses, hay rides, swimming poles, lawn care, tax
             services, and public parks
-          </li>
-        </ul>
+          </ListItem>
+        </List>
         <NextButton onClick={() => props.update(ns("s2", "c13"))} />
       </CustomContainer>
     </SimpleScene>
@@ -217,10 +238,6 @@ const s2 = props => (
         <MainText>
           Lights illuminate the platform, though no one is standing outside.
         </MainText>
-        <MainText>
-          You don't blame them, it's a bit chilly tonight, and they've likely
-          already boarded the train.
-        </MainText>
         <NextButton onClick={() => props.update(ns("s2", "c15"))} />
       </CustomContainer>
     </SimpleScene>
@@ -228,8 +245,7 @@ const s2 = props => (
     <SimpleScene isVisible={props.c15}>
       <CustomContainer>
         <MainText>
-          Something catches your eye, nearly out of view from your seat, further
-          along the platform.
+          Something catches your eye, further along the platform.
         </MainText>
         <NextButton onClick={() => props.update(ns("s2", "c16"))} />
       </CustomContainer>
@@ -312,20 +328,20 @@ const s2 = props => (
     </SimpleScene>
     <SimpleScene isVisible={props.c24}>
       <CustomContainer>
-        <ul>
-          <li>
+        <List>
+          <ListItem>
             <Echo>What is happening?</Echo>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Echo>Is this a dream?</Echo>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Echo>This must be a dream, {props.playerNameSaved}.</Echo>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Echo>Of course.</Echo>
-          </li>
-        </ul>
+          </ListItem>
+        </List>
 
         <NextButton onClick={() => props.update(ns("s2", "c25"))} />
       </CustomContainer>
@@ -345,8 +361,8 @@ const s2 = props => (
     <SimpleScene isVisible={props.c26}>
       <CustomContainer>
         <MainText>
-          Through the doors and around the pillar obstructing your view sitting
-          on a bench a few paces away is a small {props.petTypeInputSaved}.
+          Through the doors and down the platform on a bench a few paces away is
+          a small {props.petTypeInputSaved}.
         </MainText>
         <MainText>Not just any {props.petTypeInputSaved}...</MainText>
         <NextButton onClick={() => props.update(ns("s2", "c27"))} />
@@ -366,8 +382,8 @@ const s2 = props => (
     <SimpleScene isVisible={props.c28}>
       <CustomContainer>
         <UserQuote attrib={props.petNameInputSaved}>
-          Good morning, {props.playerNameSaved || "Nick"}! A little late, but it
-          should be fine.
+          Good morning, {props.playerNameSaved}! A little late, but it should be
+          fine.
         </UserQuote>
         <MainText>
           There, standing in front of you, is {props.petNameInputSaved}.

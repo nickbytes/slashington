@@ -11,19 +11,48 @@ import NextButton from "../../components/NextButton";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 
+const something = (
+  <SimpleScene isVisible={props.c17}>
+    <CustomContainer>
+      <img src={vim} alt="Vim" style={{ width: "100%", maxWidth: "200px" }} />
+      <NextButton onClick={() => props.update(ns("s4", "c18"))} />
+    </CustomContainer>
+  </SimpleScene>
+);
+
 const s5 = props => (
   <div>
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
-        <MainText>You sit down again in the same seat on the train.</MainText>
+        <MainText>
+          You board the train again, with {props.petNameInputSaved} waving at
+          you. As you look through the sliding doors, you hear The Council's
+          words reverberate through your head.
+        </MainText>
         <NextButton onClick={() => props.update(ns("s5", "c2"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c2}>
       <CustomContainer>
+        <Echo>It must be her. She is nearly halfway trained now.</Echo>
+
+        <Echo>Exceptional ability and upside.</Echo>
         <MainText>
-          You watch outside, as {props.petNameInputSaved} waves to you.
+          Yes, they heard your pleas to help, to take the task yourself, but
+          they would have nothing of it. You were just the messenger.
+        </MainText>
+
+        <NextButton onClick={() => props.update(ns("s5", "c3"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <MainText>
+          Yet they didnt seem to care much about the welfare of your niece. Not
+          in your mind at least. Yes, they see <i>value</i> in her, but they do
+          not <i>care</i> for her.
         </MainText>
 
         <MainText>
@@ -31,7 +60,59 @@ const s5 = props => (
           There are no passengers in sight. The train slowly pulls away from the
           station.
         </MainText>
-        <NextButton onClick={() => props.update(ns("s5", "c3"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <MainText>The dangers, they told you, were great.</MainText>
+        <MainText>
+          One of their less capable magicians had been caught, before even being
+          able to carry out their plan. They now relied on Olive.
+        </MainText>
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <MainText>
+          What had happened to the other magician...? You had asked, but they
+          would not speak of it, and when you thought you heard one of the{" "}
+          {props.petTypeInputSaved} mumble something about{" "}
+          <i>permanent memory allicilatory obfunscator</i> they didnt expect,
+          you asked more, but they would not tell you.
+        </MainText>
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <MainText>
+          You didnt want to admit it, but you feared the{" "}
+          {props.petNameInputSaved} a little. If they were capable of gettin you
+          to a ...
+        </MainText>
+
+        <MainText>... well what is this place ...?</MainText>
+
+        <MainText>
+          You think about it for a second. Another dimension? A rip in reality?
+          More like a soft tear.
+        </MainText>
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <MainText>
+          Anyway, what else were they capable of... you had never felt anything
+          like what you felt from the keyboard.
+        </MainText>
+
+        <MainText>
+          Even now, with it sitting right next to you, you dared not to touch a
+          key. You feared the power it held over you.
+        </MainText>
       </CustomContainer>
     </SimpleScene>
 

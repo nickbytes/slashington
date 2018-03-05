@@ -106,7 +106,8 @@ const initialState = {
     c23: false,
     c24: false,
     c25: false,
-    c26: false
+    c26: false,
+    c27: false
   },
   reactedAngry: false,
   reactedNod: false,

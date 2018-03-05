@@ -16,7 +16,7 @@ const s3 = props => (
       <CustomContainer>
         <MainText>
           {props.petNameInputSaved} jumps off the bench and starts walking,
-          upright, towards you. You're standing there dumbfounded.
+          upright, towards you. You stand dumbfounded.
         </MainText>
         <UserQuote attrib={props.petNameInputSaved}>
           C'mon now, the keyboard, you're going to need that.
@@ -45,10 +45,9 @@ const s3 = props => (
 
     <SimpleScene isVisible={props.c3}>
       <CustomContainer>
-        <Echo>
-          {props.petNameInputSaved} IS TALKING WHY THE HELL AM I HOLDING THIS
-          KEYBOARD
-        </Echo>
+        <Echo>{props.petNameInputSaved} IS TALKING</Echo>
+
+        <Echo>WHY THE HELL AM I HOLDING THIS KEYBOARD</Echo>
 
         <NextButton onClick={() => props.update(ns("s3", "c4"))} />
       </CustomContainer>
@@ -58,11 +57,13 @@ const s3 = props => (
       <CustomContainer>
         <MainText>You're on autopilot.</MainText>
 
-        <MainText>
-          You grabbed the keyboard and feel its tactile keys. You attempt to
-          measure your breaths. You tap the keys and hear the soft clicks.
-          Cherry MX. Wiggle your toes.
-        </MainText>
+        <MainText>You grab the keyboard and feel its tactile keys.</MainText>
+
+        <MainText>You attempt to measure your breaths.</MainText>
+
+        <MainText>You tap the keys and hear the soft clicks.</MainText>
+
+        <MainText>Wiggle your toes.</MainText>
 
         <MainText>
           You turn and begin to walk towards the open car doors again. You
