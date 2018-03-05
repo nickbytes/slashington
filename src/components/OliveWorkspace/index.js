@@ -208,8 +208,12 @@ const OliveWorkspace = props => (
             </WhiteWindow>
           </WindowHeader>
           <WindowBody>
-            <PoemText>Something something something</PoemText>
-            <PoemText>Here here here</PoemText>
+            <PoemText>Ooooo Oooo</PoemText>
+            <PoemText>Ooooooooooo Oooooooo</PoemText>
+            <PoemText>You delivered the keyboard</PoemText>
+            <PoemText>But you still hold something more</PoemText>
+            <PoemText>Of Slashington, you still have your reveries,</PoemText>
+            <PoemText>Messenger, no more, you leave me your memories.</PoemText>
           </WindowBody>
         </ShakyWindow>
       </Draggable>
