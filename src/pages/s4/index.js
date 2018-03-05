@@ -240,40 +240,30 @@ const s4 = props => (
             I was saying...
           </UserQuote>
 
-          <UserQuote paragraph>
-            You, {props.playerNameSaved}, have been selected for a task. First,
-            we should give you a little background on The Council and our
-            Mission.
-          </UserQuote>
+          <UserQuote paragraph>You must have many questions.</UserQuote>
+        </UserQuote>
+
+        <MainText>
+          You do. You can't tell if you feel like laughing, or crying.
+        </MainText>
+
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          Who are you? Where did you come from? What is this?
+        </UserQuote>
+
+        <UserQuote attrib={`Comrade ${props.leadPet}`}>
+          Let us try to answer some of them.
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s4", "c13"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene>
-      <CustomContainer>
-        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          Is this real?
-        </UserQuote>
-        <MainText>
-          You can't tell if you feel like laughing, or crying.
-        </MainText>
-        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          Who are you? Where did you come from?
-        </UserQuote>
-        <MainText>You can't think about what else to say.</MainText>
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c13}>
       <CustomContainer>
         <UserQuote attrib={`Comrade ${props.leadPet}`}>
-          <UserQuote paragraph>
-            As I've said, we are <i>The Council</i>. We, as{" "}
-            {props.petTypeInputSaved}s, act as intermediaries between all
-            magician creatures and humans.
-          </UserQuote>
-          <UserQuote paragraph>We've always been here.</UserQuote>
+          As I've said, we are <i>The Council</i>. We, as{" "}
+          {props.petTypeInputSaved}s, act as intermediaries between all magician
+          creatures and humans.
         </UserQuote>
         <MainText>There are humble smiles and nods around the table.</MainText>
         <NextButton onClick={() => props.update(ns("s4", "c14"))} />

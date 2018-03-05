@@ -47,3 +47,39 @@ You, {props.playerNameSaved}, are the messenger. You will deliver this your niec
 What?
 
 The words spit themselves out.
+
+Your niece will place a curse on Frailty Stow, once she has learned the appropriate magical methods.
+
+Frailty Stow? The pop singer?
+
+Country pop, really.
+
+yes, the, er... country pop singer.
+
+How? Is she going to be in danger? Why must it be her? She's only 15, well 16 tomororw.
+
+You board the train again, with {props.petNameInputSaved} waving at you. As you look through the sliding doors, you hear The Council's words reverberate through your head.
+
+It must be here. She is nearly halfway trained now.
+
+Exceptional ability and upside.
+
+Yes, they heard your pleas to help, to take the task yourself, but they would have nothing of it. You were just the messenger.
+
+Yet they didnt seem to care much about the welfare of your niece. Not in your mind at least. Yes, they see <i>value</i> in her, but they do not <i>care</i> for her.
+
+THe dangers, they told you, were great.
+
+One of their less capable magicians had been caught, before even being able to carry out their plan. THey now relied on Olive.
+
+What had happened to the other magician...? You had asked, but they would not speak of it, and when you thought you heard one of the {props.petTypeInputSaved} mumble something about permanent memory allicilatory obfunscator they didnt expect, you asked more, but they would not tell you.
+
+You didnt want to admit it, but you feared the {props.petNameInputSaved} a little. If they were capable of gettin you to a ...
+
+... well what is this place ...?
+
+You think about it for a second. Another dimension? A rip in reality? More like a soft tear.
+
+Anyway, what else were they capable of... you had never felt anything like what you felt from the keyboard.
+
+Even now, with it sitting right next to you, you dared not to touch a key. You feared the power it held over you.
