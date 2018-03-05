@@ -13,7 +13,6 @@ import OliveWorkspace from "../components/OliveWorkspace";
 import PetFormInput from "../components/PetFormInput";
 import PetFormLabel from "../components/PetFormLabel";
 import TitleModal from "../components/TitleModal";
-import TrainAnimation from "../components/TrainAnimation";
 import UserQuote from "../components/UserQuote";
 import WebcamComponent from "../components/WebcamComponent";
 import Workspace from "../components/Workspace";
@@ -26,10 +25,6 @@ storiesOf("DreamText", module)
 
 storiesOf("BrokenEmail", module).add("BrokenEmail", () => (
   <BrokenEmail playerNameSaved={"Nick"} />
-));
-
-storiesOf("TrainAnimation", module).add("TrainAnimation", () => (
-  <TrainAnimation />
 ));
 
 storiesOf("Workspace", module).add("Workspace", () => <Workspace />);
