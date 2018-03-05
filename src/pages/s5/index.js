@@ -16,8 +16,8 @@ const s5 = props => (
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <MainText>
-          You board the train again, with {props.petNameInputSaved} waving at
-          you. As you look through the sliding doors, you hear The Council's
+          You board the train again and watch {props.petNameInputSaved} waving
+          at you through the glass in the sliding doors. You hear The Council's
           words reverberate through your head.
         </MainText>
         <NextButton onClick={() => props.update(ns("s5", "c2"))} />
@@ -34,17 +34,17 @@ const s5 = props => (
           they would have nothing of it.
         </MainText>
 
-        <MainText>You were just the messenger.</MainText>
+        <MainText>You are just the messenger.</MainText>
 
         <NextButton onClick={() => props.update(ns("s5", "c3"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c3}>
       <CustomContainer>
         <MainText>
           Yet, they didnt seem to care much about the welfare of your niece. Not
-          in your mind at least.
+          in your mind, at least.
         </MainText>
 
         <MainText>
@@ -54,71 +54,7 @@ const s5 = props => (
 
         <MainText>
           You feel the familiar jolt of the train as it begins to move forward.
-          There are no passengers in sight. The train slowly pulls away from the
-          station.
-        </MainText>
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene>
-      <CustomContainer>
-        <MainText>The dangers, they told you, were great.</MainText>
-        <MainText>
-          One of their less capable magicians had been caught, before even being
-          able to carry out their plan. They now relied on Olive.
-        </MainText>
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene>
-      <CustomContainer>
-        <MainText>
-          What had happened to the other magician...? You had asked, but they
-          would not speak of it, and when you thought you heard one of the{" "}
-          {props.petTypeInputSaved} mumble something about{" "}
-          <i>permanent memory allicilatory obfunscator</i> they didnt expect,
-          you asked more, but they would not tell you.
-        </MainText>
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene>
-      <CustomContainer>
-        <MainText>
-          You didnt want to admit it, but you feared the{" "}
-          {props.petNameInputSaved} a little. If they were capable of gettin you
-          to a ...
-        </MainText>
-
-        <MainText>... well what is this place ...?</MainText>
-
-        <MainText>
-          You think about it for a second. Another dimension? A rip in reality?
-          More like a soft tear.
-        </MainText>
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene>
-      <CustomContainer>
-        <MainText>
-          Anyway, what else were they capable of... you had never felt anything
-          like what you felt from the keyboard.
-        </MainText>
-
-        <MainText>
-          Even now, with it sitting right next to you, you dared not to touch a
-          key. You feared the power it held over you.
-        </MainText>
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c3}>
-      <CustomContainer>
-        <MainText>
-          The train rolls along familiar landscape. Rolling hills, small
-          forests, empty highways, and country roads. The sun is about to peek
-          out from behind the horizon.
+          The train slowly pulls away from the station.
         </MainText>
         <NextButton onClick={() => props.update(ns("s5", "c4"))} />
       </CustomContainer>
@@ -126,9 +62,10 @@ const s5 = props => (
 
     <SimpleScene isVisible={props.c4}>
       <CustomContainer>
+        <MainText>The dangers, they told you, were great.</MainText>
         <MainText>
-          There's a tunnel approaching. The Northeast Regional does not have a
-          tunnel...
+          One of their less capable magicians had been caught, before even being
+          able to carry out their plan. They now relied on Olive.
         </MainText>
         <NextButton onClick={() => props.update(ns("s5", "c5"))} />
       </CustomContainer>
@@ -137,17 +74,85 @@ const s5 = props => (
     <SimpleScene isVisible={props.c5}>
       <CustomContainer>
         <MainText>
-          Three or four seconds. Suddenly the car <Clickable>bursts</Clickable>{" "}
-          with light, you grimace and squint in the stark contrast. When you
-          open your eyes, the train car is again packed with people, regular
-          people. People reading their tablets, morning papers, talking on cell
-          phones, glancing out the window as you pass through Baltimore.
+          What had happened to the other magician...? You had asked, but they
+          would not speak of it, and when you thought you heard one of the{" "}
+          {props.petTypeInputSaved}s mumble something about{" "}
+          <i>permanent memory allicilatory obfunscator</i> they didn't explain,
+          you asked more, but they would not tell you.
         </MainText>
         <NextButton onClick={() => props.update(ns("s5", "c6"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c6}>
+      <CustomContainer>
+        <MainText>
+          You didnt want to admit it, but you feared the{" "}
+          {props.petNameInputSaved}s. If they were capable of getting you to...
+        </MainText>
+
+        <MainText>
+          ... well what is this place ...? Slashington, they had called it.
+        </MainText>
+
+        <MainText>
+          You think about it for a second. Another dimension? A rip in reality?
+          More like a soft tear.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s5", "c7"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c7}>
+      <CustomContainer>
+        <MainText>
+          Anyway, what else were they capable of... you had never felt anything
+          like what you felt from the keyboard.
+        </MainText>
+
+        <MainText>
+          Even now, with it sitting right next to you, you dared not touch a
+          key. You feared the power it held over you.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s5", "c8"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c8}>
+      <CustomContainer>
+        <MainText>
+          The train rolls along familiar landscape. Rolling hills, small
+          forests, empty highways, and country roads. The sun is about to peek
+          out from behind the horizon.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s5", "c9"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c9}>
+      <CustomContainer>
+        <MainText>
+          There's a tunnel approaching. Is there a tunnel on the Northeast
+          Regional...?
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s5", "c10"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c10}>
+      <CustomContainer>
+        <MainText>
+          Three or four seconds. Suddenly the car <Clickable>bursts</Clickable>{" "}
+          with light, you grimace and squint in the stark contrast. When you
+          open your eyes, the train car is again packed with people, regular
+          people. People reading their tablets, morning papers, talking on cell
+          phones, glancing out the window as you pass through Baltimore.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s5", "c11"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c11}>
       <CustomContainer>
         <MainText>
           Alex greets you at the station. You load your bags and keyboard into
@@ -162,53 +167,40 @@ const s5 = props => (
           You hear the concern in his voice. He thinks you brought it to
           complete some work this weekend. If only...
         </MainText>
-        <NextButton onClick={() => props.update(ns("s5", "c7"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c7}>
-      <CustomContainer>
-        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          A gift for {props.nieceName}.
-        </UserQuote>
-        <NextButton onClick={() => props.update(ns("s5", "c8"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c8}>
-      <CustomContainer>
-        <MainText>
-          He goes on chatting about work, neighbors, {props.inLawName}'s job,
-          only do you take notice when he mentions the exception grades{" "}
-          {props.nieceName} has been getting.
-        </MainText>
-        <NextButton onClick={() => props.update(ns("s5", "c9"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c9}>
-      <CustomContainer>
-        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          That's great, real great.
-        </UserQuote>
-        <NextButton onClick={() => props.update(ns("s5", "c10"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c10}>
-      <CustomContainer>
-        <NextButton onClick={() => props.update(ns("s5", "c11"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c11}>
-      <CustomContainer>
         <NextButton onClick={() => props.update(ns("s5", "c12"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c12}>
       <CustomContainer>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          A gift for {props.nieceName}.
+        </UserQuote>
+        <MainText>
+          Carefully not to touch a key, you put the keyboard into your duffle
+          bag.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s5", "c13"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c13}>
+      <CustomContainer>
+        <MainText>
+          He goes on chatting about work, neighbors, {props.inLawName}'s job,
+          only do you take notice when he mentions the exceptional grades{" "}
+          {props.nieceName} has been getting.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s5", "c14"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c14}>
+      <CustomContainer>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          That's great, real great.
+        </UserQuote>
+        <MainText>You try to hide the dread in your voice.</MainText>
         <Link to={`/birthday-party`}>Next</Link>
       </CustomContainer>
     </SimpleScene>
