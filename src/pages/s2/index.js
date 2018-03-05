@@ -20,8 +20,10 @@ const s2 = props => (
   <div>
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
+        <MainText>And just like that, it was decided.</MainText>
         <MainText>
-          This would be the spot for the GC/PS shot walking with keyboard.
+          You'd take your keyboard, drop it off at the repair store, then all
+          Alex to pick you up at Union Station.
         </MainText>
         <MainText>
           You board the train, duffle bag slung over one shoulder, keyboard in

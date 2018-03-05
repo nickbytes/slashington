@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
+import { List, ListItem } from "../../components/ListUtils";
 import { fine, giveKeys, takeTask, toldHer } from "./updaters";
 import { ns } from "../../updaters/ns";
 import CustomContainer from "../../components/CustomContainer";
@@ -86,18 +87,18 @@ const s6 = props => (
 
     <SimpleScene isVisible={props.c5}>
       <CustomContainer>
-        <ul>
-          <li>
+        <List>
+          <ListItem>
             <PlainButton onClick={() => props.update(toldHer())}>
               Tell her
             </PlainButton>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <PlainButton onClick={() => props.update(fine())}>
               Fine, I'm great.
             </PlainButton>
-          </li>
-        </ul>
+          </ListItem>
+        </List>
       </CustomContainer>
     </SimpleScene>
 
@@ -265,19 +266,19 @@ const s6 = props => (
 
     <SimpleScene isVisible={props.c15}>
       <CustomContainer>
-        <ul>
-          <li>
+        <List>
+          <ListItem>
             <PlainButton onClick={() => console.log(props.update(giveKeys()))}>
               Give her the keyboard.
             </PlainButton>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <PlainButton onClick={() => console.log(props.update(takeTask()))}>
               Take the task yourself. Keep the keyboard. You can probably figure
               it out.
             </PlainButton>
-          </li>
-        </ul>
+          </ListItem>
+        </List>
       </CustomContainer>
     </SimpleScene>
 

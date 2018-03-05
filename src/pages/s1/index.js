@@ -446,6 +446,10 @@ const s1 = props => (
           You look up and see {coworker()}. {coworker()} is an {createTitle()},
           and a damn good one.
         </MainText>
+        <MainText>
+          Paolo is a tall slender tree, leaning over into your cubicle. He
+          speaks in a faint, crisp voice.
+        </MainText>
         <NextButton onClick={() => props.update(ns("s1", "c25"))} />
       </CustomContainer>
     </SimpleScene>
@@ -483,10 +487,14 @@ const s1 = props => (
     <SimpleScene isVisible={props.c28}>
       <CustomContainer>
         <UserQuote attrib={coworkerFullTitle()}>
-          Crazy coincidence! It's right off the Amtrak stop. You can't miss it,
-          south east corner of H Street and 4th. Open on weekends too, can
-          probably pick it up on your way back.
+          Quite the coincidence. Open on weekends too, can probably pick it up
+          on your way back.
+          <UserQuote paragraph>It's right off the Amtrak stop.</UserQuote>
+          <UserQuote paragraph>
+            You can't miss it, south east corner of H Street and 4th.
+          </UserQuote>
         </UserQuote>
+
         <Link to="/train-ride">Next</Link>
       </CustomContainer>
     </SimpleScene>

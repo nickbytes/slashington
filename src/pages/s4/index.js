@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
+import { List, ListItem } from "../../components/ListUtils";
 import { angryReaction, nodReaction } from "./updaters";
 import { ns } from "../../updaters/ns";
 import CustomContainer from "../../components/CustomContainer";
@@ -35,8 +36,10 @@ const s4 = props => (
 
     <SimpleScene isVisible={props.c3}>
       <CustomContainer>
-        <MainText>For some reason, it reminds you of the night sky.</MainText>
-        <MainText>Weird.</MainText>
+        <MainText>
+          For some reason, it reminds you of stars in the night sky, and you
+          almost forget that you've just spoken to a {props.petTypeInputSaved}
+        </MainText>
         <NextButton onClick={() => props.update(ns("s4", "c4"))} />
       </CustomContainer>
     </SimpleScene>
@@ -88,18 +91,18 @@ const s4 = props => (
 
     <SimpleScene isVisible={props.c7}>
       <CustomContainer>
-        <ul>
-          <li>
+        <List>
+          <ListItem>
             <PlainButton onClick={() => props.update(angryReaction())}>
               React Angrily
             </PlainButton>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <PlainButton onClick={() => props.update(nodReaction())}>
               Nod
             </PlainButton>
-          </li>
-        </ul>
+          </ListItem>
+        </List>
       </CustomContainer>
     </SimpleScene>
 
