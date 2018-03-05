@@ -25,7 +25,10 @@ const input =
 const credits = () => (
   <AbsoluteWrapper justifyCenter itemsCenter directionColumn>
     <FlexContainer justifyCenter itemsCenter directionColumn>
-      <Bold>Thank You</Bold>
+      <Bold>The End</Bold>
+
+      <Bold>Thank you for playing, and thank you to the following people.</Bold>
+
       <MainText>
         <ReactMarkdown source={input} />
       </MainText>

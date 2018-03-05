@@ -12,10 +12,16 @@ const Button = styled.button`
   border: none;
   background-color: #c1c1c1;
   outline: 0;
+  padding-left: ${props => (props.px ? `${props.px}px` : "0")};
+  padding-right: ${props => (props.px ? `${props.px}px` : "0")};
+  padding-top: ${props => (props.py ? `${props.py}px` : "0")};
+  padding-bottom: ${props => (props.py ? `${props.py}px` : "0")};
 `;
 
-const Clickable = ({ clickFn, children }) => (
-  <Button onClick={clickFn}>{children}</Button>
+const Clickable = ({ clickFn, children, py, px }) => (
+  <Button py={py} px={px} onClick={clickFn}>
+    {children}
+  </Button>
 );
 
 export default Clickable;
