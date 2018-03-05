@@ -316,12 +316,42 @@ const s4 = props => (
           They mention {props.playerOccupationSaved}s be "extremely online" and
           good candidates, but you have no idea what that means...They talk
           about teaching new humans and magical creatures their philosophies,
-          centered around science, and exploration of their craft...They
-          describe successfull magicians: curious, empathetic, fierce, creative,
-          hungry... and you can't help but feel like they're talking about
-          you... you are standing here, in front of them...
+          centered around science, and exploration of their craft...about a
+          program called, what sounds like...
         </MainText>
         <NextButton onClick={() => props.update(ns("s4", "c16"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <MainText>
+          <img
+            src={vim}
+            alt="Vim"
+            style={{ width: "100%", maxWidth: "200px" }}
+          />
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s4", "c16"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <MainText>
+          A program? Like coursework? A computer program? You're left wondering
+          as they continue...
+        </MainText>
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <MainText>
+          ...they describe successfull magicians: curious, empathetic, fierce,
+          creative, hungry... and you can't help but feel like they're talking
+          about you... you <i>are</i> standing here, in front of them...
+        </MainText>
       </CustomContainer>
     </SimpleScene>
 
@@ -330,6 +360,10 @@ const s4 = props => (
         <MainText>
           They stop abruptly, as if an orchestra cut off by their maestro
           suddenly.
+        </MainText>
+        <MainText>
+          They look expectantly at you, as if they assumed you would be able to
+          process that barrage of information.
         </MainText>
         <NextButton onClick={() => props.update(ns("s4", "c17"))} />
       </CustomContainer>
@@ -343,7 +377,7 @@ const s4 = props => (
         </MainText>
 
         <MainText>
-          When you imagined what magic would look like it was not this.
+          When you imagined what magic would look like, but it was not this.
         </MainText>
 
         <MainText>
@@ -458,6 +492,7 @@ const s4 = props => (
           How? Is she going to be in danger? Why must it be her? She's only 15,
           well 16 tomorrow...
         </UserQuote>
+        <Link to={`/to-washington`}>Next</Link>
       </CustomContainer>
     </SimpleScene>
   </div>
