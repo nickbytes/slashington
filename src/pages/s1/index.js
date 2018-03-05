@@ -40,7 +40,7 @@ import Workspace from "../../components/Workspace";
 import YourNewBadge from "../../components/YourNewBadge";
 import keyboard2 from "../../images/keyboard2.jpg";
 import leonard from "../../images/leonard.gif";
-import coffee from "../../images/s1/coffee.jpeg";
+import coffee from "../../images/s1/coffee.gif";
 
 const s1 = props => (
   <div>
@@ -299,10 +299,9 @@ const s1 = props => (
 
     <SimpleScene isVisible={props.c17}>
       <div>
-        <MainText>
-          It's going to be a long day, you should really grab a cup of coffee
-          first.
-        </MainText>
+        <MainText>It's going to be a long day.</MainText>
+
+        <MainText>You decide to grab a cup of coffee first.</MainText>
 
         <MainText>
           <img
@@ -310,7 +309,8 @@ const s1 = props => (
             alt="Going to need this."
             style={{
               width: "100%",
-              maxWidth: "600px"
+              maxWidth: "600px",
+              paddingTop: "10px"
             }}
           />
         </MainText>
@@ -489,9 +489,10 @@ const s1 = props => (
         <UserQuote attrib={coworkerFullTitle()}>
           Quite the coincidence. Open on weekends too, can probably pick it up
           on your way back.
-          <UserQuote paragraph>It's right off the Amtrak stop.</UserQuote>
+          <UserQuote paragraph>It's right next to Union Station.</UserQuote>
           <UserQuote paragraph>
-            You can't miss it, south east corner of H Street and 4th.
+            Take a right out of the Northeast Entrance. You can't miss it, south
+            east corner of H Street and 4th.
           </UserQuote>
         </UserQuote>
 
