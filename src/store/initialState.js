@@ -173,6 +173,8 @@ const initialState = {
     c41: false,
     c42: false
   },
+  bToldHer: true,
+  bFine: true,
   taskTaken: false,
   roleFulfilled: false,
 
@@ -189,7 +191,7 @@ const initialState = {
   leadPet: "Igglefort",
   petTwo: "Najj",
   petThree: "Barringzen",
-  petFour: "Tapien",
+  petFour: "Tomte",
 
   // global jobItems
   jobItems: [
