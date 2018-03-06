@@ -19,7 +19,7 @@ const s6 = props => (
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <UserQuote attrib={`Alex, brother`}>
-          I'll take your stuff up to the guest room. You go relax,say hello to{" "}
+          I'll take your stuff up to the guest room. Go relax, say hello to{" "}
           {props.nieceName} and {props.inLawName}.
         </UserQuote>
         <MainText>
@@ -71,9 +71,11 @@ const s6 = props => (
 
     <SimpleScene isVisible={props.c4}>
       <CustomContainer>
+        <MainText>Does she know anything?</MainText>
+
         <MainText>
-          Does she know anything? Does she know about what {props.nieceName}{" "}
-          <i>is</i>? Does she know what you're doing?
+          Does she know about what {props.nieceName} <i>is</i>? Does she know
+          what you're doing?
         </MainText>
 
         <MainText>
@@ -160,7 +162,7 @@ const s6 = props => (
             </UserQuote>
             <MainText>
               {props.inLawName} strolls over towards a group of parents chatting
-              nearby.
+              nearby, as {props.nieceName} embraces you in a hug.
             </MainText>
             <NextButton onClick={() => props.update(ns("s6", "c8"))} />
           </div>
@@ -170,23 +172,14 @@ const s6 = props => (
           <div>
             <MainText>
               You walk out the back door. {props.nieceName} and her group of
-              friends are doing group _Slipknot karaoke_. How nice.
+              friends are doing group <i>Slipknot karaoke</i>. How nice.
             </MainText>
 
             <UserQuote attrib={`${props.nieceName}, niece`}>
               {props.playerNameSaved}!
             </UserQuote>
 
-            <MainText>
-              She runs over and gives you a hug. At that exact moment The
-              Council's words bounce through your head. Why must such great risk
-              be put on such a young girl? Such a burden. What will this task do
-              to her childhood...?
-            </MainText>
-
-            <MainText>
-              TK TK, councils words bouncing through your head.
-            </MainText>
+            <MainText>She runs over and gives you a hug.</MainText>
             <NextButton onClick={() => props.update(ns("s6", "c8"))} />
           </div>
         )}
@@ -195,45 +188,135 @@ const s6 = props => (
 
     <SimpleScene isVisible={props.c8}>
       <CustomContainer>
-        {/* This is where words should echo in head */}
-        <MainText>Are you considering taking on this task yourself?</MainText>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          Happy Birthday!
+        </UserQuote>
+        <MainText>You try and hide the worry in your voice.</MainText>
         <NextButton onClick={() => props.update(ns("s6", "c9"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c9}>
       <CustomContainer>
-        <MainText>
-          You could offer her help... The Council never said anything about you
-          helping her. Or maybe, you <span>should</span> take the task
-          yourself...
-        </MainText>
+        <UserQuote attrib={`${props.nieceName}, niece`}>
+          Thanks {props.playerNameSaved}! I was worried you weren't going to be
+          able to make it.
+        </UserQuote>
         <NextButton onClick={() => props.update(ns("s6", "c10"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c10}>
       <CustomContainer>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          I didn't think I was going to make it either!
+        </UserQuote>
         <MainText>
-          You slide away from the parents and children, and make your way
-          upstairs. At the end of the hallway, you see {props.nieceName}'s room,
-          mostly because of the posters on the door.
+          The small joke and hug feels like a slight relief from the pressure
+          building in your chest.
         </MainText>
-        <NextButton onClick={() => props.update(ns("s6", "c11"))} />
+        <NextButton onClick={() => props.update(ns("s6", "c10"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c11}>
+    <SimpleScene>
       <CustomContainer>
-        <PosterAnimation />
-        <NextButton onClick={() => props.update(ns("s6", "c12"))} />
+        <MainText>
+          With all of her friends around, you don't dare mention anything about
+          your trip to Slashington.
+        </MainText>
+        <UserQuote attrib={`${props.nieceName}, niece`}>
+          It's my turn for karaoke. I want to show you my computer later, okay?
+        </UserQuote>
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>Sure!</UserQuote>
+        <MainText>
+          {props.nieceName} turns and runs back to her friends and the karaoke
+          machine. You listen for a moment, then walk back inside.
+        </MainText>
+        <MainText>
+          Seeing {props.nieceName}, Alex, {props.inLawName} – it's making you
+          reconsider the whole thing. Why would you put them in danger. Maybe
+          you should wait, give her the keyboard when she is older...
+        </MainText>
+        <MainText>
+          You can't help but feel more curious about the keyboard.
+        </MainText>
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <MainText>
+          You turn right at the top of the stairs and open the door to the guest
+          room. You feel drawn to the duffle bag, and the keyboard inside.
+        </MainText>
+        <MainText>
+          You remember the warmth it emits. The way it made you feel like
+          anything was recklessly possible.
+        </MainText>
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <MainText>A knock at the door</MainText>
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <UserQuote attrib={`Alex, brother`}>Everything okay in here?</UserQuote>
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          Yeah, fine. <i>Fine</i>.
+        </UserQuote>
+        <MainText>You try to sound innocent and whimsical.</MainText>
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <UserQuote attrib={`Alex, brother`}>
+          Going to go put the keyboard in her room? Wow, she'll love the
+          surprise.
+        </UserQuote>
+        <MainText>
+          He holds the door and nods down the small hallway. Damn him...
+        </MainText>
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          Right, yeah.
+        </UserQuote>
+        <MainText>
+          You put on a fake smile and nod. Careful not to touch the keys, you
+          walk past him and into Olive's room.
+        </MainText>
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c12}>
       <CustomContainer>
+        <MainText>You quietly close the door behind you.</MainText>
         <MainText>
-          You open the door quietly, and quickly close it behind you.
+          In the corner of the room, you see the computer that you and{" "}
+          {props.nieceName} used to play computer games on when she was younger.
+        </MainText>
+        <MainText>
+          At the same time, you feel the keyboard pulsate with warmth and
+          energy.
         </MainText>
         <NextButton onClick={() => props.update(ns("s6", "c13"))} />
       </CustomContainer>
@@ -248,7 +331,9 @@ const s6 = props => (
         </MainText>
 
         <MainText>
-          Your thoughts swim within a pool of possible morbid outcomes.
+          Your thoughts swim within a pool of possible morbid outcomes. You
+          think about how you could hold on to the keyboard a little while,
+          maybe until she's 18...
         </MainText>
         <NextButton onClick={() => props.update(ns("s6", "c14"))} />
       </CustomContainer>
@@ -268,13 +353,13 @@ const s6 = props => (
         <List>
           <ListItem>
             <PlainButton onClick={() => console.log(props.update(giveKeys()))}>
-              Give her the keyboard.
+              Give her the keyboard. You know it's not yours to keep.
             </PlainButton>
           </ListItem>
           <ListItem>
             <PlainButton onClick={() => console.log(props.update(takeTask()))}>
-              Take the task yourself. Keep the keyboard. You can probably figure
-              it out.
+              Keep the keyboard. You can give it to her <i>later</i>. Plus, you
+              might get to explore it a little more.
             </PlainButton>
           </ListItem>
         </List>
@@ -295,12 +380,6 @@ const s6 = props => (
               It is?
             </UserQuote>
             <MainText>You attempt to hold back tears.</MainText>
-            <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-              but i dont understand why. I don't understand what is happening
-            </UserQuote>
-            <MainText>
-              She guides you over towards the chair at her computer.
-            </MainText>
 
             <NextButton onClick={() => props.update(ns("s6", "c17"))} />
           </div>
@@ -327,89 +406,81 @@ const s6 = props => (
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c17}>
+    <SimpleScene>
       <CustomContainer>
         {props.roleFulfilled && (
           <div>
             <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-              But i dont understand why. I don't understand what is happening...
+              I don't understand what is happening...
             </UserQuote>
             <MainText>
               She guides you over towards the chair at her computer.
             </MainText>
 
-            <NextButton onClick={() => props.update(ns("s6", "c18"))} />
+            <NextButton onClick={() => props.update(ns("s6", "c17"))} />
           </div>
         )}
 
         {props.taskTaken && (
           <div>
-            <UserQuote attrib={`${props.nieceName}, niece`}>
-              Still works like a charm, added a new graphics card a year ago.
+            <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+              Commander Keen, The Sims, Baldur's Gate, Counter Strike...
             </UserQuote>
+
             <MainText>
-              You smile as she walks you through the changes she's made to the
-              computer. You remember back to teaching her some of the basics,
-              her knowledge greatly surpassing yours at this point. You feel
-              proud.
+              You're mumbling and fumbling the names of all the games you can
+              remember as you try to hide the keyboard behind your back.
             </MainText>
-            <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-              That's amazing, you've taken the shell of an entirely old PC and
-              turned it into a powerful computing machine.
-            </UserQuote>
-            <UserQuote attrib={`${props.nieceName}, niece`}>
-              Thanks, theres only one piece left.
-            </UserQuote>
-            <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-              What's that?
-            </UserQuote>
-            <NextButton onClick={() => props.update(ns("s6", "c18"))} />
           </div>
         )}
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c18}>
+    <SimpleScene isVisible={props.c17}>
+      <CustomContainer>
+        <UserQuote attrib={`${props.nieceName}, niece`}>
+          Still works like a charm, added a new graphics card a year ago.
+        </UserQuote>
+        <MainText>
+          You smile as she walks you through all the software and hardware
+          changes she's made to the computer. You feel proud.
+        </MainText>
+
+        <NextButton onClick={() => props.update(ns("s6", "c18"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <UserQuote attrib={`${props.nieceName}, niece`}>
+          Thanks, theres only one piece left.
+        </UserQuote>
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
       <CustomContainer>
         {props.roleFulfilled && (
           <div>
             <UserQuote attrib={`${props.nieceName}, niece`}>
-              I know, {props.playerNameSaved}.
+              It's okay, {props.playerNameSaved}. I can take it from here.
             </UserQuote>
-
-            <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-              I'm worried for you {props.nieceName}. I don't know if you should
-              be doing this – I don't know if they can be trusted – why you? – I
-              don't understand anything – I feel like, this is a dream – a wild
-              dream, hapenning so fast – but... it ... reminds me of your last
-              birthday – ugh – this is confusing –––– look I can help though...
-              ––
-            </UserQuote>
-
-            <UserQuote attrib={`${props.nieceName}, niece`}>
-              I can take it from here.
-            </UserQuote>
-
-            <NextButton onClick={() => props.update(ns("s6", "c19"))} />
+            <MainText>
+              Her voice is so reassuring. So confident. She takes the keyboard
+              from your hands.
+            </MainText>
           </div>
         )}
 
         {props.taskTaken && (
           <div>
+            <UserQuote attrib={`${props.nieceName}, niece`}>
+              Oh {props.playerNameSaved}, I was hoping we were past it this
+              time.
+            </UserQuote>
             <MainText>
-              You can feel your palms sweating as you hold the keyboard.
+              <Echo>What is she talking about?</Echo>
             </MainText>
-            <UserQuote attrib={`${props.nieceName}, niece`}>
-              Oh {props.playerNameSaved}, I thought we were passed this...
-            </UserQuote>
-            <MainText>What does she know?</MainText>
-            <UserQuote attrib={`${props.nieceName}, niece`}>
-              {props.petNameInputSaved} passed info through the neighbors{" "}
-              {props.petNameInputSaved}. They said you were taking it especially
-              rough this time...
-            </UserQuote>
-            <MainText>How does she know? She points at the keyboard.</MainText>
-            <NextButton onClick={() => props.update(ns("s6", "c19"))} />
           </div>
         )}
       </CustomContainer>
@@ -419,20 +490,12 @@ const s6 = props => (
       <CustomContainer>
         {props.roleFulfilled && (
           <div>
-            <MainText>
-              She looks striaght into your eyes. So confident.
-            </MainText>
-            <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-              Are you sure...? I wouldn't tell anyone. Whatever you need.
-            </UserQuote>
-            <MainText>She smiles.</MainText>
-            <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-              And they told me to tell you something. They said it'd be
-              extremely important.
-            </UserQuote>
             <UserQuote attrib={`${props.nieceName}, niece`}>
-              What's that?
+              You seem a little more relaxed <i>this time</i>.
             </UserQuote>
+            <MainText>
+              She takes the keyboard from you and plugs it into the computer.
+            </MainText>
             <NextButton onClick={() => props.update(ns("s6", "c20"))} />
           </div>
         )}
@@ -440,15 +503,15 @@ const s6 = props => (
         {props.taskTaken && (
           <div>
             <UserQuote attrib={`${props.nieceName}, niece`}>
-              I know you're trying to help, {props.playerNameSaved}, but this
-              task isn't for you. You role is small, but important. You are the
-              messenger... I'll take it from here.
+              You look exhausted, you're taking this all especially hard{" "}
+              <i>this time</i>.
             </UserQuote>
-
-            <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-              I'm worried for you... I don't trust them. I don't understand any
-              of it. I thought I could help. I can help...
-            </UserQuote>
+            <MainText>
+              Looking slightly disappointed, she slowly reaches for the
+              keyboard, and you hand it over to her.
+            </MainText>
+            <MainText>She plugs the keyboard into the computer.</MainText>
+            <NextButton onClick={() => props.update(ns("s6", "c20"))} />
           </div>
         )}
       </CustomContainer>
@@ -456,65 +519,74 @@ const s6 = props => (
 
     <SimpleScene isVisible={props.c20}>
       <CustomContainer>
-        {props.roleFulfilled && (
-          <div>
-            <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-              They said to tell you...
-            </UserQuote>
-            <NextButton onClick={() => props.update(ns("s6", "c21"))} />
-          </div>
-        )}
+        <MainText>
+          You see the keys glow that familiar mesmerizing warmth, and you watch
+          as {props.nieceName} navigates through some commands in a black
+          terminal window.
+        </MainText>
+        <MainText>
+          You're suddenly reminded of instructions The Council has told you to
+          give {props.nieceName}.
+        </MainText>
+      </CustomContainer>
+    </SimpleScene>
 
-        {props.taskTaken && (
-          <div>
-            <UserQuote attrib={`${props.nieceName}, niece`}>
-              I can take it from here.
-            </UserQuote>
-            <MainText>
-              You see a calmness in her eyes. You begin to think you may have
-              underestimated her.
-            </MainText>
-            <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-              There's something they wanted me to tell you.
-            </UserQuote>
-            <UserQuote attrib={`${props.nieceName}, niece`}>
-              What's that?
-            </UserQuote>
-          </div>
-        )}
+    <SimpleScene>
+      <CustomContainer>
+        <UserQuote>
+          They... The Council... they wanted me to tell you something. They said
+          it was absolutely necessary...
+        </UserQuote>
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <MainText>{props.nieceName} stares at you eagerly.</MainText>
+        <UserQuote attrib={`${props.nieceName}, niece`}>What's that?</UserQuote>
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c21}>
       <CustomContainer>
-        <div>
-          {`ESC + : + q`}
-          <NextButton onClick={() => props.update(ns("s6", "c22"))} />
-        </div>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          Escape. Colon. Q.
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s6", "c22"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c22}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          I don't know what it means though... do you?
+          I don't know what it means though... do you? Is it some code?
         </UserQuote>
         <MainText>She laughs.</MainText>
+        <NextButton onClick={() => props.update(ns("s6", "c23"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
         <UserQuote attrib={`${props.nieceName}, niece`}>
           Of course, of course. Vim. Right. No one would ever think of using it,
           it'll be the perfect place to hide instructions. Is that all{" "}
           {props.playerNameSaved}?
         </UserQuote>
-        <UserQuote attrib={`You, ${props.playerNameSaved}`}>Yes.</UserQuote>
         <NextButton onClick={() => props.update(ns("s6", "c23"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c23}>
+    <SimpleScene>
       <CustomContainer>
         <UserQuote attrib={`${props.nieceName}, niece`}>
-          Then I think it's time.
+          Thanks {props.playerNameSaved}. I think it's time then.
         </UserQuote>
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           To head back down to the party?
         </UserQuote>
@@ -535,12 +607,6 @@ const s6 = props => (
           Well, I don't know how much I can help you now...You'll know more
           about it than me... But, of course...{" "}
         </UserQuote>
-        <MainText>
-          She plugs in the keyboard, quickly, and in a matter of seconds, brings
-          up a terminal screen. She fires away command after command, you can't
-          even keep up with what she's doing. And then she stops, and steps
-          away.
-        </MainText>
         <NextButton onClick={() => props.update(ns("s6", "c25"))} />
       </CustomContainer>
     </SimpleScene>
@@ -583,6 +649,13 @@ const s6 = props => (
         <MainText>
           The screen shakes, and colors swim into your vision.
         </MainText>
+        <NextButton onClick={() => props.update(ns("s6", "c27"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene>
+      <CustomContainer>
+        <OliveWorkspace haywire {...props} />
         <Link to={`/good-messenger`}>Next</Link>
       </CustomContainer>
     </SimpleScene>
