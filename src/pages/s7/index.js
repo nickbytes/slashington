@@ -9,7 +9,7 @@ import NextButton from "../../components/NextButton";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 import Waiting from "../../components/Waiting";
-import leaves_glitch from "../../images/s7/leaves_glitch.gif";
+import leaves_glitch from "../../images/gifs/leaves_glitch.gif";
 
 const s7 = props => (
   <div>
@@ -80,21 +80,6 @@ const s7 = props => (
 
     <SimpleScene isVisible={props.c5}>
       <CustomContainer>
-        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          I did a little research, they're all the rage right now.
-        </UserQuote>
-        <MainText>
-          The words come out effortlessly, almost mechanically.
-        </MainText>
-        <MainText>
-          You feel like you <i>really knew</i> she'd like the keyboard.
-        </MainText>
-        <NextButton onClick={() => props.update(ns("s7", "c6"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c6}>
-      <CustomContainer>
         <UserQuote attrib={`Alex, brother`}>
           I did a little research, they're all the rage right now.
         </UserQuote>
@@ -106,20 +91,20 @@ const s7 = props => (
           checked a few forums, watched some reviews online... but where had you
           picked the keyboard up, again? And when did you get it...?
         </MainText>
+        <NextButton onClick={() => props.update(ns("s7", "c6"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c6}>
+      <CustomContainer>
+        <Waiting />
+        <Waiting delay={200} />
+        <Waiting delay={300} />
         <NextButton onClick={() => props.update(ns("s7", "c7"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c7}>
-      <CustomContainer>
-        <Waiting />
-        <Waiting delay={200} />
-        <Waiting delay={300} />
-        <NextButton onClick={() => props.update(ns("s7", "c8"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c8}>
       <CustomContainer>
         <MainText>
           You can't remember. Geez, a few weeks of hectic work can really do a
@@ -130,22 +115,22 @@ const s7 = props => (
           She loves the gift, you're with family, and you don't have to work
           this weekend for the first time in a long while.
         </MainText>
-        <NextButton onClick={() => props.update(ns("s7", "c9"))} />
+        <NextButton onClick={() => props.update(ns("s7", "c8"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c9}>
+    <SimpleScene isVisible={props.c8}>
       <CustomContainer>
         <UserQuote attrib={`Alex, brother`}>
           Hey – and can you believe she won backstage passes to the Frailty Stow
           show next month? Quite the birthday. She's excited. I didn't even know
           she entered a contest.
         </UserQuote>
-        <NextButton onClick={() => props.update(ns("s7", "c10"))} />
+        <NextButton onClick={() => props.update(ns("s7", "c9"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c10}>
+    <SimpleScene isVisible={props.c9}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           Wow, jealous.
@@ -166,7 +151,6 @@ const map = state => ({
   c7: state.s7.c7,
   c8: state.s7.c8,
   c9: state.s7.c9,
-  c10: state.s7.c10,
   playerNameSaved: state.playerNameSaved,
   nieceName: state.nieceName
 });

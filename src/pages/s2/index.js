@@ -14,8 +14,8 @@ import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 import Waiting from "../../components/Waiting";
 import Waves from "../../components/Waves";
-import train from "../../images/s2/train.gif";
-import train_cabin from "../../images/s2/train_cabin.gif";
+import train from "../../images/gifs/train.gif";
+import train_cabin from "../../images/gifs/train_cabin.gif";
 
 const scene = "s2";
 

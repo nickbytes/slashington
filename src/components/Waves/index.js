@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import waves from "../../images/s2/waves.gif";
+import waves from "../../images/gifs/waves.gif";
 
 const Img = styled.img`
   width: 100%;

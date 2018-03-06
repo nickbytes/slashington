@@ -25,7 +25,7 @@ import frailty from "../../images/frailty.png";
 import place1 from "../../images/keys.jpg";
 import place2 from "../../images/bridge.png";
 import plains from "../../images/plains.jpg";
-import truth from "../../images/truth.gif";
+import truth from "../../images/gifs/truth.gif";
 
 const DesktopBackground = styled.div`
   background-color: rgba(31, 34, 40, 1);

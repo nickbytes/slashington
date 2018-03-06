@@ -187,8 +187,7 @@ const initialState = {
     c6: false,
     c7: false,
     c8: false,
-    c9: false,
-    c10: false
+    c9: false
   },
 
   // global
