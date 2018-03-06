@@ -19,8 +19,8 @@ const s6 = props => (
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <UserQuote attrib={`Alex, brother`}>
-          I'll take your stuff up to the guest room. You go relax and say hello
-          to {props.nieceName} and {props.inLawName}.
+          I'll take your stuff up to the guest room. You go relax,say hello to{" "}
+          {props.nieceName} and {props.inLawName}.
         </UserQuote>
         <MainText>
           You walk into the kitchen, dodging teenagers scurrying about the
@@ -55,8 +55,7 @@ const s6 = props => (
       <CustomContainer>
         <UserQuote attrib={`${props.inLawName}, sister-in-law`}>
           Of course. We're all glad to see you, Alex tells me you're spending
-          far too much time at the office. {props.nieceName} missed you. She's
-          in the backyard with her friends.
+          far too much time at the office. {props.nieceName} missed you.
         </UserQuote>
 
         <MainText>
@@ -73,8 +72,8 @@ const s6 = props => (
     <SimpleScene isVisible={props.c4}>
       <CustomContainer>
         <MainText>
-          Does she know anything? Does she know about what {props.nieceName} is?
-          Does she know what you're doing?
+          Does she know anything? Does she know about what {props.nieceName}{" "}
+          <i>is</i>? Does she know what you're doing?
         </MainText>
 
         <MainText>
