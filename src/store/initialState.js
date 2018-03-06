@@ -181,7 +181,14 @@ const initialState = {
   s7: {
     c1: true,
     c2: false,
-    c3: false
+    c3: false,
+    c4: false,
+    c5: false,
+    c6: false,
+    c7: false,
+    c8: false,
+    c9: false,
+    c10: false
   },
 
   // global

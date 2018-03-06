@@ -14,7 +14,7 @@ const Bold = styled.h1`
 `;
 
 const input =
-  "Learning Gardens, Fantom, Commander Keen, Seers' Catalogue, Night in the Woods, Kentucky Route Zero, Choose Your Own Adventure, Morgane, James, Ed, Dempsey, Kunal, Ryan, Postlight Humans, Slade House, Eric, Jumpcity Records, Tom Riddle, Borne";
+  "Learning Gardens crew, Commander Keen, Fantom, Seers' Catalogue, Night in the Woods, Kentucky Route Zero, Choose Your Own Adventure, Postlight people, Slade House, Jumpcity Records, Tom Riddle, Borne, friends who asked about the game, Konditori, Precita Park Cafe";
 
 const credits = () => (
   <div>
