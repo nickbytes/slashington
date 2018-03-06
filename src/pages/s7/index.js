@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
+import { ns } from "../../updaters/ns";
 import CustomContainer from "../../components/CustomContainer";
 import Leaves from "../../components/Leaves";
 import MainText from "../../components/MainText";
+import NextButton from "../../components/NextButton";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 import Waiting from "../../components/Waiting";
@@ -22,6 +24,7 @@ const s7 = props => (
           the sublte hum of Nickelback. You sit up a little bit in the
           lawnchair.
         </MainText>
+        <NextButton onClick={() => props.update(ns("s7", "c2"))} />
       </CustomContainer>
     </SimpleScene>
 
@@ -35,6 +38,7 @@ const s7 = props => (
         <MainText>
           Alex hands you a cold creme soda. Damn, you love creme soda.
         </MainText>
+        <NextButton onClick={() => props.update(ns("s7", "c3"))} />
       </CustomContainer>
     </SimpleScene>
 
@@ -48,6 +52,7 @@ const s7 = props => (
           You barely remember sitting down here... You're glad you came to{" "}
           {props.nieceName}'s birthday. This is exactly what you needed.
         </MainText>
+        <NextButton onClick={() => props.update(ns("s7", "c4"))} />
       </CustomContainer>
     </SimpleScene>
 
@@ -61,6 +66,7 @@ const s7 = props => (
         <MainText>
           Alex shakes his head and takes a swig of creme soda.
         </MainText>
+        <NextButton onClick={() => props.update(ns("s7", "c5"))} />
       </CustomContainer>
     </SimpleScene>
 
@@ -75,6 +81,7 @@ const s7 = props => (
         <MainText>
           You feel like you <i>really knew</i> she'd like the keyboard.
         </MainText>
+        <NextButton onClick={() => props.update(ns("s7", "c6"))} />
       </CustomContainer>
     </SimpleScene>
 
@@ -91,6 +98,7 @@ const s7 = props => (
           checked a few forums, watched some reviews online... but where had you
           picked the keyboard up, again? And when did you get it...?
         </MainText>
+        <NextButton onClick={() => props.update(ns("s7", "c7"))} />
       </CustomContainer>
     </SimpleScene>
 
@@ -99,16 +107,22 @@ const s7 = props => (
         <Waiting />
         <Waiting delay={200} />
         <Waiting delay={300} />
+        <NextButton onClick={() => props.update(ns("s7", "c8"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c8}>
       <CustomContainer>
-        <MainText>Doesn't matter.</MainText>
+        <MainText>
+          You can't remember. Geez, a few weeks of hectic work can really do a
+          number on you...
+        </MainText>
+        <MainText>It doesn't matter.</MainText>
         <MainText>
           She loves the gift, you're with family, and you don't have to work
           this weekend for the first time in a long while.
         </MainText>
+        <NextButton onClick={() => props.update(ns("s7", "c9"))} />
       </CustomContainer>
     </SimpleScene>
 
@@ -116,8 +130,10 @@ const s7 = props => (
       <CustomContainer>
         <UserQuote attrib={`Alex, brother`}>
           Hey – and can you believe she won backstage passes to the Frailty Stow
-          show next month? Quite the birthday. She's excited.
+          show next month? Quite the birthday. She's excited. I didn't even know
+          she entered a contest.
         </UserQuote>
+        <NextButton onClick={() => props.update(ns("s7", "c10"))} />
       </CustomContainer>
     </SimpleScene>
 
