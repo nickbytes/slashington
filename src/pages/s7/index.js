@@ -4,25 +4,33 @@ import React from "react";
 
 import { ns } from "../../updaters/ns";
 import CustomContainer from "../../components/CustomContainer";
-import Leaves from "../../components/Leaves";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 import Waiting from "../../components/Waiting";
+import leaves_glitch from "../../images/s7/leaves_glitch.gif";
 
 const s7 = props => (
   <div>
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
-        <Leaves />
+        <img
+          src={leaves_glitch}
+          alt={"A nice tree"}
+          style={{
+            width: "100%",
+            maxWidth: "600px",
+            marginBottom: "50px"
+          }}
+        />
         <MainText>
           Wow, you must have dozed off a little bit there... what a week.
         </MainText>
+        <MainText>You survey the backyard.</MainText>
         <MainText>
-          You survey the backyard. Teenagers running around, parents chatting,
-          the sublte hum of Nickelback. You sit up a little bit in the
-          lawnchair.
+          Teenagers running around, parents chatting, the sublte hum of
+          Nickelback. You sit up a little bit in the lawnchair.
         </MainText>
         <NextButton onClick={() => props.update(ns("s7", "c2"))} />
       </CustomContainer>
