@@ -6,7 +6,7 @@ import { T_FF } from "../../utilities/constants";
 import CustomContainer from "../../components/CustomContainer";
 import MainText from "../../components/MainText";
 
-import train from "../../images/train-sample.jpeg";
+import trainmoving_glitch from "../../images/gifs/trainmoving_glitch.gif";
 
 const Bold = styled.h1`
   font-family: ${T_FF};
@@ -16,7 +16,7 @@ const Bold = styled.h1`
 const Image = styled.img`
   width: 100%;
   max-width: 600px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 `;
 
 const BeginLink = styled(Link)`
@@ -28,28 +28,19 @@ const s0 = () => (
   <div>
     <CustomContainer>
       <Bold>Slashington</Bold>
-      <Image src={train} alt="Slashington" />
+      <MainText>
+        A semi-fictional, interactive whirlwind by{" "}
+        <a href="http://nickbytes.com">Nick Beattie</a>.
+      </MainText>
+      <Image src={trainmoving_glitch} alt="Slashington" />
       <MainText>
         Slashington is best played with a modern browser, like Chrome, Firefox,
-        or Safari.
+        or Safari. It is best played wearing headphones with a webcam available.
       </MainText>
-      <MainText>
-        At one point in the game you will be asked to use your computer's
-        camera, this image will only be saved to your computer. If you would
-        still not like to use your camera, you will be able to continue.
-      </MainText>
-      <MainText>
-        The game features music and audio effects, it is best played wearing
-        headphones.
-      </MainText>
+      <MainText />
       <BeginLink to={`/the-office`}>
         <MainText>Start</MainText>
       </BeginLink>
-    </CustomContainer>
-    <CustomContainer>
-      <Link to={`/credits`}>
-        <MainText>Credits</MainText>
-      </Link>
     </CustomContainer>
   </div>
 );
