@@ -119,7 +119,6 @@ const s6 = props => (
             <MainText>
               You wipe the sweat from your forehead, where do you start?
             </MainText>
-
             <NextButton onClick={() => props.update(ns("s6", "c7"))} />
           </div>
         )}
@@ -215,11 +214,11 @@ const s6 = props => (
           The small joke and hug feels like a slight relief from the pressure
           building in your chest.
         </MainText>
-        <NextButton onClick={() => props.update(ns("s6", "c10"))} />
+        <NextButton onClick={() => props.update(ns("s6", "c11"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c11}>
       <CustomContainer>
         <MainText>
           With all of her friends around, you don't dare mention anything about
@@ -228,10 +227,11 @@ const s6 = props => (
         <UserQuote attrib={`${props.nieceName}, niece`}>
           It's my turn for karaoke. I want to show you my computer later, okay?
         </UserQuote>
+        <NextButton onClick={() => props.update(ns("s6", "c12"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c12}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>Sure!</UserQuote>
         <MainText>
@@ -246,10 +246,11 @@ const s6 = props => (
         <MainText>
           You can't help but feel more curious about the keyboard.
         </MainText>
+        <NextButton onClick={() => props.update(ns("s6", "c13"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c13}>
       <CustomContainer>
         <MainText>
           You turn right at the top of the stairs and open the door to the guest
@@ -259,31 +260,35 @@ const s6 = props => (
           You remember the warmth it emits. The way it made you feel like
           anything was recklessly possible.
         </MainText>
+        <NextButton onClick={() => props.update(ns("s6", "c14"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c14}>
       <CustomContainer>
         <MainText>A knock at the door</MainText>
+        <NextButton onClick={() => props.update(ns("s6", "c15"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c15}>
       <CustomContainer>
         <UserQuote attrib={`Alex, brother`}>Everything okay in here?</UserQuote>
+        <NextButton onClick={() => props.update(ns("s6", "c16"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c16}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           Yeah, fine. <i>Fine</i>.
         </UserQuote>
         <MainText>You try to sound innocent and whimsical.</MainText>
+        <NextButton onClick={() => props.update(ns("s6", "c17"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c17}>
       <CustomContainer>
         <UserQuote attrib={`Alex, brother`}>
           Going to go put the keyboard in her room? Wow, she'll love the
@@ -292,10 +297,11 @@ const s6 = props => (
         <MainText>
           He holds the door and nods down the small hallway. Damn him...
         </MainText>
+        <NextButton onClick={() => props.update(ns("s6", "c18"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c18}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           Right, yeah.
@@ -304,10 +310,11 @@ const s6 = props => (
           You put on a fake smile and nod. Careful not to touch the keys, you
           walk past him and into Olive's room.
         </MainText>
+        <NextButton onClick={() => props.update(ns("s6", "c19"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c12}>
+    <SimpleScene isVisible={props.c19}>
       <CustomContainer>
         <MainText>You quietly close the door behind you.</MainText>
         <MainText>
@@ -318,11 +325,11 @@ const s6 = props => (
           At the same time, you feel the keyboard pulsate with warmth and
           energy.
         </MainText>
-        <NextButton onClick={() => props.update(ns("s6", "c13"))} />
+        <NextButton onClick={() => props.update(ns("s6", "c20"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c13}>
+    <SimpleScene isVisible={props.c20}>
       <CustomContainer>
         <MainText>
           Your chest tightens, fingers begin to shake and fidget. How can you
@@ -335,20 +342,20 @@ const s6 = props => (
           think about how you could hold on to the keyboard a little while,
           maybe until she's 18...
         </MainText>
-        <NextButton onClick={() => props.update(ns("s6", "c14"))} />
+        <NextButton onClick={() => props.update(ns("s6", "c21"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c14}>
+    <SimpleScene isVisible={props.c21}>
       <CustomContainer>
         <UserQuote attrib={`${props.nieceName}, niece`}>
           {props.playerNameSaved}, what are you doing in here?
         </UserQuote>
-        <NextButton onClick={() => props.update(ns("s6", "c15"))} />
+        <NextButton onClick={() => props.update(ns("s6", "c22"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c15}>
+    <SimpleScene isVisible={props.c22}>
       <CustomContainer>
         <List>
           <ListItem>
@@ -366,7 +373,7 @@ const s6 = props => (
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c16}>
+    <SimpleScene isVisible={props.c23}>
       <CustomContainer>
         {props.roleFulfilled && (
           <div>
@@ -381,7 +388,7 @@ const s6 = props => (
             </UserQuote>
             <MainText>You attempt to hold back tears.</MainText>
 
-            <NextButton onClick={() => props.update(ns("s6", "c17"))} />
+            <NextButton onClick={() => props.update(ns("s6", "c24"))} />
           </div>
         )}
 
@@ -401,12 +408,13 @@ const s6 = props => (
             <MainText>
               She points to the section of computers and hardware in the corner.
             </MainText>
+            <NextButton onClick={() => props.update(ns("s6", "c24"))} />
           </div>
         )}
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c24}>
       <CustomContainer>
         {props.roleFulfilled && (
           <div>
@@ -417,7 +425,7 @@ const s6 = props => (
               She guides you over towards the chair at her computer.
             </MainText>
 
-            <NextButton onClick={() => props.update(ns("s6", "c17"))} />
+            <NextButton onClick={() => props.update(ns("s6", "c25"))} />
           </div>
         )}
 
@@ -431,12 +439,13 @@ const s6 = props => (
               You're mumbling and fumbling the names of all the games you can
               remember as you try to hide the keyboard behind your back.
             </MainText>
+            <NextButton onClick={() => props.update(ns("s6", "c25"))} />
           </div>
         )}
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c17}>
+    <SimpleScene isVisible={props.c25}>
       <CustomContainer>
         <UserQuote attrib={`${props.nieceName}, niece`}>
           Still works like a charm, added a new graphics card a year ago.
@@ -446,19 +455,20 @@ const s6 = props => (
           changes she's made to the computer. You feel proud.
         </MainText>
 
-        <NextButton onClick={() => props.update(ns("s6", "c18"))} />
+        <NextButton onClick={() => props.update(ns("s6", "c26"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c26}>
       <CustomContainer>
         <UserQuote attrib={`${props.nieceName}, niece`}>
           Thanks, theres only one piece left.
         </UserQuote>
+        <NextButton onClick={() => props.update(ns("s6", "c27"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c27}>
       <CustomContainer>
         {props.roleFulfilled && (
           <div>
@@ -469,6 +479,7 @@ const s6 = props => (
               Her voice is so reassuring. So confident. She takes the keyboard
               from your hands.
             </MainText>
+            <NextButton onClick={() => props.update(ns("s6", "c28"))} />
           </div>
         )}
 
@@ -481,12 +492,13 @@ const s6 = props => (
             <MainText>
               <Echo>What is she talking about?</Echo>
             </MainText>
+            <NextButton onClick={() => props.update(ns("s6", "c28"))} />
           </div>
         )}
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c19}>
+    <SimpleScene isVisible={props.c28}>
       <CustomContainer>
         {props.roleFulfilled && (
           <div>
@@ -496,7 +508,7 @@ const s6 = props => (
             <MainText>
               She takes the keyboard from you and plugs it into the computer.
             </MainText>
-            <NextButton onClick={() => props.update(ns("s6", "c20"))} />
+            <NextButton onClick={() => props.update(ns("s6", "c29"))} />
           </div>
         )}
 
@@ -511,13 +523,13 @@ const s6 = props => (
               keyboard, and you hand it over to her.
             </MainText>
             <MainText>She plugs the keyboard into the computer.</MainText>
-            <NextButton onClick={() => props.update(ns("s6", "c20"))} />
+            <NextButton onClick={() => props.update(ns("s6", "c29"))} />
           </div>
         )}
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c20}>
+    <SimpleScene isVisible={props.c29}>
       <CustomContainer>
         <MainText>
           You see the keys glow that familiar mesmerizing warmth, and you watch
@@ -528,64 +540,68 @@ const s6 = props => (
           You're suddenly reminded of instructions The Council has told you to
           give {props.nieceName}.
         </MainText>
+        <NextButton onClick={() => props.update(ns("s6", "c30"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c30}>
       <CustomContainer>
         <UserQuote>
           They... The Council... they wanted me to tell you something. They said
           it was absolutely necessary...
         </UserQuote>
+        <NextButton onClick={() => props.update(ns("s6", "c31"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c31}>
       <CustomContainer>
         <MainText>{props.nieceName} stares at you eagerly.</MainText>
         <UserQuote attrib={`${props.nieceName}, niece`}>What's that?</UserQuote>
+        <NextButton onClick={() => props.update(ns("s6", "c32"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c21}>
+    <SimpleScene isVisible={props.c32}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           Escape. Colon. Q.
         </UserQuote>
-        <NextButton onClick={() => props.update(ns("s6", "c22"))} />
+        <NextButton onClick={() => props.update(ns("s6", "c33"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c22}>
+    <SimpleScene isVisible={props.c33}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           I don't know what it means though... do you? Is it some code?
         </UserQuote>
         <MainText>She laughs.</MainText>
-        <NextButton onClick={() => props.update(ns("s6", "c23"))} />
+        <NextButton onClick={() => props.update(ns("s6", "c34"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c34}>
       <CustomContainer>
         <UserQuote attrib={`${props.nieceName}, niece`}>
           Of course, of course. Vim. Right. No one would ever think of using it,
           it'll be the perfect place to hide instructions. Is that all{" "}
           {props.playerNameSaved}?
         </UserQuote>
-        <NextButton onClick={() => props.update(ns("s6", "c23"))} />
+        <NextButton onClick={() => props.update(ns("s6", "c35"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c35}>
       <CustomContainer>
         <UserQuote attrib={`${props.nieceName}, niece`}>
           Thanks {props.playerNameSaved}. I think it's time then.
         </UserQuote>
+        <NextButton onClick={() => props.update(ns("s6", "c36"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c36}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           To head back down to the party?
@@ -594,11 +610,11 @@ const s6 = props => (
           You feel a slight twinge of relief. You're not crazy, this is
           happening.
         </MainText>
-        <NextButton onClick={() => props.update(ns("s6", "c24"))} />
+        <NextButton onClick={() => props.update(ns("s6", "c37"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c24}>
+    <SimpleScene isVisible={props.c37}>
       <CustomContainer>
         <UserQuote attrib={`${props.nieceName}, niece`}>
           Yes, but first, could you take a look at something on my computer...
@@ -607,11 +623,11 @@ const s6 = props => (
           Well, I don't know how much I can help you now...You'll know more
           about it than me... But, of course...{" "}
         </UserQuote>
-        <NextButton onClick={() => props.update(ns("s6", "c25"))} />
+        <NextButton onClick={() => props.update(ns("s6", "c38"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c25}>
+    <SimpleScene isVisible={props.c38}>
       <CustomContainer>
         <UserQuote attrib={`${props.nieceName}, niece`}>
           Right here... this line...
@@ -620,17 +636,18 @@ const s6 = props => (
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           Okay. It says
         </UserQuote>
-        <NextButton onClick={() => props.update(ns("s6", "c26"))} />
+        <NextButton onClick={() => props.update(ns("s6", "c39"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c39}>
       <CustomContainer>
         <OliveWorkspace {...props} />
+        <NextButton onClick={() => props.update(ns("s6", "c40"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c26}>
+    <SimpleScene isVisible={props.c40}>
       <CustomContainer>
         <MainText>
           You feel lightheaded, but you cannot stop looking at the screen. You
@@ -640,20 +657,20 @@ const s6 = props => (
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           Wazzuiitttmeeaan? Wazzzuittt?
         </UserQuote>
-        <NextButton onClick={() => props.update(ns("s6", "c27"))} />
+        <NextButton onClick={() => props.update(ns("s6", "c41"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c27}>
+    <SimpleScene isVisible={props.c41}>
       <CustomContainer>
         <MainText>
           The screen shakes, and colors swim into your vision.
         </MainText>
-        <NextButton onClick={() => props.update(ns("s6", "c27"))} />
+        <NextButton onClick={() => props.update(ns("s6", "c42"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c42}>
       <CustomContainer>
         <OliveWorkspace haywire {...props} />
         <Link to={`/good-messenger`}>Next</Link>
