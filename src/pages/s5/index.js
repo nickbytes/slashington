@@ -220,6 +220,8 @@ const map = state => ({
   c10: state.s5.c10,
   c11: state.s5.c11,
   c12: state.s5.c12,
+  c13: state.s5.c13,
+  c14: state.s5.c14,
   nieceName: state.nieceName,
   inLawName: state.inLawName
 });

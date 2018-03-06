@@ -14,8 +14,8 @@ import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 import Waiting from "../../components/Waiting";
 import Waves from "../../components/Waves";
-import train from "../../images/gifs/train.gif";
-import train_cabin from "../../images/gifs/train_cabin.gif";
+import trainmoving_glitch from "../../images/gifs/trainmoving_glitch.gif";
+import onboard_glitch from "../../images/gifs/onboard_glitch.gif";
 
 const scene = "s2";
 
@@ -53,7 +53,7 @@ const s2 = props => (
         </MainText>
         <MainText>
           <img
-            src={train}
+            src={trainmoving_glitch}
             alt={"Leaving the station"}
             style={{
               width: "100%",
@@ -114,7 +114,7 @@ const s2 = props => (
         </MainText>
         <MainText>
           <img
-            src={train_cabin}
+            src={onboard_glitch}
             alt="No one here."
             style={{
               width: "100%",

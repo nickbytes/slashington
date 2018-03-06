@@ -40,7 +40,7 @@ import Workspace from "../../components/Workspace";
 import YourNewBadge from "../../components/YourNewBadge";
 import keyboard2 from "../../images/keyboard2.jpg";
 import leonard from "../../images/gifs/leonard.gif";
-import coffee from "../../images/gifs/coffee.gif";
+import coffee from "../../images/gifs/coffee_glitch.gif";
 
 const s1 = props => (
   <div>

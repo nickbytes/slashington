@@ -125,7 +125,9 @@ const initialState = {
     c9: false,
     c10: false,
     c11: false,
-    c12: false
+    c12: false,
+    c13: false,
+    c14: false
   },
 
   // s6

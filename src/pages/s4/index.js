@@ -468,13 +468,15 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c25}>
-      <UserQuote attrib={`Comrade ${props.petTwo}`}>
-        Country-pop, really.
-      </UserQuote>
-      <MainText>
-        There are nods, and murmors of agreement about <i>country-pop</i>.
-      </MainText>
-      <NextButton onClick={() => props.update(ns("s4", "c26"))} />
+      <CustomContainer>
+        <UserQuote attrib={`Comrade ${props.petTwo}`}>
+          Country-pop, really.
+        </UserQuote>
+        <MainText>
+          There are nods, and murmors of agreement about <i>country-pop</i>.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s4", "c26"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c26}>
