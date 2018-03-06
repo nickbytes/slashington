@@ -6,11 +6,11 @@ import { List, ListItem } from "../../components/ListUtils";
 import { fine, giveKeys, takeTask, toldHer } from "./updaters";
 import { ns } from "../../updaters/ns";
 import CustomContainer from "../../components/CustomContainer";
+import Echo from "../../components/Echo";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
 import OliveWorkspace from "../../components/OliveWorkspace";
 import PlainButton from "../../components/PlainButton";
-import PosterAnimation from "../../components/PosterAnimation";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 
