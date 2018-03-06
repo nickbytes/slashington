@@ -359,12 +359,12 @@ const s6 = props => (
       <CustomContainer>
         <List>
           <ListItem>
-            <PlainButton onClick={() => console.log(props.update(giveKeys()))}>
+            <PlainButton onClick={() => props.update(giveKeys())}>
               Give her the keyboard. You know it's not yours to keep.
             </PlainButton>
           </ListItem>
           <ListItem>
-            <PlainButton onClick={() => console.log(props.update(takeTask()))}>
+            <PlainButton onClick={() => props.update(takeTask())}>
               Keep the keyboard. You can give it to her <i>later</i>. Plus, you
               might get to explore it a little more.
             </PlainButton>

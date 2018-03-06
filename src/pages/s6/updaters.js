@@ -19,8 +19,8 @@ export const fine = state => ({
 export const giveKeys = state => ({
   ...state,
   s6: {
-    c15: false,
-    c16: true
+    c22: false,
+    c23: true
   },
   taskTaken: false,
   roleFulfilled: true
@@ -29,8 +29,8 @@ export const giveKeys = state => ({
 export const takeTask = state => ({
   ...state,
   s6: {
-    c15: false,
-    c16: true
+    c22: false,
+    c23: true
   },
   taskTaken: true,
   roleFulfilled: false
