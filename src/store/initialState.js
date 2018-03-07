@@ -134,6 +134,7 @@ const initialState = {
     c13: false,
     c14: false
   },
+  darkness: true,
 
   // s6
   s6: {

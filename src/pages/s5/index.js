@@ -1,5 +1,6 @@
 import { connect } from "funcup";
 import React from "react";
+import styled from "styled-components";
 
 import {
   AbsoluteBlack,
@@ -7,6 +8,7 @@ import {
   ChapterNum,
   ChapterTitle
 } from "../../components/ChapterUtils";
+import { burst } from "./updaters";
 import { ns } from "../../updaters/ns";
 import Clickable from "../../components/Clickable";
 import CustomContainer from "../../components/CustomContainer";
@@ -16,6 +18,10 @@ import NextButton from "../../components/NextButton";
 import NextChapter from "../../components/NextChapter";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
+
+const ColorSwitch = styled.span`
+  color: ${props => (props.darkness ? "#fff" : "#000")};
+`;
 
 const s5 = props => (
   <div>
@@ -154,9 +160,14 @@ const s5 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c10}>
+      {props.darkness && <AbsoluteBlack />}
+
       <CustomContainer>
         <MainText>
-          Three or four seconds. Suddenly the car <Clickable>bursts</Clickable>{" "}
+          <ColorSwitch darkness={props.darkness}>
+            Three or four seconds. Suddenly the car{" "}
+            <Clickable clickFn={() => props.update(burst())}>bursts</Clickable>{" "}
+          </ColorSwitch>
           with light, you grimace and squint in the stark contrast. When you
           open your eyes, the train car is again packed with people, regular
           people. People reading their tablets, morning papers, talking on cell
@@ -241,7 +252,8 @@ const map = state => ({
   inLawName: state.inLawName,
   petNameInputSaved: state.petNameInputSaved,
   playerNameSaved: state.playerNameSaved,
-  playerOccupationSaved: state.playerOccupationSaved
+  playerOccupationSaved: state.playerOccupationSaved,
+  darkness: state.darkness
 });
 
 export default connect(map)(s5);
