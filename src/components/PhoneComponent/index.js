@@ -42,6 +42,11 @@ class PhoneComponent extends Component {
           style={{
             display: "none"
           }}
+          config={{
+            youtube: {
+              preload: true
+            }
+          }}
           playing={this.state.playing}
         />
         <div className="cd-iphone-6 cd-scale-60 cd-center cd-padded-device cd-blueprint">
