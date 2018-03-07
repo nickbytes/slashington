@@ -43,12 +43,6 @@ import coffee from "../../images/gifs/coffee_glitch.gif";
 import keyboard2 from "../../images/keyboard2.jpg";
 import leonard from "../../images/gifs/leonard.gif";
 
-const Bold = styled.h1`
-  font-family: ${T_FF};
-  font-weight: 700;
-  margin-bottom: 50px;
-`;
-
 const s1 = props => (
   <div>
     <SimpleScene isVisible={props.c1}>
