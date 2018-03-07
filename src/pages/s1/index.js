@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import Draggable from "react-draggable";
 import React from "react";
+import styled from "styled-components";
 
+import { T_FF } from "../../utilities/constants";
 import {
   addPlayerName,
   addSecurityAnswers,
@@ -38,9 +40,15 @@ import UserQuote from "../../components/UserQuote";
 import WebcamComponent from "../../components/WebcamComponent";
 import Workspace from "../../components/Workspace";
 import YourNewBadge from "../../components/YourNewBadge";
+import coffee from "../../images/gifs/coffee_glitch.gif";
 import keyboard2 from "../../images/keyboard2.jpg";
 import leonard from "../../images/gifs/leonard.gif";
-import coffee from "../../images/gifs/coffee_glitch.gif";
+
+const Bold = styled.h1`
+  font-family: ${T_FF};
+  font-weight: 700;
+  margin-bottom: 50px;
+`;
 
 const s1 = props => (
   <div>
@@ -55,9 +63,9 @@ const s1 = props => (
 
     <SimpleScene isVisible={props.c2}>
       <CustomContainer>
-        <MainText>Leonard the receptionist, looks at you, annoyed.</MainText>
+        <MainText>The receptionist, Leonard, looks at you annoyed.</MainText>
         <MainText>
-          Nothing is getting on your nerves today. Not the{" "}
+          Nothing is getting on your nerves today, though. Not the{" "}
           <Clickable clickFn={e => props.update(startBurning)}>
             <span style={{ position: "relative" }}>
               burnt toast {props.startBurning && <Smoke />}

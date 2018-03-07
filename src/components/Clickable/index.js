@@ -16,6 +16,10 @@ const Button = styled.button`
   padding-right: ${props => (props.px ? `${props.px}px` : "0")};
   padding-top: ${props => (props.py ? `${props.py}px` : "0")};
   padding-bottom: ${props => (props.py ? `${props.py}px` : "0")};
+
+  &:active {
+    color: inherit;
+  }
 `;
 
 const Clickable = ({ clickFn, children, py, px }) => (

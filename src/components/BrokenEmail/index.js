@@ -39,7 +39,7 @@ class BrokenEmail extends Component {
   render() {
     return (
       <EmailContainer className="handle">
-        <TopBar>WorkplaceAIM</TopBar>
+        <TopBar>WorkplaceAIM ({35 - this.state.wordJumble.length})</TopBar>
         <MessagesContainer>
           <SingleMessage>
             <MessageName>audrey</MessageName>

@@ -26,7 +26,7 @@ const InnerContainer = styled.div`
   width: 90px;
   height: 10px;
   border-radius: 8px;
-  border: 2px solid black;
+  border: 1px solid black;
   margin: 0 auto;
   top: 18px;
   position: absolute;
