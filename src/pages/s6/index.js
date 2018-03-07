@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
@@ -556,7 +555,7 @@ const s6 = props => (
 
     <SimpleScene isVisible={props.c31}>
       <CustomContainer>
-        <MainText>{props.nieceName} stares at you eagerly.</MainText>
+        <MainText>{props.nieceName} stares at you inquisitively.</MainText>
         <UserQuote attrib={`${props.nieceName}, niece`}>What's that?</UserQuote>
         <NextButton onClick={() => props.update(ns("s6", "c32"))} />
       </CustomContainer>
@@ -643,7 +642,6 @@ const s6 = props => (
     <SimpleScene isVisible={props.c39}>
       <CustomContainer>
         <OliveWorkspace {...props} />
-        <NextButton onClick={() => props.update(ns("s6", "c40"))} />
       </CustomContainer>
     </SimpleScene>
 
@@ -673,7 +671,7 @@ const s6 = props => (
     <SimpleScene isVisible={props.c42}>
       <CustomContainer>
         <OliveWorkspace haywire {...props} />
-        <Link to={`/good-messenger`}>Next</Link>
+        {/* <Link to={`/good-messenger`}>Next</Link> */}
       </CustomContainer>
     </SimpleScene>
   </div>
@@ -727,7 +725,11 @@ const map = state => ({
   bToldHer: state.bToldHer,
   bFine: state.bFine,
   nieceName: state.nieceName,
-  inLawName: state.inLawName
+  inLawName: state.inLawName,
+  playerNameSaved: state.playerNameSaved,
+  playerOccupationSaved: state.playerOccupationSaved,
+  petTypeInputSaved: state.petTypeInputSaved,
+  petNameInputSaved: state.petNameInputSaved
 });
 
 export default connect(map)(s6);

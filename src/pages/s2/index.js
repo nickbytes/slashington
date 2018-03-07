@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
@@ -10,12 +9,13 @@ import Echo from "../../components/Echo";
 import EchoInline from "../../components/EchoInline";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
+import NextChapter from "../../components/NextChapter";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 import Waiting from "../../components/Waiting";
 import Waves from "../../components/Waves";
-import trainmoving_glitch from "../../images/gifs/trainmoving_glitch.gif";
 import onboard_glitch from "../../images/gifs/onboard_glitch.gif";
+import trainmoving_glitch from "../../images/gifs/trainmoving_glitch.gif";
 
 const scene = "s2";
 
@@ -420,7 +420,7 @@ const s2 = props => (
           it to you.
         </UserQuote>
 
-        <Link to="/slashington">Next</Link>
+        <NextChapter to="/slashington" />
       </CustomContainer>
     </SimpleScene>
   </div>

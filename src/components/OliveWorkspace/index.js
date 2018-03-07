@@ -17,6 +17,8 @@ import {
   WindowHeader,
   WindowTitle
 } from "../Workspace";
+import { ns } from "../../updaters/ns";
+import Clickable from "../Clickable";
 import LeftBar from "../Workspace/LeftBar";
 import RightBar from "../Workspace/RightBar";
 import TopBar from "../Workspace/TopBar";
@@ -214,6 +216,15 @@ const OliveWorkspace = props => (
             <PoemText>But you still hold something more</PoemText>
             <PoemText>Of Slashington, you still have your reveries,</PoemText>
             <PoemText>Messenger, no more, you leave me your memories.</PoemText>
+            {!props.haywire && (
+              <PoemText>
+                <Clickable onClick={() => props.update(ns("s6", "c40"))}>
+                  <span role="img" aria-label="sparkles">
+                    ✨
+                  </span>
+                </Clickable>
+              </PoemText>
+            )}
           </WindowBody>
         </ShakyWindow>
       </Draggable>

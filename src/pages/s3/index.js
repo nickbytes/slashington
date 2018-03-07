@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
@@ -7,6 +6,7 @@ import CustomContainer from "../../components/CustomContainer";
 import Echo from "../../components/Echo";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
+import NextChapter from "../../components/NextChapter";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 
@@ -116,7 +116,7 @@ const s3 = props => (
           You walk forward, keyboard in hand, and push through the doors.
         </MainText>
 
-        <Link to={`/the-council`}>Next</Link>
+        <NextChapter to={`/the-council`} />
       </CustomContainer>
     </SimpleScene>
   </div>

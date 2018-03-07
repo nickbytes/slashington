@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
@@ -8,6 +7,7 @@ import CustomContainer from "../../components/CustomContainer";
 import Echo from "../../components/Echo";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
+import NextChapter from "../../components/NextChapter";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 
@@ -201,7 +201,7 @@ const s5 = props => (
           That's great, real great.
         </UserQuote>
         <MainText>You try to hide the dread in your voice.</MainText>
-        <Link to={`/birthday-party`}>Next</Link>
+        <NextChapter to={`/birthday-party`} />
       </CustomContainer>
     </SimpleScene>
   </div>
@@ -223,7 +223,10 @@ const map = state => ({
   c13: state.s5.c13,
   c14: state.s5.c14,
   nieceName: state.nieceName,
-  inLawName: state.inLawName
+  inLawName: state.inLawName,
+  petNameInputSaved: state.petNameInputSaved,
+  playerNameSaved: state.playerNameSaved,
+  playerOccupationSaved: state.playerOccupationSaved
 });
 
 export default connect(map)(s5);

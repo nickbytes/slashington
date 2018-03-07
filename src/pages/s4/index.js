@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
@@ -9,6 +8,7 @@ import CustomContainer from "../../components/CustomContainer";
 import DigitalBoard from "../../components/DigitalBoard";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
+import NextChapter from "../../components/NextChapter";
 import PlainButton from "../../components/PlainButton";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
@@ -118,7 +118,7 @@ const s4 = props => (
               What the <i>fuck</i> is going on?
             </UserQuote>
             <UserQuote attrib={`Comrade ${props.petThree}`}>
-              Such a temper... are they even fit for this task, Comrade
+              Such a temper... are they even fit for this task, Comrade{" "}
               {props.leadPet}?
             </UserQuote>
             <UserQuote attrib={`Comrade ${props.petTwo}`}>
@@ -142,7 +142,7 @@ const s4 = props => (
               to another
             </MainText>
             <UserQuote attrib={`Comrade ${props.petFour}`}>
-              Are they okay? They look like they might faint...I told Comrade
+              Are they okay? They look like they might faint...I told Comrade{" "}
               {props.leadPet}...
             </UserQuote>
 
@@ -207,7 +207,7 @@ const s4 = props => (
         {props.reactedNod && (
           <div>
             <UserQuote attrib={`Comrade ${props.petFour}`}>
-              Is it... hmm... pertinent to give such details now Comrade
+              Is it... hmm... pertinent to give such details now Comrade{" "}
               {props.leadPet}? Look at the state of them...
             </UserQuote>
             <NextButton onClick={() => props.update(ns("s4", "c11"))} />
@@ -273,7 +273,7 @@ const s4 = props => (
           back and forth with each other.
         </MainText>
 
-        <MainText>It's maddening.</MainText>
+        <MainText>It's a maddening orchestra of logic.</MainText>
         <NextButton onClick={() => props.update(ns("s4", "c14"))} />
       </CustomContainer>
     </SimpleScene>
@@ -494,7 +494,7 @@ const s4 = props => (
           How? Is she going to be in danger? Why must it be her? She's only 15,
           well 16 tomorrow...
         </UserQuote>
-        <Link to={`/to-washington`}>Next</Link>
+        <NextChapter to={`/to-washington`} />
       </CustomContainer>
     </SimpleScene>
   </div>
