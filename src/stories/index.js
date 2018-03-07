@@ -2,11 +2,14 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 
+import { List, ListItem } from "../components/ListUtils";
 import BrokenEmail from "../components/BrokenEmail";
 import CustomContainer from "../components/CustomContainer";
 import DigitalBoard from "../components/DigitalBoard";
 import DreamText from "../components/DreamText";
+import EchoInline from "../components/EchoInline";
 import EmailAssistant from "../components/Workspace/EmailAssistant";
+import MainText from "../components/MainText";
 import NextButton from "../components/NextButton";
 import OliveWorkspace from "../components/OliveWorkspace";
 import PetFormInput from "../components/PetFormInput";
@@ -106,3 +109,45 @@ storiesOf("Digital train board", module).add("normal", () => <DigitalBoard />);
 storiesOf("EmailAssistant", module).add("normal", () => <EmailAssistant />);
 
 storiesOf("Webcam", module).add("normal", () => <WebcamComponent />);
+
+storiesOf("New Rochelle", module).add("normal", () => (
+  <CustomContainer>
+    <List>
+      <ListItem>
+        <MainText>1. a small parking lot</MainText>
+      </ListItem>
+      <ListItem>
+        <MainText>
+          2. a variety of weathered vending machines inside and out, usually
+          out-of-order and/or stock
+        </MainText>
+      </ListItem>
+      <ListItem>
+        <MainText>3. a waiting room, in case of inclimate weather</MainText>
+      </ListItem>
+      <ListItem>
+        <MainText>
+          4. a small snack bar/cafe selling tar-black coffee, breakfast pastries
+          wrapped in Saran Wrap, fruit snacks, magazines, energy drinks, beer,
+          wine coolers, chips, candy, gum
+        </MainText>
+      </ListItem>
+      <ListItem>
+        <MainText>5. a sadly restroom</MainText>
+      </ListItem>
+      <ListItem>
+        <MainText>
+          6. and a plastic wall mount distributing pamphlets for attractions,
+          restaurants, golf courses, hay rides, swimming poles, lawn care, tax
+          services, and public parks
+        </MainText>
+      </ListItem>
+    </List>
+  </CustomContainer>
+));
+
+storiesOf("EchoInline", module).add("normal", () => (
+  <MainText>
+    You feel your legs start to <EchoInline>wobble</EchoInline>.
+  </MainText>
+));

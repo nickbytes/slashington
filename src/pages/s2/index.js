@@ -200,26 +200,35 @@ const s2 = props => (
 
     <SimpleScene isVisible={props.c12}>
       <CustomContainer>
-        <MainText>
-          These are all photos with text at Rye/New Rochelle stop.
-        </MainText>
         <List>
-          <ListItem>1. a small parking lot</ListItem>
           <ListItem>
-            2. a variety of weathered vending machines inside and out, usually
-            out-of-order and/or stock
+            <MainText>1. a small parking lot</MainText>
           </ListItem>
-          <ListItem>3. a waiting room, in case of inclimate weather</ListItem>
           <ListItem>
-            4. a small snack bar/cafe selling tar black coffee, breakfast
-            pastries wrapped in Saran Wrap, fruit snacks, magazines, energy
-            drinks, beer, wine coolers, chips, candy, gum
+            <MainText>
+              2. a variety of weathered vending machines inside and out, usually
+              out-of-order and/or stock
+            </MainText>
           </ListItem>
-          <ListItem>5. a sadly restroom</ListItem>
           <ListItem>
-            6. and a plastic wall mount distributing pamphlets for attractions,
-            restaurants, golf courses, hay rides, swimming poles, lawn care, tax
-            services, and public parks
+            <MainText>3. a waiting room, in case of inclimate weather</MainText>
+          </ListItem>
+          <ListItem>
+            <MainText>
+              4. a small snack bar/cafe selling tar black coffee, breakfast
+              pastries wrapped in Saran Wrap, fruit snacks, magazines, energy
+              drinks, beer, wine coolers, chips, candy, gum
+            </MainText>
+          </ListItem>
+          <ListItem>
+            <MainText>5. a sadly restroom</MainText>
+          </ListItem>
+          <ListItem>
+            <MainText>
+              6. and a plastic wall mount distributing pamphlets for
+              attractions, restaurants, golf courses, hay rides, swimming poles,
+              lawn care, tax services, and public parks
+            </MainText>
           </ListItem>
         </List>
         <NextButton onClick={() => props.update(ns("s2", "c13"))} />
