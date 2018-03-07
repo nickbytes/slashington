@@ -2,9 +2,7 @@ import "../../vendor/devices.min.css";
 
 import { connect } from "funcup";
 import React from "react";
-import styled from "styled-components";
 
-import { T_FF } from "../../utilities/constants";
 import {
   addPlayerName,
   addSecurityAnswers,
