@@ -44,7 +44,7 @@ import WebcamComponent from "../../components/WebcamComponent";
 import Workspace from "../../components/Workspace";
 import YourNewBadge from "../../components/YourNewBadge";
 import coffee from "../../images/gifs/coffee_glitch.gif";
-import side_keyboard_glitch from "../../images/side_keyboard_glitch.gif";
+import side_keyboard_glitch from "../../images/gifs/side_keyboard_glitch.gif";
 import leonard from "../../images/gifs/leonard.gif";
 
 const s1 = props => (
