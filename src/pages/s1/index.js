@@ -44,7 +44,7 @@ import WebcamComponent from "../../components/WebcamComponent";
 import Workspace from "../../components/Workspace";
 import YourNewBadge from "../../components/YourNewBadge";
 import coffee from "../../images/gifs/coffee_glitch.gif";
-import keyboard2 from "../../images/keyboard2.jpg";
+import side_keyboard_glitch from "../../images/side_keyboard_glitch.gif";
 import leonard from "../../images/gifs/leonard.gif";
 
 const s1 = props => (
@@ -438,7 +438,7 @@ const s1 = props => (
               cursor: "pointer"
             }}
           >
-            <img src={keyboard2} alt="keyboard" />
+            <img src={side_keyboard_glitch} alt="keyboard" />
           </button>
         </CustomContainer>
       </div>
