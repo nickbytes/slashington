@@ -50,7 +50,10 @@ class BrokenEmail extends Component {
             </SingleMessage>
             <SingleMessage>
               <MessageName>cristina</MessageName>
-              <MessageText>sample text</MessageText>
+              <MessageText>
+                why did no one tell me this was just outer space combined with
+                Rihanna songs and a light show
+              </MessageText>
             </SingleMessage>
             <SingleMessage>
               <MessageName>edouard</MessageName>
