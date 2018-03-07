@@ -4,7 +4,8 @@ export const toldHer = state => ({
     c5: false,
     c6: true
   },
-  bToldHer: true
+  bToldHer: true,
+  bFine: false
 });
 
 export const fine = state => ({
@@ -13,6 +14,7 @@ export const fine = state => ({
     c5: false,
     c6: true
   },
+  bToldHer: false,
   bFine: true
 });
 
