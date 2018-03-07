@@ -1,8 +1,6 @@
 import "../../vendor/devices.min.css";
 
-import { Link } from "react-router-dom";
 import { connect } from "funcup";
-import Draggable from "react-draggable";
 import React from "react";
 import styled from "styled-components";
 
@@ -30,6 +28,7 @@ import JobSelectionComponent from "../../components/JobSelectionComponent";
 import MainText from "../../components/MainText";
 import NewInput from "../../components/NewInput";
 import NextButton from "../../components/NextButton";
+import NextChapter from "../../components/NextChapter";
 import PetFormInput from "../../components/PetFormInput";
 import PetFormLabel from "../../components/PetFormLabel";
 import PhoneComponent from "../../components/PhoneComponent";
@@ -453,8 +452,7 @@ const s1 = props => (
           and a damn good one.
         </MainText>
         <MainText>
-          Paolo is a tall slender tree, leaning over into your cubicle. He
-          speaks in a faint, crisp voice.
+          Paolo cranes his neck, leaning over into your cubicle.
         </MainText>
         <NextButton onClick={() => props.update(ns("s1", "c25"))} />
       </CustomContainer>
@@ -493,16 +491,18 @@ const s1 = props => (
     <SimpleScene isVisible={props.c28}>
       <CustomContainer>
         <UserQuote attrib={coworkerFullTitle()}>
-          Quite the coincidence. Open on weekends too, can probably pick it up
-          on your way back.
+          <UserQuote paragraph>
+            Quite the coincidence. Open on weekends too, can probably pick it up
+            on your way back.
+          </UserQuote>
           <UserQuote paragraph>It's right next to Union Station.</UserQuote>
           <UserQuote paragraph>
-            Take a right out of the Northeast Entrance. You can't miss it, south
-            east corner of H Street and 4th.
+            Take a right out of the Northeast Entrance of the station. You can't
+            miss it, south east corner of H Street and 4th.
           </UserQuote>
         </UserQuote>
 
-        <Link to="/train-ride">Next</Link>
+        <NextChapter to="/train-ride" />
       </CustomContainer>
     </SimpleScene>
   </div>
