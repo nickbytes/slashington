@@ -39,7 +39,8 @@ const s0 = () => (
         <MainText>
           Slashington is best played with a modern browser, like Chrome,
           Firefox, or Safari. It is best played wearing headphones, with a
-          webcam available.
+          webcam available. If you have any issues, email me at nick at
+          nickbytes dot com.
         </MainText>
         <MainText />
         <BeginLink to={`/the-office`}>

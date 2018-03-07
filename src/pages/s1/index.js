@@ -402,7 +402,7 @@ const s1 = props => (
           You'll <i>disconnect</i>.
         </MainText>
         <MainText>
-          You've just got to get through the next few hours and
+          You've just got to get through the next few hours and{" "}
           <Clickable clickFn={e => props.update(ns("s1", "c21"))}>
             deadlines
           </Clickable>.

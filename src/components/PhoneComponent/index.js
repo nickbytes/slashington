@@ -6,7 +6,8 @@ import Dots from "./Dots";
 class PhoneComponent extends Component {
   state = {
     randomValues: [],
-    playing: false
+    playing: false,
+    loadingFinished: false
   };
 
   componentDidMount() {
@@ -48,6 +49,11 @@ class PhoneComponent extends Component {
             }
           }}
           playing={this.state.playing}
+          onReady={() =>
+            this.setState({
+              loadingFinished: true
+            })
+          }
         />
         <div className="cd-iphone-6 cd-scale-60 cd-center cd-padded-device cd-blueprint">
           <div className="cd-body">
@@ -260,7 +266,9 @@ class PhoneComponent extends Component {
                     })
                   }
                 >
-                  {this.state.playing ? "Stop?" : "Play now?"}
+                  {this.state.playing
+                    ? this.state.loadingFinished ? "Stop?" : "Loading..."
+                    : "Play now?"}
                 </button>
               </div>
             </div>
