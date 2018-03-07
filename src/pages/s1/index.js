@@ -407,9 +407,7 @@ const s1 = props => (
 
     <SimpleScene isVisible={props.c21}>
       <Workspace>
-        <Draggable handle=".handle">
-          <BrokenEmail {...props} />
-        </Draggable>
+        <BrokenEmail {...props} />
       </Workspace>
     </SimpleScene>
 
