@@ -2,6 +2,12 @@ import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
+import {
+  AbsoluteBlack,
+  ChapterNext,
+  ChapterNum,
+  ChapterTitle
+} from "../../components/ChapterUtils";
 import { ns } from "../../updaters/ns";
 import CustomContainer from "../../components/CustomContainer";
 import MainText from "../../components/MainText";
@@ -13,6 +19,14 @@ import leaves_glitch from "../../images/gifs/leaves_glitch.gif";
 
 const s7 = props => (
   <div>
+    <SimpleScene isVisible={props.c0}>
+      <AbsoluteBlack />
+      <CustomContainer>
+        <ChapterNum>Chapter 7</ChapterNum>
+        <ChapterTitle>What A Week</ChapterTitle>
+        <ChapterNext onClick={() => props.update(ns("s7", "c1"))} />
+      </CustomContainer>
+    </SimpleScene>
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <img
@@ -142,6 +156,7 @@ const s7 = props => (
 );
 
 const map = state => ({
+  c0: state.s7.c0,
   c1: state.s7.c1,
   c2: state.s7.c2,
   c3: state.s7.c3,

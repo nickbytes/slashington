@@ -4,6 +4,12 @@ import { connect } from "funcup";
 import React from "react";
 
 import {
+  AbsoluteBlack,
+  ChapterNext,
+  ChapterNum,
+  ChapterTitle
+} from "../../components/ChapterUtils";
+import {
   addPlayerName,
   addSecurityAnswers,
   setNewPetName,
@@ -43,6 +49,14 @@ import leonard from "../../images/gifs/leonard.gif";
 
 const s1 = props => (
   <div>
+    <SimpleScene isVisible={props.c0}>
+      <AbsoluteBlack />
+      <CustomContainer>
+        <ChapterNum>Chapter 1</ChapterNum>
+        <ChapterTitle>A Broken Keyboard</ChapterTitle>
+        <ChapterNext onClick={() => props.update(ns("s1", "c1"))} />
+      </CustomContainer>
+    </SimpleScene>
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <UserQuote attrib="You">
@@ -501,6 +515,7 @@ const s1 = props => (
 );
 
 const map = state => ({
+  c0: state.s1.c0,
   c1: state.s1.c1,
   c2: state.s1.c2,
   c3: state.s1.c3,

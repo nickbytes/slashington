@@ -1,6 +1,12 @@
 import { connect } from "funcup";
 import React from "react";
 
+import {
+  AbsoluteBlack,
+  ChapterNext,
+  ChapterNum,
+  ChapterTitle
+} from "../../components/ChapterUtils";
 import { List, ListItem } from "../../components/ListUtils";
 import { angryReaction, nodReaction } from "./updaters";
 import { ns } from "../../updaters/ns";
@@ -16,6 +22,14 @@ import vim from "../../images/vim.png";
 
 const s4 = props => (
   <div>
+    <SimpleScene isVisible={props.c0}>
+      <AbsoluteBlack />
+      <CustomContainer>
+        <ChapterNum>Chapter 4</ChapterNum>
+        <ChapterTitle>The Council</ChapterTitle>
+        <ChapterNext onClick={() => props.update(ns("s4", "c1"))} />
+      </CustomContainer>
+    </SimpleScene>
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <MainText>You stand inside an empty waiting room.</MainText>
@@ -501,6 +515,7 @@ const s4 = props => (
 );
 
 const map = state => ({
+  c0: state.s4.c0,
   c1: state.s4.c1,
   c2: state.s4.c2,
   c3: state.s4.c3,

@@ -3,7 +3,8 @@ import { createTitle } from "../components/JobSelectionComponent/jobGenerator";
 const initialState = {
   // s1
   s1: {
-    c1: true,
+    c0: true,
+    c1: false,
     c2: false,
     c3: false,
     c4: false,
@@ -38,7 +39,8 @@ const initialState = {
 
   // s2
   s2: {
-    c1: true,
+    c0: true,
+    c1: false,
     c2: false,
     c3: false,
     c4: false,
@@ -70,7 +72,8 @@ const initialState = {
 
   // s3
   s3: {
-    c1: true,
+    c0: true,
+    c1: false,
     c2: false,
     c3: false,
     c4: false,
@@ -81,7 +84,8 @@ const initialState = {
 
   // s4
   s4: {
-    c1: true,
+    c0: true,
+    c1: false,
     c2: false,
     c3: false,
     c4: false,
@@ -114,7 +118,8 @@ const initialState = {
 
   // s5
   s5: {
-    c1: true,
+    c0: true,
+    c1: false,
     c2: false,
     c3: false,
     c4: false,
@@ -132,7 +137,8 @@ const initialState = {
 
   // s6
   s6: {
-    c1: true,
+    c0: true,
+    c1: false,
     c2: false,
     c3: false,
     c4: false,
@@ -181,7 +187,8 @@ const initialState = {
   roleFulfilled: false,
 
   s7: {
-    c1: true,
+    c0: true,
+    c1: false,
     c2: false,
     c3: false,
     c4: false,

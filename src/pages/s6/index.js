@@ -1,6 +1,12 @@
 import { connect } from "funcup";
 import React from "react";
 
+import {
+  AbsoluteBlack,
+  ChapterNext,
+  ChapterNum,
+  ChapterTitle
+} from "../../components/ChapterUtils";
 import { List, ListItem } from "../../components/ListUtils";
 import { fine, giveKeys, takeTask, toldHer } from "./updaters";
 import { ns } from "../../updaters/ns";
@@ -15,6 +21,16 @@ import UserQuote from "../../components/UserQuote";
 
 const s6 = props => (
   <div>
+    <SimpleScene isVisible={props.c0}>
+      <AbsoluteBlack />
+      <CustomContainer>
+        <ChapterNum>Chapter 6</ChapterNum>
+        <ChapterTitle>
+          A Birthday Party To <i>Remember</i>
+        </ChapterTitle>
+        <ChapterNext onClick={() => props.update(ns("s6", "c1"))} />
+      </CustomContainer>
+    </SimpleScene>
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <UserQuote attrib={`Alex, brother`}>
@@ -678,6 +694,7 @@ const s6 = props => (
 );
 
 const map = state => ({
+  c0: state.s6.c0,
   c1: state.s6.c1,
   c2: state.s6.c2,
   c3: state.s6.c3,

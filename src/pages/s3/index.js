@@ -1,6 +1,12 @@
 import { connect } from "funcup";
 import React from "react";
 
+import {
+  AbsoluteBlack,
+  ChapterNext,
+  ChapterNum,
+  ChapterTitle
+} from "../../components/ChapterUtils";
 import { ns } from "../../updaters/ns";
 import CustomContainer from "../../components/CustomContainer";
 import Echo from "../../components/Echo";
@@ -12,6 +18,14 @@ import UserQuote from "../../components/UserQuote";
 
 const s3 = props => (
   <div>
+    <SimpleScene isVisible={props.c0}>
+      <AbsoluteBlack />
+      <CustomContainer>
+        <ChapterNum>Chapter 3</ChapterNum>
+        <ChapterTitle>Slashington</ChapterTitle>
+        <ChapterNext onClick={() => props.update(ns("s3", "c1"))} />
+      </CustomContainer>
+    </SimpleScene>
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <MainText>
@@ -123,6 +137,7 @@ const s3 = props => (
 );
 
 const map = state => ({
+  c0: state.s3.c0,
   c1: state.s3.c1,
   c2: state.s3.c2,
   c3: state.s3.c3,
