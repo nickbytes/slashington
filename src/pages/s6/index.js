@@ -687,7 +687,6 @@ const s6 = props => (
     <SimpleScene isVisible={props.c42}>
       <CustomContainer>
         <OliveWorkspace haywire {...props} />
-        {/* <Link to={`/good-messenger`}>Next</Link> */}
       </CustomContainer>
     </SimpleScene>
   </div>

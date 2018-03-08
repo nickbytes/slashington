@@ -14,6 +14,7 @@ import {
 import { ns } from "../../updaters/ns";
 import Clickable from "../Clickable";
 import LeftBar from "../Workspace/LeftBar";
+import NextChapter from "../NextChapter";
 import RightBar from "../Workspace/RightBar";
 import TopBar from "../Workspace/TopBar";
 import WorkspaceContainer from "../Workspace/WorkspaceContainer";
@@ -117,10 +118,10 @@ const OliveWorkspace = props => (
     <DesktopBackground className="desktop-bg">
       {props.children}
       {props.haywire && [
-        <Haywire />,
-        <BlackWindow />,
-        <YellowWindow />,
-        <BlueWindow />
+        <Haywire key="haywireback" />,
+        <BlackWindow key="blackwindow" />,
+        <YellowWindow key="YellowWindow" />,
+        <BlueWindow key="BlueWindow" />
       ]}
 
       <Draggable>
@@ -266,6 +267,11 @@ const OliveWorkspace = props => (
                     ✨
                   </span>
                 </Clickable>
+              </PoemText>
+            )}
+            {props.haywire && (
+              <PoemText>
+                <NextChapter to={`/good-messenger`} />
               </PoemText>
             )}
           </WindowBody>
