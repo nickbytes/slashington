@@ -1,8 +1,8 @@
 export const angryReaction = state => ({
   ...state,
   s4: {
-    c7: false,
-    c8: true
+    c8: false,
+    c9: true
   },
   reactedAngry: true
 });
@@ -10,8 +10,8 @@ export const angryReaction = state => ({
 export const nodReaction = state => ({
   ...state,
   s4: {
-    c7: false,
-    c8: true
+    c8: false,
+    c9: true
   },
   reactedNod: true
 });

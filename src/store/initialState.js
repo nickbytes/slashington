@@ -132,7 +132,16 @@ const initialState = {
     c24: false,
     c25: false,
     c26: false,
-    c27: false
+    c27: false,
+    c28: false,
+    c29: false,
+    c30: false,
+    c31: false,
+    c32: false,
+    c33: false,
+    c34: false,
+    c35: false,
+    c36: false
   },
   reactedAngry: false,
   reactedNod: false,

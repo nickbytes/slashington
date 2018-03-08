@@ -19,6 +19,7 @@ import PlainButton from "../../components/PlainButton";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 import vim from "../../images/vim.png";
+import frailty_glitch from "../../images/gifs/frailty_concert_glitch.gif";
 
 const s4 = props => (
   <div>
@@ -84,7 +85,12 @@ const s4 = props => (
           They look like a mix between model train fanatics and Game of Thrones
           fans.
         </MainText>
+        <NextButton onClick={() => props.update(ns("s4", "c6"))} />
+      </CustomContainer>
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c6}>
+      <CustomContainer>
         <UserQuote
           attrib={`${props.petTypeInputSaved}, sitting at head of table`}
         >
@@ -94,20 +100,20 @@ const s4 = props => (
           The {props.petTypeInputSaved} nods towards an empty seat at their
           table. Your feet seem to walk without you telling them to do so.
         </MainText>
-        <NextButton onClick={() => props.update(ns("s4", "c6"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c6}>
-      <CustomContainer>
-        <UserQuote attrib={`Comrade ${props.leadPet}`}>
-          We, as you might know, are The Council.
-        </UserQuote>
         <NextButton onClick={() => props.update(ns("s4", "c7"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c7}>
+      <CustomContainer>
+        <UserQuote attrib={`Comrade ${props.leadPet}`}>
+          We, as you might know, are The Council.
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s4", "c8"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c8}>
       <CustomContainer>
         <List>
           <ListItem>
@@ -124,7 +130,7 @@ const s4 = props => (
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c8}>
+    <SimpleScene isVisible={props.c9}>
       <CustomContainer>
         {props.reactedAngry && (
           <div>
@@ -142,7 +148,7 @@ const s4 = props => (
             <MainText>
               All around the table, eyes look over every inch of you.
             </MainText>
-            <NextButton onClick={() => props.update(ns("s4", "c9"))} />
+            <NextButton onClick={() => props.update(ns("s4", "c10"))} />
           </div>
         )}
 
@@ -164,44 +170,6 @@ const s4 = props => (
             <UserQuote attrib={`You, ${props.playerNameSaved}`}>
               {props.petNameInputSaved}... {props.petNameInputSaved} told me.
             </UserQuote>
-            <NextButton onClick={() => props.update(ns("s4", "c9"))} />
-          </div>
-        )}
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c9}>
-      <CustomContainer>
-        {props.reactedAngry && (
-          <div>
-            <UserQuote attrib={`Comrade ${props.leadPet}`}>
-              Completely normal response. You all saw the week{" "}
-              {props.playerNameSaved} had {props.petThree}. All fine, fine{" "}
-              {props.petFour}.
-            </UserQuote>
-            <MainText>
-              Some of the {props.petTypeInputSaved}s whisper to each other, as
-              the lead {props.petTypeInputSaved}, Comrade {props.leadPet}, tries
-              to reassure them of your reaction.
-            </MainText>
-            <UserQuote attrib={`Comrade ${props.leadPet}`}>
-              You have been--
-            </UserQuote>
-            <NextButton onClick={() => props.update(ns("s4", "c10"))} />
-          </div>
-        )}
-        {props.reactedNod && (
-          <div>
-            <UserQuote attrib={`Comrade ${props.leadPet}`}>
-              Well, good. Good, good. Okay, then.
-            </UserQuote>
-            <MainText>
-              Some tension seems to have been released from the group. There is
-              nodding.
-            </MainText>
-            <UserQuote attrib={`Comrade ${props.leadPet}`}>
-              You have been--
-            </UserQuote>
             <NextButton onClick={() => props.update(ns("s4", "c10"))} />
           </div>
         )}
@@ -212,17 +180,35 @@ const s4 = props => (
       <CustomContainer>
         {props.reactedAngry && (
           <div>
-            <UserQuote attrib={`Comrade ${props.petThree}`}>
-              Must we really explain this each time Comrade {props.leadPet}?
+            <UserQuote attrib={`Comrade ${props.leadPet}`}>
+              Completely normal response. You all saw the week{" "}
+              {props.playerNameSaved} had {props.petThree}. We <i>all</i> got
+              the reports from Paolo and Leonard – tough week. All fine, fine{" "}
+              {props.petFour}.
+            </UserQuote>
+            <MainText>
+              Some of the {props.petTypeInputSaved}s whisper to each other, as
+              the lead {props.petTypeInputSaved}, Comrade {props.leadPet}, tries
+              to reassure them of your reaction.
+            </MainText>
+            <UserQuote attrib={`Comrade ${props.leadPet}`}>
+              You have been--
             </UserQuote>
             <NextButton onClick={() => props.update(ns("s4", "c11"))} />
           </div>
         )}
         {props.reactedNod && (
           <div>
-            <UserQuote attrib={`Comrade ${props.petFour}`}>
-              Is it... hmm... pertinent to give such details now Comrade{" "}
-              {props.leadPet}? Look at the state of them...
+            <UserQuote attrib={`Comrade ${props.leadPet}`}>
+              See, see? All good, Paolo and Leonard assured me all was{" "}
+              <i>fine</i>. Good, good. Okay, then.
+            </UserQuote>
+            <MainText>
+              Some tension seems to have been released from the group. There is
+              nodding.
+            </MainText>
+            <UserQuote attrib={`Comrade ${props.leadPet}`}>
+              You have been--
             </UserQuote>
             <NextButton onClick={() => props.update(ns("s4", "c11"))} />
           </div>
@@ -231,6 +217,35 @@ const s4 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c11}>
+      <CustomContainer>
+        <MainText>Paolo? Leonard?</MainText>
+        <NextButton onClick={() => props.update(ns("s4", "c12"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c12}>
+      <CustomContainer>
+        {props.reactedAngry && (
+          <div>
+            <UserQuote attrib={`Comrade ${props.petThree}`}>
+              Must we really explain this each time Comrade {props.leadPet}?
+            </UserQuote>
+            <NextButton onClick={() => props.update(ns("s4", "c13"))} />
+          </div>
+        )}
+        {props.reactedNod && (
+          <div>
+            <UserQuote attrib={`Comrade ${props.petFour}`}>
+              Is it... hmm... pertinent to give such details now Comrade{" "}
+              {props.leadPet}? Look at the state of them...
+            </UserQuote>
+            <NextButton onClick={() => props.update(ns("s4", "c13"))} />
+          </div>
+        )}
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c13}>
       <CustomContainer>
         <UserQuote attrib={`Comrade ${props.leadPet}`}>
           Rule 17, Article 405b states that the counselor must explain
@@ -246,11 +261,11 @@ const s4 = props => (
           bicker. Some are rolling their eyes, some nodding in approval, one
           solemnly stirs its coffee, paying little attention.
         </MainText>
-        <NextButton onClick={() => props.update(ns("s4", "c12"))} />
+        <NextButton onClick={() => props.update(ns("s4", "c14"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c12}>
+    <SimpleScene isVisible={props.c14}>
       <CustomContainer>
         <UserQuote attrib={`Comrade ${props.leadPet}`}>
           <UserQuote paragraph>
@@ -260,23 +275,29 @@ const s4 = props => (
 
           <UserQuote paragraph>You must have many questions.</UserQuote>
         </UserQuote>
+        <NextButton onClick={() => props.update(ns("s4", "c15"))} />
+      </CustomContainer>
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c15}>
+      <CustomContainer>
         <MainText>
           You do. You can't tell if you feel like laughing, or crying.
         </MainText>
 
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          Who are you? What is this? What is going on?
+          Who are you? What is this? What is going on? How do you know Paolo and
+          Leonard...?
         </UserQuote>
 
         <UserQuote attrib={`Comrade ${props.leadPet}`}>
           Let us try to answer a few of these.
         </UserQuote>
-        <NextButton onClick={() => props.update(ns("s4", "c13"))} />
+        <NextButton onClick={() => props.update(ns("s4", "c16"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c13}>
+    <SimpleScene isVisible={props.c16}>
       <CustomContainer>
         <MainText>
           They begin to explain in <i>unison</i>.
@@ -288,11 +309,11 @@ const s4 = props => (
         </MainText>
 
         <MainText>It's a maddening orchestra of logic.</MainText>
-        <NextButton onClick={() => props.update(ns("s4", "c14"))} />
+        <NextButton onClick={() => props.update(ns("s4", "c17"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c14}>
+    <SimpleScene isVisible={props.c17}>
       <CustomContainer>
         <MainText>
           Parts of it even sound familiar, though you can't imagine how they
@@ -309,11 +330,11 @@ const s4 = props => (
           groups...Elaborate attempts at secrecy, inflitrations into religions
           and states, governing bodies created, and disbanded...
         </MainText>
-        <NextButton onClick={() => props.update(ns("s4", "c15"))} />
+        <NextButton onClick={() => props.update(ns("s4", "c18"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c15}>
+    <SimpleScene isVisible={props.c18}>
       <CustomContainer>
         <MainText>
           They stop for a moment, as if to assess if you are following along,
@@ -333,11 +354,11 @@ const s4 = props => (
           centered around science, and exploration of their craft...about a
           program called, what sounds like...
         </MainText>
-        <NextButton onClick={() => props.update(ns("s4", "c16"))} />
+        <NextButton onClick={() => props.update(ns("s4", "c19"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c19}>
       <CustomContainer>
         <MainText>
           <img
@@ -346,30 +367,32 @@ const s4 = props => (
             style={{ width: "100%", maxWidth: "200px" }}
           />
         </MainText>
-        <NextButton onClick={() => props.update(ns("s4", "c16"))} />
+        <NextButton onClick={() => props.update(ns("s4", "c20"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c20}>
       <CustomContainer>
         <MainText>
           A program? Like coursework? A computer program? You're left wondering
           as they continue...
         </MainText>
+        <NextButton onClick={() => props.update(ns("s4", "c21"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene>
+    <SimpleScene isVisible={props.c21}>
       <CustomContainer>
         <MainText>
           ...they describe successfull magicians: curious, empathetic, fierce,
           creative, hungry... and you can't help but feel like they're talking
           about you... you <i>are</i> standing here, in front of them...
         </MainText>
+        <NextButton onClick={() => props.update(ns("s4", "c22"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c16}>
+    <SimpleScene isVisible={props.c22}>
       <CustomContainer>
         <MainText>
           They stop abruptly, as if an orchestra cut off by their maestro
@@ -379,115 +402,45 @@ const s4 = props => (
           They look expectantly at you, as if they assumed you would be able to
           process that barrage of information.
         </MainText>
-        <NextButton onClick={() => props.update(ns("s4", "c17"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c17}>
-      <CustomContainer>
-        <MainText>
-          One of them grabs the keyboard and waves their fingers over the top of
-          it.
-        </MainText>
-
-        <MainText>
-          When you imagined what magic would look like, but it was not this.
-        </MainText>
-
-        <MainText>
-          You imagined it so artistic, graceful, and nuanced. But here you are,
-          watching <i>real magic</i>, and in the corniest way, this{" "}
-          {props.petTypeInputSaved} waved 'spirit fingers' over the keyboard.
-          You're almost disappointed, before you see the{" "}
-          {props.petTypeInputSaved} push a key and you watch the keyboard light
-          up.
-        </MainText>
-        <NextButton onClick={() => props.update(ns("s4", "c18"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c18}>
-      <CustomContainer>
-        <MainText>
-          It's as if the sun itself is hiding behind each of the keys. It's a
-          bright light, imminating 3-4 inches between the cracks of each of the
-          keys. The glow feels warm and in your mind you know that must be what
-          magic feels like.
-        </MainText>
-        <NextButton onClick={() => props.update(ns("s4", "c19"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c19}>
-      <CustomContainer>
-        <MainText>You love the feeling.</MainText>
-        <UserQuote attrib={`Comrade ${props.leadPet}`}>
-          The next part of training is the most important, the first mission is
-          dangerous, but we are nearly out of time.
-        </UserQuote>
-        <NextButton onClick={() => props.update(ns("s4", "c20"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c20}>
-      <CustomContainer>
-        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          What mission am I to do?
-        </UserQuote>
-
-        <MainText>
-          You ask almost brashly, but you can't help it, you are drunk with
-          confidence (the magic?) from the keyboard. The feeling dies within
-          seconds and you wondered why you even said anything.
-        </MainText>
-        <NextButton onClick={() => props.update(ns("s4", "c21"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c21}>
-      <CustomContainer>
-        <UserQuote attrib={`Comrade ${props.leadPet}`}>
-          You, {props.playerNameSaved}, are the messenger. You will deliver this
-          your niece, Olive.
-        </UserQuote>
-        <NextButton onClick={() => props.update(ns("s4", "c22"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c22}>
-      <CustomContainer>
-        <UserQuote attrib={`You, ${props.playerNameSaved}`}>What?</UserQuote>
-        <MainText>The words spit themselves out.</MainText>
         <NextButton onClick={() => props.update(ns("s4", "c23"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c23}>
       <CustomContainer>
-        <UserQuote attrib={`Comrade ${props.leadPet}`}>
-          Your niece will place a curse on Frailty Stow, once she has learned
-          the appropriate magical methods.
-        </UserQuote>
+        <MainText>
+          One of them grabs the keyboard and waves their fingers over the top of
+          it.
+        </MainText>
         <NextButton onClick={() => props.update(ns("s4", "c24"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c24}>
       <CustomContainer>
-        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          Frailty Stow? The pop singer?
-        </UserQuote>
+        <MainText>
+          When you imagined what magic would look like, but it was not this.
+        </MainText>
+        <MainText>
+          Books and movies had portrayed it as{" "}
+          <i>artistic, graceful, and nuanced</i>. And that's how you imagined
+          it.
+        </MainText>
         <NextButton onClick={() => props.update(ns("s4", "c25"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c25}>
       <CustomContainer>
-        <UserQuote attrib={`Comrade ${props.petTwo}`}>
-          Country-pop, really.
-        </UserQuote>
         <MainText>
-          There are nods, and murmors of agreement about <i>country-pop</i>.
+          But here you are, watching <i>real magic</i>, and in the corniest way,
+          this {props.petTypeInputSaved} waved 'spirit fingers' over the
+          keyboard.
+        </MainText>
+        <MainText>
+          You're almost disappointed, before you see the{" "}
+          {props.petTypeInputSaved} push a key and you watch the keyboard light
+          up.
         </MainText>
         <NextButton onClick={() => props.update(ns("s4", "c26"))} />
       </CustomContainer>
@@ -495,14 +448,119 @@ const s4 = props => (
 
     <SimpleScene isVisible={props.c26}>
       <CustomContainer>
-        <UserQuote attrib={`Comrade ${props.leadPet}`}>
-          Yes, the, er... country-pop singer.
-        </UserQuote>
+        <MainText>
+          It's as if the sun itself is hiding behind each of the keys. It's a
+          bright light, imminating 3-4 inches between the cracks of each of the
+          keys. The glow feels warm and in your mind you know that must be what
+          magic feels like.
+        </MainText>
         <NextButton onClick={() => props.update(ns("s4", "c27"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c27}>
+      <CustomContainer>
+        <MainText>You love the feeling.</MainText>
+        <UserQuote attrib={`Comrade ${props.leadPet}`}>
+          The next part of the training is the most important, the first mission
+          is dangerous, but we are nearly out of time...
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s4", "c28"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c28}>
+      <CustomContainer>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          What mission am I to do?
+        </UserQuote>
+
+        <MainText>You ask almost brashly.</MainText>
+        <MainText>But you can't help it.</MainText>
+
+        <MainText>
+          You are drunk with confidence (the magic?) from the keyboard. The
+          feeling dies within seconds and you wondered why you even said
+          anything.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s4", "c29"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c29}>
+      <CustomContainer>
+        <UserQuote attrib={`Comrade ${props.leadPet}`}>
+          You, {props.playerNameSaved}, are the messenger. You will deliver this
+          your niece, Olive.
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s4", "c30"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c30}>
+      <CustomContainer>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>What?</UserQuote>
+        <MainText>The words spit themselves out.</MainText>
+        <NextButton onClick={() => props.update(ns("s4", "c31"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c31}>
+      <CustomContainer>
+        <UserQuote attrib={`Comrade ${props.leadPet}`}>
+          Your niece will place a curse on Frailty Stow, once she has learned
+          the appropriate magical methods.
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s4", "c32"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c32}>
+      <CustomContainer>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          Frailty Stow? The pop singer?
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s4", "c33"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c33}>
+      <CustomContainer>
+        <img
+          src={frailty_glitch}
+          alt={`Frailty Stow`}
+          style={{
+            width: "100%",
+            maxWidth: "600px",
+            marginBottom: "50px"
+          }}
+        />
+        <NextButton onClick={() => props.update(ns("s4", "c34"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c34}>
+      <CustomContainer>
+        <UserQuote attrib={`Comrade ${props.petTwo}`}>
+          Country-pop, really.
+        </UserQuote>
+        <MainText>
+          There are nods, and murmors of agreement about <i>country-pop</i>.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s4", "c35"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c35}>
+      <CustomContainer>
+        <UserQuote attrib={`Comrade ${props.leadPet}`}>
+          Yes, the, er... country-pop singer.
+        </UserQuote>
+        <NextButton onClick={() => props.update(ns("s4", "c36"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c36}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           How? Is she going to be in danger? Why must it be her? She's only 15,
@@ -543,6 +601,15 @@ const map = state => ({
   c25: state.s4.c25,
   c26: state.s4.c26,
   c27: state.s4.c27,
+  c28: state.s4.c28,
+  c29: state.s4.c29,
+  c30: state.s4.c30,
+  c31: state.s4.c31,
+  c32: state.s4.c32,
+  c33: state.s4.c33,
+  c34: state.s4.c34,
+  c35: state.s4.c35,
+  c36: state.s4.c36,
   reactedAngry: state.reactedAngry,
   reactedNod: state.reactedNod,
   playerNameSaved: state.playerNameSaved,
