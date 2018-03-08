@@ -11,7 +11,7 @@ import { List, ListItem } from "../../components/ListUtils";
 import { fine, giveKeys, takeTask, toldHer } from "./updaters";
 import { ns } from "../../updaters/ns";
 import CustomContainer from "../../components/CustomContainer";
-import Echo from "../../components/Echo";
+import EchoInline from "../../components/EchoInline";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
 import OliveWorkspace from "../../components/OliveWorkspace";
@@ -501,11 +501,11 @@ const s6 = props => (
         {props.taskTaken && (
           <div>
             <UserQuote attrib={`${props.nieceName}, niece`}>
-              Oh {props.playerNameSaved}, I was hoping we were past it this
-              time.
+              Oh {props.playerNameSaved}, I was hoping we were past it{" "}
+              <i>this time</i>.
             </UserQuote>
             <MainText>
-              <Echo>What is she talking about?</Echo>
+              <EchoInline>What is she talking about?</EchoInline>
             </MainText>
             <NextButton onClick={() => props.update(ns("s6", "c28"))} />
           </div>

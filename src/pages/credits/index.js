@@ -10,7 +10,8 @@ import SimpleScene from "../../components/SimpleScene";
 const Bold = styled.h1`
   font-family: ${T_FF};
   font-weight: 700;
-  margin-bottom: 250px;
+  margin-top: 50px;
+  margin-bottom: 220px;
 `;
 
 const input =
