@@ -69,7 +69,11 @@ const initialState = {
     c25: false,
     c26: false,
     c27: false,
-    c28: false
+    c28: false,
+    c29: false,
+    c30: false,
+    c31: false,
+    c32: false
   },
 
   // s3

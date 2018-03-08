@@ -35,6 +35,7 @@ const s2 = props => (
         <ChapterNext onClick={() => props.update(ns("s2", "c1"))} />
       </CustomContainer>
     </SimpleScene>
+
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <MainText>
@@ -45,18 +46,25 @@ const s2 = props => (
           You find a seat near the middle of the train and unwind. You've made
           it. The end of a long week.
         </MainText>
+        <NextButton onClick={() => props.update(ns("s2", "c2"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c2}>
+      <CustomContainer>
         <MainText>
           Relief washes over you like a series gentle{" "}
-          <Clickable clickFn={e => props.update(ns(scene, "c2"))}>
+          <Clickable clickFn={e => props.update(ns(scene, "c3"))}>
             waves.
           </Clickable>
         </MainText>
       </CustomContainer>
     </SimpleScene>
-    <SimpleScene isVisible={props.c2}>
+
+    <SimpleScene isVisible={props.c3}>
       <CustomContainer>
         <Waves />
-        <NextButton onClick={() => props.update(ns("s2", "c3"))} />
+        <NextButton onClick={() => props.update(ns("s2", "c4"))} />
       </CustomContainer>
     </SimpleScene>
 
@@ -75,35 +83,35 @@ const s2 = props => (
             }}
           />
         </MainText>
+        <NextButton onClick={() => props.update(ns("s2", "c4"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c4}>
+      <CustomContainer>
         <MainText>
           You lean against the window as city lights slowly give in to the
           darkness of the outer edges of the city.
         </MainText>
         <MainText>
           The train has begun its slow wind along the coast. It lulls you to{" "}
-          <Clickable clickFn={() => props.update(ns("s2", "c4"))}>
+          <Clickable clickFn={() => props.update(ns("s2", "c5"))}>
             sleep.
           </Clickable>
         </MainText>
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c4}>
-      <CustomContainer>
-        <NextButton onClick={() => props.update(ns("s2", "c5"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c4}>
+    <SimpleScene isVisible={props.c5}>
       <CustomContainer>
         <Waiting />
         <Waiting delay={200} />
         <Waiting delay={300} />
-        <NextButton onClick={() => props.update(ns("s2", "c5"))} />
+        <NextButton onClick={() => props.update(ns("s2", "c6"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c5}>
+    <SimpleScene isVisible={props.c6}>
       <CustomContainer>
         <MainText>
           Half awake, you hear the sounds of the doors opening.
@@ -116,26 +124,39 @@ const s2 = props => (
         <MainText>
           You hear the subtle whirrrrrr of the train engines at rest.
         </MainText>
-        <NextButton onClick={() => props.update(ns("s2", "c6"))} />
+        <NextButton onClick={() => props.update(ns("s2", "c7"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c6}>
+    <SimpleScene isVisible={props.c7}>
       <CustomContainer>
         <MainText>
           Opening your eyes for a split second, you see you are still alone in
           the train cabin.
         </MainText>
+        <NextButton onClick={() => props.update(ns("s2", "c8"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c8}>
+      <CustomContainer>
         <MainText>
           <img
             src={onboard_glitch}
             alt="No one here."
             style={{
               width: "100%",
-              maxWidth: "600px"
+              maxWidth: "600px",
+              marginBottom: "50px"
             }}
           />
         </MainText>
+        <NextButton onClick={() => props.update(ns("s2", "c9"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c9}>
+      <CustomContainer>
         <MainText>
           The sky was still dark. There are no blue hues fading into black sky
           yet. You must be somewhere between Baltimore and Washington, D.C.
@@ -151,38 +172,38 @@ const s2 = props => (
         </MainText>
 
         <MainText>You wait for the announcement.</MainText>
-        <NextButton onClick={() => props.update(ns("s2", "c7"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c7}>
-      <CustomContainer>
-        <Waiting />
-        <Waiting delay={200} />
-        <Waiting delay={300} />
-        <NextButton onClick={() => props.update(ns("s2", "c8"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c8}>
-      <CustomContainer>
-        <MainText>
-          There must be some hold up. Possibly waiting for another train for
-          people to transfer, someone asking the conductor about directions...
-        </MainText>
-        <NextButton onClick={() => props.update(ns("s2", "c9"))} />
-      </CustomContainer>
-    </SimpleScene>
-    <SimpleScene isVisible={props.c9}>
-      <CustomContainer>
-        <Waiting />
-        <Waiting delay={200} />
-        <Waiting delay={300} />
         <NextButton onClick={() => props.update(ns("s2", "c10"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c10}>
+      <CustomContainer>
+        <Waiting />
+        <Waiting delay={200} />
+        <Waiting delay={300} />
+        <NextButton onClick={() => props.update(ns("s2", "c11"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c11}>
+      <CustomContainer>
+        <MainText>
+          There must be some hold up. Possibly waiting for another train for
+          people to transfer, someone asking the conductor about directions...
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s2", "c12"))} />
+      </CustomContainer>
+    </SimpleScene>
+    <SimpleScene isVisible={props.c12}>
+      <CustomContainer>
+        <Waiting />
+        <Waiting delay={200} />
+        <Waiting delay={300} />
+        <NextButton onClick={() => props.update(ns("s2", "c13"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c13}>
       <CustomContainer>
         <MainText>
           The car is quiet. You steal another glance, and twist your neck to see
@@ -193,11 +214,11 @@ const s2 = props => (
         <MainText>You sit up straight and glance out at the station.</MainText>
 
         <MainText>Which station is this?</MainText>
-        <NextButton onClick={() => props.update(ns("s2", "c11"))} />
+        <NextButton onClick={() => props.update(ns("s2", "c14"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c11}>
+    <SimpleScene isVisible={props.c14}>
       <CustomContainer>
         <MainText>
           You look for a sign, but do not immediately see one.
@@ -208,11 +229,11 @@ const s2 = props => (
         </MainText>
 
         <MainText>Each follow a similar layout:</MainText>
-        <NextButton onClick={() => props.update(ns("s2", "c12"))} />
+        <NextButton onClick={() => props.update(ns("s2", "c15"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c12}>
+    <SimpleScene isVisible={props.c15}>
       <CustomContainer>
         <List>
           <ListItem>
@@ -245,72 +266,72 @@ const s2 = props => (
             </MainText>
           </ListItem>
         </List>
-        <NextButton onClick={() => props.update(ns("s2", "c13"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c13}>
-      <CustomContainer>
-        <MainText>This station is no different.</MainText>
-        <NextButton onClick={() => props.update(ns("s2", "c14"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c14}>
-      <CustomContainer>
-        <MainText>
-          Lights illuminate the platform, though no one is standing outside.
-        </MainText>
-        <NextButton onClick={() => props.update(ns("s2", "c15"))} />
-      </CustomContainer>
-    </SimpleScene>
-
-    <SimpleScene isVisible={props.c15}>
-      <CustomContainer>
-        <MainText>
-          Something catches your eye, further along the platform.
-        </MainText>
         <NextButton onClick={() => props.update(ns("s2", "c16"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c16}>
       <CustomContainer>
-        <MainText>Sitting on one of the benches outside...</MainText>
+        <MainText>This station is no different.</MainText>
         <NextButton onClick={() => props.update(ns("s2", "c17"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c17}>
       <CustomContainer>
-        <Waiting />
-        <Waiting delay={200} />
-        <Waiting delay={300} />
+        <MainText>
+          Lights illuminate the platform, though no one is standing outside.
+        </MainText>
         <NextButton onClick={() => props.update(ns("s2", "c18"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c18}>
       <CustomContainer>
-        <MainText>Is... that ...?</MainText>
+        <MainText>
+          Something catches your eye, further along the platform.
+        </MainText>
         <NextButton onClick={() => props.update(ns("s2", "c19"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c19}>
       <CustomContainer>
-        <MainText>
-          Your eyes must be deceiving you. For a second, you thought you saw...
-          no, no... surely not.
-        </MainText>
-        <MainText>
-          Lack of sleep, exhaustion... work has you all out of wack.
-        </MainText>
+        <MainText>Sitting on one of the benches outside...</MainText>
         <NextButton onClick={() => props.update(ns("s2", "c20"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c20}>
+      <CustomContainer>
+        <Waiting />
+        <Waiting delay={200} />
+        <Waiting delay={300} />
+        <NextButton onClick={() => props.update(ns("s2", "c21"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c21}>
+      <CustomContainer>
+        <MainText>Is... that ...?</MainText>
+        <NextButton onClick={() => props.update(ns("s2", "c22"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c22}>
+      <CustomContainer>
+        <MainText>
+          Your eyes must be deceiving you. For a second, you thought you saw...
+          no, no... surely not.
+        </MainText>
+        <MainText>
+          Lack of sleep, exhaustion... you... are seeing <i>things</i>.
+        </MainText>
+        <NextButton onClick={() => props.update(ns("s2", "c23"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c23}>
       <CustomContainer>
         <MainText>
           You rub your eyes, and look out onto the platform again.
@@ -320,36 +341,40 @@ const s2 = props => (
           Is it a child waving at you? You try and convince yourself otherwise,
           but the thought rises up anyway...
         </MainText>
-        <NextButton onClick={() => props.update(ns("s2", "c21"))} />
+        <NextButton onClick={() => props.update(ns("s2", "c24"))} />
       </CustomContainer>
     </SimpleScene>
-    <SimpleScene isVisible={props.c21}>
+
+    <SimpleScene isVisible={props.c24}>
       <CustomContainer>
         <MainText>... is that a {props.petTypeInputSaved}?</MainText>
-        <NextButton onClick={() => props.update(ns("s2", "c22"))} />
+        <NextButton onClick={() => props.update(ns("s2", "c25"))} />
       </CustomContainer>
     </SimpleScene>
-    <SimpleScene isVisible={props.c22}>
+
+    <SimpleScene isVisible={props.c25}>
       <CustomContainer>
         <MainText>
           You stand, face pressed against the glass, peering wildly across the
           platform.
         </MainText>
         <MainText>... is it... waving at you?!?!</MainText>
-        <NextButton onClick={() => props.update(ns("s2", "c23"))} />
+        <NextButton onClick={() => props.update(ns("s2", "c26"))} />
       </CustomContainer>
     </SimpleScene>
-    <SimpleScene isVisible={props.c23}>
+
+    <SimpleScene isVisible={props.c26}>
       <CustomContainer>
         <MainText>
           You turn back to and look around the train car, but there is still no
           one there.
         </MainText>
         <MainText>Dishelved, you sit back down in your seat.</MainText>
-        <NextButton onClick={() => props.update(ns("s2", "c24"))} />
+        <NextButton onClick={() => props.update(ns("s2", "c27"))} />
       </CustomContainer>
     </SimpleScene>
-    <SimpleScene isVisible={props.c24}>
+
+    <SimpleScene isVisible={props.c27}>
       <CustomContainer>
         <List>
           <ListItem>
@@ -366,43 +391,43 @@ const s2 = props => (
           </ListItem>
         </List>
 
-        <NextButton onClick={() => props.update(ns("s2", "c25"))} />
+        <NextButton onClick={() => props.update(ns("s2", "c28"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c25}>
+    <SimpleScene isVisible={props.c28}>
       <CustomContainer>
         <MainText>
           You've got to go see... You stand and begin walking through the aisle,
           leaving your belongings, peering wildly out on to the platform.
         </MainText>
         <MainText>You are nearly at a jog.</MainText>
-        <NextButton onClick={() => props.update(ns("s2", "c26"))} />
+        <NextButton onClick={() => props.update(ns("s2", "c29"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c26}>
+    <SimpleScene isVisible={props.c29}>
       <CustomContainer>
         <MainText>
           Through the doors and down the platform on a bench a few paces away is
           a small {props.petTypeInputSaved}.
         </MainText>
         <MainText>Not just any {props.petTypeInputSaved}...</MainText>
-        <NextButton onClick={() => props.update(ns("s2", "c27"))} />
+        <NextButton onClick={() => props.update(ns("s2", "c30"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c27}>
+    <SimpleScene isVisible={props.c30}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          <Clickable clickFn={() => props.update(ns("s2", "c28"))}>
+          <Clickable clickFn={() => props.update(ns("s2", "c31"))}>
             {props.petNameInputSaved}?!?!?!?!
           </Clickable>
         </UserQuote>
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c28}>
+    <SimpleScene isVisible={props.c31}>
       <CustomContainer>
         <UserQuote attrib={props.petNameInputSaved}>
           Good morning, {props.playerNameSaved}! A little late, but it should be
@@ -415,15 +440,15 @@ const s2 = props => (
           Not only that, but {props.petNameInputSaved} is wearing a small,
           shabby train conductors outfit...
         </MainText>
-        <NextButton onClick={() => props.update(ns("s2", "c29"))} />
+        <NextButton onClick={() => props.update(ns("s2", "c32"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c29}>
+    <SimpleScene isVisible={props.c32}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          You can speak! What in the hell is going on? Where are we.. What is
-          The Council...
+          Wuhhh! You can speak! What in the hell is going on? Where are we..
+          What is The Council...
         </UserQuote>
 
         <MainText>
@@ -471,6 +496,9 @@ const map = state => ({
   c27: state.s2.c27,
   c28: state.s2.c28,
   c29: state.s2.c29,
+  c30: state.s2.c30,
+  c31: state.s2.c31,
+  c32: state.s2.c32,
   petTypeInputSaved: state.petTypeInputSaved,
   playerNameSaved: state.playerNameSaved,
   petNameInputSaved: state.petNameInputSaved

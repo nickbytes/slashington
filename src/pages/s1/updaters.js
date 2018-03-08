@@ -64,8 +64,8 @@ export const addPlayerOccupation = state => ({
 export const nsHelper = state => ({
   ...state,
   s1: {
-    c16: false,
-    c17: true
+    c18: false,
+    c19: true
   }
 });
 

@@ -316,7 +316,7 @@ const s1 = props => (
         <MainText>It's going to be a long day.</MainText>
 
         <MainText>You decide to grab a cup of coffee first.</MainText>
-        <NextButton onClick={() => props.update(ns("s1", "c15"))} />
+        <NextButton onClick={() => props.update(ns("s1", "c20"))} />
       </CustomContainer>
     </SimpleScene>
 
@@ -383,8 +383,9 @@ const s1 = props => (
 
       <CustomContainer>
         <DreamText>
-          barbeque, slipknot karaoke, did you have a few drinks...?
+          barbeque... the bean bag game...did you have a few drinks...?
         </DreamText>
+        <DreamText>did... did you do slipnot karaoke...?</DreamText>
         <DreamText>
           what did you get her...? how could you{" "}
           <Clickable clickFn={() => props.update(ns("s1", "c24"))}>
@@ -441,7 +442,7 @@ const s1 = props => (
         </CustomContainer>
         <CustomContainer>
           <button
-            onClick={() => props.update(ns("s1", "c23"))}
+            onClick={() => props.update(ns("s1", "c27"))}
             style={{
               backgroundColor: "transparent",
               border: "none",
@@ -470,7 +471,12 @@ const s1 = props => (
           and a damn good one.
         </MainText>
         <MainText>
-          Paolo cranes his neck, leaning over into your cubicle.
+          If anyone would know what was wrong with your keyboard, it would be
+          Paolo.
+        </MainText>
+        <MainText>
+          Paolo leaned over the cubicle, eyeing you for a moment, then peering
+          at the keyboard.
         </MainText>
         <NextButton onClick={() => props.update(ns("s1", "c29"))} />
       </CustomContainer>
@@ -489,8 +495,8 @@ const s1 = props => (
     <SimpleScene isVisible={props.c30}>
       <CustomContainer>
         <UserQuote attrib={coworkerFullTitle()}>
-          Same thing happened to me about a year ago. I took it to a place near
-          where I lived in DC. Fixed it up in a day, had it working good as new.
+          Hmm, yes. Same thing happened to me about a year ago. I took it to a
+          place near where I lived in DC. Fixed it up in a day.
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s1", "c31"))} />
       </CustomContainer>
@@ -510,16 +516,17 @@ const s1 = props => (
       <CustomContainer>
         <UserQuote attrib={coworkerFullTitle()}>
           <UserQuote paragraph>
-            Quite the coincidence. Open on weekends too, can probably pick it up
-            on your way back.
+            Quite the coincidence. The store iso open on weekends too.
           </UserQuote>
           <UserQuote paragraph>It's right next to Union Station.</UserQuote>
           <UserQuote paragraph>
             Take a right out of the Northeast Entrance of the station. You can't
             miss it, south east corner of H Street and 4th.
           </UserQuote>
+          <UserQuote paragraph>
+            It's called <i>Igglefort's</i>.
+          </UserQuote>
         </UserQuote>
-
         <NextChapter to="/train-ride" />
       </CustomContainer>
     </SimpleScene>

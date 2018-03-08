@@ -28,7 +28,7 @@ class BrokenEmail extends Component {
 
   typingMess = () => {
     if (this.state.wordJumble.length > 35) {
-      this.props.update(ns("s1", "c22"));
+      this.props.update(ns("s1", "c26"));
     } else {
       const textArray = ["n", "b", " "];
       const randomNumber = Math.floor(Math.random() * textArray.length);
