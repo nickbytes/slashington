@@ -72,6 +72,8 @@ export const nsHelper = state => ({
 export const badgeHelper = state => ({
   ...state,
   s1: {
+    c16b: false,
+    c16c: true,
     newBadgeReceived: true
   }
 });
@@ -81,8 +83,8 @@ export const cameraHelper = value => state => {
     ...state,
     photoSrc: value,
     s1: {
-      c14: false,
-      c14c: true
+      c16: false,
+      c16b: true
     }
   };
 };
@@ -96,7 +98,7 @@ export const addSecurityAnswers = state => ({
   petTypeInputSaved: state.petTypeInput.toLowerCase(),
   petNameInputSaved: state.petNameInput,
   s1: {
-    c12: false,
-    c13: true
+    c13: false,
+    c14: true
   }
 });

@@ -57,6 +57,7 @@ const s1 = props => (
         <ChapterNext onClick={() => props.update(ns("s1", "c1"))} />
       </CustomContainer>
     </SimpleScene>
+
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <UserQuote attrib="You">
@@ -76,13 +77,14 @@ const s1 = props => (
               burnt toast {props.startBurning && <Smoke />}
             </span>
           </Clickable>{" "}
-          that nearly caused a fire in your apartment, not your nosy super,
-          Derek, asking about your plans to renew your lease, not your forgotten
-          badge, and not the Leonard's crabby mood.
+          that nearly caused a fire in your apartment, not your super, Derek,
+          telling you that your rent is going to be higher next year, not your
+          forgotten badge, and not the Leonard's crabby mood.
         </MainText>
+        <MainText>It's Friday. It's the end of a long week.</MainText>
         <MainText>
-          It's Friday. It's the end of a long week. And after work today, you're
-          headed to Washington, DC for your niece's birthday.
+          And after work today, you're headed to Washington, DC for your niece's
+          birthday.
         </MainText>
         <NextButton onClick={() => props.update(ns("s1", "c3"))} />
       </CustomContainer>
@@ -161,64 +163,56 @@ const s1 = props => (
     </SimpleScene>
 
     <SimpleScene isVisible={props.c9}>
-      <div>
-        <CustomContainer>
-          <img
-            src={leonard_glitch}
-            alt="Leonard"
-            style={{ width: "100%", maxWidth: "600px" }}
-          />
-        </CustomContainer>
-        <CustomContainer>
-          <MainText>
-            More click-clacking on the keyboard. {receptionist()} is looking
-            intensely at you. You wonder what his deal is... why is he looking
-            at you like this?
-          </MainText>
-        </CustomContainer>
-
-        <CustomContainer>
-          <NextButton onClick={() => props.update(ns("s1", "c10"))} />
-        </CustomContainer>
-      </div>
+      <CustomContainer>
+        <img
+          src={leonard_glitch}
+          alt="Leonard"
+          style={{
+            width: "100%",
+            maxWidth: "600px",
+            marginBottom: "50px",
+            display: "block"
+          }}
+        />
+        <NextButton onClick={() => props.update(ns("s1", "c10"))} />
+      </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c10}>
       <CustomContainer>
-        <UserQuote attrib={receptionist()}>
-          THE ANSWERS TO YOUR SECURITY QUESTION!
-        </UserQuote>
-
         <MainText>
-          He nearly spits the words at you, his lower limb trembling.
+          More click-clacking on the keyboard. {receptionist()} is looking
+          intensely at you. You wonder what his deal is... why is he looking at
+          you like this?
         </MainText>
-      </CustomContainer>
-
-      <CustomContainer>
         <NextButton onClick={() => props.update(ns("s1", "c11"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c11}>
       <CustomContainer>
-        <UserQuote pt={"100px"} attrib={receptionist()}>
-          What is the name of a close friend or relative who owns a pet, the
-          pets name, and the type of pet?
+        <UserQuote attrib={receptionist()}>
+          THE ANSWERS TO YOUR SECURITY QUESTION!
         </UserQuote>
-      </CustomContainer>
 
-      <CustomContainer>
-        <MainText>
-          You don't remember filling out this question. Leonard continues to
-          look at you suspiciously.
-        </MainText>
-      </CustomContainer>
-      <CustomContainer>
+        <MainText>He nearly spits the words at you.</MainText>
         <NextButton onClick={() => props.update(ns("s1", "c12"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c12}>
+      <CustomContainer>
+        <UserQuote pt={"100px"} attrib={receptionist()}>
+          What is the name of a close friend or relative who owns a pet, the
+          pets name, and the type of pet?
+        </UserQuote>
+        <MainText>You don't remember filling out this question.</MainText>
+        <MainText>Leonard continues to look at you suspiciously.</MainText>
+        <NextButton onClick={() => props.update(ns("s1", "c13"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c13}>
       <CustomContainer>
         <form
           onSubmit={e => {
@@ -256,37 +250,44 @@ const s1 = props => (
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c13}>
-      <div>
-        <CustomContainer>
-          <MainText>More click-clacking on the keyboard.</MainText>
-        </CustomContainer>
+    <SimpleScene isVisible={props.c14}>
+      <CustomContainer>
+        <MainText>More click-clacking on the keyboard.</MainText>
+        <NextButton onClick={() => props.update(ns("s1", "c15"))} />
+      </CustomContainer>
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c15}>
+      <CustomContainer>
         <CustomContainer>
           <UserQuote pl={"300px"} attrib={receptionist()}>
             Look towards the{" "}
-            <Clickable clickFn={() => props.update(ns("s1", "c14"))}>
+            <Clickable clickFn={() => props.update(ns("s1", "c16"))}>
               camera
             </Clickable>.
           </UserQuote>
         </CustomContainer>
-      </div>
+      </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c14}>
+    <SimpleScene isVisible={props.c16}>
       <CustomContainer>
         <WebcamComponent {...props} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c14b}>
-      <UserQuote>
-        Here is your new{" "}
-        <Clickable clickFn={() => props.update(badgeHelper())}>badge</Clickable>.
-      </UserQuote>
+    <SimpleScene isVisible={props.c16b}>
+      <CustomContainer>
+        <UserQuote attrib={receptionist()}>
+          Here is your new{" "}
+          <Clickable clickFn={() => props.update(badgeHelper())}>
+            badge
+          </Clickable>.
+        </UserQuote>
+      </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c14c}>
+    <SimpleScene isVisible={props.c16c}>
       <YourNewBadge
         imgSrc={props.photoSrc}
         playerName={props.playerNameSaved}
@@ -295,27 +296,32 @@ const s1 = props => (
       />
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c15}>
+    <SimpleScene isVisible={props.c17}>
       <CustomContainer>
         <MainText>
           Once you arrive at your desk, you turn on your{" "}
-          <Clickable clickFn={e => props.update(ns("s1", "c16"))}>
+          <Clickable clickFn={e => props.update(ns("s1", "c18"))}>
             computer
           </Clickable>.
         </MainText>
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c16}>
+    <SimpleScene isVisible={props.c18}>
       <Workspace {...props} coffee />
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c17}>
-      <div>
+    <SimpleScene isVisible={props.c19}>
+      <CustomContainer>
         <MainText>It's going to be a long day.</MainText>
 
         <MainText>You decide to grab a cup of coffee first.</MainText>
+        <NextButton onClick={() => props.update(ns("s1", "c15"))} />
+      </CustomContainer>
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c20}>
+      <CustomContainer>
         <MainText>
           <img
             src={coffee}
@@ -323,22 +329,27 @@ const s1 = props => (
             style={{
               width: "100%",
               maxWidth: "600px",
-              paddingTop: "10px"
+              marginBottom: "50px"
             }}
           />
         </MainText>
+        <NextButton onClick={() => props.update(ns("s1", "c21"))} />
+      </CustomContainer>
+    </SimpleScene>
 
+    <SimpleScene isVisible={props.c21}>
+      <CustomContainer>
         <MainText>
           When you get back to your desk, you see that you have a{" "}
-          <Clickable clickFn={e => props.update(ns("s1", "c18"))}>
+          <Clickable clickFn={e => props.update(ns("s1", "c22"))}>
             voicemail
           </Clickable>{" "}
           from your brother.
         </MainText>
-      </div>
+      </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c18}>
+    <SimpleScene isVisible={props.c22}>
       <PhoneComponent {...props} />
       <ItalicText>
         Hey {props.playerNameSaved}, I know you're probably busy at work...
@@ -362,7 +373,7 @@ const s1 = props => (
       <ItalicText>Alright, see you soon.</ItalicText>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c19}>
+    <SimpleScene isVisible={props.c23}>
       <CustomContainer>
         <MainText>
           What did he mean by <i>strange gift</i>...? You think back to{" "}
@@ -376,7 +387,7 @@ const s1 = props => (
         </DreamText>
         <DreamText>
           what did you get her...? how could you{" "}
-          <Clickable clickFn={() => props.update(ns("s1", "c20"))}>
+          <Clickable clickFn={() => props.update(ns("s1", "c24"))}>
             forget
           </Clickable>{" "}
           this...?
@@ -384,7 +395,7 @@ const s1 = props => (
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c20}>
+    <SimpleScene isVisible={props.c24}>
       <CustomContainer>
         <MainText>
           It all feels hazy... You're a{" "}
@@ -404,20 +415,20 @@ const s1 = props => (
         </MainText>
         <MainText>
           You've just got to get through the next few hours and{" "}
-          <Clickable clickFn={e => props.update(ns("s1", "c21"))}>
+          <Clickable clickFn={e => props.update(ns("s1", "c25"))}>
             deadlines
           </Clickable>.
         </MainText>
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c21}>
+    <SimpleScene isVisible={props.c25}>
       <Workspace>
         <BrokenEmail {...props} />
       </Workspace>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c22}>
+    <SimpleScene isVisible={props.c26}>
       <div>
         <CustomContainer>
           <MainText>
@@ -445,14 +456,14 @@ const s1 = props => (
       </div>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c23}>
+    <SimpleScene isVisible={props.c27}>
       <CustomContainer>
         <UserQuote attrib={coworkerFullTitle()}>Keyboard issues?</UserQuote>
-        <NextButton onClick={() => props.update(ns("s1", "c24"))} />
+        <NextButton onClick={() => props.update(ns("s1", "c28"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c24}>
+    <SimpleScene isVisible={props.c28}>
       <CustomContainer>
         <MainText>
           You look up and see {coworker()}. {coworker()} is an {createTitle()},
@@ -461,41 +472,41 @@ const s1 = props => (
         <MainText>
           Paolo cranes his neck, leaning over into your cubicle.
         </MainText>
-        <NextButton onClick={() => props.update(ns("s1", "c25"))} />
+        <NextButton onClick={() => props.update(ns("s1", "c29"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c25}>
+    <SimpleScene isVisible={props.c29}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           For some reason, every key is registering as only an <code>n</code> or{" "}
           <code>b</code> on the screen.
         </UserQuote>
-        <NextButton onClick={() => props.update(ns("s1", "c26"))} />
+        <NextButton onClick={() => props.update(ns("s1", "c30"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c26}>
+    <SimpleScene isVisible={props.c30}>
       <CustomContainer>
         <UserQuote attrib={coworkerFullTitle()}>
           Same thing happened to me about a year ago. I took it to a place near
           where I lived in DC. Fixed it up in a day, had it working good as new.
         </UserQuote>
-        <NextButton onClick={() => props.update(ns("s1", "c27"))} />
+        <NextButton onClick={() => props.update(ns("s1", "c31"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c27}>
+    <SimpleScene isVisible={props.c31}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           I'm taking the Amtrak down there this weekend... It's my niece's
           birthday...
         </UserQuote>
-        <NextButton onClick={() => props.update(ns("s1", "c28"))} />
+        <NextButton onClick={() => props.update(ns("s1", "c32"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c28}>
+    <SimpleScene isVisible={props.c32}>
       <CustomContainer>
         <UserQuote attrib={coworkerFullTitle()}>
           <UserQuote paragraph>
@@ -531,8 +542,8 @@ const map = state => ({
   c12: state.s1.c12,
   c13: state.s1.c13,
   c14: state.s1.c14,
-  c14b: state.s1.c14b,
-  c14c: state.s1.c14c,
+  c16b: state.s1.c16b,
+  c16c: state.s1.c16c,
   c15: state.s1.c15,
   c16: state.s1.c16,
   c17: state.s1.c17,

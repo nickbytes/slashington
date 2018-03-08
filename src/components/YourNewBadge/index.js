@@ -56,7 +56,7 @@ const YourNewBadge = props => (
     <OuterContainer>
       <InnerContainer />
       <Logo src={company} alt={"Corp A"} />
-      <BadgeButton onClick={() => props.update(ns("s1", "c15"))}>
+      <BadgeButton onClick={() => props.update(ns("s1", "c17"))}>
         <YourFace src={props.imgSrc} alt={"Definitely you."} />
       </BadgeButton>
       <div>

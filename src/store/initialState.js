@@ -20,6 +20,8 @@ const initialState = {
     c14: false,
     c15: false,
     c16: false,
+    c16b: false,
+    c16c: false,
     c17: false,
     c18: false
   },
