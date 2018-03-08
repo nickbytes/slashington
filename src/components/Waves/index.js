@@ -8,7 +8,7 @@ const Img = styled.img`
   max-width: 600px;
   display: block;
   align-self: flex-start;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 `;
 
 const Container = styled.div`

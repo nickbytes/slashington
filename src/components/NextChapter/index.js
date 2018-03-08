@@ -4,12 +4,13 @@ import styled from "styled-components";
 
 const NextChapterStyled = styled(Link)`
   font-weight: normal;
-  font-size: 26px;
-  line-height: 26px;
+  font-size: 38px;
+  line-height: 38px;
   padding: 20px;
   margin-left: -20px;
   color: #000;
   cursor: pointer;
+  text-decoration: none;
 `;
 
 const NextChapter = ({ to }) => (

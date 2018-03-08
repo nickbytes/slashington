@@ -105,7 +105,7 @@ class BrokenEmail extends Component {
             </SingleMessage>
 
             <SingleMessage>
-              <MessageName>scott</MessageName>
+              <MessageName>paolo</MessageName>
               <MessageText>
                 @{this.props.playerNameSaved}, do you have a moment to chat?
                 Could I come to your desk?

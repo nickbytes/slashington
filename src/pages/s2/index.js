@@ -145,7 +145,7 @@ const s2 = props => (
         </MainText>
 
         <MainText>
-          Soon, the conductor will announce the next stop, advise passengers to
+          Soon, the conductor will announce the next stop, advise passengers to{" "}
           <i>Stand Clear Of The Closing Doors</i>, accompanied by the soft{" "}
           <i>ding dong ding dong</i>, and the train will continue onward.
         </MainText>

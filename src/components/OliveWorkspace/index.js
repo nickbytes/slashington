@@ -11,7 +11,7 @@ import {
   WindowHeader,
   WindowTitle
 } from "../Workspace";
-import { ns } from "../../updaters/ns";
+import { nsHelper } from "../../pages/s6/updaters";
 import Clickable from "../Clickable";
 import LeftBar from "../Workspace/LeftBar";
 import NextChapter from "../NextChapter";
@@ -254,7 +254,7 @@ const OliveWorkspace = props => (
             {!props.haywire && (
               <PoemText>
                 <Clickable
-                  onClick={() => props.update(ns("s6", "c40"))}
+                  clickFn={e => props.update(nsHelper)}
                   bgColor={"transparent"}
                 >
                   <span

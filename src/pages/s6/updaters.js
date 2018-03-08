@@ -37,3 +37,11 @@ export const takeTask = state => ({
   taskTaken: true,
   roleFulfilled: false
 });
+
+export const nsHelper = state => ({
+  ...state,
+  s6: {
+    c39: false,
+    c40: true
+  }
+});

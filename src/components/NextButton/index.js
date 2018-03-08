@@ -9,12 +9,13 @@ const NextButtonStyle = styled.button`
   font-family: ${T_FF};
   color: #000;
   font-weight: normal;
-  font-size: 26px;
-  line-height: 26px;
+  font-size: 38px;
+  line-height: 38px;
   padding: 20px;
   margin-left: -20px;
   cursor: pointer;
   outline: 0;
+  text-decoration: none;
 `;
 
 const NextButton = props => (

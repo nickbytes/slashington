@@ -153,7 +153,7 @@ const s4 = props => (
             </UserQuote>
             <MainText>
               Glancing around the table, one {props.petTypeInputSaved} mutters
-              to another
+              to another.
             </MainText>
             <UserQuote attrib={`Comrade ${props.petFour}`}>
               Are they okay? They look like they might faint...I told Comrade{" "}
@@ -242,9 +242,9 @@ const s4 = props => (
         </UserQuote>
 
         <MainText>
-          You look around the table as the two {props.petTypeInputSaved} bicker.
-          Some are rolling their eyes, some nodding in approval, one solemnly
-          stirs its coffee, paying little attention.
+          You look around the table as the two {props.petTypeInputSaved}s{" "}
+          bicker. Some are rolling their eyes, some nodding in approval, one
+          solemnly stirs its coffee, paying little attention.
         </MainText>
         <NextButton onClick={() => props.update(ns("s4", "c12"))} />
       </CustomContainer>

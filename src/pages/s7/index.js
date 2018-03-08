@@ -94,7 +94,7 @@ const s7 = props => (
 
     <SimpleScene isVisible={props.c5}>
       <CustomContainer>
-        <UserQuote attrib={`Alex, brother`}>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           I did a little research, they're all the rage right now.
         </UserQuote>
         <MainText>

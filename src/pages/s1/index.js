@@ -332,7 +332,8 @@ const s1 = props => (
           When you get back to your desk, you see that you have a{" "}
           <Clickable clickFn={e => props.update(ns("s1", "c18"))}>
             voicemail
-          </Clickable>from your brother.
+          </Clickable>{" "}
+          from your brother.
         </MainText>
       </div>
     </SimpleScene>

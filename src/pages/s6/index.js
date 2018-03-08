@@ -281,7 +281,7 @@ const s6 = props => (
 
     <SimpleScene isVisible={props.c14}>
       <CustomContainer>
-        <MainText>A knock at the door</MainText>
+        <MainText>A knock at the door.</MainText>
         <NextButton onClick={() => props.update(ns("s6", "c15"))} />
       </CustomContainer>
     </SimpleScene>
@@ -323,7 +323,7 @@ const s6 = props => (
         </UserQuote>
         <MainText>
           You put on a fake smile and nod. Careful not to touch the keys, you
-          walk past him and into Olive's room.
+          walk past him, down the hall, and turn into Olive's room.
         </MainText>
         <NextButton onClick={() => props.update(ns("s6", "c19"))} />
       </CustomContainer>
@@ -477,7 +477,7 @@ const s6 = props => (
     <SimpleScene isVisible={props.c26}>
       <CustomContainer>
         <UserQuote attrib={`${props.nieceName}, niece`}>
-          Thanks, theres only one piece left.
+          Thanks, there's only one piece left.
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s6", "c27"))} />
       </CustomContainer>
@@ -561,7 +561,7 @@ const s6 = props => (
 
     <SimpleScene isVisible={props.c30}>
       <CustomContainer>
-        <UserQuote>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           They... The Council... they wanted me to tell you something. They said
           it was absolutely necessary...
         </UserQuote>
@@ -589,7 +589,7 @@ const s6 = props => (
     <SimpleScene isVisible={props.c33}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          I don't know what it means though... do you? Is it some code?
+          I don't know what it means though... do you? Is it some <i>code</i>?
         </UserQuote>
         <MainText>She laughs.</MainText>
         <NextButton onClick={() => props.update(ns("s6", "c34"))} />

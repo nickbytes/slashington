@@ -108,7 +108,7 @@ const s5 = props => (
       <CustomContainer>
         <MainText>
           You didnt want to admit it, but you feared the{" "}
-          {props.petNameInputSaved}s. If they were capable of getting you to...
+          {props.petTypeInputSaved}s. If they were capable of getting you to...
         </MainText>
 
         <MainText>

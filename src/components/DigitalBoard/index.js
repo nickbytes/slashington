@@ -7,6 +7,7 @@ const OuterContainer = styled.div`
   border-radius: 6px;
   width: 600px;
   height: 400px;
+  margin-bottom: 50px;
 `;
 
 const InnerContainer = styled.div`

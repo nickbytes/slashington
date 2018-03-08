@@ -59,7 +59,7 @@ const s3 = props => (
 
     <SimpleScene isVisible={props.c3}>
       <CustomContainer>
-        <Echo>{props.petNameInputSaved} IS TALKING</Echo>
+        <Echo>{props.petNameInputSaved.toUpperCase()} IS TALKING</Echo>
 
         <Echo>WHY THE HELL AM I HOLDING THIS KEYBOARD</Echo>
 
