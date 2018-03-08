@@ -22,7 +22,7 @@ import frailty from "../../images/frailty.png";
 import good_glitch from "../../images/gifs/good_glitch.gif";
 import place1 from "../../images/keys.jpg";
 import place2 from "../../images/bridge.png";
-import plains from "../../images/plains.jpg";
+import plains from "../../images/plains.png";
 import truth from "../../images/gifs/truth.gif";
 
 const DesktopBackground = styled.div`

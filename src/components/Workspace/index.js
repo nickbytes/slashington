@@ -18,7 +18,7 @@ import Programs from "./Programs";
 import RightBar from "./RightBar";
 import TopBar from "./TopBar";
 import WorkspaceContainer from "./WorkspaceContainer";
-import place1 from "../../images/snow.jpg";
+import place1 from "../../images/snow.png";
 
 export const WindowContainer = styled.div`
   position: absolute;

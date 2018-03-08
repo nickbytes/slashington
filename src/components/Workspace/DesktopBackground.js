@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import beach from "../../images/beach.jpg";
+import beach from "../../images/beach.png";
 
 const DesktopBackground = styled.div`
   background-color: rgba(31, 34, 40, 1);
