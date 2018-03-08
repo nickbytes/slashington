@@ -10,7 +10,8 @@ const Button = styled.button`
   line-height: inherit;
   cursor: pointer;
   border: none;
-  background-color: #c1c1c1;
+  background-color: ${props =>
+    props.bgColor ? `${props.bgColor}` : "#c1c1c1"};
   outline: 0;
   padding-left: ${props => (props.px ? `${props.px}px` : "0")};
   padding-right: ${props => (props.px ? `${props.px}px` : "0")};
@@ -22,8 +23,8 @@ const Button = styled.button`
   }
 `;
 
-const Clickable = ({ clickFn, children, py, px }) => (
-  <Button py={py} px={px} onClick={clickFn}>
+const Clickable = ({ clickFn, children, py, px, bgColor }) => (
+  <Button py={py} px={px} onClick={clickFn} bgColor={bgColor}>
     {children}
   </Button>
 );

@@ -153,7 +153,7 @@ const s1 = props => (
     <SimpleScene isVisible={props.c8}>
       <CustomContainer>
         <UserQuote attrib="You">
-          {props.playerOccupationSaved} at Tinsel Corp.
+          {props.playerOccupationSaved} at Shapes Corp.
         </UserQuote>
 
         <NextButton onClick={() => props.update(ns("s1", "c9"))} />

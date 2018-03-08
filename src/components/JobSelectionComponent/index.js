@@ -2,6 +2,8 @@ import { Radio } from "rebass";
 import { connect } from "funcup";
 import React from "react";
 
+import styled from "styled-components";
+
 import {
   addPlayerOccupation,
   newJobs,
@@ -9,6 +11,10 @@ import {
 } from "../../pages/s1/updaters";
 import JobButton from "./JobButton";
 import JobLabel from "./JobLabel";
+
+const RadioButton = styled(Radio)`
+  margin-bottom: 11px;
+`;
 
 const JobSelectionComponent = props => (
   <form
@@ -20,7 +26,7 @@ const JobSelectionComponent = props => (
     <radiogroup>
       {props.jobItems.map(jobItem => (
         <JobLabel key={jobItem.id}>
-          <Radio
+          <RadioButton
             name="radio"
             value={jobItem.title}
             checked={jobItem.title === props.playerOccupationRadio}

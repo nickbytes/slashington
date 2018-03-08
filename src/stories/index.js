@@ -14,7 +14,6 @@ import NextButton from "../components/NextButton";
 import OliveWorkspace from "../components/OliveWorkspace";
 import PetFormInput from "../components/PetFormInput";
 import PetFormLabel from "../components/PetFormLabel";
-import TitleModal from "../components/TitleModal";
 import UserQuote from "../components/UserQuote";
 import WebcamComponent from "../components/WebcamComponent";
 import Workspace from "../components/Workspace";
@@ -31,11 +30,9 @@ storiesOf("BrokenEmail", module).add("BrokenEmail", () => (
 
 storiesOf("Workspace", module).add("Workspace", () => <Workspace />);
 
-storiesOf("OliveWorkspace", module).add("normal", () => <OliveWorkspace />);
-
-storiesOf("TitleModal", module).add("normal", () => (
-  <TitleModal chapterNumber={"01"} chapterTitle={"The Office"} />
-));
+storiesOf("OliveWorkspace", module)
+  .add("normal", () => <OliveWorkspace />)
+  .add("haywire", () => <OliveWorkspace haywire />);
 
 storiesOf("Pet Name Form", module).add("normal", () => (
   <CustomContainer>

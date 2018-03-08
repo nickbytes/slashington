@@ -1,6 +1,14 @@
+import Briefcase from "react-feather/dist/icons/briefcase";
+import Camera from "react-feather/dist/icons/camera";
+import Clipboard from "react-feather/dist/icons/clipboard";
+import DollarSign from "react-feather/dist/icons/dollar-sign";
 import Draggable from "react-draggable";
+import Eye from "react-feather/dist/icons/eye";
+import Lock from "react-feather/dist/icons/lock";
 import React from "react";
-import styled from "styled-components";
+import Sun from "react-feather/dist/icons/sun";
+import Watch from "react-feather/dist/icons/watch";
+import styled, { css } from "styled-components";
 
 import AreaChart from "../AreaChart";
 import DesktopBackground from "./DesktopBackground";
@@ -12,15 +20,6 @@ import TopBar from "./TopBar";
 import WorkspaceContainer from "./WorkspaceContainer";
 import place1 from "../../images/snow.jpg";
 
-import DollarSign from "react-feather/dist/icons/dollar-sign";
-import Lock from "react-feather/dist/icons/lock";
-import Eye from "react-feather/dist/icons/eye";
-import Watch from "react-feather/dist/icons/watch";
-import Briefcase from "react-feather/dist/icons/briefcase";
-import Sun from "react-feather/dist/icons/sun";
-import Clipboard from "react-feather/dist/icons/clipboard";
-import Camera from "react-feather/dist/icons/camera";
-
 export const WindowContainer = styled.div`
   position: absolute;
   background-color: ${props =>
@@ -29,6 +28,13 @@ export const WindowContainer = styled.div`
   border: ${props =>
     props.bColor ? `1px solid ${props.bColor}` : `1px solid #323d47`};
   z-index: 1;
+
+  ${props =>
+    props.haywire &&
+    css`
+      box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+      background-color: rgba(107, 236, 60, 0.7);
+    `};
 `;
 
 export const WindowHeader = styled.div`
@@ -40,6 +46,14 @@ export const WindowHeader = styled.div`
   &:hover {
     cursor: pointer;
   }
+
+  ${props =>
+    props.haywire &&
+    css`
+      box-shadow: inset 0px 12px 30px 10px rgba(107, 236, 60, 0.7);
+      background-color: #000;
+      color: #fff;
+    `};
 `;
 
 export const WindowTitle = styled.h4`

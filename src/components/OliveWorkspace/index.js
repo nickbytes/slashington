@@ -65,6 +65,49 @@ const WhiteWindow = WindowTitle.extend`
   color: #fff;
 `;
 
+const Haywire = styled.div`
+  background-color: rgba(254, 77, 135, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+`;
+
+const BlackWindow = styled.div`
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 400px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 600px;
+  transform: rotate3d(2, -1, -1, -0.2turn);
+`;
+
+const BlueWindow = styled.div`
+  background-color: rgba(81, 182, 195, 0.9);
+  width: 400px;
+  position: absolute;
+  top: 0;
+  right: 35%;
+  bottom: 0;
+  height: 600px;
+  transform: rotate3d(2, -1, -1, -0.2turn);
+`;
+
+const YellowWindow = styled.div`
+  background-color: rgba(230, 170, 64, 0.8);
+  width: 400px;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  transform: rotate3d(2, -1, -1, -0.2turn);
+  bottom: 0;
+  height: 600px;
+`;
+
 const OliveWorkspace = props => (
   <WorkspaceContainer>
     <TopBar className="desktop-topBar">
@@ -73,18 +116,27 @@ const OliveWorkspace = props => (
     </TopBar>
     <DesktopBackground className="desktop-bg">
       {props.children}
+      {props.haywire && [
+        <Haywire />,
+        <BlackWindow />,
+        <YellowWindow />,
+        <BlueWindow />
+      ]}
+
       <Draggable>
         <WindowContainer
           style={{ right: "100px", top: "55px" }}
           bgColor={"rgba(104, 159, 182, 1.000)"}
+          haywire
         >
           <WindowHeader
             className="handle"
             bgColor={"rgba(83, 135, 245, 0.700)"}
+            haywire
           >
             <WindowTitle>
               <Sun size={18} style={{ marginRight: "5px" }} />
-              <span>{`Good Morning, ${props.playerNameSaved || "Nick"}`}</span>
+              <span>{`Good Morning, ${props.nieceName || "Olive"}`}</span>
             </WindowTitle>
           </WindowHeader>
           <WindowBody>
@@ -117,62 +169,64 @@ const OliveWorkspace = props => (
         </WindowContainer>
       </Draggable>
       <Draggable handle=".handle">
-        <WindowContainer style={{ top: "40%", left: "30%" }}>
-          <WindowHeader className="handle">
+        <WindowContainer haywire style={{ top: "40%", left: "30%" }}>
+          <WindowHeader haywire className="handle">
             <WindowTitle>
               <span>Device per source</span>
             </WindowTitle>
           </WindowHeader>
-          <WindowBody>
+          <WindowBody haywire>
             <Raw src={place1} alt={"something"} />
           </WindowBody>
         </WindowContainer>
       </Draggable>
       <Draggable handle=".handle">
-        <WindowContainer style={{ top: "50%", left: "50%" }}>
-          <WindowHeader className="handle">
+        <WindowContainer haywire style={{ top: "50%", left: "50%" }}>
+          <WindowHeader haywire className="handle">
             <WindowTitle>
               <span>Fekkfyzystem</span>
             </WindowTitle>
           </WindowHeader>
-          <WindowBody>
+          <WindowBody haywire>
             <Raw src={place2} alt={"something"} />
           </WindowBody>
         </WindowContainer>
       </Draggable>
 
       <Draggable handle=".handle">
-        <WindowContainer style={{ top: "60%", left: "10%" }}>
-          <WindowHeader className="handle">
+        <WindowContainer haywire style={{ top: "60%", left: "10%" }}>
+          <WindowHeader haywire className="handle">
             <WindowTitle>
               <span>Frailty Stow</span>
             </WindowTitle>
           </WindowHeader>
-          <WindowBody>
+          <WindowBody haywire>
             <Raw src={frailty} alt={"something"} />
           </WindowBody>
         </WindowContainer>
       </Draggable>
 
       <Draggable handle=".handle">
-        <WindowContainer style={{ top: "10%", left: "10%" }}>
-          <WindowHeader className="handle">
+        <WindowContainer haywire style={{ top: "10%", left: "10%" }}>
+          <WindowHeader haywire className="handle">
             <WindowTitle>
               <span>Raw recording</span>
             </WindowTitle>
           </WindowHeader>
-          <WindowBody>
+          <WindowBody haywire>
             <Raw src={truth} alt={"something"} />
           </WindowBody>
         </WindowContainer>
       </Draggable>
       <Draggable handle=".handle">
         <WindowContainer
+          haywire
           style={{ right: "123px", top: "185px" }}
           bgColor={"#e5c273"}
           bColor={"#d29b62"}
         >
           <WindowHeader
+            haywire
             className="handle"
             bgColor={"rgba(230, 195, 109, 0.7)"}
             bColor={"#d29b62"}
@@ -182,7 +236,7 @@ const OliveWorkspace = props => (
               <span>Notes</span>
             </WindowTitle>
           </WindowHeader>
-          <WindowBody>
+          <WindowBody haywire>
             <ul>
               <li>Research system dynamics</li>
               <li>Review Ethical Investments from Frontier Imaginaries</li>
@@ -196,11 +250,13 @@ const OliveWorkspace = props => (
 
       <Draggable handle=".handle">
         <ShakyWindow
+          haywire
           style={{ right: "calc(50% - 180px)", top: "30%" }}
           bgColor={"#fe4d87"}
           bColor={"#e2194e"}
         >
           <WindowHeader
+            haywire
             className="handle"
             bgColor={"rgba(254, 77, 135, 0.7)"}
             bColor={"#e2194e"}
@@ -209,7 +265,7 @@ const OliveWorkspace = props => (
               <span>READ HERE {props.playerNameSaved}</span>
             </WhiteWindow>
           </WindowHeader>
-          <WindowBody>
+          <WindowBody haywire>
             <PoemText>Ooooo Oooo</PoemText>
             <PoemText>Ooooooooooo Oooooooo</PoemText>
             <PoemText>You delivered the keyboard</PoemText>
@@ -218,8 +274,17 @@ const OliveWorkspace = props => (
             <PoemText>Messenger, no more, you leave me your memories.</PoemText>
             {!props.haywire && (
               <PoemText>
-                <Clickable onClick={() => props.update(ns("s6", "c40"))}>
-                  <span role="img" aria-label="sparkles">
+                <Clickable
+                  onClick={() => props.update(ns("s6", "c40"))}
+                  bgColor={"transparent"}
+                >
+                  <span
+                    role="img"
+                    aria-label="sparkles"
+                    style={{
+                      fontSize: "26px"
+                    }}
+                  >
                     ✨
                   </span>
                 </Clickable>
