@@ -1,16 +1,10 @@
-import Briefcase from "react-feather/dist/icons/briefcase";
 import Clipboard from "react-feather/dist/icons/clipboard";
-import DollarSign from "react-feather/dist/icons/dollar-sign";
 import Draggable from "react-draggable";
-import Eye from "react-feather/dist/icons/eye";
-import Lock from "react-feather/dist/icons/lock";
 import React from "react";
 import Sun from "react-feather/dist/icons/sun";
-import Watch from "react-feather/dist/icons/watch";
 import styled, { keyframes } from "styled-components";
 
 import {
-  ListItem,
   Raw,
   WindowBody,
   WindowContainer,
@@ -24,6 +18,7 @@ import RightBar from "../Workspace/RightBar";
 import TopBar from "../Workspace/TopBar";
 import WorkspaceContainer from "../Workspace/WorkspaceContainer";
 import frailty from "../../images/frailty.png";
+import good_glitch from "../../images/gifs/good_glitch.gif";
 import place1 from "../../images/keys.jpg";
 import place2 from "../../images/bridge.png";
 import plains from "../../images/plains.jpg";
@@ -45,6 +40,11 @@ const PoemText = styled.p`
   color: #fff;
   font-style: italic;
   margin: 0 0 15px;
+  padding: 0 15px;
+
+  &:first-of-type {
+    padding-top: 12px;
+  }
 `;
 
 const shake = keyframes`
@@ -140,31 +140,7 @@ const OliveWorkspace = props => (
             </WindowTitle>
           </WindowHeader>
           <WindowBody>
-            <ul>
-              <ListItem>
-                <Briefcase style={{ marginRight: "10px" }} />
-                <span>You have 39 meetings today.</span>
-              </ListItem>
-              <ListItem>
-                <Watch style={{ marginRight: "10px" }} />
-                <span>You have 7 deadlines today.</span>
-              </ListItem>
-              <ListItem>
-                <Lock style={{ marginRight: "10px" }} />
-                <span>You have not enabled 2FA.</span>
-              </ListItem>
-              <ListItem>
-                <Eye style={{ marginRight: "10px" }} />
-                <span>You yearly review is in 3 days.</span>
-              </ListItem>
-              <ListItem>
-                <DollarSign style={{ marginRight: "10px" }} />
-                <span>
-                  You have not contributed to your 401k, would you like to
-                  start?
-                </span>
-              </ListItem>
-            </ul>
+            <Raw src={good_glitch} alt={"something"} />
           </WindowBody>
         </WindowContainer>
       </Draggable>
@@ -238,11 +214,13 @@ const OliveWorkspace = props => (
           </WindowHeader>
           <WindowBody haywire>
             <ul>
+              <li>
+                {props.leadPet}/{props.petThree} distrust?
+              </li>
               <li>Research system dynamics</li>
-              <li>Review Ethical Investments from Frontier Imaginaries</li>
-              <li>Process emulation fever dream, due EOD.</li>
-              <li>Military cybernetics?!?!</li>
-              <li>4, 8, 15, 16, 23, 42</li>
+              <li>Connections between emulation fever dreams</li>
+              <li>Not keen on parasitic algorithms</li>
+              <li>Has {props.playerNameSaved} had any memory damage?</li>
             </ul>
           </WindowBody>
         </WindowContainer>

@@ -45,7 +45,7 @@ import Workspace from "../../components/Workspace";
 import YourNewBadge from "../../components/YourNewBadge";
 import coffee from "../../images/gifs/coffee_glitch.gif";
 import side_keyboard_glitch from "../../images/gifs/side_keyboard_glitch.gif";
-import leonard from "../../images/gifs/leonard.gif";
+import leonard_glitch from "../../images/gifs/leonard_glitch.gif";
 
 const s1 = props => (
   <div>
@@ -164,7 +164,7 @@ const s1 = props => (
       <div>
         <CustomContainer>
           <img
-            src={leonard}
+            src={leonard_glitch}
             alt="Leonard"
             style={{ width: "100%", maxWidth: "600px" }}
           />
