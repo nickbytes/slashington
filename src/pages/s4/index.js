@@ -315,21 +315,35 @@ const s4 = props => (
 
     <SimpleScene isVisible={props.c17}>
       <CustomContainer>
-        <MainText>
-          Parts of it even sound familiar, though you can't imagine how they
-          would.
-        </MainText>
+        <List>
+          <ListItem>
+            <MainText>
+              Parts of their explanation even sounds familiar, though you can't
+              imagine how they would.
+            </MainText>
+          </ListItem>
+          <ListItem>
+            <MainText>
+              You catch that magic has existed for thousands of years.
+            </MainText>
+          </ListItem>
+          <ListItem>
+            <MainText>
+              A division and secret war amongst magicial animals and magical
+              humans, further divisions and factions created amongst each of
+              those groups....
+            </MainText>
+          </ListItem>
 
-        <MainText>
-          You catch that magic has existed for thousands of years.
-        </MainText>
+          <ListItem>
+            <MainText>
+              Elaborate attempts at secrecy, inflitrations into religions and
+              states, governing bodies created, and disbanded..
+            </MainText>
+          </ListItem>
 
-        <MainText>
-          A division and secret war amongst magicial animals and magical humans,
-          further divisions and factions created amongst each of those
-          groups...Elaborate attempts at secrecy, inflitrations into religions
-          and states, governing bodies created, and disbanded...
-        </MainText>
+          <ListItem />
+        </List>
         <NextButton onClick={() => props.update(ns("s4", "c18"))} />
       </CustomContainer>
     </SimpleScene>
@@ -340,13 +354,37 @@ const s4 = props => (
           They stop for a moment, as if to assess if you are following along,
           before starting up again, speaking even faster.
         </MainText>
-        <MainText>
-          Politicians, celebrities, Popes, common people, all types of
-          magicians? All in hiding? You wonder how but don't have time to ask as
-          they continue you on...You hear about the change the internet brings,
-          the ability to connect people yet also to silo. The ability to spread
-          information at an unprecedented scale...
-        </MainText>
+        <List>
+          <ListItem>
+            <MainText>
+              Politicians, celebrities, Popes, common people, all types of
+              magicians?
+            </MainText>
+          </ListItem>
+          <ListItem>
+            <MainText>
+              All in hiding? Soft gaps in dimensions, known as, "Slashes".
+            </MainText>
+          </ListItem>
+          <ListItem>
+            <MainText>
+              You wonder how but don't have time to ask as they continue you
+              on...
+            </MainText>
+          </ListItem>
+          <ListItem rotate="2">
+            <MainText>
+              You hear about the change the internet brings, the ability to
+              connect people yet also to silo.
+            </MainText>
+          </ListItem>
+          <ListItem>
+            <MainText>
+              The ability to spread information at an unprecedented scale...
+            </MainText>
+          </ListItem>
+        </List>
+        <MainText />
         <MainText>
           They mention {props.playerOccupationSaved}s be "extremely online" and
           good candidates, but you have no idea what that means...They talk
