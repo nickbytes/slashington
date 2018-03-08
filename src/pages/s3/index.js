@@ -26,6 +26,7 @@ const s3 = props => (
         <ChapterNext onClick={() => props.update(ns("s3", "c1"))} />
       </CustomContainer>
     </SimpleScene>
+
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <MainText>
@@ -97,15 +98,21 @@ const s3 = props => (
           You stop and really stare at {props.petNameInputSaved}.{" "}
           {props.petNameInputSaved}'s eyes are watery.
         </MainText>
-        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          What was that?
-        </UserQuote>
-        <MainText>You surprise yourself with a sensitive tone.</MainText>
         <NextButton onClick={() => props.update(ns("s3", "c6"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c6}>
+      <CustomContainer>
+        <UserQuote attrib={`You, ${props.playerNameSaved}`}>
+          What was that?
+        </UserQuote>
+        <MainText>You surprise yourself with a sensitive tone.</MainText>
+        <NextButton onClick={() => props.update(ns("s3", "c7"))} />
+      </CustomContainer>
+    </SimpleScene>
+
+    <SimpleScene isVisible={props.c7}>
       <CustomContainer>
         <UserQuote attrib={props.petNameInputSaved}>
           It's nothing. C'mon, they're waiting for you. I'll be out here once
@@ -115,11 +122,11 @@ const s3 = props => (
           {props.petNameInputSaved} leads you towards the train station and
           points towards the double doors.
         </MainText>
-        <NextButton onClick={() => props.update(ns("s3", "c7"))} />
+        <NextButton onClick={() => props.update(ns("s3", "c8"))} />
       </CustomContainer>
     </SimpleScene>
 
-    <SimpleScene isVisible={props.c7}>
+    <SimpleScene isVisible={props.c8}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           {props.petNameInputSaved}, where am I?
@@ -145,6 +152,7 @@ const map = state => ({
   c5: state.s3.c5,
   c6: state.s3.c6,
   c7: state.s3.c7,
+  c8: state.s3.c8,
   petTypeInputSaved: state.petTypeInputSaved,
   playerNameSaved: state.playerNameSaved,
   petNameInputSaved: state.petNameInputSaved

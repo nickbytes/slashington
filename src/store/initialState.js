@@ -18,12 +18,26 @@ const initialState = {
     c12: false,
     c13: false,
     c14: false,
-    c15: false,
-    c16: false,
     c16b: false,
     c16c: false,
+    c15: false,
+    c16: false,
     c17: false,
-    c18: false
+    c18: false,
+    c19: false,
+    c20: false,
+    c21: false,
+    c22: false,
+    c23: false,
+    c24: false,
+    c25: false,
+    c26: false,
+    c27: false,
+    c28: false,
+    c29: false,
+    c30: false,
+    c31: false,
+    c32: false
   },
 
   startBurning: false,
@@ -85,7 +99,8 @@ const initialState = {
     c4: false,
     c5: false,
     c6: false,
-    c7: false
+    c7: false,
+    c8: false
   },
 
   // s4
