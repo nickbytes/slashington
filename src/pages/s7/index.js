@@ -23,7 +23,7 @@ const s7 = props => (
       <AbsoluteBlack />
       <CustomContainer>
         <ChapterNum>Chapter 7</ChapterNum>
-        <ChapterTitle>What A Week</ChapterTitle>
+        <ChapterTitle>Country-Pop</ChapterTitle>
         <ChapterNext onClick={() => props.update(ns("s7", "c1"))} />
       </CustomContainer>
     </SimpleScene>

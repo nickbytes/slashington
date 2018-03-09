@@ -636,15 +636,18 @@ const s4 = props => (
 
     <SimpleScene isVisible={props.c33}>
       <CustomContainer>
-        <img
-          src={frailty_glitch}
-          alt={`Frailty Stow`}
-          style={{
-            width: "100%",
-            maxWidth: "600px",
-            marginBottom: "50px"
-          }}
-        />
+        <MainText>
+          <img
+            src={frailty_glitch}
+            alt={`Frailty Stow`}
+            style={{
+              width: "100%",
+              maxWidth: "600px",
+              marginBottom: "50px"
+            }}
+          />
+        </MainText>
+
         <NextButton onClick={() => props.update(ns("s4", "c34"))} />
       </CustomContainer>
     </SimpleScene>
