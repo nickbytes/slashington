@@ -144,48 +144,133 @@ storiesOf("New Rochelle", module).add("normal", () => (
 ));
 
 storiesOf("Explanation", module).add("normal", () => (
-  <CustomContainer>
-    <MainText>
-      They stop for a moment, as if to assess if you are following along, before
-      starting up again, speaking even faster.
-    </MainText>
-    <List>
-      <ListItem rotate="-2">
-        <MainText>
-          Politicians, celebrities, Popes, common people, all types of
-          magicians?
-        </MainText>
-      </ListItem>
-      <ListItem rotate="1" tug="-30">
-        <MainText>
-          All in hiding? Soft gaps in dimensions, known as, "Slashes".
-        </MainText>
-      </ListItem>
-      <ListItem rotate="-3">
-        <MainText>
-          You wonder how but don't have time to ask as they continue you on...
-        </MainText>
-      </ListItem>
-      <ListItem rotate="2" tug="40">
-        <MainText>
-          You hear about the change the internet brings, the ability to connect
-          people yet also to silo.
-        </MainText>
-      </ListItem>
-      <ListItem rotate="3">
-        <MainText>
-          The ability to spread information at an unprecedented scale...
-        </MainText>
-      </ListItem>
-    </List>
-    <MainText />
-    <MainText>
-      They mention cats be "extremely online" and good candidates, but you have
-      no idea what that means...They talk about teaching new humans and magical
-      creatures their philosophies, centered around science, and exploration of
-      their craft...about a program called, what sounds like...
-    </MainText>
-  </CustomContainer>
+  <div>
+    <CustomContainer>
+      <MainText>
+        They begin to explain in <i>unison</i>.
+      </MainText>
+
+      <MainText>
+        You catch bits from each of them, who seem to be volleying phrases back
+        and forth with each other.
+      </MainText>
+
+      <MainText>It's a maddening orchestra of logic.</MainText>
+    </CustomContainer>
+
+    <CustomContainer>
+      <List>
+        <ListItem>
+          <MainText>
+            Parts of their explanation even sounds familiar, though you can't
+            imagine how they would.
+          </MainText>
+        </ListItem>
+        <ListItem>
+          <MainText>
+            You catch that magic has existed for thousands of years.
+          </MainText>
+        </ListItem>
+        <ListItem rotate={-10} tug={40}>
+          <MainText>
+            A division and secret war amongst magicial animals and magical
+            humans, further divisions and factions created amongst each of those
+            groups....
+          </MainText>
+        </ListItem>
+
+        <ListItem rotate={-10} tug={40}>
+          <MainText>Allegiances formed among unlikely pairs...</MainText>
+        </ListItem>
+
+        <ListItem rotate={-5} tug={10}>
+          <MainText>
+            Elaborate attempts at secrecy, inflitrations into religions and
+            states, governing bodies created, and disbanded..
+          </MainText>
+        </ListItem>
+
+        <ListItem />
+      </List>
+    </CustomContainer>
+
+    <CustomContainer>
+      <MainText>
+        They stop for a moment, as if to assess if you are following along,
+        before starting up again, speaking even faster.
+      </MainText>
+      <List>
+        <ListItem rotate="-2">
+          <MainText>
+            Politicians, celebrities, religious figures, accountants, all types
+            of humans are magicians?
+          </MainText>
+        </ListItem>
+        <ListItem rotate="1" tug="-30">
+          <MainText>
+            Living in secret, though more or less interwoven into "normal"
+            society. Meeting in soft pockets is this dimension, known as,{" "}
+            <i>Slashes</i>.
+          </MainText>
+        </ListItem>
+        <ListItem rotate="-3">
+          <MainText>
+            You wonder <i>how</i> but don't have time to ask as they continue
+            you on...
+          </MainText>
+        </ListItem>
+        <ListItem rotate="2" tug="40">
+          <MainText>
+            You hear about the change the internet brings, the ability to
+            connect people yet also to silo.
+          </MainText>
+        </ListItem>
+        <ListItem>
+          <MainText>
+            You can't possibly see how the internet would have any effect on
+            people who can do <i>actual magic</i>, but you listen anyway.
+          </MainText>
+        </ListItem>
+        <ListItem rotate="3">
+          <MainText>
+            The ability to spread information at an unprecedented scale...brings
+            responsibilities and outcomes that no magic can even tame.
+          </MainText>
+        </ListItem>
+        <ListItem rotate="3" tug="20">
+          <MainText>
+            They mention digital archivists be "extremely online" and good
+            resources for The Council, but you have no idea what that means...
+          </MainText>
+        </ListItem>
+
+        <ListItem rotate="3" tug="20">
+          <MainText>
+            How could the work you are doing for Shape Corp have any real impact
+            on the world?
+          </MainText>
+        </ListItem>
+        <ListItem>
+          <MainText>
+            They say that you, especially, with your <i>connection</i>, are an
+            important piece. What connection...?
+          </MainText>
+        </ListItem>
+        <ListItem>
+          <MainText>
+            They talk about teaching new humans and magical creatures their
+            philosophies. They explain that magic is a mix of science and
+            artistry, honed over a lifetime, used for good or evil or worse,
+            used without thought of purpose or effect...
+          </MainText>
+        </ListItem>
+
+        <ListItem>
+          <MainText>about a program called, what sounds like...</MainText>
+        </ListItem>
+      </List>
+    </CustomContainer>
+  </div>
 ));
 
 storiesOf("EchoInline", module).add("normal", () => (

@@ -327,7 +327,7 @@ const s4 = props => (
               You catch that magic has existed for thousands of years.
             </MainText>
           </ListItem>
-          <ListItem>
+          <ListItem rotate="-10" tug="40">
             <MainText>
               A division and secret war amongst magicial animals and magical
               humans, further divisions and factions created amongst each of
@@ -335,7 +335,11 @@ const s4 = props => (
             </MainText>
           </ListItem>
 
-          <ListItem>
+          <ListItem rotate="-10" tug="40">
+            <MainText>Allegiances formed among unlikely pairs...</MainText>
+          </ListItem>
+
+          <ListItem rotate="-5" tug="10">
             <MainText>
               Elaborate attempts at secrecy, inflitrations into religions and
               states, governing bodies created, and disbanded..
@@ -355,24 +359,26 @@ const s4 = props => (
           before starting up again, speaking even faster.
         </MainText>
         <List>
-          <ListItem>
+          <ListItem rotate="-2">
             <MainText>
-              Politicians, celebrities, Popes, common people, all types of
-              magicians?
+              Politicians, celebrities, religious figures, accountants, all
+              types of humans are magicians?
             </MainText>
           </ListItem>
-          <ListItem>
+          <ListItem rotate="1" tug="-30">
             <MainText>
-              All in hiding? Soft gaps in dimensions, known as, "Slashes".
+              Living in secret, though more or less interwoven into "normal"
+              society. Meeting in soft pockets is this dimension, known as,{" "}
+              <i>Slashes</i>.
             </MainText>
           </ListItem>
-          <ListItem>
+          <ListItem rotate="-3">
             <MainText>
-              You wonder how but don't have time to ask as they continue you
-              on...
+              You wonder <i>how</i> but don't have time to ask as they continue
+              you on...
             </MainText>
           </ListItem>
-          <ListItem rotate="2">
+          <ListItem rotate="2" tug="40">
             <MainText>
               You hear about the change the internet brings, the ability to
               connect people yet also to silo.
@@ -380,18 +386,50 @@ const s4 = props => (
           </ListItem>
           <ListItem>
             <MainText>
-              The ability to spread information at an unprecedented scale...
+              You can't possibly see how the internet would have any effect on
+              people who can do <i>actual magic</i>, but you listen anyway.
             </MainText>
           </ListItem>
+          <ListItem rotate="3">
+            <MainText>
+              The ability to spread information at an unprecedented
+              scale...brings responsibilities and outcomes that no magic can
+              even tame.
+            </MainText>
+          </ListItem>
+          <ListItem rotate="3" tug="20">
+            <MainText>
+              They mention {props.playerOccupationSaved}s be "extremely online"
+              and good resources for The Council, but you have no idea what that
+              means...
+            </MainText>
+          </ListItem>
+
+          <ListItem rotate="3" tug="20">
+            <MainText>
+              How could the work you are doing for Shape Corp have any real
+              impact on the world?
+            </MainText>
+          </ListItem>
+          <ListItem rotate="-5" tug="30">
+            <MainText>
+              They say that you, especially, with your <i>connection</i>, are an
+              important piece. What connection...?
+            </MainText>
+          </ListItem>
+          <ListItem rotate="-1" tug="60">
+            <MainText>
+              They talk about teaching new humans and magical creatures their
+              philosophies. They explain that magic is a mix of science and
+              artistry, honed over a lifetime, used for good or evil or worse,
+              used without thought of purpose or effect...
+            </MainText>
+          </ListItem>
+
+          <ListItem>
+            <MainText>about a program called, what sounds like...</MainText>
+          </ListItem>
         </List>
-        <MainText />
-        <MainText>
-          They mention {props.playerOccupationSaved}s be "extremely online" and
-          good candidates, but you have no idea what that means...They talk
-          about teaching new humans and magical creatures their philosophies,
-          centered around science, and exploration of their craft...about a
-          program called, what sounds like...
-        </MainText>
         <NextButton onClick={() => props.update(ns("s4", "c19"))} />
       </CustomContainer>
     </SimpleScene>
@@ -421,11 +459,26 @@ const s4 = props => (
 
     <SimpleScene isVisible={props.c21}>
       <CustomContainer>
-        <MainText>
-          ...they describe successfull magicians: curious, empathetic, fierce,
-          creative, hungry... and you can't help but feel like they're talking
-          about you... you <i>are</i> standing here, in front of them...
-        </MainText>
+        <List>
+          <ListItem rotate="-3" tug="-20">
+            <MainText>
+              ...they describe successfull magicians: curious, empathetic,
+              fierce, creative, eager...
+            </MainText>
+          </ListItem>
+          <ListItem rotate="-1" tug="-50">
+            <MainText>
+              and you can't help but feel like they're talking about you... you{" "}
+              <i>are</i> standing here, in front of them...
+            </MainText>
+          </ListItem>
+          <ListItem rotate="2">
+            <MainText>
+              for a moment your mind wonders:{" "}
+              <i>have you always had some greater purpose</i>?
+            </MainText>
+          </ListItem>
+        </List>
         <NextButton onClick={() => props.update(ns("s4", "c22"))} />
       </CustomContainer>
     </SimpleScene>
@@ -433,12 +486,8 @@ const s4 = props => (
     <SimpleScene isVisible={props.c22}>
       <CustomContainer>
         <MainText>
-          They stop abruptly, as if an orchestra cut off by their maestro
+          They stop abruptly, like an orchestra cut off by their conductor
           suddenly.
-        </MainText>
-        <MainText>
-          They look expectantly at you, as if they assumed you would be able to
-          process that barrage of information.
         </MainText>
         <NextButton onClick={() => props.update(ns("s4", "c23"))} />
       </CustomContainer>
@@ -472,7 +521,7 @@ const s4 = props => (
       <CustomContainer>
         <MainText>
           But here you are, watching <i>real magic</i>, and in the corniest way,
-          this {props.petTypeInputSaved} waved 'spirit fingers' over the
+          this {props.petTypeInputSaved} waved <i>spirit fingers</i> over the
           keyboard.
         </MainText>
         <MainText>
@@ -487,10 +536,15 @@ const s4 = props => (
     <SimpleScene isVisible={props.c26}>
       <CustomContainer>
         <MainText>
-          It's as if the sun itself is hiding behind each of the keys. It's a
-          bright light, imminating 3-4 inches between the cracks of each of the
-          keys. The glow feels warm and in your mind you know that must be what
-          magic feels like.
+          It's as if the sun itself is hiding behind each of the keys.
+        </MainText>
+        <MainText>
+          It's a bright light, imminating 3-4 inches between the cracks of each
+          of the keys.
+        </MainText>
+        <MainText>
+          The glow feels warm and in your mind you know that must be what magic
+          feels like.
         </MainText>
         <NextButton onClick={() => props.update(ns("s4", "c27"))} />
       </CustomContainer>
@@ -500,8 +554,10 @@ const s4 = props => (
       <CustomContainer>
         <MainText>You love the feeling.</MainText>
         <UserQuote attrib={`Comrade ${props.leadPet}`}>
-          The next part of the training is the most important, the first mission
-          is dangerous, but we are nearly out of time...
+          The next part of the training is the most important, the next mission
+          is dangerous, but we are nearly out of time... things are moving...<i>
+            fast
+          </i>.
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s4", "c28"))} />
       </CustomContainer>
@@ -513,13 +569,15 @@ const s4 = props => (
           What mission am I to do?
         </UserQuote>
 
-        <MainText>You ask almost brashly.</MainText>
+        <MainText>You ask, almost brashly.</MainText>
         <MainText>But you can't help it.</MainText>
 
         <MainText>
-          You are drunk with confidence (the magic?) from the keyboard. The
-          feeling dies within seconds and you wondered why you even said
-          anything.
+          You are drunk with confidence (the magic?!) from the keyboard.
+        </MainText>
+        <MainText>
+          The feeling dies within seconds and you wondered why you even said
+          anything at all.
         </MainText>
         <NextButton onClick={() => props.update(ns("s4", "c29"))} />
       </CustomContainer>
@@ -592,7 +650,8 @@ const s4 = props => (
     <SimpleScene isVisible={props.c35}>
       <CustomContainer>
         <UserQuote attrib={`Comrade ${props.leadPet}`}>
-          Yes, the, er... country-pop singer.
+          Yes, the, er... country-pop singer. She has become a figurehead for
+          our opposition.
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s4", "c36"))} />
       </CustomContainer>
@@ -601,8 +660,7 @@ const s4 = props => (
     <SimpleScene isVisible={props.c36}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          How? Is she going to be in danger? Why must it be her? She's only 15,
-          well 16 tomorrow...
+          Why must it be her? She's only 15. Well, 16 tomorrow...
         </UserQuote>
         <NextChapter to={`/to-washington`} />
       </CustomContainer>
