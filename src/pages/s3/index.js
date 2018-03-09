@@ -92,7 +92,7 @@ const s3 = props => (
       <CustomContainer>
         <UserQuote attrib={props.petNameInputSaved}>
           -- and quite young, with such potential, but the risks of course, well
-          I just don't know. Doesn't seem like theres any other options...
+          I just don't know. Doesn't seem like there are any other options...
         </UserQuote>
         <MainText>
           You stop and really stare at {props.petNameInputSaved}.{" "}
