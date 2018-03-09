@@ -3,6 +3,7 @@ import { createProvider } from "funcup";
 import React from "react";
 
 import NoMatch from "./components/NoMatch";
+import credits from "./pages/credits";
 import initialState from "./store/initialState";
 import s0 from "./pages/s0";
 import s1 from "./pages/s1";
@@ -24,6 +25,7 @@ const App = props => (
       <Route path="/to-washington" component={s5} />
       <Route path="/birthday-party" component={s6} />
       <Route path="/country-pop" component={s7} />
+      <Route path="/credits" component={credits} />
       <Route component={NoMatch} />
     </Switch>
   </div>
