@@ -218,7 +218,7 @@ const s4 = props => (
 
     <SimpleScene isVisible={props.c11}>
       <CustomContainer>
-        <MainText>Paolo? Leonard?</MainText>
+        <MainText>Paolo? Leonard? What?</MainText>
         <NextButton onClick={() => props.update(ns("s4", "c12"))} />
       </CustomContainer>
     </SimpleScene>
@@ -682,7 +682,7 @@ const s4 = props => (
     <SimpleScene isVisible={props.c36}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          Why must it be her? She's only 15. Well, 16 tomorrow...
+          Why must it be Olive? She's only 15. Well, 16 tomorrow...
         </UserQuote>
         <NextChapter to={`/to-washington`} />
       </CustomContainer>
