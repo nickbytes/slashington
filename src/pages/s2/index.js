@@ -53,7 +53,7 @@ const s2 = props => (
     <SimpleScene isVisible={props.c2}>
       <CustomContainer>
         <MainText>
-          Relief washes over you like a series gentle{" "}
+          Relief washes over you like a series of gentle{" "}
           <Clickable clickFn={e => props.update(ns(scene, "c3"))}>
             waves.
           </Clickable>
