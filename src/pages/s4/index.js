@@ -449,10 +449,18 @@ const s4 = props => (
 
     <SimpleScene isVisible={props.c20}>
       <CustomContainer>
-        <MainText>
-          A program? Like coursework? A computer program? You're left wondering
-          as they continue...
-        </MainText>
+        <List>
+          <ListItem rotate="-1" tug="">
+            <MainText>
+              Your keyboard shall act as the vessel for communication{" "}
+              <i>semi-fluid-inter-dimension</i> communication.
+            </MainText>
+          </ListItem>
+          <ListItem rotate="5" tug="80">
+            <MainText>What does that even mean?</MainText>
+          </ListItem>
+        </List>
+
         <NextButton onClick={() => props.update(ns("s4", "c21"))} />
       </CustomContainer>
     </SimpleScene>
