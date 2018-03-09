@@ -35,7 +35,7 @@ const InnerContainer = styled.div`
 
 const Logo = styled.img`
   width: 99px;
-  margin: 0 auto;
+  margin: 0 auto 10px;
 `;
 
 const NameSlot = styled.h1`

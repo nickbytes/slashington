@@ -62,8 +62,8 @@ const s5 = props => (
     <SimpleScene isVisible={props.c3}>
       <CustomContainer>
         <MainText>
-          Yet, they didnt seem to care much about the welfare of your niece. Not
-          in your mind, at least.
+          Yet, they didn't seem to care much about the welfare of your niece.
+          Not in your mind, at least.
         </MainText>
 
         <MainText>
@@ -115,13 +115,16 @@ const s5 = props => (
     <SimpleScene isVisible={props.c6}>
       <CustomContainer>
         <MainText>
-          You didnt want to admit it, but you feared the{" "}
-          {props.petTypeInputSaved}s. If they were capable of getting you to...
+          You didn't want to admit it, but you feared the{" "}
+          {props.petTypeInputSaved}s.
         </MainText>
 
         <MainText>
-          ... well what is this place ...? <i>Slashington</i>, they had called
-          it.
+          If they were capable of getting you to... well what is this place?
+        </MainText>
+
+        <MainText>
+          <i>Slashington</i>, they had called it.
         </MainText>
         <NextButton onClick={() => props.update(ns("s5", "c7"))} />
       </CustomContainer>
@@ -135,8 +138,7 @@ const s5 = props => (
         </MainText>
 
         <MainText>
-          Even now, with it sitting right next to you, you dared not touch a
-          key.
+          Even now, with it sitting right next to you, you dare not touch a key.
         </MainText>
         <MainText>You feared the power it held over you.</MainText>
         <NextButton onClick={() => props.update(ns("s5", "c8"))} />
@@ -145,10 +147,10 @@ const s5 = props => (
 
     <SimpleScene isVisible={props.c8}>
       <CustomContainer>
+        <MainText>The train rolls along familiar landscape.</MainText>
         <MainText>
-          The train rolls along familiar landscape. Rolling hills, small
-          forests, empty highways, and country roads. The sun is about to peek
-          out from behind the horizon.
+          Rolling hills, small forests, empty highways, and country roads. The
+          sun is about to peek out from behind the horizon.
         </MainText>
         <NextButton onClick={() => props.update(ns("s5", "c9"))} />
       </CustomContainer>
@@ -265,7 +267,8 @@ const map = state => ({
   petNameInputSaved: state.petNameInputSaved,
   playerNameSaved: state.playerNameSaved,
   playerOccupationSaved: state.playerOccupationSaved,
-  darkness: state.darkness
+  darkness: state.darkness,
+  petTypeInputSaved: state.petTypeInputSaved
 });
 
 export default connect(map)(s5);

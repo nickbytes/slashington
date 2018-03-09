@@ -87,7 +87,8 @@ const initialState = {
     c29: false,
     c30: false,
     c31: false,
-    c32: false
+    c32: false,
+    c33: false
   },
 
   // s3

@@ -516,7 +516,7 @@ const s1 = props => (
       <CustomContainer>
         <UserQuote attrib={coworkerFullTitle()}>
           <UserQuote paragraph>
-            Quite the coincidence. The store iso open on weekends too.
+            Quite the coincidence. The store is open on weekends too.
           </UserQuote>
           <UserQuote paragraph>It's right next to Union Station.</UserQuote>
           <UserQuote paragraph>

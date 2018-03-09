@@ -205,7 +205,10 @@ const s6 = props => (
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           Happy Birthday!
         </UserQuote>
-        <MainText>You try and hide the worry in your voice.</MainText>
+        <MainText>
+          You try and muster all the fake enthusiasm you can, but you are
+          exhausted.
+        </MainText>
         <NextButton onClick={() => props.update(ns("s6", "c9"))} />
       </CustomContainer>
     </SimpleScene>
@@ -241,7 +244,7 @@ const s6 = props => (
         </MainText>
         <UserQuote attrib={`${props.nieceName}, niece`}>
           It's my turn for karaoke. I want to show you what I've done to your
-          computer later, okay?
+          old computer later, okay?
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s6", "c12"))} />
       </CustomContainer>
@@ -528,9 +531,7 @@ const s6 = props => (
             <UserQuote attrib={`${props.nieceName}, niece`}>
               You seem a little more relaxed <i>this time</i>.
             </UserQuote>
-            <MainText>
-              She takes the keyboard from you and plugs it into the computer.
-            </MainText>
+            <MainText>She plugs the keyboard into the computer.</MainText>
             <NextButton onClick={() => props.update(ns("s6", "c29"))} />
           </div>
         )}
@@ -560,8 +561,8 @@ const s6 = props => (
           terminal window.
         </MainText>
         <MainText>
-          You're suddenly reminded instructions The Council has told you to give{" "}
-          {props.nieceName}. Their final, departing words.
+          You're suddenly reminded of the instructions The Council told you to
+          give {props.nieceName}. Their final, departing words.
         </MainText>
         <NextButton onClick={() => props.update(ns("s6", "c30"))} />
       </CustomContainer>

@@ -11,8 +11,10 @@ import trainmoving_glitch from "../../images/gifs/trainmoving_glitch.gif";
 const Bold = styled.h1`
   font-family: ${T_FF};
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: -10px;
   margin-top: 0;
+  font-size: 80px;
+  line-height: 92px;
 `;
 
 const Image = styled.img`
@@ -37,14 +39,27 @@ const s0 = () => (
         </MainText>
         <Image src={trainmoving_glitch} alt="Slashington" />
         <MainText>
-          Slashington is best played with a modern browser, like Chrome,
-          Firefox, or Safari. It is best played wearing headphones, with a
-          webcam available. If you have any issues, email me at nick at
-          nickbytes dot com.
+          Slashington is best played with a modern <i>desktop</i> browser, like
+          Chrome, Firefox, or{" "}
+          <span
+            style={{
+              textDecoration: "line-through"
+            }}
+          >
+            Safari
+          </span>. It is designed to be played in one sitting and should take
+          less than 30 mins.
         </MainText>
-        <MainText />
+
+        <MainText>
+          There is one audio and webcam interaction – please wear headphones and
+          have your webcam ready now.
+        </MainText>
         <BeginLink to={`/the-office`}>
-          <MainText>Start</MainText>
+          <MainText>
+            You're nearly late for your job at Shapes Corp. You better get
+            going.
+          </MainText>
         </BeginLink>
       </CustomContainer>
     </SimpleScene>

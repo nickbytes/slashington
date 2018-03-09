@@ -63,7 +63,7 @@ class PhoneComponent extends Component {
             <div className="cd-ear" />
             <div
               className="cd-home"
-              onClick={e => this.props.update(ns("s1", "c19"))}
+              onClick={e => this.props.update(ns("s1", "c23"))}
               style={{ cursor: "pointer" }}
             />
             <div
