@@ -397,6 +397,12 @@ const s4 = props => (
               even tame.
             </MainText>
           </ListItem>
+          <ListItem rotate="-1" tug="-50">
+            <MainText>
+              ...there are no <i>magicial</i> solutions to <i>political</i>{" "}
+              problems...
+            </MainText>
+          </ListItem>
           <ListItem rotate="3" tug="20">
             <MainText>
               They mention {props.playerOccupationSaved}s be "extremely online"
