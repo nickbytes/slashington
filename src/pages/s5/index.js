@@ -35,10 +35,13 @@ const s5 = props => (
     </SimpleScene>
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
+        <MainText>You board the train again.</MainText>
         <MainText>
-          You board the train again and watch {props.petNameInputSaved} waving
-          at you through the glass in the sliding doors. You hear The Council's
-          words reverberate through your head.
+          {props.petNameInputSaved} waves at your from the platform at the
+          sliding doors close.
+        </MainText>
+        <MainText>
+          You hear The Council's words reverberate through your head.
         </MainText>
         <NextButton onClick={() => props.update(ns("s5", "c2"))} />
       </CustomContainer>
@@ -49,12 +52,8 @@ const s5 = props => (
         <Echo>It must be her. She is nearly halfway trained now.</Echo>
 
         <Echo>Exceptional ability and upside.</Echo>
-        <MainText>
-          They listened to your pleas to help, to take the task yourself, but
-          they would have nothing of it.
-        </MainText>
 
-        <MainText>You are just the messenger.</MainText>
+        <Echo>The Council must act soon.</Echo>
 
         <NextButton onClick={() => props.update(ns("s5", "c3"))} />
       </CustomContainer>
@@ -84,21 +83,30 @@ const s5 = props => (
       <CustomContainer>
         <MainText>The dangers, they told you, were great.</MainText>
         <MainText>
-          One of their less capable magicians had been caught, before even being
-          able to carry out their plan. They now relied on Olive.
+          One of their less capable magicians had been caught trying to carry
+          out their plan.
         </MainText>
+        <MainText>They now relied on Olive.</MainText>
         <NextButton onClick={() => props.update(ns("s5", "c5"))} />
       </CustomContainer>
     </SimpleScene>
 
     <SimpleScene isVisible={props.c5}>
       <CustomContainer>
+        <MainText>What had happened to the other magician...?</MainText>
         <MainText>
-          What had happened to the other magician...? You had asked, but they
-          would not speak of it, and when you thought you heard one of the{" "}
-          {props.petTypeInputSaved}s mumble something about{" "}
-          <i>permanent memory allicilatory obfunscator</i> they didn't explain,
-          you asked more, but they would not tell you.
+          You had asked, but they told you it did not concern you.
+        </MainText>
+
+        <MainText>
+          You thought you heard one of the {props.petTypeInputSaved}s mumble
+          something about <i>permanent memory allicilatory obfunscator</i>.
+        </MainText>
+
+        <MainText>You asked more, but they wouldn't tell you.</MainText>
+
+        <MainText>
+          Your role was to be the <i>messenger</i>.
         </MainText>
         <NextButton onClick={() => props.update(ns("s5", "c6"))} />
       </CustomContainer>
@@ -112,12 +120,8 @@ const s5 = props => (
         </MainText>
 
         <MainText>
-          ... well what is this place ...? Slashington, they had called it.
-        </MainText>
-
-        <MainText>
-          You think about it for a second. Another dimension? A rip in reality?
-          More like a soft tear.
+          ... well what is this place ...? <i>Slashington</i>, they had called
+          it.
         </MainText>
         <NextButton onClick={() => props.update(ns("s5", "c7"))} />
       </CustomContainer>
@@ -126,14 +130,15 @@ const s5 = props => (
     <SimpleScene isVisible={props.c7}>
       <CustomContainer>
         <MainText>
-          Anyway, what else were they capable of... you had never felt anything
-          like what you felt from the keyboard.
+          What else were they capable of... you had never felt anything like
+          what you felt from the keyboard.
         </MainText>
 
         <MainText>
           Even now, with it sitting right next to you, you dared not touch a
-          key. You feared the power it held over you.
+          key.
         </MainText>
+        <MainText>You feared the power it held over you.</MainText>
         <NextButton onClick={() => props.update(ns("s5", "c8"))} />
       </CustomContainer>
     </SimpleScene>
@@ -168,10 +173,16 @@ const s5 = props => (
             Three or four seconds. Suddenly the car{" "}
             <Clickable clickFn={() => props.update(burst())}>bursts</Clickable>{" "}
           </ColorSwitch>
-          with light, you grimace and squint in the stark contrast. When you
-          open your eyes, the train car is again packed with people, regular
-          people. People reading their tablets, morning papers, talking on cell
-          phones, glancing out the window as you pass through Baltimore.
+          with light, you grimace and squint in the stark contrast.
+        </MainText>
+        <MainText>
+          When you open your eyes, the train car is again packed with people,
+          regular people.
+        </MainText>
+
+        <MainText>
+          People reading their tablets, morning papers, talking on cell phones,
+          glancing out the window as you pass through Baltimore.
         </MainText>
         <NextButton onClick={() => props.update(ns("s5", "c11"))} />
       </CustomContainer>
@@ -189,9 +200,11 @@ const s5 = props => (
         </UserQuote>
 
         <MainText>
-          You hear the concern in his voice. He thinks you brought it to
-          complete some work this weekend. If only...
+          You hear the concern in his voice. He thinks you brought it to do some
+          work this weekend.
         </MainText>
+
+        <MainText>If only...</MainText>
         <NextButton onClick={() => props.update(ns("s5", "c12"))} />
       </CustomContainer>
     </SimpleScene>
@@ -202,8 +215,7 @@ const s5 = props => (
           A gift for {props.nieceName}.
         </UserQuote>
         <MainText>
-          Carefully not to touch a key, you put the keyboard into your duffle
-          bag.
+          Careful not to touch a key, you put the keyboard into your duffle bag.
         </MainText>
         <NextButton onClick={() => props.update(ns("s5", "c13"))} />
       </CustomContainer>
@@ -212,8 +224,8 @@ const s5 = props => (
     <SimpleScene isVisible={props.c13}>
       <CustomContainer>
         <MainText>
-          He goes on chatting about work, neighbors, {props.inLawName}'s job,
-          only do you take notice when he mentions the exceptional grades{" "}
+          He goes on chatting about work, neighbors, {props.inLawName}'s new
+          job... only do you take notice when he mentions the exceptional grades{" "}
           {props.nieceName} has been getting.
         </MainText>
         <NextButton onClick={() => props.update(ns("s5", "c14"))} />
@@ -223,9 +235,9 @@ const s5 = props => (
     <SimpleScene isVisible={props.c14}>
       <CustomContainer>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-          That's great, real great.
+          That's great, really great.
         </UserQuote>
-        <MainText>You try to hide the dread in your voice.</MainText>
+        <MainText>You try to hide the worry in your voice.</MainText>
         <NextChapter to={`/birthday-party`} />
       </CustomContainer>
     </SimpleScene>
