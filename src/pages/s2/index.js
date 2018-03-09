@@ -439,7 +439,7 @@ const s2 = props => (
         </MainText>
         <MainText>
           Not only that, but {props.petNameInputSaved} is wearing a small,
-          shabby train conductors outfit...
+          shabby train conductor's outfit...
         </MainText>
         <NextButton onClick={() => props.update(ns("s2", "c33"))} />
       </CustomContainer>
