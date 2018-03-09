@@ -8,13 +8,16 @@ const NextChapterStyled = styled(Link)`
   line-height: 38px;
   padding: 20px;
   margin-left: -20px;
-  color: #000;
+  color: ${props => (props.white ? "#fff" : "#000")};
   cursor: pointer;
   text-decoration: none;
+  font-style: normal;
 `;
 
-const NextChapter = ({ to }) => (
-  <NextChapterStyled to={to}>☞</NextChapterStyled>
+const NextChapter = ({ to, white }) => (
+  <NextChapterStyled white={white} to={to}>
+    ☞
+  </NextChapterStyled>
 );
 
 export default NextChapter;

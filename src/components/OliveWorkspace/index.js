@@ -272,7 +272,7 @@ const OliveWorkspace = props => (
             )}
             {props.haywire && (
               <PoemText>
-                <NextChapter to={`/country-pop`} />
+                <NextChapter white to={`/country-pop`} />
               </PoemText>
             )}
           </WindowBody>
