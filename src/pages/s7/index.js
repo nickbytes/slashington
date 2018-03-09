@@ -43,7 +43,7 @@ const s7 = props => (
         </MainText>
         <MainText>You survey the backyard.</MainText>
         <MainText>
-          Teenagers running around, parents chatting, the sublte hum of
+          Teenagers running around, parents chatting, the subtle hum of
           Nickelback. You sit up a little bit in the lawnchair.
         </MainText>
         <NextButton onClick={() => props.update(ns("s7", "c2"))} />

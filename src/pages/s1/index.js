@@ -79,7 +79,7 @@ const s1 = props => (
           </Clickable>{" "}
           that nearly caused a fire in your apartment, not your super telling
           you that your rent is increasing next year, not your forgotten badge,
-          and not the Leonard's crabby mood.
+          and not Leonard's crabby mood.
         </MainText>
         <MainText>It's Friday. It's the end of a long week.</MainText>
         <MainText>
@@ -385,7 +385,7 @@ const s1 = props => (
         <DreamText>
           barbeque... the bean bag game...did you have a few drinks...?
         </DreamText>
-        <DreamText>did... did you do slipnot karaoke...?</DreamText>
+        <DreamText>did... did you do slipknot karaoke...?</DreamText>
         <DreamText>
           what did you get her...? how could you{" "}
           <Clickable clickFn={() => props.update(ns("s1", "c24"))}>

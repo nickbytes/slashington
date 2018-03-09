@@ -52,7 +52,7 @@ const s3 = props => (
           DREAM HOW IS THIS HAPPENING HAVE I LOST MY MIND
         </Echo>
 
-        <Echo>This most be a dream.</Echo>
+        <Echo>This must be a dream.</Echo>
 
         <NextButton onClick={() => props.update(ns("s3", "c3"))} />
       </CustomContainer>

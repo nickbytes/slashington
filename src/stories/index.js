@@ -130,7 +130,7 @@ storiesOf("New Rochelle", module).add("normal", () => (
         </MainText>
       </ListItem>
       <ListItem>
-        <MainText>5. a sadly restroom</MainText>
+        <MainText>5. a restroom with 1/4 inch standing water</MainText>
       </ListItem>
       <ListItem>
         <MainText>
