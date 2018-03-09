@@ -128,76 +128,91 @@ const OliveWorkspace = props => (
         <WindowContainer
           style={{ right: "100px", top: "55px" }}
           bgColor={"rgba(104, 159, 182, 1.000)"}
-          haywire
+          haywire={props.haywire}
         >
           <WindowHeader
             className="handle"
             bgColor={"rgba(83, 135, 245, 0.700)"}
-            haywire
+            haywire={props.haywire}
           >
             <WindowTitle>
               <Sun size={18} style={{ marginRight: "5px" }} />
               <span>{`Good Morning, ${props.nieceName || "Olive"}`}</span>
             </WindowTitle>
           </WindowHeader>
-          <WindowBody haywire={["rgba(210, 132, 69, 1)"]}>
+          <WindowBody
+            haywireColor={["rgba(210, 132, 69, 1)"]}
+            haywire={props.haywire}
+          >
             <Raw src={good_glitch} alt={"something"} />
           </WindowBody>
         </WindowContainer>
       </Draggable>
       <Draggable handle=".handle">
-        <WindowContainer haywire style={{ top: "40%", left: "30%" }}>
-          <WindowHeader haywire className="handle">
+        <WindowContainer
+          haywire={props.haywire}
+          style={{ top: "40%", left: "30%" }}
+        >
+          <WindowHeader haywire={props.haywire} className="handle">
             <WindowTitle>
               <span>Device per source</span>
             </WindowTitle>
           </WindowHeader>
-          <WindowBody haywire>
+          <WindowBody haywire={props.haywire}>
             <Raw src={place1} alt={"something"} />
           </WindowBody>
         </WindowContainer>
       </Draggable>
       <Draggable handle=".handle">
-        <WindowContainer haywire style={{ top: "50%", left: "50%" }}>
-          <WindowHeader haywire className="handle">
+        <WindowContainer
+          haywire={props.haywire}
+          style={{ top: "50%", left: "50%" }}
+        >
+          <WindowHeader haywire={props.haywire} className="handle">
             <WindowTitle>
               <span>Fekkfyzystem</span>
             </WindowTitle>
           </WindowHeader>
-          <WindowBody haywire>
+          <WindowBody haywire={props.haywire}>
             <Raw src={place2} alt={"something"} />
           </WindowBody>
         </WindowContainer>
       </Draggable>
 
       <Draggable handle=".handle">
-        <WindowContainer haywire style={{ top: "60%", left: "10%" }}>
-          <WindowHeader haywire className="handle">
+        <WindowContainer
+          haywire={props.haywire}
+          style={{ top: "60%", left: "10%" }}
+        >
+          <WindowHeader haywire={props.haywire} className="handle">
             <WindowTitle>
               <span>Frailty Stow</span>
             </WindowTitle>
           </WindowHeader>
-          <WindowBody haywire>
+          <WindowBody haywire={props.haywire}>
             <Raw src={frailty} alt={"something"} />
           </WindowBody>
         </WindowContainer>
       </Draggable>
 
       <Draggable handle=".handle">
-        <WindowContainer haywire style={{ top: "10%", left: "10%" }}>
-          <WindowHeader haywire className="handle">
+        <WindowContainer
+          haywire={props.haywire}
+          style={{ top: "10%", left: "10%" }}
+        >
+          <WindowHeader haywire={props.haywire} className="handle">
             <WindowTitle>
               <span>Raw recording</span>
             </WindowTitle>
           </WindowHeader>
-          <WindowBody haywire>
+          <WindowBody haywire={props.haywire}>
             <Raw src={truth} alt={"something"} />
           </WindowBody>
         </WindowContainer>
       </Draggable>
       <Draggable handle=".handle">
         <WindowContainer
-          haywire
+          haywire={props.haywire}
           style={{ right: "123px", top: "185px" }}
           bgColor={"#e5c273"}
           bColor={"#d29b62"}
@@ -212,7 +227,7 @@ const OliveWorkspace = props => (
               <span>Notes</span>
             </WindowTitle>
           </WindowHeader>
-          <WindowBody haywire={["red"]}>
+          <WindowBody haywire={props.haywire} haywireBg={"red"}>
             <ul>
               <li>
                 {props.leadPet}/{props.petThree} distrust?
@@ -228,13 +243,13 @@ const OliveWorkspace = props => (
 
       <Draggable handle=".handle">
         <ShakyWindow
-          haywire
+          haywire={props.haywire}
           style={{ right: "calc(50% - 180px)", top: "30%" }}
           bgColor={"#fe4d87"}
           bColor={"#e2194e"}
         >
           <WindowHeader
-            haywire
+            haywire={props.haywire}
             className="handle"
             bgColor={"rgba(254, 77, 135, 0.7)"}
             bColor={"#e2194e"}

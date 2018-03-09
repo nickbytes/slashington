@@ -93,9 +93,9 @@ export const WindowBody = styled.div`
     css`
       transform: ;
       border: ${props =>
-        props.haywire[0] ? `4px solid ${props.haywire[0]}` : "2px solid blue"};
+        props.haywireBg ? `4px solid ${props.haywireBg}` : "2px solid blue"};
       border-radius: ${props =>
-        props.haywire[1] ? `${props.haywire[1]}` : "7%"};
+        props.haywireBg ? `${props.haywireBg}` : "7%"};
       animation: slidein 5s linear 1s infinite alternate;
     `};
 
