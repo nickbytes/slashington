@@ -35,7 +35,7 @@ const s6 = props => (
       <CustomContainer>
         <UserQuote attrib={`Alex, brother`}>
           I'll take your stuff up to the guest room. Go relax, say hello to{" "}
-          {props.nieceName} and {props.inLawName}.
+          {props.nieceName} and {props.inLawName}. Enjoy the party.
         </UserQuote>
         <MainText>
           You walk into the kitchen, dodging teenagers scurrying about the
@@ -237,10 +237,11 @@ const s6 = props => (
       <CustomContainer>
         <MainText>
           With all of her friends around, you don't dare mention anything about
-          your trip to Slashington.
+          your trip to <i>Slashington</i>.
         </MainText>
         <UserQuote attrib={`${props.nieceName}, niece`}>
-          It's my turn for karaoke. I want to show you my computer later, okay?
+          It's my turn for karaoke. I want to show you what I've done to your
+          computer later, okay?
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s6", "c12"))} />
       </CustomContainer>
@@ -256,7 +257,7 @@ const s6 = props => (
         <MainText>
           Seeing {props.nieceName}, Alex, {props.inLawName} – it's making you
           reconsider the whole thing. Why would you put them in danger. Maybe
-          you should wait, give her the keyboard when she is older...
+          you should wait, try to figure out all of this on your own...
         </MainText>
         <MainText>
           You can't help but feel more curious about the keyboard.
@@ -267,13 +268,15 @@ const s6 = props => (
 
     <SimpleScene isVisible={props.c13}>
       <CustomContainer>
+        <MainText>Inside, you head upstairs.</MainText>
+
         <MainText>
           You turn right at the top of the stairs and open the door to the guest
           room. You feel drawn to the duffle bag, and the keyboard inside.
         </MainText>
         <MainText>
           You remember the warmth it emits. The way it made you feel like
-          anything was recklessly possible.
+          anything was <i>recklessly</i> possible.
         </MainText>
         <NextButton onClick={() => props.update(ns("s6", "c14"))} />
       </CustomContainer>
@@ -357,6 +360,11 @@ const s6 = props => (
           think about how you could hold on to the keyboard a little while,
           maybe until she's 18...
         </MainText>
+
+        <MainText>
+          Or maybe, you're just making excuses to keep the keyboard for
+          yourself...
+        </MainText>
         <NextButton onClick={() => props.update(ns("s6", "c21"))} />
       </CustomContainer>
     </SimpleScene>
@@ -418,7 +426,7 @@ const s6 = props => (
               great games on it.
             </UserQuote>
             <UserQuote attrib={`${props.nieceName}, niece`}>
-              Oh yea, it's over here.
+              Oh yea, it's over there.
             </UserQuote>
             <MainText>
               She points to the section of computers and hardware in the corner.
@@ -447,7 +455,7 @@ const s6 = props => (
         {props.taskTaken && (
           <div>
             <UserQuote attrib={`You, ${props.playerNameSaved}`}>
-              Commander Keen, The Sims, Baldur's Gate, Counter Strike...
+              Commander Keen, The Sims, Baldur's Gate, Hi-Octane...
             </UserQuote>
 
             <MainText>
@@ -477,7 +485,7 @@ const s6 = props => (
     <SimpleScene isVisible={props.c26}>
       <CustomContainer>
         <UserQuote attrib={`${props.nieceName}, niece`}>
-          Thanks, there's only one piece left.
+          There's only one piece left.
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s6", "c27"))} />
       </CustomContainer>
@@ -552,8 +560,8 @@ const s6 = props => (
           terminal window.
         </MainText>
         <MainText>
-          You're suddenly reminded of instructions The Council has told you to
-          give {props.nieceName}.
+          You're suddenly reminded instructions The Council has told you to give{" "}
+          {props.nieceName}. Their final, departing words.
         </MainText>
         <NextButton onClick={() => props.update(ns("s6", "c30"))} />
       </CustomContainer>
@@ -600,8 +608,7 @@ const s6 = props => (
       <CustomContainer>
         <UserQuote attrib={`${props.nieceName}, niece`}>
           Of course, of course. Vim. Right. No one would ever think of using it,
-          it'll be the perfect place to hide instructions. Is that all{" "}
-          {props.playerNameSaved}?
+          it'll be the perfect place to hide instructions.
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s6", "c35"))} />
       </CustomContainer>
@@ -636,7 +643,7 @@ const s6 = props => (
         </UserQuote>
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           Well, I don't know how much I can help you now...You'll know more
-          about it than me... But, of course...{" "}
+          about it than me... But, sure...{" "}
         </UserQuote>
         <NextButton onClick={() => props.update(ns("s6", "c38"))} />
       </CustomContainer>
