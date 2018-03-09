@@ -18,7 +18,7 @@ const App = props => (
   <div>
     <Switch>
       <Route exact path="/" component={s0} />
-      <Route path="/the-office" component={s1} />
+      <Route path="/broken-keyboard" component={s1} />
       <Route path="/train-ride" component={s2} />
       <Route path="/slashington" component={s3} />
       <Route path="/the-council" component={s4} />

@@ -55,7 +55,7 @@ const s0 = () => (
           There is one audio and webcam interaction – please wear headphones and
           have your webcam ready now.
         </MainText>
-        <BeginLink to={`/the-office`}>
+        <BeginLink to={`/broken-keyboard`}>
           <MainText>
             You're nearly late for your job at Shapes Corp. You better get
             going.
