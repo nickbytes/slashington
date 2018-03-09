@@ -269,7 +269,7 @@ const s4 = props => (
       <CustomContainer>
         <UserQuote attrib={`Comrade ${props.leadPet}`}>
           <UserQuote paragraph>
-            Then you should also understand it's importance, {props.petFour}. As
+            Then you should also understand its importance, {props.petFour}. As
             I was saying...
           </UserQuote>
 
