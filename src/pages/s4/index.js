@@ -248,7 +248,7 @@ const s4 = props => (
     <SimpleScene isVisible={props.c13}>
       <CustomContainer>
         <UserQuote attrib={`Comrade ${props.leadPet}`}>
-          Rule 17, Article 405b states that the counselor must explain
+          Rule 17, Article 405b states that the councilor must explain
           appropriate context for me the-
         </UserQuote>
 
