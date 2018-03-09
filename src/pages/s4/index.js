@@ -304,8 +304,8 @@ const s4 = props => (
         </MainText>
 
         <MainText>
-          You catch bits from each of them, who seem to be volleying phrases
-          back and forth with each other.
+          You catch bits from each of them. They seem to be volleying phrases
+          back and forth at each other.
         </MainText>
 
         <MainText>It's a maddening orchestra of logic.</MainText>
@@ -318,7 +318,7 @@ const s4 = props => (
         <List>
           <ListItem>
             <MainText>
-              Parts of their explanation even sounds familiar, though you can't
+              Parts of their explanation even sound familiar, though you can't
               imagine how they would.
             </MainText>
           </ListItem>
@@ -329,14 +329,14 @@ const s4 = props => (
           </ListItem>
           <ListItem rotate="-10" tug="40">
             <MainText>
-              A division and secret war amongst magicial animals and magical
+              A division and secret war amongst magical animals and magical
               humans, further divisions and factions created amongst each of
               those groups....
             </MainText>
           </ListItem>
 
           <ListItem rotate="-10" tug="40">
-            <MainText>Allegiances formed among unlikely pairs...</MainText>
+            <MainText>Allegiances formed amongst unlikely pairs...</MainText>
           </ListItem>
 
           <ListItem rotate="-5" tug="10">
