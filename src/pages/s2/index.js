@@ -247,7 +247,7 @@ const s2 = props => (
             </MainText>
           </ListItem>
           <ListItem>
-            <MainText>3. a waiting room, in case of inclimate weather</MainText>
+            <MainText>3. a waiting room, in case of inclement weather</MainText>
           </ListItem>
           <ListItem>
             <MainText>
@@ -262,7 +262,7 @@ const s2 = props => (
           <ListItem>
             <MainText>
               6. and a plastic wall mount distributing pamphlets for
-              attractions, restaurants, golf courses, hay rides, swimming poles,
+              attractions, restaurants, golf courses, hay rides, swimming holes,
               lawn care, tax services, and public parks
             </MainText>
           </ListItem>
@@ -370,7 +370,7 @@ const s2 = props => (
           You turn back to and look around the train car, but there is still no
           one there.
         </MainText>
-        <MainText>Dishelved, you sit back down in your seat.</MainText>
+        <MainText>Disheveled, you sit back down in your seat.</MainText>
         <NextButton onClick={() => props.update(ns("s2", "c28"))} />
       </CustomContainer>
     </SimpleScene>
