@@ -521,7 +521,7 @@ const s1 = props => (
           <UserQuote paragraph>It's right next to Union Station.</UserQuote>
           <UserQuote paragraph>
             Take a right out of the Northeast Entrance of the station. You can't
-            miss it, south east corner of H Street and 4th.
+            miss it, south east corner of 4th and H Northeast.
           </UserQuote>
           <UserQuote paragraph>
             It's called <i>Igglefort's</i>.
