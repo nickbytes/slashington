@@ -77,9 +77,9 @@ const s1 = props => (
               burnt toast {props.startBurning && <Smoke />}
             </span>
           </Clickable>{" "}
-          that nearly caused a fire in your apartment, not your super, Derek,
-          telling you that your rent is going to be higher next year, not your
-          forgotten badge, and not the Leonard's crabby mood.
+          that nearly caused a fire in your apartment, not your super telling
+          you that your rent is increasing next year, not your forgotten badge,
+          and not the Leonard's crabby mood.
         </MainText>
         <MainText>It's Friday. It's the end of a long week.</MainText>
         <MainText>

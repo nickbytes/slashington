@@ -39,8 +39,8 @@ const s2 = props => (
     <SimpleScene isVisible={props.c1}>
       <CustomContainer>
         <MainText>
-          You board the train, duffle bag slung over one shoulder, keyboard in
-          the other hand.
+          You board the late train, duffle bag slung over one shoulder, keyboard
+          in the other hand.
         </MainText>
         <MainText>
           You find a seat near the middle of the train and unwind. You've made

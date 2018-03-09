@@ -50,11 +50,11 @@ const PoemText = styled.p`
 
 const shake = keyframes`
   from {
-    transform: translate(-1px, 0px);
+    transform: translate(-2px, 0px);
   }
 
   to {
-    transform: translate(1px, 0px);
+    transform: translate(2px, 0px);
   }
 `;
 
@@ -140,7 +140,7 @@ const OliveWorkspace = props => (
               <span>{`Good Morning, ${props.nieceName || "Olive"}`}</span>
             </WindowTitle>
           </WindowHeader>
-          <WindowBody>
+          <WindowBody haywire={["rgba(210, 132, 69, 1)"]}>
             <Raw src={good_glitch} alt={"something"} />
           </WindowBody>
         </WindowContainer>
@@ -203,7 +203,6 @@ const OliveWorkspace = props => (
           bColor={"#d29b62"}
         >
           <WindowHeader
-            haywire
             className="handle"
             bgColor={"rgba(230, 195, 109, 0.7)"}
             bColor={"#d29b62"}
@@ -213,7 +212,7 @@ const OliveWorkspace = props => (
               <span>Notes</span>
             </WindowTitle>
           </WindowHeader>
-          <WindowBody haywire>
+          <WindowBody haywire={["red"]}>
             <ul>
               <li>
                 {props.leadPet}/{props.petThree} distrust?
@@ -241,10 +240,12 @@ const OliveWorkspace = props => (
             bColor={"#e2194e"}
           >
             <WhiteWindow>
-              <span>READ HERE {props.playerNameSaved}</span>
+              <span style={{ textTransform: "uppercase" }}>
+                READ HERE {props.playerNameSaved}
+              </span>
             </WhiteWindow>
           </WindowHeader>
-          <WindowBody haywire>
+          <WindowBody>
             <PoemText>Ooooo Oooo</PoemText>
             <PoemText>Ooooooooooo Oooooooo</PoemText>
             <PoemText>You delivered the keyboard</PoemText>

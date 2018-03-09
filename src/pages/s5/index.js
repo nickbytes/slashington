@@ -226,9 +226,11 @@ const s5 = props => (
     <SimpleScene isVisible={props.c13}>
       <CustomContainer>
         <MainText>
-          He goes on chatting about work, neighbors, {props.inLawName}'s new
-          job... only do you take notice when he mentions the exceptional grades{" "}
-          {props.nieceName} has been getting.
+          He says something under his breath about it being{" "}
+          <i>better than scientific equipment</i>, then goes on chatting about
+          work, neighbors, {props.inLawName}'s new job... only do you take
+          notice when he mentions the exceptional grades {props.nieceName} has
+          been getting.
         </MainText>
         <NextButton onClick={() => props.update(ns("s5", "c14"))} />
       </CustomContainer>

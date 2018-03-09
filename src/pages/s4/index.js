@@ -456,7 +456,7 @@ const s4 = props => (
     <SimpleScene isVisible={props.c20}>
       <CustomContainer>
         <List>
-          <ListItem rotate="-1" tug="">
+          <ListItem rotate="-1">
             <MainText>
               Your keyboard shall act as the vessel for communication{" "}
               <i>semi-fluid-inter-dimension</i> communication.
@@ -464,6 +464,11 @@ const s4 = props => (
           </ListItem>
           <ListItem rotate="5" tug="80">
             <MainText>What does that even mean?</MainText>
+          </ListItem>
+          <ListItem rotate="-2" tug="20">
+            <MainText>
+              ...something about a <i>biotech kit</i> causing concern.
+            </MainText>
           </ListItem>
         </List>
 

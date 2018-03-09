@@ -34,7 +34,21 @@ export const WindowContainer = styled.div`
     css`
       box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
       background-color: rgba(107, 236, 60, 0.7);
+      animation: slidein 1s linear 3s infinite alternate;
     `};
+
+  @keyframes slidein {
+    from {
+      opacity: 1;
+      transform: rotate(0.5turn) skew(30deg, 20deg) translateY(0px)
+        translateX(-20px);
+    }
+    to {
+      opacity: 0.4;
+      transform: scaleX(4) skew(-10deg, 80deg) translateY(0px) translateX(40px)
+        rotate(-1.5turn);
+    }
+  }
 `;
 
 export const WindowHeader = styled.div`
@@ -72,6 +86,29 @@ export const WindowBody = styled.div`
 
   > * {
     line-height: 1.3em;
+  }
+
+  ${props =>
+    props.haywire &&
+    css`
+      transform: ;
+      border: ${props =>
+        props.haywire[0] ? `4px solid ${props.haywire[0]}` : "2px solid blue"};
+      border-radius: ${props =>
+        props.haywire[1] ? `${props.haywire[1]}` : "7%"};
+      animation: slidein 5s linear 1s infinite alternate;
+    `};
+
+  @keyframes slidein {
+    from {
+      opacity: 0.7;
+      transform: scaleX(0) skew(30deg, 20deg) translateY(0px) translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: scaleX(4) skew(-10deg, 80deg) translateY(-20px)
+        translateX(40px);
+    }
   }
 `;
 
