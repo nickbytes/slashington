@@ -97,11 +97,7 @@ class BrokenEmail extends Component {
             </SingleMessage>
             <SingleMessage>
               <MessageName>morgane</MessageName>
-              <MessageText>
-                well it’s built with unity and can technically export to any
-                platform. i just export to iOS so i can run it on my phone. i
-                could try to do webvr instead :thinking_face:
-              </MessageText>
+              <MessageText>dude i think james is a fed</MessageText>
             </SingleMessage>
 
             <SingleMessage>
