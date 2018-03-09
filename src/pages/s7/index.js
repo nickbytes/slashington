@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { connect } from "funcup";
 import React from "react";
 
@@ -12,6 +11,7 @@ import { ns } from "../../updaters/ns";
 import CustomContainer from "../../components/CustomContainer";
 import MainText from "../../components/MainText";
 import NextButton from "../../components/NextButton";
+import NextChapter from "../../components/NextChapter";
 import SimpleScene from "../../components/SimpleScene";
 import UserQuote from "../../components/UserQuote";
 import Waiting from "../../components/Waiting";
@@ -149,7 +149,10 @@ const s7 = props => (
         <UserQuote attrib={`You, ${props.playerNameSaved}`}>
           Wow, jealous.
         </UserQuote>
-        <Link to={`/credits`}>Next</Link>
+        <MainText>
+          You think about how much you enjoy <i>country-pop</i>.
+        </MainText>
+        <NextChapter to={`/credits`} />
       </CustomContainer>
     </SimpleScene>
   </div>
