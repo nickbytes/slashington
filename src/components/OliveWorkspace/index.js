@@ -248,10 +248,10 @@ const OliveWorkspace = props => (
           <WindowBody>
             <PoemText>Ooooo Oooo</PoemText>
             <PoemText>Ooooooooooo Oooooooo</PoemText>
-            <PoemText>You delivered the keyboard</PoemText>
-            <PoemText>But you still hold something more</PoemText>
-            <PoemText>Of Slashington, you still have your reveries,</PoemText>
-            <PoemText>Messenger, no more, you leave me your memories.</PoemText>
+            <PoemText>Click, clack on the keyboard</PoemText>
+            <PoemText>Shows where your memories are stored</PoemText>
+            <PoemText>Forgetting all you saw of the train station</PoemText>
+            <PoemText>Slashington removed from your imagination</PoemText>
             {!props.haywire && (
               <PoemText>
                 <Clickable
