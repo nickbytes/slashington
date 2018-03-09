@@ -1,6 +1,6 @@
 import "./index.css";
 
-import { BrowserRouter as Router } from "react-router-dom";
+import { MemoryRouter as Router } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom";
 import ReactGA from "react-ga";
