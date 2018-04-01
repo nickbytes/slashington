@@ -6667,9 +6667,9 @@ react-treebeard@^2.0.3:
     shallowequal "^0.2.2"
     velocity-react "^1.3.1"
 
-react-webcam@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/react-webcam/-/react-webcam-0.2.0.tgz#03f8ce6811ae73e9d3158cbd17345a6832b23353"
+react-webcam@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/react-webcam/-/react-webcam-0.3.1.tgz#6fa57f223759b10418715080dc33f6438ce0fee9"
   dependencies:
     prop-types "^15.5.8"
 
