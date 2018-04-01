@@ -40,15 +40,8 @@ const s0 = () => (
         <Image src={trainmoving_glitch} alt="Slashington" />
         <MainText>
           Slashington is best played with a modern <i>desktop</i> browser, like
-          Chrome, Firefox, or{" "}
-          <span
-            style={{
-              textDecoration: "line-through"
-            }}
-          >
-            Safari
-          </span>. It is designed to be played in one sitting and should take
-          less than 30 mins.
+          Chrome, Firefox, or Safari. It is designed to be played in one sitting
+          and should take less than 30 mins.
         </MainText>
 
         <MainText>
